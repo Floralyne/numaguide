@@ -18,7 +18,7 @@
 }
 
 .flex-items:nth-child(1) {
-    display: flex;
+    display: block;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
@@ -26,8 +26,6 @@
     order: 0;
     width: 50%;
     height: 50%;
-    background-image: url('');
-    background-size: cover;
     text-align: center;
     justify-content: center;
     overflow: hidden;
@@ -42,8 +40,6 @@
     order: 0;
     width: 50%;
     height: 50%;
-    background-image: url('');
-    background-size: cover;
     text-align: center;
     justify-content: center;
     overflow: hidden;
@@ -58,8 +54,6 @@
     order: 0;
     width: 50%;
     height: 50%;
-    background-image: url('');
-    background-size: cover;
     text-align: center;
     justify-content: center;
     overflow: hidden;
@@ -74,9 +68,12 @@
     order: 0;
     width: 50%;
     height: 50%;
-    background-image: url('');
-    background-size: cover;
     text-align: center;
     justify-content: center;
     overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
 }
