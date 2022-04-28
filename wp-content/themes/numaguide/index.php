@@ -21,7 +21,7 @@
         $var = ob_get_contents();
         ob_end_clean();
         return $var;
-        die(var_dump($var));
+        //die(var_dump($var));
     }
     ?>
 
