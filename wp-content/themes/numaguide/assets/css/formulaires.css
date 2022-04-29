@@ -35,6 +35,14 @@ p {
    height: 40px;
 }
 
+.ajout_section {
+   display: block;
+   margin-bottom: 40px;
+   margin-top: 40px;
+   width: 115%;
+   height: 40px;
+}
+
 .bouton-validation {
    margin-top: 30px;
    margin-bottom: 50px;
@@ -369,12 +377,3 @@ button {
 
 }
 
-/* à faire : 
-rendre moins moche 
-espacement entre jour, nuit, printemps 
-faire fonctionner le repli 
-accorder la taille de la zone de texte 
-aligner la zone parcourir avec le reste 
-centrer le bouton ajouter une slide 
-espacer et agrandir les boutons 'aperçu', et 'valider' 
-agrandir (en hauteur) les boutons selon leurs importances 

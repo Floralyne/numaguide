@@ -84,8 +84,9 @@
         <h4 id="a25">Slide 2</h4>
         <input type="url" name="video" placeholder="URL de la vidéo" id="a26">
         <button id="a27"class="ajout_slide">Ajouter une slide</button>
-        <button id="a28">Aperçu</button>
-        <button id="a29">Valider</button>
+        <button id="a28" class="ajout_section">Ajouter une section</button>
+        <button id="a29">Aperçu</button>
+        <button id="a30">Valider</button>
     </div>
 </body>
 
