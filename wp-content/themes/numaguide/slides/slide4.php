@@ -6,10 +6,12 @@
  */
 
 ?>
+<?php get_header()
+?>
 
-<div class="flex-container">
-    <div class="flex-items">
-        <div id="texte">
+<section>
+    <div class="container-fluid">
+        <div id="row">
             <?php
 
             //die(var_dump($post));
@@ -17,8 +19,8 @@
             //die(var_dump($post));
             //die(var_dump($args['article']));
 
-            $post_tab = $args['article'];
-            $post = $post_tab[0];
+            //$post_tab = $args['article'];
+            //$post = $post_tab[0];
             //die(var_dump($post));
             //die(var_dump($post1->post_content));
             $blocks = parse_blocks($post->post_content);
@@ -32,7 +34,7 @@
             ?>
         </div>
     </div>
-    <div class="flex-items">
+    <div class="row">
         <?php
         $post = get_post();
         $blocks = parse_blocks($post->post_content);
@@ -44,4 +46,4 @@
         }
         ?>
     </div>
-</div>
+</section>

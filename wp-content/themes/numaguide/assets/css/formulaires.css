@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
 body {
-  font: 100% Poppins, sans-serif;
-  margin-left: 30%;
-  margin-right: 30%;
+   font: 100% Poppins, sans-serif;
+   margin-left: 30%;
+   margin-right: 30%;
 }
 
 
-/* styles des titres et texte */ 
+/* styles des titres et texte */
 
 h2 {
-  margin-top: 150px;
+   margin-top: 150px;
 }
 
 h3 {
-  margin-top: 70px;
+   margin-top: 70px;
 }
 
 h4 {
-  margin-top: 50px;
+   margin-top: 50px;
 }
 
 p {
@@ -28,119 +28,125 @@ p {
 /* boutons */
 
 .ajout_slide {
-  display: block;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  width: 115%;
-  height: 40px;
+   display: block;
+   margin-bottom: 40px;
+   margin-top: 40px;
+   width: 115%;
+   height: 40px;
 }
 
 .bouton-validation {
-  margin-top: 30px;
-  margin-bottom: 50px;
+   margin-top: 30px;
+   margin-bottom: 50px;
 
 }
 
 .repli {
-  margin-left: 60%; 
+   margin-left: 60%;
 }
 
 .parcourir {
-  margin-top: 10px;
+   margin-top: 10px;
 }
 
-/*formulaires */ 
+/*formulaires */
 
 label {
-  display: block;
-  width: 150px;
-  float: left;
+   display: block;
+   width: 150px;
+   float: left;
 }
 
 input {
-  margin-left: 20px;
-  width: 50%;
+   margin-left: 20px;
+   width: 50%;
 }
 
 select {
-  margin-left: 20px;
-} */
+   margin-left: 20px;
+}
 
-
-
-
+*/
 /* grid page de création */
 
 #container {
-   display: grid; 
+   display: grid;
 
    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
    grid-template-columns: 1fr 1fr 1fr;
-   
+
    gap: 10px;
    height: 100%;
-   
+
 }
 
 button {
-  margin-top: 20px;
+   margin-top: 20px;
 }
+
 #a1 {
    grid-row-start: 1;
    grid-column-start: 1;
 
    grid-row-end: 2;
    grid-column-end: 2;
-   
+
 }
+
 #a2 {
    grid-row-start: 2;
    grid-column-start: 2;
 
    grid-row-end: 3;
    grid-column-end: 4;
-   
+
 }
-#a3 { 
+
+#a3 {
    grid-row-start: 3;
    grid-column-start: 1;
 
    grid-row-end: 4;
    grid-column-end: 4;
-   
+
 }
+
 #a4 {
    grid-row-start: 4;
    grid-column-start: 1;
 
    grid-row-end: 5;
    grid-column-end: 4;
-   
+
 }
+
 #a5 {
    grid-row-start: 5;
    grid-column-start: 1;
 
    grid-row-end: 6;
    grid-column-end: 4;
-   
+
 }
+
 #a6 {
    grid-row-start: 7;
    grid-column-start: 1;
 
    grid-row-end: 8;
    grid-column-end: 2;
-   
+
 }
-#a7 { 
+
+#a7 {
    grid-row-start: 8;
    grid-column-start: 1;
 
    grid-row-end: 9;
    grid-column-end: 2;
-   
+
 }
+
 #a8 {
    grid-row-start: 9;
    grid-column-start: 1;
@@ -149,6 +155,7 @@ button {
    grid-column-end: 2;
    width: 30%;
 }
+
 #a9 {
    grid-row-start: 9;
    grid-column-start: 2;
@@ -157,6 +164,7 @@ button {
    grid-column-end: 3;
    width: 30%;
 }
+
 #a10 {
    grid-row-start: 9;
    grid-column-start: 3;
@@ -164,8 +172,9 @@ button {
    grid-row-end: 10;
    grid-column-end: 4;
    width: 30%;
-   
+
 }
+
 #a11 {
    grid-row-start: 10;
    grid-column-start: 1;
@@ -184,7 +193,7 @@ button {
    display: inline-block;
 }
 
-#a13 { 
+#a13 {
    grid-row-start: 11;
    grid-column-start: 1;
 
@@ -192,30 +201,32 @@ button {
    grid-column-end: 4;
 }
 
-#a14 { 
+#a14 {
    grid-row-start: 12;
    grid-column-start: 1;
 
    grid-row-end: 13;
    grid-column-end: 2;
-   
+
 }
 
-#a15 { 
+#a15 {
    grid-row-start: 13;
    grid-column-start: 1;
 
    grid-row-end: 14;
    grid-column-end: 4;
 }
+
 #a16 {
- 
+
    grid-row-start: 14;
    grid-column-start: 1;
 
    grid-row-end: 15;
    grid-column-end: 4;
 }
+
 #a17 {
 
    grid-row-start: 15;
@@ -225,24 +236,27 @@ button {
    grid-column-end: 4;
    display: block;
 }
+
 #a18 {
- 
+
    grid-row-start: 16;
    grid-column-start: 1;
 
    grid-row-end: 17;
    grid-column-end: 2;
-   
+
 }
+
 #a19 {
- 
+
    grid-row-start: 16;
    grid-column-start: 3;
 
    grid-row-end: 17;
    grid-column-end: 4;
-   
+
 }
+
 #a20 {
 
    grid-row-start: 17;
@@ -252,25 +266,28 @@ button {
    grid-column-end: 2;
    display: inline-block;
 }
+
 #a21 {
- 
+
    grid-row-start: 17;
    grid-column-start: 3;
 
    grid-row-end: 18;
    grid-column-end: 4;
    display: inline-block;
-   
+
 }
+
 #a22 {
- 
+
    grid-row-start: 18;
    grid-column-start: 1;
 
    grid-row-end: 19;
    grid-column-end: 4;
-   
+
 }
+
 #a23 {
 
    grid-row-start: 19;
@@ -278,26 +295,29 @@ button {
 
    grid-row-end: 20;
    grid-column-end: 2;
-   
+
 }
+
 #a24 {
- 
+
    grid-row-start: 20;
    grid-column-start: 1;
 
    grid-row-end: 21;
    grid-column-end: 4;
-   
+
 }
+
 #a25 {
- 
+
    grid-row-start: 21;
    grid-column-start: 1;
 
    grid-row-end: 22;
    grid-column-end: 2;
-   
+
 }
+
 #a26 {
 
    grid-row-start: 22;
@@ -305,18 +325,20 @@ button {
 
    grid-row-end: 23;
    grid-column-end: 4;
-   
+
 }
+
 #a27 {
- 
+
    grid-row-start: 23;
    grid-column-start: 1;
 
    grid-row-end: 24;
    grid-column-end: 4;
    display: block;
-   
+
 }
+
 #a28 {
 
    grid-row-start: 24;
@@ -324,17 +346,19 @@ button {
 
    grid-row-end: 25;
    grid-column-end: 2;
-   
+
 }
+
 #a29 {
- 
+
    grid-row-start: 24;
    grid-column-start: 3;
 
    grid-row-end: 25;
    grid-column-end: 4;
-   
+
 }
+
 #a30 {
 
    grid-row-start: 25;
@@ -342,7 +366,7 @@ button {
 
    grid-row-end: 26;
    grid-column-end: 4;
-   
+
 }
 
 /* à faire : 

@@ -25,7 +25,6 @@
     }
     ?>
 
-
     <?php
     if (have_posts()) {
         $nbSlide = 1;
@@ -104,6 +103,7 @@
         echo "Created page_id=" . $page_id . " for page '" . $title_of_the_page . "'<br/>";
         return $page_id;
     }
+
 
     //creer_page('MONKEY NATION', $slide);
 
