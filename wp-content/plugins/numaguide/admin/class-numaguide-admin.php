@@ -1,7 +1,7 @@
 <?php
 
 /**
- * La fonctionnalité spécifique à l'administrateur du plugin.
+ * Les fonctionnalités spécifiques à l'administrateur du plugin.
  *
  * @link              https://numaguide.msh-vdl.fr/
  * @since             1.0.0
@@ -88,5 +88,71 @@ class Numaguide_Admin
 		 */
 
 		wp_enqueue_script($this->numaguide, plugin_dir_url(__FILE__) . 'js/plugin-name-admin.js', array('jquery'), $this->version, false);
+	}
+
+	function numaguide_page()
+	{
+		add_menu_page(
+			'Numaguide',
+			'Numaguide',
+			'edit_posts',
+			'numaguide',
+			'ng_admin_page_contents',
+			'dashicons-media-spreadsheet',
+			3
+		);
+
+		add_submenu_page(
+			'numaguide',
+			'Numaguide | Création d\'un guide',
+			'Créer un guide',
+			'edit_posts',
+			'ng_creerguide',
+			'ng_submenu_page_content'
+		);
+
+		add_submenu_page(
+			'numaguide',
+			'Numaguide | Modifier un guide',
+			'Modifier un guide',
+			'edit_posts',
+			'ng_modifierguide',
+			'ng_submenu_page_content'
+		);
+
+		add_submenu_page(
+			'numaguide',
+			'Numaguide | Liste des guides',
+			'Liste des guides',
+			'edit_posts',
+			'ng_listeguide',
+			'ng_submenu_page_content'
+		);
+
+		add_submenu_page(
+			'numaguide',
+			'Numaguide | Configuration',
+			'Configuration',
+			'edit_posts',
+			'ng_configuration',
+			'ng_submenu_page_content'
+		);
+
+
+		function ng_admin_page_contents()
+		{
+?>
+			<h1>
+				<?php esc_html_e('Test Numaguide', 'Numaguide'); ?>
+			</h1>
+<?php
+		}
+
+		function ng_submenu_page_content()
+		{
+			echo '<div class="wrap">';
+			echo '<h2>Formulaires Numaguide</h2>';
+			echo '</div>';
+		}
 	}
 }
