@@ -1,5 +1,16 @@
 /***Style pour les slides appartenant à l'ouverture et la fermeture du guide***/
 
+@font-face {
+    font-family: "Poppins";
+    src: url("font/Poppins-Regular.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
 /*Bibliographie*/
 
 #slide_7 {
