@@ -89,4 +89,25 @@ class Numaguide_Public
 
 		wp_enqueue_script($this->numaguide, plugin_dir_url(__FILE__) . 'js/plugin-name-public.js', array('jquery'), $this->version, false);
 	}
+
+		/*
+	* Met en variable un template avec son contenu
+	*
+	* @since Numaguide 0.1
+	*
+	* @param string $template_name le path du template
+	* @param string $part_name le nom de la partie du template
+	* @param array $variable tableau de variables à injecter dans le template
+	* 
+	* @return string
+	*/
+	function numaguide_load_template_part($template_name, $part_name = null, $variable)
+	{
+		ob_start();
+		get_template_part($template_name, $part_name, $variable);
+		$var = ob_get_contents();
+		ob_end_clean();
+		return $var;
+		//die(var_dump($var));
+	}
 }
