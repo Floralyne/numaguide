@@ -397,3 +397,9 @@ max-height: 70vh;
 #slide_26_son_legende2{
     font-style: italic;
 }
+
+/*Slide contenant une vidéo en pleine écran avec une légende*/
+
+#slide_27_c{
+    background-color: #38979f;
+}
