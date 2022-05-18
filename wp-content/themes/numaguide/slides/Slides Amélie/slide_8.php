@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Slide 19
+ * Template Name: Slide 8
  * Template Post Type: post, page
  */
 
