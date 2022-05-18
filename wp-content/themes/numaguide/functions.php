@@ -25,8 +25,6 @@ function numaguide_title_separator()
   return '|';
 }
 
-add_action('admin_print_styles', 'admin_css', 11);
-
 add_action('after_setup_theme', 'numaguide_supports');
 add_action('wp_enqueue_scripts', 'numaguide_register_assets');
 add_action('wp_enqueue_styles', 'numaguide_register_assets');
