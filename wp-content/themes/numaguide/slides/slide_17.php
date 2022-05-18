@@ -19,18 +19,20 @@
 //die(var_dump($post));
 //die(var_dump($args['article']));
 
-//$post_tab = $args['article'];
-//$post = $post_tab[0];
+$post_tab = $args['article'];
+$post = $post_tab[0];
 //die(var_dump($post));
 //die(var_dump($post1->post_content));
 $blocks = parse_blocks($post->post_content);
 
 //die(var_dump($blocks));
+$paragraphes = array();
 foreach ($blocks as $block) {
     if ($block['blockName'] == 'core/paragraph') {
-        echo render_block($block);
+        $paragraphes[] = $block;
     }
 }
+echo render_block($paragraphes[0]);
 ?>
                     </div>
                 </div>
@@ -43,18 +45,20 @@ foreach ($blocks as $block) {
 //die(var_dump($post));
 //die(var_dump($args['article']));
 
-//$post_tab = $args['article'];
-//$post = $post_tab[0];
+$post_tab = $args['article'];
+$post = $post_tab[0];
 //die(var_dump($post));
 //die(var_dump($post1->post_content));
 $blocks = parse_blocks($post->post_content);
 
 //die(var_dump($blocks));
+$paragraphes = array();
 foreach ($blocks as $block) {
     if ($block['blockName'] == 'core/paragraph') {
-        echo render_block($block);
+        $paragraphes[] = $block;
     }
 }
+echo render_block($paragraphes[1]);
 ?>                </div>
             </div>
         </div>

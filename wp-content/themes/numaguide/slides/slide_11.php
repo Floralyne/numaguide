@@ -14,13 +14,14 @@
       <div id="slide_11_div" class="col text-justify mt-auto mb-auto p-5">
       <?php
 
-//die(var_dump($post));
+
 //$post = get_post($args);
 //die(var_dump($post));
 //die(var_dump($args['article']));
 
-//$post_tab = $args['article'];
-//$post = $post_tab[0];
+$post_tab = $args['article'];
+//die(var_dump($post_tab));
+$post = $post_tab[0];
 //die(var_dump($post));
 //die(var_dump($post1->post_content));
 $blocks = parse_blocks($post->post_content);

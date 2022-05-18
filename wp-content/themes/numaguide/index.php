@@ -48,22 +48,20 @@
         $args = array(
             'post_type' => 'post',
             'post_status' => 'publish',
-            'category_name' => 'slide4',
+            'category_name' => 'slide11',
             'tag' => $nbSlide
         );
 
         $mypost = get_posts($args);
-
         //die(var_dump($mypost));
         if ($mypost) {
             the_post();
 
             //$post = $mypost;
             $post_tab = array('article' => $mypost);
-            //die(var_dump($post));
             //, null, $post
             //get_template_part('slides/slide4', null, $post_tab);
-            $slide = apply_filters('numaguide_test','slides/slide4', null, $post_tab);
+            $slide = apply_filters('numaguide_test','slides/slide_11', null, $post_tab);
             $nbSlide = $nbSlide + 1;
         }
 
@@ -72,7 +70,7 @@
         $args = array(
             'post_type' => 'post',
             'post_status' => 'publish',
-            'category_name' => 'slide8',
+            'category_name' => 'slide17',
             'tag' => $nbSlide2
         );
 
@@ -86,7 +84,7 @@
             //die(var_dump($post));
             //, null, $post
             //get_template_part('slides/slide4', null, $post_tab);
-            $slide = $slide . apply_filters('numaguide_test','slides/slide4', null, $post_tab);
+            $slide = $slide . apply_filters('numaguide_test','slides/slide_17', null, $post_tab);
             $nbSlide2 = $nbSlide2 + 1;
         }
     }
@@ -120,8 +118,7 @@
         return $page_id;
     }
 
-
-    creer_page('MONKEY NATION', $slide);
+    creer_page('Mirage', $slide);
 
     ?>
 

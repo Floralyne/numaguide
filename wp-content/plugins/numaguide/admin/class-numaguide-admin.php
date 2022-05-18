@@ -169,7 +169,9 @@ class Numaguide_Admin
 	*/
 	function numaguide_load_template_part($template_name, $part_name = null, $variable)
 	{
+		
 		ob_start();
+		//die(var_dump($variable));
 		get_template_part($template_name, $part_name, $variable);
 		$var = ob_get_contents();
 		ob_end_clean();
