@@ -13,7 +13,7 @@ class Numaguide_Admin
 {
 
 	/**
-	 * The ID of this plugin.
+	 * Le ID de ce plugin.
 	 *
 	 * @since    1.0.0
 	 * @access   private
@@ -155,4 +155,82 @@ class Numaguide_Admin
 			echo '</div>';
 		}
 	}
+
+	/*
+	* Met en variable un template avec son contenu
+	*
+	* @since Numaguide 0.1
+	*
+	* @param string $template_name le path du template
+	* @param string $part_name le nom de la partie du template
+	* @param array $variable tableau de variables à injecter dans le template
+	* 
+	* @return string
+	*/
+	function numaguide_load_template_part($template_name, $part_name = null, $variable)
+	{
+		ob_start();
+		get_template_part($template_name, $part_name, $variable);
+		$var = ob_get_contents();
+		ob_end_clean();
+		return $var;
+		//die(var_dump($var));
+	}
+
 }
+
+// // Ajout des pages dans la bar de menu administrateur
+// function ajout_menu_configuration($wp_admin_bar)
+// {
+//   $args = array(
+//     'id' => 'wp_numaguide',
+//     'title' => 'Numaguide',
+//     'href' => '/',
+//     'meta' => array(
+//       'class' => 'wp_config_numaguide',
+//       'title' => 'Search WPBeginner Tutorials'
+//     )
+//   );
+//   $wp_admin_bar->add_node($args);
+
+
+//   $args = array(
+//     'id' => 'wp_config_numaguide',
+//     'title' => 'Configuration',
+//     'href' => get_template_directory_uri() . '/page_config/form_configuration.php',
+//     'parent' => 'wp_numaguide',
+//     'meta' => array(
+//       'class' => 'wp_config_numaguide',
+//       'title' => 'Configuration'
+//     )
+//   );
+//   $wp_admin_bar->add_node($args);
+
+
+//   $args = array(
+//     'id' => 'wp_creation_numaguide',
+//     'title' => 'Création d\'un guide',
+//     'href' => get_template_directory_uri() . '/page_creation/form_creation.php',
+//     'parent' => 'wp_numaguide',
+//     'meta' => array(
+//       'class' => 'wp_creation_numaguide',
+//       'title' => 'Création d\'un guide'
+//     )
+//   );
+//   $wp_admin_bar->add_node($args);
+
+
+//   $args = array(
+//     'id' => 'wp_liste_numaguide',
+//     'title' => 'Liste des guides',
+//     'href' => get_template_directory_uri() . '/page_liste/form_liste.php',
+//     'parent' => 'wp_numaguide',
+//     'meta' => array(
+//       'class' => 'wp_liste_numaguide',
+//       'title' => 'Liste des guides'
+//     )
+//   );
+//   $wp_admin_bar->add_node($args);
+// }
+// add_action('admin_bar_menu', 'ajout_menu_configuration', 999);
+

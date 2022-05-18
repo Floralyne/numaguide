@@ -13,7 +13,7 @@
  * @param array $variable tableau de variables à injecter dans le template
  * 
  * @return string
-*/
+
     function load_template_part($template_name, $part_name = null, $variable)
     {
         ob_start();
@@ -22,10 +22,26 @@
         ob_end_clean();
         return $var;
         //die(var_dump($var));
+    }*/
+
+
+    /*if(has_filter( 'numaguide_test' ))
+    {
+        $post_tab = array('article' => $mypost);
+        //$slide = numaguide_test('slides/slide4', null, $post_tab);
+        $slide = apply_filters('numaguide_test','slides/slide4', null, $post_tab);
+        //echo "lol";
+    } else {
+        //$slide = do_action('numaguide_test','slides/slide4', null, $post_tab);
+        
+        echo "monkey";
     }
+
+    die(var_dump($slide));*/
     ?>
 
     <?php
+
     if (have_posts()) {
         $nbSlide = 1;
 
@@ -47,7 +63,7 @@
             //die(var_dump($post));
             //, null, $post
             //get_template_part('slides/slide4', null, $post_tab);
-            $slide = load_template_part('slides/slide4', null, $post_tab);
+            $slide = apply_filters('numaguide_test','slides/slide4', null, $post_tab);
             $nbSlide = $nbSlide + 1;
         }
 
@@ -70,7 +86,7 @@
             //die(var_dump($post));
             //, null, $post
             //get_template_part('slides/slide4', null, $post_tab);
-            $slide = $slide . load_template_part('slides/slide8', null, $post_tab);
+            $slide = $slide . apply_filters('numaguide_test','slides/slide4', null, $post_tab);
             $nbSlide2 = $nbSlide2 + 1;
         }
     }
@@ -105,7 +121,7 @@
     }
 
 
-    //creer_page('MONKEY NATION', $slide);
+    creer_page('MONKEY NATION', $slide);
 
     ?>
 

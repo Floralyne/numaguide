@@ -16,8 +16,6 @@ function numaguide_register_assets()
   wp_enqueue_script('bootstrap');
   wp_register_style('slide', get_template_directory_uri() . '/assets/css/slides_style/slide.css',  []);
   wp_enqueue_style('slide');
-  // wp_register_style('formulaire', get_template_directory_uri() . '/assets/css/formulaires.css',  []);
-  // wp_enqueue_style('formulaire');
   wp_register_style('page_404', get_template_directory_uri() . '/assets/css/404.css',  []);
   wp_enqueue_style('page_404');
 }
@@ -27,73 +25,24 @@ function numaguide_title_separator()
   return '|';
 }
 
-function admin_css()
-{
-  $admin_handle = 'admin_css';
-  $admin_stylesheet = get_template_directory_uri() . '/assets/css/admin.css';
-
-  wp_enqueue_style($admin_handle, $admin_stylesheet);
-}
-
-// // Ajout des pages dans la bar de menu administrateur
-// function ajout_menu_configuration($wp_admin_bar)
-// {
-//   $args = array(
-//     'id' => 'wp_numaguide',
-//     'title' => 'Numaguide',
-//     'href' => '/',
-//     'meta' => array(
-//       'class' => 'wp_config_numaguide',
-//       'title' => 'Search WPBeginner Tutorials'
-//     )
-//   );
-//   $wp_admin_bar->add_node($args);
-
-
-//   $args = array(
-//     'id' => 'wp_config_numaguide',
-//     'title' => 'Configuration',
-//     'href' => get_template_directory_uri() . '/page_config/form_configuration.php',
-//     'parent' => 'wp_numaguide',
-//     'meta' => array(
-//       'class' => 'wp_config_numaguide',
-//       'title' => 'Configuration'
-//     )
-//   );
-//   $wp_admin_bar->add_node($args);
-
-
-//   $args = array(
-//     'id' => 'wp_creation_numaguide',
-//     'title' => 'Création d\'un guide',
-//     'href' => get_template_directory_uri() . '/page_creation/form_creation.php',
-//     'parent' => 'wp_numaguide',
-//     'meta' => array(
-//       'class' => 'wp_creation_numaguide',
-//       'title' => 'Création d\'un guide'
-//     )
-//   );
-//   $wp_admin_bar->add_node($args);
-
-
-//   $args = array(
-//     'id' => 'wp_liste_numaguide',
-//     'title' => 'Liste des guides',
-//     'href' => get_template_directory_uri() . '/page_liste/form_liste.php',
-//     'parent' => 'wp_numaguide',
-//     'meta' => array(
-//       'class' => 'wp_liste_numaguide',
-//       'title' => 'Liste des guides'
-//     )
-//   );
-//   $wp_admin_bar->add_node($args);
-// }
-// add_action('admin_bar_menu', 'ajout_menu_configuration', 999);
-
-
-add_action('admin_print_styles', 'admin_css', 11);
-
 add_action('after_setup_theme', 'numaguide_supports');
 add_action('wp_enqueue_scripts', 'numaguide_register_assets');
 add_action('wp_enqueue_styles', 'numaguide_register_assets');
 add_filter('document_title_separator', 'numaguide_title_separator');
+
+
+/*add_action( 'numaguide.message', 'numaguide_msg_load_template_part' );
+
+function numaguide_msg_load_template_part()
+{
+    if ( ! function_exists( 'numaguide_load_template_part' ) ) {
+
+        // Show debug info for those who can do something about it.
+        if ( current_user_can( 'manage_option' ) ) {
+            print '<p class="error">Function plugin_frontend_message() not found.</p>';
+        }
+        return;
+    }
+
+    print numaguide_load_template_part();
+}*/

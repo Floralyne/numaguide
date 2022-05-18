@@ -138,6 +138,7 @@ class Numaguide
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
 		$this->loader->add_action('admin_menu', $plugin_admin, 'numaguide_page');
+		$this->loader->add_filter('numaguide_test', $plugin_admin, 'numaguide_load_template_part',10, 3);
 	}
 
 	/**
