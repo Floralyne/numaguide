@@ -13,7 +13,7 @@
  * @param array $variable tableau de variables à injecter dans le template
  * 
  * @return string
-*/
+
     function load_template_part($template_name, $part_name = null, $variable)
     {
         ob_start();
@@ -22,7 +22,20 @@
         ob_end_clean();
         return $var;
         //die(var_dump($var));
+    }*/
+
+    if(function_exists('numaguide_test'))
+    {
+        $post_tab = array('article' => $mypost);
+        //$slide = numaguide_test('slides/slide4', null, $post_tab);
+        $slide = do_action('numaguide_test','slides/slide4', null, $post_tab);
+    } else {
+        //$slide = do_action('numaguide_test','slides/slide4', null, $post_tab);
+        
+        echo "monkey";
     }
+
+    die(var_dump($slide));
     ?>
 
     <?php
