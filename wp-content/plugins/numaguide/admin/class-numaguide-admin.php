@@ -51,19 +51,6 @@ class Numaguide_Admin
 	 */
 	public function enqueue_styles()
 	{
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style($this->numaguide, plugin_dir_url(__FILE__) . 'css/numaguide-admin.css', array(), $this->version, 'all');
 	}
 
@@ -74,19 +61,6 @@ class Numaguide_Admin
 	 */
 	public function enqueue_scripts()
 	{
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_script($this->numaguide, plugin_dir_url(__FILE__) . 'js/plugin-name-admin.js', array('jquery'), $this->version, false);
 	}
 
@@ -159,25 +133,60 @@ class Numaguide_Admin
 	/*
 	* Met en variable un template avec son contenu
 	*
-	* @since Numaguide 0.1
+	* @since Numaguide 1.0.0
 	*
 	* @param string $template_name le path du template
 	* @param string $part_name le nom de la partie du template
-	* @param array $variable tableau de variables à injecter dans le template
+	* @param array $args tableau de variables à injecter dans le template
 	* 
 	* @return string
 	*/
-	function numaguide_load_template_part($template_name, $part_name = null, $variable)
+	function numaguide_genere_slide($template_name, $part_name = null, $args)
 	{
 		
 		ob_start();
-		//die(var_dump($variable));
-		get_template_part($template_name, $part_name, $variable);
+		get_template_part($template_name, $part_name, $args);
 		$var = ob_get_contents();
 		ob_end_clean();
 		return $var;
-		//die(var_dump($var));
 	}
+
+	/*
+	* Creer le guide numérique sous la forme d'une page wordpress.
+	*
+	* @since Numaguide 1.0.0
+	*
+	* @param string $titre_guide Le titre du guide
+	* @param string $content le contenu à placer
+	* @param int $parent_id id d'un parent, par défaut NULL
+	* 
+	* @return int $page_id 
+	*/
+	function numaguide_creer_guide($titre_guide, $content, $parent_id = NULL)
+    {
+        $objPage = get_page_by_title($titre_guide, 'OBJECT', 'page');
+        if (!empty($objPage)) {
+            echo "La page existe déjà:" . $titre_guide . "<br/>";
+            return $objPage->ID;
+        }
+
+        $page_id = wp_insert_post(
+            array(
+                'comment_status' => 'close',
+                'ping_status'    => 'close',
+                'post_author'    => 1,
+                'post_title'     => ucwords($titre_guide),
+                'post_name'      => strtolower(str_replace(' ', '-', trim($titre_guide))),
+                'post_status'    => 'publish',
+                'post_content'   => $content,
+                'post_type'      => 'page',
+                'post_parent'    =>  $parent_id //seulement s'il y en a un
+            )
+        );
+        echo "Le guide numérique" . $titre_guide . "( ID: " . $page_id . ") a été crée !";
+		echo "Retrouvez le à l'adresse : http://localhost/wordpress/" . strtolower(str_replace(' ', '-', trim($titre_guide)));
+        return $page_id;
+    }
 
 }
 

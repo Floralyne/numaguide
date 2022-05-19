@@ -62,7 +62,7 @@
             $post_tab = array('article' => $mypost);
             //, null, $post
             //get_template_part('slides/slide4', null, $post_tab);
-            $slide = apply_filters('numaguide_test','slides/slide_10', null, $post_tab);
+            $slide = apply_filters('ng_genere_slide','slides/slide_11', null, $post_tab);
             $nbSlide = $nbSlide + 1;
         }
 
@@ -85,7 +85,7 @@
             //die(var_dump($post));
             //, null, $post
             //get_template_part('slides/slide4', null, $post_tab);
-            $slide = $slide . apply_filters('numaguide_test','slides/slide_17', null, $post_tab);
+            $slide = $slide . apply_filters('ng_genere_slide','slides/slide_17', null, $post_tab);
             $nbSlide2 = $nbSlide2 + 1;
         }
     }
@@ -94,32 +94,32 @@
 
     <?php
 
-    function creer_page($title_of_the_page, $content, $parent_id = NULL)
-    {
-        $objPage = get_page_by_title($title_of_the_page, 'OBJECT', 'page');
-        if (!empty($objPage)) {
-            echo "La page existe déjà:" . $title_of_the_page . "<br/>";
-            return $objPage->ID;
-        }
+    // function creer_page($title_of_the_page, $content, $parent_id = NULL)
+    // {
+    //     $objPage = get_page_by_title($title_of_the_page, 'OBJECT', 'page');
+    //     if (!empty($objPage)) {
+    //         echo "La page existe déjà:" . $title_of_the_page . "<br/>";
+    //         return $objPage->ID;
+    //     }
 
-        $page_id = wp_insert_post(
-            array(
-                'comment_status' => 'close',
-                'ping_status'    => 'close',
-                'post_author'    => 1,
-                'post_title'     => ucwords($title_of_the_page),
-                'post_name'      => strtolower(str_replace(' ', '-', trim($title_of_the_page))),
-                'post_status'    => 'publish',
-                'post_content'   => $content,
-                'post_type'      => 'page',
-                'post_parent'    =>  $parent_id //'id_of_the_parent_page_if_it_available'
-            )
-        );
-        echo "Created page_id=" . $page_id . " for page '" . $title_of_the_page . "'<br/>";
-        return $page_id;
-    }
+    //     $page_id = wp_insert_post(
+    //         array(
+    //             'comment_status' => 'close',
+    //             'ping_status'    => 'close',
+    //             'post_author'    => 1,
+    //             'post_title'     => ucwords($title_of_the_page),
+    //             'post_name'      => strtolower(str_replace(' ', '-', trim($title_of_the_page))),
+    //             'post_status'    => 'publish',
+    //             'post_content'   => $content,
+    //             'post_type'      => 'page',
+    //             'post_parent'    =>  $parent_id //'id_of_the_parent_page_if_it_available'
+    //         )
+    //     );
+    //     echo "Created page_id=" . $page_id . " for page '" . $title_of_the_page . "'<br/>";
+    //     return $page_id;
+    // }
 
-    creer_page('beaugosse', $slide);
+    apply_filters('ng_creer_guide','RIHAM EST PARTOUT BIS', $slide);
 
     ?>
 
