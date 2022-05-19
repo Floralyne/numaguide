@@ -3,9 +3,9 @@
 <main id="site-content">
 
     <?php
-        $info_slide = array('slide19', 'slides/slide_19');
+        $info_slide = array('slide24', 'slides/slide_24');
         $slide = apply_filters('ng_article_pour_template', $info_slide);
-        apply_filters('ng_creer_guide','Slide CRAST TEST TEST TEST TEST TEST TEST TEst', $slide);
+        apply_filters('ng_creer_guide','amelie big brain 12', $slide);
     ?>
 
 </main>
