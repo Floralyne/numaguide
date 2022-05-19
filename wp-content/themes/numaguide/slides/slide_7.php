@@ -25,7 +25,7 @@
                                 $paragraphes[] = $block;
                             }
                         }
-                        <die var_dump>
+                    
                         echo render_block($paragraphes[0]);
 ?>
                     </div>
