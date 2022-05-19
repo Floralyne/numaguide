@@ -115,11 +115,11 @@ class Numaguide_Admin
 
 		function ng_admin_page_contents()
 		{
-?>
-			<h1>
-				<?php esc_html_e('Test Numaguide', 'Numaguide'); ?>
-			</h1>
-<?php
+			?>
+						<h1>
+							<?php esc_html_e('Test Numaguide', 'Numaguide'); ?>
+						</h1>
+			<?php
 		}
 
 		function ng_submenu_page_content()
@@ -131,7 +131,46 @@ class Numaguide_Admin
 	}
 
 	/*
-	* Met en variable un template avec son contenu
+	* Cherche l'article pour générer l'article.
+	*
+	* @since Numaguide 1.0.0
+	*
+	* @param string $titre_guide Le titre du guide
+	* @param string $content le contenu à placer
+	* @param int $parent_id id d'un parent, par défaut NULL
+	* 
+	* @return int $page_id 
+	*/
+	function numaguide_article_pour_template($info_slide)
+    {
+		//TO DO 
+		//RAJOUTER LES VARIABLES D'ENTREE
+		//POUR AUTOMATISER LA CATEGORIE/ETIQUETTE/GUIDE
+
+		$slide = "";
+		$nbSlide = 1;
+
+        $args = array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'category_name' => $info_slide[0],
+            'tag' => $nbSlide
+        );
+
+		$mypost = get_posts($args);
+
+        if ($mypost) {
+            the_post();
+            $post_tab = array('article' => $mypost);
+            $slide = apply_filters('ng_genere_slide',$info_slide[1], null, $post_tab);
+            $nbSlide = $nbSlide + 1;
+        }
+
+		return $slide;
+	}
+
+	/*
+	* Met en variable un template avec son contenu.
 	*
 	* @since Numaguide 1.0.0
 	*
@@ -166,7 +205,7 @@ class Numaguide_Admin
     {
         $objPage = get_page_by_title($titre_guide, 'OBJECT', 'page');
         if (!empty($objPage)) {
-            echo "La page existe déjà:" . $titre_guide . "<br/>";
+            echo "La page existe déjà: " . $titre_guide;
             return $objPage->ID;
         }
 
@@ -183,11 +222,10 @@ class Numaguide_Admin
                 'post_parent'    =>  $parent_id //seulement s'il y en a un
             )
         );
-        echo "Le guide numérique" . $titre_guide . "( ID: " . $page_id . ") a été crée !";
-		echo "Retrouvez le à l'adresse : http://localhost/wordpress/" . strtolower(str_replace(' ', '-', trim($titre_guide)));
+        echo "Le guide numérique : \"" . $titre_guide . " (ID: " . $page_id . ")\" a été crée ! <br>";
+		echo "<a href=\"http://localhost/wordpress/" . strtolower(str_replace(' ', '-', trim($titre_guide))) . "\">Appuyez pour voir le guide !</a>";
         return $page_id;
     }
-
 }
 
 // // Ajout des pages dans la bar de menu administrateur

@@ -11,106 +11,33 @@
         <div id="slide_13_c" class="container-fluid">
             <div id="slide_13_r" class="row vh-100">
                 <div id="slide_13_div" class="col text-justify mt-auto mb-auto p-5">
-                    <div id="slide_13_titre_principal" class="slide_13_titre">            <?php
+                    <div id="slide_13_titre_principal" class="slide_13_titre">           
+                        <?php
+                            $post_tab = $args['article'];
+                            $post = $post_tab[0];
+                            $blocks = parse_blocks($post->post_content);
 
-//die(var_dump($post));
-//$post = get_post($args);
-//die(var_dump($post));
-//die(var_dump($args['article']));
-
-//$post_tab = $args['article'];
-//$post = $post_tab[0];
-//die(var_dump($post));
-//die(var_dump($post1->post_content));
-$blocks = parse_blocks($post->post_content);
-
-//die(var_dump($blocks));
-foreach ($blocks as $block) {
-    if ($block['blockName'] == 'core/paragraph') {
-        echo render_block($block);
-    }
-}
-?></div>
-                    <div id="slide_13_sous_titre" class="slide_13_sous_titre">Sous-titre : <i>            <?php
-
-//die(var_dump($post));
-//$post = get_post($args);
-//die(var_dump($post));
-//die(var_dump($args['article']));
-
-//$post_tab = $args['article'];
-//$post = $post_tab[0];
-//die(var_dump($post));
-//die(var_dump($post1->post_content));
-$blocks = parse_blocks($post->post_content);
-
-//die(var_dump($blocks));
-foreach ($blocks as $block) {
-    if ($block['blockName'] == 'core/paragraph') {
-        echo render_block($block);
-    }
-}
-?></i></div>
-                    <div id="slide_13_auteur" class="slide_13_auteur">Auteur(s) :             <?php
-
-//die(var_dump($post));
-//$post = get_post($args);
-//die(var_dump($post));
-//die(var_dump($args['article']));
-
-//$post_tab = $args['article'];
-//$post = $post_tab[0];
-//die(var_dump($post));
-//die(var_dump($post1->post_content));
-$blocks = parse_blocks($post->post_content);
-
-//die(var_dump($blocks));
-foreach ($blocks as $block) {
-    if ($block['blockName'] == 'core/paragraph') {
-        echo render_block($block);
-    }
-}
-?></div>
-                    <div id="slide_13_aff" class="slide_13_aff">Affiliation(s) :             <?php
-
-//die(var_dump($post));
-//$post = get_post($args);
-//die(var_dump($post));
-//die(var_dump($args['article']));
-
-//$post_tab = $args['article'];
-//$post = $post_tab[0];
-//die(var_dump($post));
-//die(var_dump($post1->post_content));
-$blocks = parse_blocks($post->post_content);
-
-//die(var_dump($blocks));
-foreach ($blocks as $block) {
-    if ($block['blockName'] == 'core/paragraph') {
-        echo render_block($block);
-    }
-}
-?></div>
-                    <div id="slide_13_clef" class="slide_13_clef">Mots-clés :             <?php
-
-//die(var_dump($post));
-//$post = get_post($args);
-//die(var_dump($post));
-//die(var_dump($args['article']));
-
-//$post_tab = $args['article'];
-//$post = $post_tab[0];
-//die(var_dump($post));
-//die(var_dump($post1->post_content));
-$blocks = parse_blocks($post->post_content);
-
-//die(var_dump($blocks));
-foreach ($blocks as $block) {
-    if ($block['blockName'] == 'core/paragraph') {
-        echo render_block($block);
-    }
-}
-?></div>
+                            $paragraphes = array();
+                            foreach ($blocks as $block) {
+                                if ($block['blockName'] == 'core/paragraph') {
+                                    $paragraphes[] = $block;
+                                }
+                            }
+                            echo render_block($paragraphes[0]);
+                        ?>
+                    </div>
+                    <div id="slide_13_sous_titre" class="slide_13_sous_titre">
+                        Sous-titre : <i><?php echo render_block($paragraphes[1]);?></i>
+                    </div>
+                    <div id="slide_13_auteur" class="slide_13_auteur">
+                        Auteur(s) : <?php echo render_block($paragraphes[2]);?>
+                    </div>
+                    <div id="slide_13_aff" class="slide_13_aff">
+                        Affiliation(s) : <?php echo render_block($paragraphes[3]);?>
+                    </div>
+                    <div id="slide_13_clef" class="slide_13_clef">
+                        Mots-clés : <?php echo render_block($paragraphes[4]);?>
+                    </div>
 
                 </div>
             </div>
