@@ -28,7 +28,7 @@
                 <div id="slide_24_div1" class="row-5 text-center mt-auto mb-auto pt-5">
                     
                     <div id="slide_24_video" class="embed-responsive embed-responsive-21by9">
-                        <iframe class="embed-responsive-item" src=<?=$video?> allowfullscreen></iframe>
+                        <iframe width="100%" height="100%" class="embed-responsive-item" src=<?=$video?> allowfullscreen></iframe>
                       </div>
                       <div id="slide_24_titre" class="text-center p-2"> <?php
                         $post_tab = $args['article'];
