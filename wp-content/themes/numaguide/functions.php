@@ -30,7 +30,6 @@ add_action('wp_enqueue_scripts', 'numaguide_register_assets');
 add_action('wp_enqueue_styles', 'numaguide_register_assets');
 add_filter('document_title_separator', 'numaguide_title_separator');
 
-
 /*add_action( 'numaguide.message', 'numaguide_msg_load_template_part' );
 
 function numaguide_msg_load_template_part()
