@@ -48,12 +48,13 @@
         $args = array(
             'post_type' => 'post',
             'post_status' => 'publish',
-            'category_name' => 'slide11',
+            'category_name' => 'slide10',
             'tag' => $nbSlide
         );
 
+        
+
         $mypost = get_posts($args);
-        //die(var_dump($mypost));
         if ($mypost) {
             the_post();
 
@@ -61,7 +62,7 @@
             $post_tab = array('article' => $mypost);
             //, null, $post
             //get_template_part('slides/slide4', null, $post_tab);
-            $slide = apply_filters('numaguide_test','slides/slide_11', null, $post_tab);
+            $slide = apply_filters('numaguide_test','slides/slide_10', null, $post_tab);
             $nbSlide = $nbSlide + 1;
         }
 
@@ -118,7 +119,7 @@
         return $page_id;
     }
 
-    creer_page('Mirage', $slide);
+    creer_page('beaugosse', $slide);
 
     ?>
 
