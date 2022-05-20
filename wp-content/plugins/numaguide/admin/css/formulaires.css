@@ -3,9 +3,7 @@
 .boutonForm {
     border-radius:5px;
     color:#fff;
-    letter-spacing:0.1rem;
     text-align:center;
-    text-transform:uppercase;
     min-width:125px;
     margin:auto;
     transition:all 0.3s ease-in
@@ -42,7 +40,7 @@
     background-color:#e99350;
     border:2px solid #e99350;
    }
-   
+
    .boutonAction:hover {
     background-color:#fff;
     border:2px solid #e99350;
