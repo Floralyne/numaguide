@@ -61,10 +61,10 @@ class Numaguide_Admin
 	 */
 	public function enqueue_scripts()
 	{
-		wp_enqueue_script($this->numaguide, plugin_dir_url(__FILE__) . 'js/plugin-name-admin.js', array('jquery'), $this->version, false);
+		wp_enqueue_script($this->numaguide, plugin_dir_url(__FILE__) . 'js/numaguide-admin.js', array('jquery'), $this->version, false);
 	}
 
-	function numaguide_page()
+	function numaguide_pages_admin()
 	{
 		add_menu_page(
 			'Numaguide',
@@ -124,9 +124,7 @@ class Numaguide_Admin
 
 		function ng_submenu_page_content()
 		{
-			echo '<div class="wrap">';
-			echo '<h2>Formulaires Numaguide</h2>';
-			echo '</div>';
+			include_once( 'views/view_numaguide_form_creation.php' );
 		}
 	}
 
@@ -226,6 +224,17 @@ class Numaguide_Admin
 		echo "<a href=\"http://localhost/wordpress/" . strtolower(str_replace(' ', '-', trim($titre_guide))) . "\">Appuyez pour voir le guide !</a>";
         return $page_id;
     }
+
+	function numaguide_register_assets()
+	{
+		wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css', []);
+		wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js', ['popper', 'jquery'], false, true);
+		wp_register_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', [], false, true);
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js', [], false, true);
+		wp_enqueue_style('bootstrap');
+		wp_enqueue_script('bootstrap');
+	}
 }
 
 // // Ajout des pages dans la bar de menu administrateur

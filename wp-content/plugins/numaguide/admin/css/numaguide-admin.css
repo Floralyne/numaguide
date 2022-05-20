@@ -154,3 +154,51 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
   font: 100% Poppins, sans-serif;
 }
  */
+
+ /*Apparence des boutons à modifier*/
+
+.boutonForm {
+    border-radius:5px;
+    color:#fff;
+    text-align:center;
+    min-width:125px;
+    margin:auto;
+    transition:all 0.3s ease-in
+   }
+
+   .boutonAjouter {
+    background-color:#35A6B1;
+    border:2px solid #35A6B1;
+   }
+
+   .boutonAjouter:hover {
+    background-color:#fff;
+    color:#35A6B1!important;
+   }
+
+   .boutonSupprimer {
+    background-color:#363440;
+    border:2px solid #363440;
+   }
+
+   .boutonSupprimer:hover {
+    background-color:#fff;
+    color:#363440;
+   }
+   .boutonValider {
+    background-color:#E57654;
+    border:2px solid #E57654!important
+   }
+   .boutonValider:hover {
+    background-color:#fff;
+    color:#E57654
+   }
+   .boutonAction {
+    background-color:#e99350;
+    border:2px solid #e99350;
+   }
+
+   .boutonAction:hover {
+    background-color:#fff;
+    border:2px solid #e99350;
+   }

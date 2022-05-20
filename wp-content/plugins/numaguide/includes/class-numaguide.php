@@ -135,9 +135,11 @@ class Numaguide
 
 		$plugin_admin = new Numaguide_Admin($this->get_numaguide(), $this->get_version());
 
+		$this->loader->add_action('wp_enqueue_scripts', $plugin_admin, 'numaguide_register_assets');
+		$this->loader->add_action('wp_enqueue_styles', $plugin_admin, 'numaguide_register_assets');
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
-		$this->loader->add_action('admin_menu', $plugin_admin, 'numaguide_page');
+		$this->loader->add_action('admin_menu', $plugin_admin, 'numaguide_pages_admin');
 		$this->loader->add_filter('ng_article_pour_template', $plugin_admin, 'numaguide_article_pour_template', 10, 1);
 		$this->loader->add_filter('ng_genere_slide', $plugin_admin, 'numaguide_genere_slide',10, 3);
 		$this->loader->add_filter('ng_creer_guide', $plugin_admin, 'numaguide_creer_guide',10, 3);
@@ -202,4 +204,5 @@ class Numaguide
 	{
 		return $this->version;
 	}
+
 }
