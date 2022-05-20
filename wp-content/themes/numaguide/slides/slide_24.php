@@ -21,7 +21,6 @@
     }
 ?>
 
- 
  <section id="slide_24">
         <div id="slide_24_c" class="container-fluid">
             <div id="slide_24_r" class="row vh-100 vw-100">
