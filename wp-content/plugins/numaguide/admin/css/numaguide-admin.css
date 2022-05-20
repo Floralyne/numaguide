@@ -39,11 +39,11 @@ a,
 #adminmenu .wp-menu-arrow div,
 #adminmenu li.current a.menu-top,
 #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
-	background-color: #2e929c;
+	background-color: #35A6B1;
 }
 
 #adminmenu .wp-submenu-wrap {
-	background-color: #2e929c;
+	background-color: #35A6B1;
 }
 
 #adminmenu div.wp-menu-image::before {
@@ -101,7 +101,7 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 
 #wpadminbar .menupop .ab-sub-wrapper,
 #wpadminbar .shortlink-input {
-	background-color: #2e929c;
+	background-color: #35A6B1;
 }
 
 #collapse-button,
@@ -110,7 +110,7 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 }
 
 #collapse-button:hover {
-	background-color: #2e929c;
+	background-color: #35A6B1;
 	color: #000;
 }
 
