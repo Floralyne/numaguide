@@ -1,5 +1,3 @@
-<?php get_header() ?>
-
 <!-- formulaire de création de guide  -->
     <div class="container">
 
