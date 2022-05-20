@@ -3,7 +3,8 @@
 
 
 <!-- formulaire de renseignement des informations générales du guide -->
-        <h2 class="pt-5 pb-4">Informations du guide</h2>
+        <h2 class="pt-5">Informations du guide</h2>
+        <hr>
 
         <form>
             <div class="form-group pb-sm-2">
@@ -29,7 +30,8 @@
 
 
 <!-- formulaire de création des sections et slides  -->
-            <h2 class="pt-5 pb-sm-4">Création du guide</h2>
+            <h2 class="pt-5">Création du guide</h2>
+            <hr>
 
             <h3 class="pb-sm-4">Thèmes des couleurs</h3>
             <div class="form-group row pb-sm-2">
