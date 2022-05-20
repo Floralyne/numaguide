@@ -14,7 +14,7 @@
 
             <div class="form-group pb-sm-2">
                 <label for="url_guide">URL du guide :</label>
-                <input type="url" class="form-control" name="url du guide" value="http:/numaguide.fr/" required><br><br>
+                <input type="url" class="form-control" name="url du guide" value="http:/numaguide.fr/" required>
             </div>
 
             <div class="form-group pb-sm-2">
@@ -36,11 +36,11 @@
             <div class="soustitreForm">Thèmes colorés</div>
             <div class="form-group row pb-sm-2">
                 <div class="col-sm">
-                    <button type="button" class="boutonForm boutonAction">Printemps</button>
+                    <button type="button" class="boutonForm boutonAjouter">Printemps</button>
                 </div>
-                <div class="col-sm"> <button type="button" class="boutonForm boutonAction">Jour</button>
+                <div class="col-sm"> <button type="button" class="boutonForm boutonAjouter">Jour</button>
                 </div>
-                <div class="col-sm"><button type="button" class="boutonForm boutonAction">Nuit</button>
+                <div class="col-sm"><button type="button" class="boutonForm boutonAjouter">Nuit</button>
                 </div>
 
             </div>
@@ -80,7 +80,7 @@
                     </div>
 
                     <div class="form-group pb-sm-2">
-                        <button type="button" class="boutonForm boutonValider">Aperçu</button>
+                        <button type="button" class="boutonForm boutonAction">Aperçu</button>
                         <button type="button" class="boutonForm boutonValider">Valider</button>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
 
 
             <div class="form-group pb-sm-2">
-                <button type="button" class="boutonForm boutonSupprimer" id="supprimer_section">Supprimer une
+                <button type="button" class="boutonForm boutonSupprimer" id="supprimer_section" onClick="alert('Supprimer ?')">Supprimer une
                     section</button>
                 <button type="button" class="boutonForm boutonAjouter" id="ajout_section">Ajouter une
                     section</button>

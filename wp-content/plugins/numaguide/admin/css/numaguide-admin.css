@@ -160,22 +160,22 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 	margin: 1rem;
 }
 
-.boutonAjouter {
+.boutonValider {
     background-color: #35A6B1;
     border: 2px solid #35A6B1;
 }
 
-.boutonAjouter:hover {
+.boutonValider:hover {
     background-color: #fff;
 }
 
-.boutonValider{
+.boutonAjouter{
     background-color: #363440;
     border: 2px solid #363440;
     color: #fff;
 }
 
-.boutonValider:hover {
+.boutonAjouter:hover {
     background-color: #fff;
     color: #000000;
 }
@@ -209,5 +209,5 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 
 .soustitreForm{
 	margin-top: 1rem;
-	font-size: 16pt;
+	font-size: 15pt;
 }
