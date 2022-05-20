@@ -144,61 +144,54 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 	background-color: #1d2327;
 }
 
- /* Formulaires */
+/*** Formulaires ***/
 
- /*
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
-
-.container {
-  font: 100% Poppins, sans-serif;
-}
- */
-
- /*Apparence des boutons à modifier*/
+/*Apparence des boutons du formulaire*/
 
 .boutonForm {
-    border-radius:5px;
-    color:#fff;
-    text-align:center;
-    min-width:125px;
-    margin:auto;
-    transition:all 0.3s ease-in
-   }
+    border-radius: 5px;
+    color: #000000;
+    text-align: center;
+    min-width: 125px;
+    margin: auto;
+    transition: all 0.3s ease-in
+}
 
-   .boutonAjouter {
-    background-color:#35A6B1;
-    border:2px solid #35A6B1;
-   }
+.boutonAjouter {
+    background-color: #35A6B1;
+    border: 2px solid #35A6B1;
+}
 
-   .boutonAjouter:hover {
-    background-color:#fff;
-    color:#35A6B1!important;
-   }
+.boutonAjouter:hover {
+    background-color: #fff;
+}
 
-   .boutonSupprimer {
-    background-color:#363440;
-    border:2px solid #363440;
-   }
+.boutonSupprimer {
+    background-color: #363440;
+    border: 2px solid #363440;
+    color: #fff;
+}
 
-   .boutonSupprimer:hover {
-    background-color:#fff;
-    color:#363440;
-   }
-   .boutonValider {
-    background-color:#E57654;
-    border:2px solid #E57654!important
-   }
-   .boutonValider:hover {
-    background-color:#fff;
-    color:#E57654
-   }
-   .boutonAction {
-    background-color:#e99350;
-    border:2px solid #e99350;
-   }
+.boutonSupprimer:hover {
+    background-color: #fff;
+    color: #000000;
+}
 
-   .boutonAction:hover {
-    background-color:#fff;
-    border:2px solid #e99350;
-   }
+.boutonValider {
+    background-color: #E57654;
+    border: 2px solid #E57654 !important
+}
+
+.boutonValider:hover {
+    background-color: #fff;
+}
+
+.boutonAction {
+    background-color: #e99350;
+    border: 2px solid #e99350;
+}
+
+.boutonAction:hover {
+    background-color: #fff;
+    border: 2px solid #e99350;
+}
