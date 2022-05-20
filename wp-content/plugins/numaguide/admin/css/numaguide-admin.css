@@ -169,23 +169,23 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
     background-color: #fff;
 }
 
-.boutonSupprimer {
+.boutonValider{
     background-color: #363440;
     border: 2px solid #363440;
     color: #fff;
 }
 
-.boutonSupprimer:hover {
+.boutonValider:hover {
     background-color: #fff;
     color: #000000;
 }
 
-.boutonValider {
+.boutonSupprimer{
     background-color: #E57654;
     border: 2px solid #E57654 !important
 }
 
-.boutonValider:hover {
+.boutonSupprimer:hover {
     background-color: #fff;
 }
 
@@ -197,4 +197,17 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 .boutonAction:hover {
     background-color: #fff;
     border: 2px solid #e99350;
+}
+
+/***Titres du formulaire***/
+
+.titreForm{
+	font-weight: bold;
+	margin-top: 1rem;
+	font-size: 18pt;
+}
+
+.soustitreForm{
+	margin-top: 1rem;
+	font-size: 16pt;
 }

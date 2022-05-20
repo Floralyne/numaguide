@@ -3,7 +3,7 @@
 
 
 <!-- formulaire de renseignement des informations générales du guide -->
-        <h2 class="pt-5">Informations du guide</h2>
+        <div class="titreForm">Informations du guide</div>
         <hr>
 
         <form>
@@ -30,10 +30,10 @@
 
 
 <!-- formulaire de création des sections et slides  -->
-            <h2 class="pt-5">Création du guide</h2>
+<div class="titreForm">Création du guide</div>
             <hr>
 
-            <h3 class="pb-sm-4">Thèmes des couleurs</h3>
+            <div class="soustitreForm">Thèmes colorés</div>
             <div class="form-group row pb-sm-2">
                 <div class="col-sm">
                     <button type="button" class="boutonForm boutonAction">Printemps</button>
@@ -48,10 +48,11 @@
             <div class="container-section" id="container-section">
                 <div class="row">
                     <div class="col-sm">
-                        <h3>Section</h3>
+                    <div class="soustitreForm">Section</div>
+
                     </div>
                     <div class="col-sm">
-                        <a class="boutonForm boutonSupprimer" data-toggle="collapse" href="#section_exemple" role="button"
+                        <a class="boutonForm boutonAction" data-toggle="collapse" href="#section_exemple" role="button"
                             aria-expanded="false" aria-controls="section_exemple">Replier la section</a>
                     </div>
                 </div>
@@ -168,7 +169,7 @@
             <div class="form-group pb-sm-2">
                 <button type="button" class="boutonForm boutonSupprimer" id="supprimer_section">Supprimer une
                     section</button>
-                <button type="button" class="boutonForm boutonSupprimer" id="ajout_section">Ajouter une
+                <button type="button" class="boutonForm boutonAjouter" id="ajout_section">Ajouter une
                     section</button>
             </div>
 
