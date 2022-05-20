@@ -34,11 +34,11 @@
             <h3 class="pb-sm-4">Thèmes des couleurs</h3>
             <div class="form-group row pb-sm-2">
                 <div class="col-sm">
-                    <button type="button" class="btn btn-light btn-lg btn-block">Printemps</button>
+                    <button type="button" class="boutonForm boutonAction">Printemps</button>
                 </div>
-                <div class="col-sm"> <button type="button" class="btn btn-light btn-lg btn-block">Jour</button>
+                <div class="col-sm"> <button type="button" class="boutonForm boutonAction">Jour</button>
                 </div>
-                <div class="col-sm"><button type="button" class="btn btn-light btn-lg btn-block">Nuit</button>
+                <div class="col-sm"><button type="button" class="boutonForm boutonAction">Nuit</button>
                 </div>
 
             </div>
@@ -49,7 +49,7 @@
                         <h3>Section</h3>
                     </div>
                     <div class="col-sm">
-                        <a class="btn btn-dark float-right" data-toggle="collapse" href="#section_exemple" role="button"
+                        <a class="boutonForm boutonSupprimer" data-toggle="collapse" href="#section_exemple" role="button"
                             aria-expanded="false" aria-controls="section_exemple">Replier la section</a>
                     </div>
                 </div>
@@ -73,12 +73,12 @@
 
 
                     <div class="form-group pb-sm-2">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Ajouter une slide</button>
+                        <button type="button" class="boutonForm boutonAjouter">Ajouter une slide</button>
                     </div>
 
                     <div class="form-group pb-sm-2">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Aperçu</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Valider</button>
+                        <button type="button" class="boutonForm boutonValider">Aperçu</button>
+                        <button type="button" class="boutonForm boutonValider">Valider</button>
                     </div>
                 </div>
             </div>
@@ -164,9 +164,9 @@
 
 
             <div class="form-group pb-sm-2">
-                <button type="button" class="btn btn-light btn-lg btn-block btn-add" id="supprimer_section">Supprimer une
+                <button type="button" class="boutonForm boutonSupprimer" id="supprimer_section">Supprimer une
                     section</button>
-                <button type="button" class="boutonForm boutonAjouter" id="ajout_section">Ajouter une
+                <button type="button" class="boutonForm boutonSupprimer" id="ajout_section">Ajouter une
                     section</button>
             </div>
 

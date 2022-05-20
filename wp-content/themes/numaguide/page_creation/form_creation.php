@@ -22,7 +22,7 @@
 
     <script src="formulaires.js"></script>
 
-    <link rel="stylesheet" href="formulaires.css" />
+    <link rel="stylesheet" href="numaguide-admin.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -84,7 +84,7 @@
                         <h3>Section</h3>
                     </div>
                     <div class="col-sm">
-                        <a class="btn btn-dark float-right" data-toggle="collapse" href="#section_exemple" role="button"
+                        <a class="boutonForm bouton" data-toggle="collapse" href="#section_exemple" role="button"
                             aria-expanded="false" aria-controls="section_exemple">Replier la section</a>
                     </div>
                 </div>

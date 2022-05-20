@@ -152,9 +152,12 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
     border-radius: 5px;
     color: #000000;
     text-align: center;
-    min-width: 125px;
-    margin: auto;
-    transition: all 0.3s ease-in
+    transition: all 0.3s ease-in;
+	display: block;
+	width: 100%;
+	border: 2px solid;
+	padding: .5rem 1rem;
+	margin: 1rem;
 }
 
 .boutonAjouter {
