@@ -75,70 +75,7 @@
                 </div>
 
             </div>
-<<<<<<< Updated upstream
-    
-            <div class="container-section" id="container-section">
-                <div class="row">
-                    <div class="col-sm">
-                        <h3>Section</h3>
-                    </div>
-                    <div class="col-sm">
-                        <a class="boutonForm bouton" data-toggle="collapse" href="#section_exemple" role="button"
-                            aria-expanded="false" aria-controls="section_exemple">Replier la section</a>
-                    </div>
-                </div>
-                <hr>
-                <div class="collapse" id="section_exemple">
-                    <div class="form-group pb-sm-2">
-                        <label for="nom_section1">Nom de la section : </label>
-                        <input type="text" class="form-control" name="nom de la section" required>
-                    </div>
-
-
-                    <h4>Slide</h4>
-
-                    <div class="form-group pb-sm-2">
-                        <textarea style="width: 700px; height: 200px; font-size: 15px;"
-                            placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft"
-                            class="form-control"></textarea>
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
-                            class="parcourir">
-                    </div>
-
-
-                    <div class="form-group pb-sm-2">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Ajouter une slide</button>
-                    </div>
-
-                    <div class="form-group pb-sm-2">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Aperçu</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Valider</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Deuxième section pouvant être présente d'emblée, comme sur le template ; retirée pour le moment pour simplifier la création de section par le js ;  -->
-            <!-- <div class="row">
-                <div class="col-sm">
-                    <h3>Section</h3>
-                </div>
-                <div class="col-sm">
-                    <a class="btn btn-dark float-right" data-toggle="collapse" href="#section2" role="button"
-                        aria-expanded="false" aria-controls="section2">Replier la section</a>
-                </div>
-
-            </div>
-            <hr>
-
-            <div id="section2" class="collapse">
-                <div class="form-group pb-sm-2">
-                    <label for="nom_section1">Nom de la section : </label>
-                    <input type="text" class="form-control" name="nom de la section" required>
-                </div>
-                <h4>Slide</h4>
-=======
->>>>>>> Stashed changes
-
+            
             <div class="container-section" id="container-section">
                 <details>
                     <summary>Section</summary>
