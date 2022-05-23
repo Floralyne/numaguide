@@ -20,87 +20,22 @@ function urlFonction() {
     <!-- formulaire de renseignement des informations générales du guide -->
     <div class="titreForm">Informations du guide</div>
     <hr>
-
     <form>
         <div class="form-group pb-sm">
             <label for="nom_guide">Titre du guide :</label>
             <input type="text" class="form-control" name="nom du guide" required>
         </div>
-
         <div class="form-group pb-sm">
         <label for="auteur_guide">Lien du guide :</label>
         <div class="input-group mb-2">
             <div class="input-group-prepend">
                 <div class="input-group-text">
                 http://numaguide.msh-vdl.fr/
-
-        <div class="form-group pb-sm-2">
-            <label for="auteur_guide">Auteur(es) du guide :</label>
-            <input type="auteur" class="form-control" name="auteur du guide" required>
-        </div>
-
-        <div class="form-check pb-sm-2">
-            <input type="checkbox" class="form-check-input" name="visibilité du guide" required>
-            <label for="visibilite_guide" class="form-check-label">Indexer le guide sur les moteurs de
-                recherches</label>
-        </div>
-
-
-        <!-- formulaire de création des sections et slides  -->
-        <div class="titreForm">Création du guide</div>
-        <hr>
-
-        <div class="soustitreForm">Thèmes colorés</div>
-        <div class="form-group row pb-sm-2">
-            <div class="col-sm">
-                <button type="button" class="boutonForm boutonAjouter">Printemps</button>
-            </div>
-            <div class="col-sm"> <button type="button" class="boutonForm boutonAjouter">Jour</button>
-            </div>
-            <div class="col-sm"><button type="button" class="boutonForm boutonAjouter">Nuit</button>
-            </div>
-
-        </div>
-
-        <div class="container-section" id="container-section">
-            <details open>
-                <summary class="soustitreForm">Section</summary>
-
-                <hr>
-                <div id="section_exemple">
-                    <div class="form-group pb-sm-2">
-                        <label for="nom_section1">Nom de la section : </label>
-                        <input type="text" class="form-control" name="nom de la section" required>
-                    </div>
-
-                    <div id="container-slide">
-                        <h4>Slide</h4>
-
-                        <div class="form-group pb-sm-2">
-                            <textarea style="width: 700px; height: 200px; font-size: 15px;"
-                                placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft"
-                                class="form-control"></textarea>
-                            <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
-                                class="parcourir">
-                        </div>
-                    </div>
-
-                    <div class="form-group pb-sm-2">
-                        <button type="button" class="boutonForm boutonAjouter" id="#ajout_slide">Ajouter une
-                            slide</button>
-                    </div>
-
-                    <div class="form-group pb-sm-2">
-                        <button type="button" class="boutonForm boutonAction">Aperçu</button>
-                        <button type="button" class="boutonForm boutonValider">Valider</button>
-                    </div>
                 </div>
             </div>
             <input class="form-control" type="text" placeholder="Adresse du guide" required>
         </div>
 </div>
-
-
 <div class="form-group pb-sm">
     <label for="auteur_guide">Auteur(es) du guide :</label>
     <input type="auteur" class="form-control" name="auteur du guide" required>
@@ -108,19 +43,15 @@ function urlFonction() {
       Nom de famille en majuscules, prénom en minuscules, séparer les noms d'une virgule si plusieurs auteurs.
     </small>
 </div>
-
 <div class="form-check" id="divIndexer">
     <input id="indexer" type="checkbox" class="form-check-input mr-2 mt-auto mb-auto" name="visibilité du guide"
         required>
     <label for="visibilite_guide" class="form-check-label">Indexer le guide sur les moteurs de
         recherches</label>
 </div>
-
-
 <!-- formulaire de création des sections et slides  -->
 <div class="titreForm">Création du guide</div>
 <hr>
-
 <div class="soustitreForm">Thèmes colorés</div>
 <div class="form-group row">
     <div class="col">
@@ -133,28 +64,21 @@ function urlFonction() {
     <div class="col"><button type="button" class="boutonForm boutonAjouter">Sombre</button>
     </div>
 </div>
-
 <div class="container-section" id="container-section">
     <details open>
         <summary class="soustitreForm">Section</summary>
-
         <hr>
         <div id="section_exemple">
             <div class="form-group pb-sm">
                 <label for="nom_section1">Nom de la section : </label>
                 <input type="text" class="form-control" name="nom de la section" required>
             </div>
-
-
             <div class="soustitreForm">Slide :</div>
-
             <div class="form-group pb-sm">
                 <textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft"
                     class="form-control mb-3"></textarea>
                 <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir">
             </div>
-
-
             <div class="form-group">
                 <button type="button" class="boutonForm boutonAjouter boutonPetit ml-auto mr-auto">Ajouter une
                     slide</button>
@@ -169,7 +93,6 @@ function urlFonction() {
             </div>
         </div>
 </div>
-
 <div class="form-group">
     <div class="form-group row">
         <div class="col-sm">
