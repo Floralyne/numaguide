@@ -55,13 +55,60 @@
         <div class="soustitreForm">Thèmes colorés</div>
         <div class="form-group row">
             <div class="col">
-                <button type="button" class="boutonForm boutonAjouter">NumaGuide</button>
+                <button type="button" class="boutonForm boutonAjouter" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseExample" data-target="#numaguide">NumaGuide</button>
+                <div class="collapse" id="numaguide">
+                    <div class="card card-body" id="palettenumaguide">
+                        <div id="numa363440">#363440</div>
+                        <div id="numa35A6B1">#35A6B1</div>
+                        <div id="numaE57654">#E57654</div>
+                        <div id="numaE99350">#E99350</div>
+                        <div id="numaFFF">#FFFFFF</div>
+                    </div>
+                </div>
+                </button>
             </div>
-            <div class="col"> <button type="button" class="boutonForm boutonAjouter">Pastel</button>
+            <div class="col">
+                <button type="button" class="boutonForm boutonAjouter" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseExample" data-target="#pastel">Pastel</button>
+                <div class="collapse" id="pastel">
+                    <div class="card card-body" id="palettepastel">
+                        <div id="numaEEF9FF">#EEF9FF</div>
+                        <div id="numaFFF7FC">#FFF7FC</div>
+                        <div id="numaFFFDED">#FFFDED</div>
+                        <div id="numaFFF7EC">#FFF7EC</div>
+                        <div id="numaFFFBFB">#FFFBFB</div>
+                    </div>
+                </div>
+                </button>
             </div>
-            <div class="col"><button type="button" class="boutonForm boutonAjouter">Automne</button>
+            <div class="col">
+                <button type="button" class="boutonForm boutonAjouter" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseExample" data-target="#automne">Automne</button>
+                <div class="collapse" id="automne">
+                    <div class="card card-body" id="paletteautomne">
+                        <div id="numaC58768">#C58768</div>
+                        <div id="numa313232">#313232</div>
+                        <div id="numaF5F1DF">#F5F1DF</div>
+                        <div id="numaA2B1A7">#A2B1A7</div>
+                        <div id="numa817677">#817677</div>
+                    </div>
+                </div>
+                </button>
             </div>
-            <div class="col"><button type="button" class="boutonForm boutonAjouter">Sombre</button>
+            <div class="col">
+                <button type="button" class="boutonForm boutonAjouter" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseExample" data-target="#sombre">Sombre</button>
+                <div class="collapse" id="sombre">
+                    <div class="card card-body" id="palettesombre">
+                        <div id="numa002029">#002029</div>
+                        <div id="numa0C1D1D">#0C1D1D</div>
+                        <div id="numa0E1717">#0E1717</div>
+                        <div id="numa170E1D">#170E1D</div>
+                        <div id="numa100F0F">#100F0F</div>
+                    </div>
+                </div>
+                </button>
             </div>
         </div>
         <div class="container-section" id="container-section">
