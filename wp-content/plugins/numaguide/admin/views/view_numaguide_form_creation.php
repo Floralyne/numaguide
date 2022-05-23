@@ -1,3 +1,19 @@
+<script> 
+function urlFonction() {
+	if (document.getElementById(
+	  "nomGuide").value) {
+		document.getElementById(
+		  "urlGuide").value = document.getElementById(
+			  "nomGuide").replace(' ', '-').toLowerCase().value;
+	} else {
+		document.getElementById(
+		  "secondaryaddress").value = "";
+		document.getElementById(
+		  "secondaryzip").value = "";
+	}
+}
+</script>
+
 <!-- formulaire de création de guide  -->
 <div class="container">
 
@@ -6,16 +22,16 @@
     <div class="titreForm">Informations du guide</div>
     <hr>
 
-    <form>
-        <div class="form-group pb-sm-2">
-            <label for="nom_guide">Nom du guide :</label>
-            <input type="text" class="form-control" name="nom du guide" required>
-        </div>
+        <form>
+            <div class="form-group pb-sm-2">
+                <label for="nom_guide">Nom du guide :</label>
+                <input type="text" id="nomGuide" class="form-control" name="nom du guide" onchange="urlFonction()" required>
+            </div>
 
-        <div class="form-group pb-sm-2">
-            <label for="url_guide">URL du guide :</label>
-            <input type="url" class="form-control" name="url du guide" value="http:/numaguide.fr/" required>
-        </div>
+            <div class="form-group pb-sm-2">
+                <label for="url_guide">URL du guide :</label>
+                <input type="url" id="urlGuide" class="form-control" name="url du guide" required>
+            </div>
 
         <div class="form-group pb-sm-2">
             <label for="auteur_guide">Auteur(es) du guide :</label>
