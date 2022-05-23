@@ -157,7 +157,7 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 	width: 100%;
 	border: 2px solid;
 	padding: .5rem 1rem;
-	margin: 1rem;
+	margin-bottom:0.5rem;
 }
 
 .boutonValider {
@@ -210,4 +210,32 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 .soustitreForm{
 	margin-top: 1rem;
 	font-size: 15pt;
+	margin-bottom: 1rem;
+}
+
+#formCrea{
+	max-width: 65%;
+}
+
+#validerGuide{
+	margin-top: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#indexer{
+	position:relative;
+}
+
+#divIndexer{
+	padding:0;
+}
+
+.boutonMarges{
+	
+	margin-top: 0.5rem;
+}
+
+.boutonPetit{
+	width:60%;
 }
