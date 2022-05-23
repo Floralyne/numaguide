@@ -242,12 +242,14 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 
 #select_slide {
 	display: none;
-	
+}
+
 /**Palettes**/
 
 /*Palette Numaguide*/
 
-#palettenumaguide{
+#palettenumaguide
+{
 	text-align: center;
 }
 
