@@ -1,15 +1,42 @@
+<div class="container">
+        <h2 class="pb-sm-4">Renseignement des métadonnées</h2>
+
+        <form name="form" action="" method="post">
+            <div class="form-group pb-sm-2">
+                <label for="title">Titre :</label>
+                <input type="text" class="form-control" name="title" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="author">Auteur(s) :</label>
+                <input type="text" class="form-control" name="author" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="url">URL</label>
+                <input type="url" class="form-control" value="https://numaguide.fr/" required>
+            </div>
+            <input type=submit name="ok" value="Envoyer">
+        </form>
 <?php
-$dom = new DOMDocument('1.0', 'utf-8');
+        if(isset($_POST['ok'])){
+    $donnee_titre = $_POST['title'];
+    $donnee_auteur = $_POST['author'];
+}
+?>
+
+<?php
+
+$dom = new DOMDocument('1.0', 'utf-8'); 
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
 
 //create the main tags, without values
 $donnees = $dom->createElement('donnees');
 $donnee_1 = $dom->createElement('donnee');
-
 // create some tags with values
-$nom_1 = $dom->createElement('nom', 'Guide');
-$domaine_1 = $dom->createElement('domaine', 'culture et patrimoine');
+$nom_1 = $dom->createElement('nom', $donnee_titre);
+$domaine_1 = $dom->createElement('domaine', 'culture et ');
 $id_1 = $dom->createElement('id', '1');
 
 //create  and append an attribute
@@ -46,6 +73,9 @@ $dom->appendChild($donnees);
 
 //saveXML() method returns the XML in a String
 $tag = $dom->saveXML($dom->documentElement);
-echo htmlspecialchars($tag);
-?> 
 
+if(isset($_POST['ok'])){
+    echo htmlspecialchars($tag);
+}
+?>
+<div>
