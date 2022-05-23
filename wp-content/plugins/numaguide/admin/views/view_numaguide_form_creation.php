@@ -1,19 +1,3 @@
-<script>
-    function urlFonction() {
-        if (document.getElementById(
-            "nomGuide").value) {
-            document.getElementById(
-                "urlGuide").value = document.getElementById(
-                    "nomGuide").replace(' ', '-').toLowerCase().value;
-        } else {
-            document.getElementById(
-                "secondaryaddress").value = "";
-            document.getElementById(
-                "secondaryzip").value = "";
-        }
-    }
-</script>
-
 <!-- formulaire de création de guide  -->
 <div class="container" id="formCrea">
 
@@ -23,7 +7,7 @@
     <form>
         <div class="form-group pb-sm">
             <label for="nom_guide">Titre du guide :</label>
-            <input type="text" class="form-control" id="nomGuide" onClick="urlFonction()" name="nom du guide" required>
+            <input type="text" class="form-control" id="nomGuide" onChange="urlFonction()" name="nom du guide" required>
         </div>
         <div class="form-group pb-sm">
             <label for="auteur_guide">Lien du guide :</label>

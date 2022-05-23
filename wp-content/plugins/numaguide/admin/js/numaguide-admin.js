@@ -67,3 +67,20 @@ function format_slide() {
 		format.style.display ="none"
 	}
 }
+
+function urlFonction() {
+	console.log(document.getElementById(
+		"nomGuide").value);
+	if (document.getElementById("nomGuide").value) {
+			$str = document.getElementById("nomGuide").value;
+			var regex = new RegExp("\\\W|_", "g");
+			var replace = "-";
+		document.getElementById("urlGuide").value = $str.replace(regex, replace).toLowerCase();
+	} else {
+		document.getElementById(
+			"secondaryaddress").value = "";
+		document.getElementById(
+			"secondaryzip").value = "";
+	}
+}
+
