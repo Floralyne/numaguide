@@ -72,20 +72,21 @@ function urlFonction() {
                         <input type="text" class="form-control" name="nom de la section" required>
                     </div>
 
+                    <div id="container-slide">
+                        <h4>Slide</h4>
 
-                    <h4>Slide</h4>
-
-                    <div class="form-group pb-sm-2">
-                        <textarea style="width: 700px; height: 200px; font-size: 15px;"
-                            placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft"
-                            class="form-control"></textarea>
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
-                            class="parcourir">
+                        <div class="form-group pb-sm-2">
+                            <textarea style="width: 700px; height: 200px; font-size: 15px;"
+                                placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft"
+                                class="form-control"></textarea>
+                            <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                                class="parcourir">
+                        </div>
                     </div>
 
-
                     <div class="form-group pb-sm-2">
-                        <button type="button" class="boutonForm boutonAjouter">Ajouter une slide</button>
+                        <button type="button" class="boutonForm boutonAjouter" id="#ajout_slide">Ajouter une
+                            slide</button>
                     </div>
 
                     <div class="form-group pb-sm-2">
