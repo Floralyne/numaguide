@@ -37,7 +37,7 @@
 
       $("#section" + i).append(nouvelle_section);
 
-      $("#container-section").append('<tr id="section' + (i + 1) + '"></tr>');
+      $("#container-section").append('<div id="section' + (i + 1) + '"></div>');
       i++;
     });
 
@@ -52,7 +52,7 @@
       var nouvelle_slide =
         '<label for="select-slide">Choisir un format de slide :</label> <select> <option value="">------</option> <option value="1">Slide 1</option> <option value="2">Slide 2</option> <option value="3">Slide 3</option> <option value="4">Slide 4</option> <option value="5">Slide 5</option> <option value="6">Slide 6</option> <option value="7">Slide 7</option> <option value="8">Slide 9</option> <option value="9">Slide 10</option> <option value="10">Slide 11</option> <option value="11">Slide 12</option> <option value="12">Slide 13</option> <option value="13">Slide 14</option> <option value="14">Slide 15</option> <option value="15">Slide 16</option> <option value="16">Slide 17</option> <option value="18">Slide 18</option> </select>';
 		$("#container-slide" + (i + 1)).append(nouvelle_slide);
-		$("#section" + i).append('<tr id="container-slide' + (i + 1) + '"></tr>');
+		$("#section" + i).append('<div id="container-slide' + (i + 1) + '"></div>');
       i++;
     });
   });
