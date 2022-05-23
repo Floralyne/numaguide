@@ -7,7 +7,7 @@
     <form>
         <div class="form-group pb-sm">
             <label for="nom_guide">Titre du guide :</label>
-            <input type="text" class="form-control" id="nomGuide" onChange="urlFonction()" name="nom du guide" required>
+            <input type="text" class="form-control" id="nomGuide" onChange="urlFonction()" name="nom du guide" maxlength="40" required>
         </div>
         <div class="form-group pb-sm">
             <label for="auteur_guide">Lien du guide :</label>
@@ -17,7 +17,7 @@
                         http://numaguide.msh-vdl.fr/
                     </div>
                 </div>
-                <input class="form-control" type="text" id="urlGuide" placeholder="Adresse du guide" required>
+                <input class="form-control" type="text" pattern="/\W|_/g" maxlength="20" id="urlGuide" placeholder="Adresse du guide" required>
             </div>
         </div>
         <div class="form-group pb-sm">
