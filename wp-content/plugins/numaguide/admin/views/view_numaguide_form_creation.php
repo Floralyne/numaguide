@@ -69,14 +69,15 @@
                 <summary class="soustitreForm">Section</summary>
                 <hr>
                 <div id="section_exemple">
-                    <div class="form-group pb-sm">
+                    <div class="form-group pb-2">
                         <label for="nom_section1">Nom de la section : </label>
                         <input type="text" class="form-control" name="nom de la section" required>
                     </div>
-                    <div class="soustitreForm">Slide :</div>
+                    <hr>
+                    <div>Slide :</div>
                     <div class="form-group pb-sm">
                         <textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft"
-                            class="form-control mb-3"></textarea>
+                            class="form-control mb-3 mt-3"></textarea>
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
                             class="parcourir">
                     </div>
