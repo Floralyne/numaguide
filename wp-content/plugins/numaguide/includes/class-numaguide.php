@@ -140,7 +140,6 @@ class Numaguide
 		$this->loader->add_action('admin_menu', $plugin_admin, 'numaguide_pages_admin');
 		$this->loader->add_filter('ng_article_pour_template', $plugin_admin, 'numaguide_article_pour_template', 10, 1);
 		$this->loader->add_filter('ng_genere_slide', $plugin_admin, 'numaguide_genere_slide',10, 3);
-		$this->loader->add_filter('ng_creer_guide', $plugin_admin, 'numaguide_creer_guide',10, 3);
 	}
 
 	/**
