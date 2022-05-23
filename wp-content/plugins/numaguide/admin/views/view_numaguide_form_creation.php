@@ -55,8 +55,10 @@
         <div class="soustitreForm">Thèmes colorés</div>
         <div class="form-group row">
             <div class="col">
-                <button type="button" class="boutonForm boutonAjouter" data-toggle="collapse" aria-expanded="false"
-                    aria-controls="collapseExample" data-target="#numaguide">NumaGuide</button>
+            <label class="boutonForm boutonAjouter">
+                    <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="collapseExample" data-target="#numaguide">NumaGuide
+                </label>
                 <div class="collapse" id="numaguide">
                     <div class="card card-body" id="palettenumaguide">
                         <div id="numa363440">#363440</div>
@@ -69,8 +71,10 @@
                 </button>
             </div>
             <div class="col">
-                <button type="button" class="boutonForm boutonAjouter" data-toggle="collapse" aria-expanded="false"
-                    aria-controls="collapseExample" data-target="#pastel">Pastel</button>
+                <label class="boutonForm boutonAjouter">
+                    <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="collapseExample" data-target="#pastel">Pastel
+                </label>
                 <div class="collapse" id="pastel">
                     <div class="card card-body" id="palettepastel">
                         <div id="numaEEF9FF">#EEF9FF</div>
@@ -83,8 +87,10 @@
                 </button>
             </div>
             <div class="col">
-                <button type="button" class="boutonForm boutonAjouter" data-toggle="collapse" aria-expanded="false"
-                    aria-controls="collapseExample" data-target="#automne">Automne</button>
+            <label class="boutonForm boutonAjouter">
+                    <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="collapseExample" data-target="#automne">Automne
+                </label>
                 <div class="collapse" id="automne">
                     <div class="card card-body" id="paletteautomne">
                         <div id="numaC58768">#C58768</div>
@@ -97,8 +103,10 @@
                 </button>
             </div>
             <div class="col">
-                <button type="button" class="boutonForm boutonAjouter" data-toggle="collapse" aria-expanded="false"
-                    aria-controls="collapseExample" data-target="#sombre">Sombre</button>
+            <label class="boutonForm boutonAjouter">
+                    <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="collapseExample" data-target="#sombre">Sombre
+                </label>
                 <div class="collapse" id="sombre">
                     <div class="card card-body" id="palettesombre">
                         <div id="numa002029">#002029</div>
