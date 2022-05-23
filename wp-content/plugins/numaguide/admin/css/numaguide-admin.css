@@ -211,3 +211,19 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 	margin-top: 1rem;
 	font-size: 15pt;
 }
+
+#formCrea{
+	max-width: 65%;
+}
+
+#validerGuide{
+	margin-top: 10%;
+width: 80%;
+}
+
+/* @media (min-width: 1200px) {
+	#formCrea {
+		width: 40% !important;
+		max-width: 100px !important;
+	}
+} */
