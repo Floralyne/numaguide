@@ -242,4 +242,100 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 
 #select_slide {
 	display: none;
+	
+/**Palettes**/
+
+/*Palette Numaguide*/
+
+#palettenumaguide{
+	text-align: center;
+}
+
+#numa363440{
+	background-color: #363440;
+	color: white;
+}
+#numa35A6B1{
+	background-color: #35A6B1;
+}
+#numaE57654{
+	background-color: #E57654;
+}
+#numaE99350{
+	background-color: #e99350;
+}
+#numaFFF{
+	background-color: #ffffff;
+}
+
+/*Palette Pastel*/
+
+#palettepastel{
+	text-align: center;
+}
+
+#numaEEF9FF{
+	background-color: #EEF9FF;
+}
+#numaFFF7FC{
+	background-color: #FFF7FC;
+}
+#numaFFFDED{
+	background-color: #FFFDED;
+}
+#numaFFF7EC{
+	background-color: #FFF7EC;
+}
+#numaFFFBFB{
+	background-color: #FFFBFB;
+}
+
+/*Palette Automne*/
+
+#paletteautomne{
+	text-align: center;
+}
+
+#numaC58768{
+	background-color: #C58768;
+}
+#numa313232{
+	background-color: #313232;
+	color:white;
+}
+#numaF5F1DF{
+	background-color: #F5F1DF;
+}
+#numaA2B1A7{
+	background-color: #A2B1A7;
+}
+#numa817677{
+	background-color: #817677;
+}
+
+/*Palette Sombre*/
+
+#palettesombre{
+	text-align: center;
+}
+
+#numa002029{
+	background-color: #002029;
+	color:white;
+}
+#numa0C1D1D{
+	background-color: #0C1D1D;
+	color:white;
+}
+#numa0E1717{
+	background-color: #0E1717;
+	color:white;
+}
+#numa170E1D{
+	background-color: #170E1D;
+	color:white;
+}
+#numa100F0F{
+	background-color: #100F0F;
+	color:white;
 }
