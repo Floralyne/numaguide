@@ -63,10 +63,17 @@ $donnees->appendChild($auteur);
 
 
 //Renvoi du XML en chaine de caracteres
-$tag = $dom->saveXML($dom->documentElement);
-
+//echo $tag = $dom->saveXML($dom->documentElement);
+//$tag->save("essai.xml");
 if(isset($_POST['ok'])){
-    echo htmlspecialchars ($tag);
+    //$tag = simplexml_export_dom($dom);
+    echo "<xmp>".$tag = $dom->saveXML($dom->documentElement)."</xmp>";
+   // echo htmlspecialchars ($tag);
+  //$tag->save("essai.xml");
+    //echo $tag.$xml->saveXML().$tag;
+//$xml->save("essai.xml");
+//echo $xml->saveXML($dom->documentElement)."</xmp>";
+//$xml->save("essai.xml");
 }
 ?>
 <div>

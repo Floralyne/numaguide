@@ -14,9 +14,8 @@
     $blocks = parse_blocks($post->post_content);
     $video = '';
     foreach ($blocks as $block) {
-        if ($block['blockName'] == 'core/video') {
-            $video = substr($block['innerContent'][0], 52);
-            $video = substr($video, 0, -19);
+        if ($block['blockName'] == 'core/embed') {
+            $video = $block['attrs']['url'];
         }
     }
 ?>
@@ -24,8 +23,9 @@
     <section id="slide_27">
         <div id="slide_27_c" class="container-fluid">
             <div id="slide_27_r" class="row vh-100 p-5">
-                    <video controls width="100%" height="100%" src=<?=$video?> allowfullscreen></video>
-       
+                    <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+                    <?=$video?>
+</div></figure>
             </div>
         </div>
 
