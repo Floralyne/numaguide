@@ -3,9 +3,9 @@
 <main id="site-content">
 
     <?php
-        $info_slide = array('slide18', 'slides/slide_18');
+        $info_slide = array('slide22', 'slides/slide_22');
         $slide = apply_filters('ng_article_pour_template', $info_slide);
-        apply_filters('ng_creer_guide','Slide 18 gone 11', $slide);
+        apply_filters('ng_creer_guide','Slide 22 gone 11', $slide);
     ?>
 
 </main>

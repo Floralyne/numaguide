@@ -46,6 +46,8 @@ function numaguide_msg_load_template_part()
     print numaguide_load_template_part();
 }*/
 
+/*Permet de supprimer les <p> indésirables une fois le guide généré*/
+
 function numaguide_supprimer_p( $content ) {
   remove_filter( 'the_content', 'wpautop' );
   remove_filter( 'the_excerpt', 'wpautop' );
