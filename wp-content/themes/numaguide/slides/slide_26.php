@@ -26,8 +26,8 @@
     <section id="slide_26">
         <div id="slide_26_c" class="container-fluid">
             <div id="slide_26_r" class="row vh-100">
-                <div id="slide_26_son1" class="row text-center mt-auto mb-auto p-5 embed-responsive embed-responsive-4by3">
-                    <audio controls class="embed-responsive-item">
+                <div id="slide_26_son1" class="row text-center mt-auto mb-auto p-5 embed-responsive ml-auto mr-auto">
+                    <audio controls class="embed-responsive-item" id="son1">
                     <source src=<?=$audios[0]?>>
                     </audio>
                     <div id="slide_26_son_legende1" class="text-center p-2"><?php
@@ -44,8 +44,8 @@
                         echo render_block($paragraphes[0]);
                     ?></div>
                 </div>
-                <div id="slide_26_son2" class="row text-center mt-auto mb-auto p-5 embed-responsive embed-responsive-4by3">
-                    <audio controls class="embed-responsive-item">
+                <div id="slide_26_son2" class="row text-center mt-auto mb-auto p-5 embed-responsive ml-auto mr-auto">
+                    <audio controls class="embed-responsive-item" id="son2">
                     <source src=<?=$audios[1]?>>
                     </audio>
                     <div id="slide_26_son_legende2" class="text-center p-2"><?php
