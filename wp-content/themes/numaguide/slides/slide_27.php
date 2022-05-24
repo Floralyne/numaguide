@@ -24,7 +24,6 @@
     <section id="slide_27">
         <div id="slide_27_c" class="container-fluid">
             <div id="slide_27_r" class="row vh-100 p-5">
-                    <iframe width="100%" height="100%" src=<?=$video?> allowfullscreen></iframe>
        
             </div>
         </div>
