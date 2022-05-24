@@ -45,3 +45,10 @@ function numaguide_msg_load_template_part()
 
     print numaguide_load_template_part();
 }*/
+
+function numaguide_supprimer_p( $content ) {
+  remove_filter( 'the_content', 'wpautop' );
+  remove_filter( 'the_excerpt', 'wpautop' );
+  return $content;
+}
+add_filter( 'the_content', 'numaguide_supprimer_p', 0 );
