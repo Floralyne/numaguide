@@ -67,13 +67,16 @@ $donnees->appendChild($auteur);
 //$tag->save("essai.xml");
 if(isset($_POST['ok'])){
     //$tag = simplexml_export_dom($dom);
+    $xml_file_name = plugin_dir_path(__FILE__). 'admin/movies_list.xml';
     echo "<xmp>".$tag = $dom->saveXML($dom->documentElement)."</xmp>";
-   // echo htmlspecialchars ($tag);
-  //$tag->save("essai.xml");
-    //echo $tag.$xml->saveXML().$tag;
-//$xml->save("essai.xml");
-//echo $xml->saveXML($dom->documentElement)."</xmp>";
-//$xml->save("essai.xml");
+    $dom->save($xml_file_name);
+    echo "$xml_file_name has been successfully created";
 }
 ?>
+
 <div>
+<script>function createAndOpenFile(){
+    var stupidExample = '<?xml version="1.0" encoding="utf-8"?><aTag>something</aTag>';
+    document.open('data:Application/octet-stream,' + encodeURIComponent(stupidExample));
+}</script>
+<a href="#" onclick="createAndOpenFile()" download="file.xml">Donwload</a>
