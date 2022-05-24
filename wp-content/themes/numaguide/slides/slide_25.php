@@ -24,7 +24,7 @@
     <section id="slide_25">
         <div id="slide_25_c" class="container-fluid">
             <div id="slide_25_r" class="row vh-100">
-                <div id="slide_25_div1" class="row text-justify mt-auto mb-auto p-5">
+                <div id="slide_25_div1" class="row text-justify mt-auto mb-auto p-5 ml-auto mr-auto">
                     <div id="slide_25_texte1" class="slide_25_texte">
                     <?php
                         $post_tab = $args['article'];
@@ -41,8 +41,8 @@
                     ?>
                     </div>
                 </div>
-                <div id="slide_25_son" class="row text-center mt-auto mb-auto p-5 embed-responsive embed-responsive-4by3">
-                    <audio controls class="embed-responsive-item">
+                <div id="slide_25_son" class="row text-center mt-auto mb-auto p-5 embed-responsive ml-auto mr-auto">
+                    <audio controls class="embed-responsive-item" id="son1">
                         <source src=<?=$audio?>>
                     </audio>
                     <div id="slide_25_son_legende" class="text-center p-2"><?php

@@ -7,6 +7,7 @@
 
 ?>
 <?php get_header() ?>
+
     <section id="slide_14">
         <div id="slide_14_c" class="container-fluid">
             <div id="slide_14_r" class="row vh-100">
