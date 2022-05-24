@@ -7,6 +7,7 @@
 
 ?>
 <?php get_header() ?>
+
 <section id="slide_12">
     <div id="slide_12_c" class="container-fluid">
         <div id="slide_12_r" class="row vh-100">
@@ -34,3 +35,4 @@
             </div>
         </div>
     </div>
+</section>

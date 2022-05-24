@@ -409,6 +409,10 @@ max-height: 70vh;
     font-style: italic;
 }
 
+#son2, #son1{
+    position:relative;
+}
+
 /*Slide contenant une vidéo en pleine écran*/
 
 #slide_27_c{
