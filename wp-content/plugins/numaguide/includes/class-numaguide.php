@@ -107,10 +107,7 @@ class Numaguide
 	}
 
 	/**
-	 * Défini la variable locale pour les langages.
-	 *
-	 * Uses the Numaguide_i18n class in order to set the domain and to register the hook
-	 * with WordPress.
+	 * Défini la variable locale pour la traduction.
 	 *
 	 * @since    1.0.0
 	 * @access   private

@@ -1,5 +1,5 @@
 === NumaGuide ===
-Contributors: AJOUTER
+Contributors: L'équipe du Numaguide
 Tags: CMS, Humanities
 Requires at least: 5.9.2
 Tested up to: 5.9.3

@@ -1,33 +1,7 @@
 (function ($) {
   "use strict";
 
-  /**
-   * All of the code for your admin-facing JavaScript source
-   * should reside in this file.
-   *
-   * Note: It has been assumed you will write jQuery code here, so the
-   * $ function reference has been prepared for usage within the scope
-   * of this function.
-   *
-   * This enables you to define handlers, for when the DOM is ready:
-   *
-   * $(function() {
-   *
-   * });
-   *
-   * When the window is loaded:
-   *
-   * $( window ).load(function() {
-   *
-   * });
-   *
-   * ...and/or other possibilities.
-   *
-   * Ideally, it is not considered best practise to attach more than a
-   * single DOM-ready or window-load handler for a particular page.
-   * Although scripts in the WordPress core, Plugins and Themes may be
-   * practising this, we should strive to set a better example in our own work.
-   */
+  //Les fonctions jQuery
 
   $(document).ready(function () {
     var i = 1;
@@ -68,6 +42,7 @@ function format_slide() {
 	}
 }
 
+//Transforme le nom du guide vers l'url du guide dans le bon format 
 function urlFonction() {
 	if (document.getElementById("nomGuide").value) {
 		str = document.getElementById("nomGuide").value;
@@ -86,6 +61,7 @@ function urlFonction() {
 	}
 }
 
+//Fonction pour remplacer les accent dans une phrase par les lettres sans accent
 function supp_accent(my_string)
 {
 	// tableau accents

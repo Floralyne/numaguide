@@ -5,6 +5,7 @@ function numaguide_supports()
   add_theme_support('title-tag');
 }
 
+//Insert les css et js dans le front
 function numaguide_register_assets()
 {
   wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css', []);
@@ -30,24 +31,7 @@ add_action('wp_enqueue_scripts', 'numaguide_register_assets');
 add_action('wp_enqueue_styles', 'numaguide_register_assets');
 add_filter('document_title_separator', 'numaguide_title_separator');
 
-/*add_action( 'numaguide.message', 'numaguide_msg_load_template_part' );
-
-function numaguide_msg_load_template_part()
-{
-    if ( ! function_exists( 'numaguide_load_template_part' ) ) {
-
-        // Show debug info for those who can do something about it.
-        if ( current_user_can( 'manage_option' ) ) {
-            print '<p class="error">Function plugin_frontend_message() not found.</p>';
-        }
-        return;
-    }
-
-    print numaguide_load_template_part();
-}*/
-
-/*Permet de supprimer les <p> indésirables une fois le guide généré*/
-
+//Permet de supprimer les <p> indésirables une fois le guide généré
 function numaguide_supprimer_p( $content ) {
   remove_filter( 'the_content', 'wpautop' );
   remove_filter( 'the_excerpt', 'wpautop' );
