@@ -44,10 +44,15 @@
 <?php
 
 $dom = new DOMDocument('1.0', 'utf-8'); 
-$dom->validateOnParse = true;
-$dom->load('test.xml');
+//$dom->loadXML("<root/>");
+//$f = $dom->createDocumentFragment();
+//$dom->openUri();
+//$dom->load("test.xml");
+//$dom->validateOnParse = true;
+//$dom->load('test.xml');
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
+
 
 //creation des principaux elements, sans valeurs
 $all = $dom->createElement('metadonnees');
@@ -84,11 +89,15 @@ $popularLevel = $dom->createElement('niveaudevulgatisation', $d_popularLevel);
 $type = $dom->createElement('type', $d_type);
 $domain = $dom->createElement('domain', $d_domain);
 
+
 //creation attributs des balises 
 $id_type = $dom->createAttribute('type');
 $id_type->value = 'DOI';
-//append the attribute
+
+
+//ajout de l'attribut
 $identifier->appendChild($id_type);
+
 
 //creation de la structure xml
 $dom->appendChild($all);
@@ -107,7 +116,7 @@ $donnees->appendChild($auteur);
 $facultatif->appendChild($subtitle);
 $facultatif->appendChild($abstract);
 $facultatif->appendChild($keyword);
-$facultatif->appendChild($identifier); // attribut type  DOI
+$facultatif->appendChild($identifier); 
 $facultatif->appendChild($language);
 $facultatif->appendChild($writingDate);
 $facultatif->appendChild($Licence);
@@ -124,14 +133,14 @@ $choix->appendChild($type);
 $choix->appendChild($domain);
 
 
-
 //affichage des métadonnées avec balises xml apparentes
 if(isset($_POST['ok'])){
+    
     echo "<xmp>".$res= $dom->saveXML()."</xmp>";
     
+//print $dom->saveXML();
+    //echo file_get_contents("test.txt");
 }
 ?>
-
-
 </div>
    
