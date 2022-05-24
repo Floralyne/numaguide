@@ -40,6 +40,8 @@ $dom->formatOutput = true;
 $all = $dom->createElement('metadonnees');
 $donnees = $dom->createElement('donneesObligatoires');
 $fichier = $dom->createElement('notes');
+$facultatif = $dom->createElement('donneesFacultatives');
+$choix = $dom->createElement('publication');
 
 
 //creation des elements avec valeurs
@@ -56,6 +58,7 @@ $dom->appendChild($all);
 $all->appendChild($fichier);
 $all->appendChild($donnees);
 $all->appendChild($facultatif);
+$all->appendChild($choix);
 
 $fichier->appendChild($desc);
 $fichier->appendChild($licence);
@@ -78,6 +81,9 @@ $facultatif->appendChild($seeAlso);
 $facultatif->appendChild($anrProject);
 $facultatif->appendChild($europeanProject);
 $facultatif->appendChild($funding);
+
+$choix->appendChild($type);
+$choix->appendChild($domain);
 
 
 
