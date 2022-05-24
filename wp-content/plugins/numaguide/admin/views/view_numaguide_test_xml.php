@@ -31,6 +31,8 @@
 <?php
 
 $dom = new DOMDocument('1.0', 'utf-8'); 
+$dom->validateOnParse = true;
+$dom->load('test.xml');
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
 
@@ -53,6 +55,7 @@ $lien = $dom->createElement('URL', $donnee_url);
 $dom->appendChild($all);
 $all->appendChild($fichier);
 $all->appendChild($donnees);
+$all->appendChild($facultatif);
 
 $fichier->appendChild($desc);
 $fichier->appendChild($licence);
@@ -61,22 +64,30 @@ $donnees->appendChild($titre);
 $donnees->appendChild($lien);
 $donnees->appendChild($auteur);
 
+$facultatif->appendChild($subtitle);
+$facultatif->appendChild($abstract);
+$facultatif->appendChild($keyword);
+$facultatif->appendChild($identifier); // attribut type  DOI
+$facultatif->appendChild($language);
+$facultatif->appendChild($writingDate);
+$facultatif->appendChild($Licence);
+$facultatif->appendChild($classification );
+$facultatif->appendChild($comment);
+$facultatif->appendChild($collaboration);
+$facultatif->appendChild($seeAlso);
+$facultatif->appendChild($anrProject);
+$facultatif->appendChild($europeanProject);
+$facultatif->appendChild($funding);
 
-//Renvoi du XML en chaine de caracteres
-//echo $tag = $dom->saveXML($dom->documentElement);
-//$tag->save("essai.xml");
+
+
+//affichage des métadonnées avec balises xml apparentes
 if(isset($_POST['ok'])){
-    //$tag = simplexml_export_dom($dom);
-    $xml_file_name = plugin_dir_path(__FILE__). 'admin/movies_list.xml';
-    echo "<xmp>".$tag = $dom->saveXML($dom->documentElement)."</xmp>";
-    $dom->save($xml_file_name);
-    echo "$xml_file_name has been successfully created";
+    echo "<xmp>".$res= $dom->saveXML()."</xmp>";
+    
 }
 ?>
 
-<div>
-<script>function createAndOpenFile(){
-    var stupidExample = '<?xml version="1.0" encoding="utf-8"?><aTag>something</aTag>';
-    document.open('data:Application/octet-stream,' + encodeURIComponent(stupidExample));
-}</script>
-<a href="#" onclick="createAndOpenFile()" download="file.xml">Donwload</a>
+
+</div>
+   
