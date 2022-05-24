@@ -14,9 +14,8 @@
     $blocks = parse_blocks($post->post_content);
     $video = '';
     foreach ($blocks as $block) {
-        if ($block['blockName'] == 'core/video') {
-            $video = substr($block['innerContent'][0], 52);
-            $video = substr($video, 0, -19);
+        if ($block['blockName'] == 'core/embed') {
+            $video = $block['attrs']['url'];
         }
     }
 ?>
@@ -27,7 +26,9 @@
                 <div id="slide_24_div1" class="row-5 text-center mt-auto mb-auto pt-5">
                     
                     <div id="slide_24_video" class="embed-responsive embed-responsive-21by9">
-                        <iframe width="100%" height="100%" class="embed-responsive-item" src=<?=$video?> allowfullscreen></iframe>
+                    <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+                    <?=$video?>
+</div></figure>
                       </div>
                       <div id="slide_24_titre" class="text-center p-2"> <?php
                         $post_tab = $args['article'];

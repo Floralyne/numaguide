@@ -23,7 +23,7 @@
 
 <section id="slide_20">
     <div id="slide_20_c" class="container-fluid">
-        <div id="slide_20_r" class="row vh-100" id="slide20row">
+        <div id="slide_20_r" class="row vh-100 mr-auto ml-auto">
             <div id="slide_20_div1" class="col text-justify mt-auto mb-auto p-5">
                 <div id="slide_20_texte1" class="slide_20_texte">
                     <?php

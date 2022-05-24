@@ -21,6 +21,16 @@
     }
 ?>
 
+<?php
+
+// $phrase  = "<p></p>";
+// $gone   = "";
+
+// $newphrase = str_replace($phrase, $gone);
+// echo $newphrase;
+
+?>
+
 <section id="slide_19">
     <div id="slide_19_c" class="container-fluid">
         <div id="slide_19_r" class="row vh-100">
