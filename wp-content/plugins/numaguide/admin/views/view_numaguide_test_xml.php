@@ -66,7 +66,7 @@ $donnees->appendChild($auteur);
 //echo $tag = $dom->saveXML($dom->documentElement);
 //$tag->save("essai.xml");
 if(isset($_POST['ok'])){
-    $tag = simplexml_export_dom($dom);
+    //$tag = simplexml_export_dom($dom);
     echo "<xmp>".$tag = $dom->saveXML($dom->documentElement)."</xmp>";
    // echo htmlspecialchars ($tag);
   //$tag->save("essai.xml");
