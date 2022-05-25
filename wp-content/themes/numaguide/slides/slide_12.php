@@ -13,7 +13,10 @@
         <div id="slide_12_r" class="row vh-100">
             <div id="slide_12_div" class="col text-center mt-auto mb-auto p-5">
                 <div id="slide_12_titre" class="slide_12_titre"> 
-                    <?php
+               Remerciements
+                </div>
+                <div id="slide_12_merci" class="slide_12_merci">
+                <?php
                         $post_tab = $args['article'];
                         $post = $post_tab[0];
                         $blocks = parse_blocks($post->post_content);
@@ -25,12 +28,7 @@
                             }
                         }
                         echo render_block($paragraphes[0]);
-                    ?>
-                </div>
-                <div id="slide_12_merci" class="slide_12_merci">
-                    <?php
-                        echo render_block($paragraphes[1]);
-                    ?>
+?>
                 </div>
             </div>
         </div>

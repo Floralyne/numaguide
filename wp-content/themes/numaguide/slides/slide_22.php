@@ -24,7 +24,7 @@
 <section id="slide_22">
     <div id="slide_22_c" class="container-fluid">
         <div id="slide_22_r" class="row vh-100">
-            <div id="slide_22_div1" class="row text-justify mt-auto mb-auto p-5">
+            <div id="slide_22_div1" class="row text-justify mt-auto mb-auto p-5 ml-auto mr-auto">
                 <div id="slide_22_texte1" class="slide_22_texte">
                     <?php
                         foreach ($blocks as $block) {
@@ -35,7 +35,7 @@
                     ?>
                 </div>
             </div>
-            <div class="row text-center mt-auto mb-auto pb-5">
+            <div id="slide_22_div2" class="row text-center mt-auto mb-auto pb-5 mr-auto ml-auto">
                 <div id="slide_22_image2" class="slide_22_image2">
                     <img id="slide_22_image" class="img-fluid" src=<?=$link?>>
                 </div>

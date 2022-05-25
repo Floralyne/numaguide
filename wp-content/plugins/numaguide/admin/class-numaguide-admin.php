@@ -177,9 +177,9 @@ class Numaguide_Admin
             'category_name' => $info_slide[0],
             'tag' => $nbSlide
         );
-
+	
 		$mypost = get_posts($args);
-
+		
         if ($mypost) {
             the_post();
             $post_tab = array('article' => $mypost);
@@ -203,7 +203,6 @@ class Numaguide_Admin
 	*/
 	function numaguide_genere_slide($template_name, $part_name = null, $args)
 	{
-		
 		ob_start();
 		get_template_part($template_name, $part_name, $args);
 		$var = ob_get_contents();
