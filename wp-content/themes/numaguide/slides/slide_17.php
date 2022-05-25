@@ -31,7 +31,7 @@
                     <div id="slide_17_texte2" class="slide_17_texte">
                     <?php
                         echo render_block($paragraphes[1]);
-?>                </div>)
+?>                </div>
             </div>
         </div>
         </div>
