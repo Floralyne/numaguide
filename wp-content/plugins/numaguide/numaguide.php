@@ -1,12 +1,12 @@
 <?php
 
 /**
- * The plugin bootstrap file
+ * Le fichier d'amorçage du plugin
  *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
+ * Ce fichier est lu par WordPress pour générer les informations relatives au plugin
+ * dans la zone d'administration du plugin. Ce fichier comprend également toutes les dépendances utilisées par le plugin,
+ * et enregistre les fonctions d'activation et de désactivation, et définit une fonction
+ * qui démarre le plugin.
  *
  * @link              https://numaguide.msh-vdl.fr/
  * @since             1.0.0
