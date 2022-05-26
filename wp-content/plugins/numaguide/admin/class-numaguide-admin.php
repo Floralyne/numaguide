@@ -54,7 +54,6 @@ class Numaguide_Admin
 		wp_enqueue_style($this->numaguide, plugin_dir_url(__FILE__) . 'css/numaguide-admin.css', array(), $this->version, 'all');
 		wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css', []);
 		wp_enqueue_style('bootstrap');
-		
 	}
 
 	/**
@@ -73,7 +72,7 @@ class Numaguide_Admin
 		wp_enqueue_script('jquery');
 	}
 
-	function numaguide_pages_admin()
+	function numaguide_creer_menu_admin()
 	{
 		add_menu_page(
 			'Numaguide',
@@ -130,6 +129,15 @@ class Numaguide_Admin
 			'ng_submenu_xml_test'
 		);
 
+		add_submenu_page(
+			'numaguide',
+			'Numaguide | Test création d\'un guide',
+			'Test guide',
+			'edit_posts',
+			'ng_test_guide',
+			'ng_submenu_guide_test'
+		);
+
 
 		function ng_admin_page_contents()
 		{
@@ -148,6 +156,11 @@ class Numaguide_Admin
 		function ng_submenu_xml_test()
 		{
 			include_once( 'views/view_numaguide_test_xml.php' );
+		}
+
+		function ng_submenu_guide_test()
+		{
+			include_once( 'views/view_numaguide_test_guide.php' );
 		}
 	}
 
@@ -177,8 +190,8 @@ class Numaguide_Admin
             'category_name' => $info_slide[0],
             'tag' => $nbSlide
         );
-	
 		$mypost = get_posts($args);
+		die(var_dump($mypost));
 		
         if ($mypost) {
             the_post();
