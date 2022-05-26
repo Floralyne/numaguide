@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Slide 27
+ * Template Name: Slide 15
  * Template Post Type: post, page
  */
 
@@ -20,9 +20,9 @@
     }
 ?>
 
-    <section id="slide_27">
-        <div id="slide_27_c" class="container-fluid">
-            <div id="slide_27_r" class="row vh-100 p-5">
+    <section id="slide_15">
+        <div id="slide_15_c" class="container-fluid">
+            <div id="slide_15_r" class="row vh-100 p-5">
                 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
                     <div class="wp-block-embed__wrapper">
                         <?=$video?>

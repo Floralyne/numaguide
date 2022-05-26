@@ -1,17 +1,19 @@
 <?php
 
 /**
- * Template Name: Slide 7
+ * Template Name: Slide 4
  * Template Post Type: post, page
  */
 
 ?>
 <?php get_header() ?>
-    <section id="slide_7">
-        <div id="slide_7_c" class="container-fluid">
-            <div id="slide_7_r" class="row vh-100">
-                <div id="slide_7_div1" class="col text-justify mt-auto mb-auto p-5">
-                    <div id="slide_7_texte1" class="slide_7_texte">
+
+<section id="slide_4">
+        <div id="slide_4_c" class="container-fluid">
+            <div id="slide_4_r" class="row vh-100">
+                <div id="slide_4_div" class="col text-center mt-auto mb-auto p-5">
+                    <div id="slide_4_titre" class="slide_4_titre">Résumé :</div>
+                    <div id="slide_4_resume" class="slide_4_resume">
                     <?php
                         $post_tab = $args['article'];
                         $post = $post_tab[0];
@@ -23,17 +25,10 @@
                                 $paragraphes[] = $block;
                             }
                         }
+                    
                         echo render_block($paragraphes[0]);
-?>
-                    </div>
+?></div>
                 </div>
-                <div class="col text-justify mt-auto mb-auto p-5">
-                    <div id="slide_7_texte2" class="slide_7_texte">
-                    <?php
-                        echo render_block($paragraphes[1]);
-?>                </div>
             </div>
         </div>
-        </div>
-
-    </section>
+</section>

@@ -11,130 +11,95 @@
     font-family: 'Poppins', sans-serif !important;
 }
 
-/*Bibliographie*/
+/*Page de titre - Slide 1*/
 
-#slide_7 {
-    background-color: #e99857;
-}
-
-#slide_7_bib {
-    font-size: 2rem;
-    margin-bottom: 5%;
-}
-
-.slide_7_livre {
-    font-size: 1rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#slide_7_r{
-    overflow: auto;
-}
-
-#slide_7_bis {
-    background-color: #e99857;
-}
-
-.slide_7_bis_livre {
-    font-size: 1rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#slide_7_bis_r{
-    overflow: auto;
-}
-
-/*Page de titre*/
-
-#slide_8 {
+#slide_1 {
     background-color: #38979f;
 }
 
-#slide_8_r{
+#slide_1_r{
     overflow: auto;
 }
 
-#slide_8_titre_principal {
+#slide_1_titre_principal {
     font-size: 2rem;
 }
 
-#slide_8_sous_titre {
+#slide_1_sous_titre {
     font-style: italic;
     font-size: 1.5rem;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-/*Slide contenant un résumé*/
+/*Slide 2 - Page de titre pour publication scientifique*/
 
-#slide_10 {
+#slide_2 {
     background-color: #38979f;
 }
 
-#slide_10_r{
+#slide_2_r{
     overflow: auto;
 }
 
-#slide_10_titre {
+.slide_2_titre{
     font-size: 2rem;
-    margin-bottom: 2%;
 }
 
-.slide_10_resume{
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: justify;
-}
+/*Slide 3 - Slide contenant des remerciements*/
 
-/*Slide contenant des remerciements*/
-
-#slide_12 {
+#slide_3 {
     background-color: #e77050;
 }
 
-#slide_12_r{
+#slide_3_r{
     overflow: auto;
 }
 
-#slide_12_titre {
+#slide_3_titre {
     font-size: 2rem;
     margin-bottom: 2%;
 }
 
-.slide_12_merci {
+.slide_3_merci {
     font-style: italic;
     padding-left: 20%;
     padding-right: 20%;
 }
 
-/*Page de titre pour publication scientifique*/
+/*Slide 4 - Slide contenant un résumé*/
 
-#slide_13 {
+#slide_4 {
     background-color: #38979f;
 }
 
-#slide_13_r{
+#slide_4_r{
     overflow: auto;
 }
 
-.slide_13_titre{
-    font-size: 2rem;
-}
-
-/*Slide contenant une introduction*/
-
-#slide_14 {
-    background-color: #e77050;
-}
-
-#slide_14_titre {
+#slide_4_titre {
     font-size: 2rem;
     margin-bottom: 2%;
 }
 
-.slide_14_intro {
+.slide_4_resume{
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+}
+
+/*Slide 5 - Slide contenant une introduction*/
+
+#slide_5 {
+    background-color: #e77050;
+}
+
+#slide_5_titre {
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+.slide_5_intro {
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -142,288 +107,230 @@
 
 /***Style pour les slides avec une dominante textuelle***/
 
-/*Slide de texte plein*/
+/*Slide 6 - Slide avec un texte plein*/
 
-#slide_11{
+#slide_6{
     background-color: #e77050;
 }
 
-#slide_11_div{
+#slide_6_div{
     text-align: justify;
 }
 
-#slide_11_r{
+#slide_6_r{
     overflow: auto;
 }
 
-/*Slide avec deux colonnes de texte*/
+/*Slide 7 - Slide avec deux colonnes de texte*/
 
-#slide_17 {
+#slide_7 {
     background-color: #363440;
     color: white;
 }
 
-#slide_17_c{
+#slide_7_c{
     overflow: auto;
 }
 
-#slide_17_div1{
+#slide_7_div1{
     text-align: justify;
 }
 
-.slide_17_texte{
+.slide_7_texte{
     text-align: justify;
 }
 
-/*Slide avec deux rangées de texte*/
+/*Slide 8 - Slide avec deux rangées de texte*/
 
-#slide_18 {
+#slide_8 {
     background-color: #363440;
     color: white;
 }
 
-#slide_18_c{
+#slide_8_c{
     overflow: auto;
 }
 
-#slide_18_div1{
+#slide_8_div1{
     text-align: justify;
 }
 
-.slide_18_texte{
+.slide_8_texte{
     text-align: justify;
 }
 
 /***Style pour les slides avec une dominante multimédia***/
 
-/*Slide contenant une image responsive en plein écran*/
+/*Slide 9 - Slide contenant une image responsive en plein écran*/
 
-#slide_19 {
+#slide_9 {
     padding: 0;
 }
 
-#slide_19_r{
+#slide_9_r{
     background-color: #363440;
 }
 
-#slide_19_image{
+#slide_9_image{
 max-width: 100vw;
 max-height: 100vh;
 }
 
-/*Slide contenant une colonne de texte et une image responsive*/
+/*Slide 10 - Slide contenant une colonne de texte et une image responsive*/
 
-#slide_20 {
+#slide_10 {
     background-color: #e99350;
     color: white;
 }
 
-#slide_20_div1{
+#slide_10_div1{
     text-align: justify;
 }
 
-#slide_20_r{
+#slide_10_r{
     --bs-gutter-x:0;
 }
 
-#slide_20_c{
+#slide_10_c{
     padding-right: 0;
     padding-left: 0;
     overflow: auto;
 }
 
-#slide_20_image{
+#slide_10_image{
     max-width: 100vw;
 max-height: 100vh;
 }
 
-#slide_20_div2{
+#slide_10_div2{
     padding: 0;
 }
 
-#slide20row{
+#slide10row{
     margin-right: 0px;
     margin-left: 0px;
   }
 
-.slide_20_texte{
+.slide_10_texte{
     text-align: justify;
 }
 
-/*Slide contenant une image responsive et une colonne de texte*/
+/*Slide 11 - Slide contenant une image responsive et une colonne de texte*/
 
-#slide_21 {
+#slide_11 {
     background-color: #363440;
     color: white;
 }
 
-#slide_21_div2{
+#slide_11_div2{
     text-align: justify;
     padding: 0;
 }
 
-#slide_21_r{
+#slide_11_r{
     --bs-gutter-x:0;
 }
 
-#slide_21_c{
+#slide_11_c{
     overflow: auto;
     padding-right: 0;
     padding-left: 0;
 }
 
-#slide_21_image{
+#slide_11_image{
     max-width: 100vw;
-max-height: 70vh;
+max-height: 100vh;
 }
 
-#slide_21_div1{
-    max-width: 70vw;
+#slide_11_div1{
     padding: 0;
 }
 
-#slide21row{
+#slide11row{
     margin-right: 0px;
     margin-left: 0px;
   }
 
-.slide_21_texte{
+.slide_11_texte{
     text-align: justify;
 }
 
-/*Slide avec deux rangées contenant un texte et une image*/
+/*Slide 12 - Slide avec deux rangées contenant un texte et une image*/
 
-#slide_22_image{
+#slide_12_image{
     max-width: 100vw;
 max-height: 50vh;
 }
 
-#slide_22_div2{
+#slide_12_div2{
     max-width: 100vw;
 }
 
-#slide_22_c{
+#slide_12_c{
     overflow: auto;
 }
 
-#slide_22 {
+#slide_12 {
     background-color: #363440;
     color: white;
 }
 
-#slide_22_div1{
+#slide_12_div1{
     text-align: justify;
 }
 
-.slide_22_texte{
+.slide_12_texte{
     text-align: justify;
 }
 
-/*Slide contenant un texte et une vidéo*/
 
-#slide_23 {
-    background-color: #e99350;
-}
+/*Slide 13 - Slide contenant un texte et une bande sonore légendée*/
 
-#slide_23_div1{
-    text-align: justify;
-}
-
-#slide_23_r{
-    --bs-gutter-x:0;
-    overflow: auto;
-}
-
-#slide_23_c{
-    padding: 0;
-    overflow: auto;
-}
-
-#slide_23_image{
-    max-width: 100vw;
-max-height: 70vh;
-}
-
-#slide_23_div2{
-    max-width: 100vw;
-    padding: 0;
-}
-
-/*Slide contenant une vidéo avec un titre et un texte*/
-
-.slide_24_texte{
-    text-align: justify;
-}
-
-#slide_24 {
-    background-color: #e99350;
-    color: white;
-}
-
-#slide_24_div1{
-    text-align: justify;
-}
-
-#slide_24_r{
-    --bs-gutter-x:0;
-    overflow: auto;
-}
-
-#slide_24_c{
-    padding: 0;
-}
-
-#slide_24_titre{
-    font-style: italic;
-}
-
-/*Slide contenant un texte et une bande sonore légendée*/
-
-#slide_25_r{
+#slide_13_r{
     --bs-gutter-x: 0;
     overflow: auto;
 }
 
-#slide_25_div1{
+#slide_13_div1{
     --bs-gutter-x: 0;
 }
 
-#slide_25_c{
+#slide_13_c{
     background-color: #38979f;
 }
 
-#slide_25_son{
+#slide_13_son{
     --bs-gutter-x: 0;
 }
 
-#slide_25_son_legende{
+#slide_13_son_legende{
     font-style: italic;
 }
 
-.slide_25_texte{
+.slide_13_texte{
     text-align: justify;
 }
 
-/*Slide contenant deux bandes sonores légendées*/
+/*Slide 14 - Slide contenant deux bandes sonores légendées*/
 
-#slide_26_r{
+#slide_14_r{
     --bs-gutter-x: 0;
     overflow: auto;
 }
 
-#slide_26_c{
+#slide_14_c{
     background-color: #38979f;
 }
 
-#slide_26_son{
+#slide_14_son{
     --bs-gutter-x: 0;
 }
 
-#slide_26_son_legende1{
+#slide_14_son_legende1{
     font-style: italic;
 }
 
-#slide_26_son_legende2{
+#slide_14_son_legende2{
     font-style: italic;
 }
 
@@ -431,8 +338,105 @@ max-height: 70vh;
     position:relative;
 }
 
-/*Slide contenant une vidéo en pleine écran*/
+/*Slide 15 - Slide contenant une vidéo en pleine écran*/
 
-#slide_27_c{
+#slide_15_c{
     background-color: #38979f;
+}
+
+/*Slide 16 - Slide contenant une vidéo avec un titre et un texte*/
+
+.slide_16_texte{
+    text-align: justify;
+}
+
+#slide_16 {
+    background-color: #e99350;
+    color: white;
+}
+
+#slide_16_div1{
+    text-align: justify;
+}
+
+#slide_16_r{
+    --bs-gutter-x:0;
+    overflow: auto;
+}
+
+#slide_16_c{
+    padding: 0;
+}
+
+#slide_16_titre{
+    font-style: italic;
+}
+
+/*Slide 17 - Slide contenant un texte et une vidéo*/
+
+#slide_17 {
+    background-color: #e99350;
+}
+
+#slide_17_div1{
+    text-align: justify;
+}
+
+#slide_17_r{
+    --bs-gutter-x:0;
+    overflow: auto;
+}
+
+#slide_17_c{
+    padding: 0;
+    overflow: auto;
+}
+
+#slide_17_image{
+    max-width: 100vw;
+max-height: 70vh;
+}
+
+#slide_17_div2{
+    max-width: 100vw;
+    padding: 0;
+}
+
+/***Slides de fin***/
+
+/*Slide 18 - Bibliographie*/
+
+#slide_18 {
+    background-color: #e99857;
+}
+
+#slide_18_bib {
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
+.slide_18_livre {
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#slide_18_r{
+    overflow: auto;
+}
+
+/*Slide 19 - Bibliographie sans titre*/
+
+#slide_19 {
+    background-color: #e99857;
+}
+
+.slide_19_livre {
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#slide_19_r{
+    overflow: auto;
 }

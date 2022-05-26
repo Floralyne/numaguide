@@ -7,7 +7,22 @@
 
 ?>
 <?php get_header() ?>
-    <section id="slide_17">
+
+<?php
+    $post_tab = $args['article'];
+    $post = $post_tab[0];
+    $blocks = parse_blocks($post->post_content);
+    $video = '';
+    foreach ($blocks as $block) {
+        if ($block['blockName'] == 'core/video') {
+            $video = substr($block['innerContent'][0], 52);
+            $video = substr($video, 0, -19);
+        }
+    }
+?>
+
+
+<section id="slide_17">
         <div id="slide_17_c" class="container-fluid">
             <div id="slide_17_r" class="row vh-100">
                 <div id="slide_17_div1" class="col text-justify mt-auto mb-auto p-5">
@@ -17,23 +32,19 @@
                         $post = $post_tab[0];
                         $blocks = parse_blocks($post->post_content);
 
-                        $paragraphes = array();
                         foreach ($blocks as $block) {
                             if ($block['blockName'] == 'core/paragraph') {
-                                $paragraphes[] = $block;
+                                echo render_block($block);
                             }
                         }
-                        echo render_block($paragraphes[0]);
-?>
+                        
+                    ?>
                     </div>
                 </div>
-                <div class="col text-justify mt-auto mb-auto p-5">
-                    <div id="slide_17_texte2" class="slide_17_texte">
-                    <?php
-                        echo render_block($paragraphes[1]);
-?>                </div>
+                <div id="slide_17_div2" class="col text-center mt-auto mb-auto p-5">
+                        <iframe width="100%" height="100%" src=<?=$video?> allowfullscreen></iframe>
+                </div>
             </div>
         </div>
         </div>
-
-    </section>
+</section>
