@@ -33,10 +33,10 @@
 			$(this).parent().append('<div class="form-group"><label>Titre :</label><input type="text"><label>Auteur(s) :</label><input type="text"></div>'); 
 		}
 		else if (choix == '2') {
-			choix.parent().append('<div class="form-group"><label>Titre :</label><input type="text"><label>Sous-titre(s) :</label><input type="text"><label>Auteur(s) :</label><input type="text"><input type="text"><label>Affiliation(s) :</label><input type="text"><input type="text"><label>Mot(s)-clés :</label><input type="text"></div>');
+			$(this).parent().append('<div class="form-group"><label>Titre :</label><input type="text"><label>Sous-titre(s) :</label><input type="text"><label>Auteur(s) :</label><input type="text"><input type="text"><label>Affiliation(s) :</label><input type="text"><input type="text"><label>Mot(s)-clés :</label><input type="text"></div>');
 		}
 		else {
-			choix.parent().append("a");
+			$(this).parent().append("a");
 			// valeur test, rajouter les autres slides 
 		}
 	});
