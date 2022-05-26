@@ -121,29 +121,6 @@
                             class="parcourir">
                     </div>
                     <div class="form-group">
-                        <div id="select_slide">
-                            <label for="select-slide">Choisir un format de slide :</label>
-                            <select>
-                                <option value="">------</option>
-                                <option value="1">Slide 1</option>
-                                <option value="2">Slide 2</option>
-                                <option value="3">Slide 3</option>
-                                <option value="4">Slide 4</option>
-                                <option value="5">Slide 5</option>
-                                <option value="6">Slide 6</option>
-                                <option value="7">Slide 7</option>
-                                <option value="8">Slide 9</option>
-                                <option value="9">Slide 10</option>
-                                <option value="10">Slide 11</option>
-                                <option value="11">Slide 12</option>
-                                <option value="12">Slide 13</option>
-                                <option value="13">Slide 14</option>
-                                <option value="14">Slide 15</option>
-                                <option value="15">Slide 16</option>
-                                <option value="16">Slide 17</option>
-                                <option value="18">Slide 18</option>
-                            </select>
-                        </div>
                         <button type="button" class="boutonForm boutonAjouter boutonPetit ml-auto mr-auto" onclick="format_slide()">Ajouter une
                             slide</button>
                     </div>
