@@ -220,7 +220,6 @@ max-height: 100vh;
 
 #slide_20_div1{
     text-align: justify;
-    max-width: 50vw;
 }
 
 #slide_20_r{
@@ -228,17 +227,17 @@ max-height: 100vh;
 }
 
 #slide_20_c{
-    padding: 0;
+    padding-right: 0;
+    padding-left: 0;
     overflow: auto;
 }
 
 #slide_20_image{
     max-width: 100vw;
-max-height: 70vh;
+max-height: 100vh;
 }
 
 #slide_20_div2{
-    max-width: 50vw;
     padding: 0;
 }
 
@@ -246,6 +245,10 @@ max-height: 70vh;
     margin-right: 0px;
     margin-left: 0px;
   }
+
+.slide_20_texte{
+    text-align: justify;
+}
 
 /*Slide contenant une image responsive et une colonne de texte*/
 
@@ -256,6 +259,7 @@ max-height: 70vh;
 
 #slide_21_div2{
     text-align: justify;
+    padding: 0;
 }
 
 #slide_21_r{
@@ -263,8 +267,9 @@ max-height: 70vh;
 }
 
 #slide_21_c{
-    padding: 0;
     overflow: auto;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 #slide_21_image{
@@ -275,6 +280,15 @@ max-height: 70vh;
 #slide_21_div1{
     max-width: 70vw;
     padding: 0;
+}
+
+#slide21row{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+.slide_21_texte{
+    text-align: justify;
 }
 
 /*Slide avec deux rangées contenant un texte et une image*/

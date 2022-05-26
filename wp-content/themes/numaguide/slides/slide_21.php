@@ -20,17 +20,17 @@
         }
     }
 ?>
-    
+
 <section id="slide_21">
-    <div id="slide_21_c" class="container-fluid">
-        <div id="slide_21_r" class="row vh-100">
-            <div id="slide_21_div1" class="col text-center mt-auto mb-auto">
-                <div id="slide_21_image2" class="slide_21_image2">
-                    <img id="slide_21_image" class="img-fluid" src=<?=$link?>>
+        <div id="slide_21_c" class="container-fluid">
+            <div id="slide_21_r" class="row vh-100 mr-auto ml-auto">
+                <div id="slide_20_div2" class="col text-center mt-auto mb-auto ml-auto mr-auto">
+                    <div id="slide_21_image2">
+                        <img id="slide_20_image" class="img-fluid" src=<?=$link?>>
+                    </div>
                 </div>
-            </div>
-            <div id="slide_21_div2" class="col text-justify mt-auto mb-auto p-5">
-                <div id="slide_21_texte2" class="slide_21_texte">
+                <div id="slide_21_div1" class="col text-justify mt-auto mb-auto p-5">
+                    <div id="slide_21_texte1" class="slide_21_texte">
                     <?php
                         foreach ($blocks as $block) {
                             if ($block['blockName'] == 'core/paragraph') {
@@ -38,11 +38,8 @@
                             }
                         }
                     ?>
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    </div>
-
-</section>
+    </section>

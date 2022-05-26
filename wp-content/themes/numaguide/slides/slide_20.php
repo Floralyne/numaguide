@@ -35,13 +35,11 @@
                     ?>
                 </div>
             </div>
-            <div id="slide_20_div2" class="col text-center mt-auto mb-auto">
-                <div id="slide_20_image2" class="slide_20_image2">
+            <div id="slide_20_div2" class="col text-center mt-auto mb-auto ml-auto mr-auto">
+                <div id="slide_20_image2">
                     <img id="slide_20_image" class="img-fluid" src=<?=$link?>>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-
 </section>
