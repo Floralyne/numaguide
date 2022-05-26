@@ -247,4 +247,41 @@ class Numaguide_Admin
         return $page_id;
     }
 
+		/*
+	* Masques les menus de la barre de menus pour les éditeurs, auteurs et contributeurs.
+	*
+	* @since Numaguide 1.0.0
+	*
+	* @param string $user 
+	* @param array $allowed_roles la liste des rôles concernés
+
+	* @param int $parent_id id d'un parent, par défaut NULL
+	* 
+	* @return int $page_id 
+	*/
+
+function numaguide_cacher_menus(){
+	$user = wp_get_current_user();
+	$allowed_roles = array( 'editor', 'contributor', 'author' );
+
+if ( array_intersect( $allowed_roles, $user->roles ) ) {
+
+   
+	remove_menu_page( 'index.php' );                  //Dashboard
+	remove_menu_page( 'jetpack' );                    //Jetpack* 
+	remove_menu_page( 'edit.php' );                   //Articles
+	remove_menu_page( 'upload.php' );                 //Media
+	remove_menu_page( 'edit.php?post_type=page' );    //Pages
+	remove_menu_page( 'edit-comments.php' );          //Commentaires
+	remove_menu_page( 'themes.php' );                 //Apparence
+	remove_menu_page( 'plugins.php' );                //Plugins
+	remove_menu_page( 'users.php' );                  //Utilisateurs
+	remove_menu_page( 'tools.php' );                  //Outils
+	remove_menu_page( 'options-general.php' );        //Paramètres
+	remove_menu_page( 'profile.php' );                //Profils des utilisateurs
+
+}
+  }
+
+
 }
