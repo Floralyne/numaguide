@@ -78,8 +78,6 @@
         }if($ng_slide1_nom == 'slide18') {
             $num_cat =14;
         }
-
-        die(var_dump($num_cat));
         
         $ng_info_article = array(
             'post_content'  => $ng_content,
@@ -90,14 +88,38 @@
             
         wp_insert_post($ng_info_article);
 
-        // $ng_slide7_nom = $_POST['slide7'];
-        // $ng_slide7_value1 = $_POST['slide7-1'];
-        // $ng_slide7_value2 = $_POST['slide7-2'];
-        // $ng_slide7_value3 = $_POST['slide7-3'];
-        // $ng_slide7_value4 = $_POST['slide7-4'];
-        // $ng_slide7_value5 = $_POST['slide7-5'];
-        // $ng_slide7_value6 = $_POST['slide7-6'];
-        // $ng_slide7_value7 = $_POST['slide7-7'];
+        $ng_slide7_nom = $_POST['slide7'];
+        $ng_slide7_value1 = $_POST['slide7-1'];
+        $ng_slide7_value2 = $_POST['slide7-2'];
+        $ng_slide7_value3 = $_POST['slide7-3'];
+        $ng_slide7_value4 = $_POST['slide7-4'];
+        $ng_slide7_value5 = $_POST['slide7-5'];
+        $ng_slide7_value6 = $_POST['slide7-6'];
+        $ng_slide7_value7 = $_POST['slide7-7'];
+
+        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+                        $ng_slide7_value1 . '<!-- /wp:paragraph -->' . 
+                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+                        $ng_slide7_value2 . '<!-- /wp:paragraph -->' . 
+                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+                        $ng_slide7_value3 . '<!-- /wp:paragraph -->' . 
+                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+                        $ng_slide7_value4 . '<!-- /wp:paragraph -->' . 
+                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+                        $ng_slide7_value5 . '<!-- /wp:paragraph -->' . 
+                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+                        $ng_slide7_value6 . '<!-- /wp:paragraph -->' . 
+                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+                        $ng_slide7_value7 . '<!-- /wp:paragraph -->';
+
+        $ng_info_article = array(
+            'post_content'  => $ng_content,
+            'post_category' => array( 12 ),
+            'tags_input' => array('1'),
+            'post_type' => 'post'
+        );
+            
+        wp_insert_post($ng_info_article);
 
         $ng_slide11_nom = $_POST['slide11'];
         $ng_slide11_value1 = $_POST['slide11-1'];
@@ -158,6 +180,8 @@
         );
 
         wp_insert_post($ng_info_article);
+
+
     }
 ?>
 
