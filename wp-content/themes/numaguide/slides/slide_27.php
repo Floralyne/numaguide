@@ -23,9 +23,11 @@
     <section id="slide_27">
         <div id="slide_27_c" class="container-fluid">
             <div id="slide_27_r" class="row vh-100 p-5">
-                    <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-                    <?=$video?>
-</div></figure>
+                <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                    <div class="wp-block-embed__wrapper">
+                        <?=$video?>
+                    </div>
+                </figure>
             </div>
         </div>
 

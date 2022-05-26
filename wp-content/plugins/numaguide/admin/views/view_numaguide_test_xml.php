@@ -44,12 +44,6 @@
 <?php
 
 $dom = new DOMDocument('1.0', 'utf-8'); 
-//$dom->loadXML("<root/>");
-//$f = $dom->createDocumentFragment();
-//$dom->openUri();
-//$dom->load("test.xml");
-//$dom->validateOnParse = true;
-//$dom->load('test.xml');
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
 
@@ -137,7 +131,8 @@ $choix->appendChild($domain);
 if(isset($_POST['ok'])){
     
     echo "<xmp>".$res= $dom->saveXML()."</xmp>";
-    
+    $dom->save("test.xml");
+
 //print $dom->saveXML();
     //echo file_get_contents("test.txt");
 }

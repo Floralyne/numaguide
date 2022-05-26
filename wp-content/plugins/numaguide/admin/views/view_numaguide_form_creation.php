@@ -121,7 +121,7 @@
                             class="parcourir">
                     </div>
                     <div class="form-group">
-                        <button type="button" class="boutonForm boutonAjouter boutonPetit ml-auto mr-auto" onclick="format_slide()">Ajouter une
+                        <button type="button" class="boutonForm boutonAjouter boutonPetit ml-auto mr-auto format_slide">Ajouter une
                             slide</button>
                     </div>
                     <div class="form-group row">
