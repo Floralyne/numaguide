@@ -27,8 +27,8 @@
 	});
 
 	// Apparition des formulaire de slide après choix d'un format 
-	$(".valider.format").click(function() {
-		var choix = $(".liste_slide").val(); 
+	$(".liste_slide").click(function() {
+		var choix = $(this).val(); 
 		if (choix == '1') {
 			$(this).parent().append('<div class="form-group"><label>Titre :</label><input type="text"><label>Auteur(s) :</label><input type="text"></div>'); 
 		}
