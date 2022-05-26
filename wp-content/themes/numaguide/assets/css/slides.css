@@ -1,5 +1,3 @@
-/***Style pour les slides appartenant à l'ouverture et la fermeture du guide***/
-
 @font-face {
     font-family: "Poppins";
     src: url("font/Poppins-Regular.ttf");
@@ -10,6 +8,8 @@
 * {
     font-family: 'Poppins', sans-serif !important;
 }
+
+/***Slides d'ouverture du guide***/
 
 /*Page de titre - Slide 1*/
 
@@ -103,7 +103,6 @@
     padding-left: 20%;
     padding-right: 20%;
 }
-
 
 /***Style pour les slides avec une dominante textuelle***/
 
