@@ -21,14 +21,14 @@
     });
 
 	// Génére la liste des formats de slides
-	$(".choix_format").click(function () {
-		var liste_slide = '<div class="liste_slide"><label for="select-slide">Choisir un format de slide :</label><select><option value="">------</option><optgroup label="Introduction :"><option value="1">Slide 1 : Titre, sous-titre(s), auteur(s)</option><option value="2">Slide 2 : Titre, sous-titre(s), auteur(s), mot(s)-clé(s)</option><option value="3">Slide 3 : Remerciements</option><option value="4">Slide 4 : Résumé</option><option value="5">Slide 5 : Introduction</option></optgroup><optgroup label="Texte :"><option value="6">Slide 6</option><option value="7">Slide 7</option><option value="8">Slide 8</option></optgroup><optgroup label="Avec une image :"><option value="9">Slide 9</option><option value="10">Slide 10</option><option value="11">Slide 11</option><option value="12>Slide 12</option></optgroup><optgroup label="Avec du son :"><option value="13">Slide 13</option><option value="14">Slide 14</option></optgroup><optgroup label="Avec une vidéo :"><option value="15">Slide 15</option><option value="16">Slide 16</option><option value="17">Slide 17</option></optgroup><optgroup label="Références :"><option value="18">Slide 18 : Bibliographie</option><option value="19">Slide 19 : Bibliographie (2)</option></optgroup></select><button type="button" class="boutonForm boutonAjouter boutonPetit ml-auto mr-auto format_slide">Ajouter une slide</button></div><div class="form-group row"><div class="col-sm"><button type="button" class="boutonForm boutonAction">Aperçu</button></div><div class="col-sm"><button type="button" class="boutonForm boutonValider choix_format">Valider</button></div>'; 
-		$(this).parent("div").append(liste_slide);
+	$(".format_slide").click(function () {
+		var liste_slide = '<div class="liste_slide"><label for="select-slide">Choisir un format de slide :</label><select><option value="">------</option><optgroup label="Introduction :"><option value="1">Slide 1 : Titre, sous-titre(s), auteur(s)</option><option value="2">Slide 2 : Titre, sous-titre(s), auteur(s), mot(s)-clé(s)</option><option value="3">Slide 3 : Remerciements</option><option value="4">Slide 4 : Résumé</option><option value="5">Slide 5 : Introduction</option></optgroup><optgroup label="Texte :"><option value="6">Slide 6</option><option value="7">Slide 7</option><option value="8">Slide 8</option></optgroup><optgroup label="Avec une image :"><option value="9">Slide 9</option><option value="10">Slide 10</option><option value="11">Slide 11</option><option value="12>Slide 12</option></optgroup><optgroup label="Avec du son :"><option value="13">Slide 13</option><option value="14">Slide 14</option></optgroup><optgroup label="Avec une vidéo :"><option value="15">Slide 15</option><option value="16">Slide 16</option><option value="17">Slide 17</option></optgroup><optgroup label="Références :"><option value="18">Slide 18 : Bibliographie</option><option value="19">Slide 19 : Bibliographie (2)</option></optgroup></select><button type="button" class="boutonForm boutonValider choix_format">Valider</button></div>'; 
+		$(this).parent().append(liste_slide);
 	});
 
 
 	// Apparition des formulaire de slide après choix d'un format 
-	$(".liste_slide").click(function() {
+	$(".choix_format").click(function() {
 		var choix = $(this).val(); 
 		if (choix == '1') {
 			$(this).parent().append('<div class="form-group"><label>Titre :</label><input type="text"><label>Auteur(s) :</label><input type="text"></div>'); 
