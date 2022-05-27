@@ -63,4 +63,13 @@ class Numaguide_Public
 	{
 		wp_enqueue_script($this->numaguide, plugin_dir_url(__FILE__) . 'js/numaguide-public.js', array('jquery'), $this->version, false);
 	}
+
+	/**
+	 * Enlève la barre administrateur côté front.
+	 *
+	 * @since    1.0.0
+	 */
+	public function numaguide_enleve_barre_admin() {
+		show_admin_bar(false);
+	  }
 }

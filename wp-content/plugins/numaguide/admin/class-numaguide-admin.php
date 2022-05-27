@@ -186,12 +186,13 @@ class Numaguide_Admin
 
         $args = array(
             'post_type' => 'post',
-            'post_status' => 'publish',
+            'post_status' => 'draft',
             'category_name' => $info_slide[0],
             'tag' => $nbSlide
         );
-		$mypost = get_posts($args);
 		
+		$mypost = get_posts($args);
+
         if ($mypost) {
             the_post();
             $post_tab = array('article' => $mypost);
@@ -215,12 +216,19 @@ class Numaguide_Admin
 	*/
 	function numaguide_genere_slide($template_name, $part_name = null, $args)
 	{
+		$slide = "";
+
+		//Start le buffering
 		ob_start();
-		get_template_part($template_name, $part_name, $args);
-		//TO DO TEST AVEC INCLUDE DANS UNE VARIABLE
-		$var = ob_get_contents();
-		ob_end_clean();
-		return $var;
+
+		//Inclu le template
+		include $template_name;
+
+		//Fin du buffering et retourne son contenu
+		$slide = ob_get_clean();
+
+		return $slide;
+
 	}
 
 	/*
@@ -316,3 +324,7 @@ function numaguide_vider_barre_admin( $wp_admin_bar ) {
 	
 }
 }
+
+/*Change la photo de profil par défaut*/
+
+update_option( 'avatar_default', 'https://zupimages.net/up/22/21/3hzz.png' );
