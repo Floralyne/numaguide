@@ -296,5 +296,23 @@ if ( array_intersect( $allowed_roles, $user->roles ) ) {
 }
   }
 
+  	/*
+	* Supprime les commentaires et la possibilité de créer des articles via la barre administrateur.
+	*
+	* @since Numaguide 1.0.0
+	*
+	* @param WP_Admin_Bar $wp_admin_bar WP_Admin Bar instance.
+	* @param array $allowed_roles la liste des rôles concernés
 
+	* @param int $parent_id id d'un parent, par défaut NULL
+	* 
+	* @return int $page_id 
+	*/
+
+function numaguide_vider_barre_admin( $wp_admin_bar ) {
+
+    $wp_admin_bar->remove_node( 'comments' );   
+	$wp_admin_bar->remove_node( 'new-content' );  
+	
+}
 }
