@@ -316,3 +316,7 @@ function numaguide_vider_barre_admin( $wp_admin_bar ) {
 	
 }
 }
+
+/*Change la photo de profil par défaut*/
+
+update_option( 'avatar_default', 'https://zupimages.net/up/22/21/3hzz.png' );
