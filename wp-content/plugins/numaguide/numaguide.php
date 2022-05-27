@@ -80,6 +80,6 @@ function run_numaguide()
 run_numaguide();
 
 
-// update_option( 'avatar_default', 'https://zupimages.net/up/22/21/3hzz.png' );
+update_option( 'avatar_default', 'https://zupimages.net/up/22/21/3hzz.png' );
 
 
