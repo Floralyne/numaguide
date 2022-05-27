@@ -191,7 +191,6 @@ class Numaguide_Admin
             'tag' => $nbSlide
         );
 		$mypost = get_posts($args);
-		die(var_dump($mypost));
 		
         if ($mypost) {
             the_post();
@@ -218,6 +217,7 @@ class Numaguide_Admin
 	{
 		ob_start();
 		get_template_part($template_name, $part_name, $args);
+		//TO DO TEST AVEC INCLUDE DANS UNE VARIABLE
 		$var = ob_get_contents();
 		ob_end_clean();
 		return $var;

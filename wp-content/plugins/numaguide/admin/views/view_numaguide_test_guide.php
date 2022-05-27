@@ -57,69 +57,69 @@
 
 <?php
     if(isset($_POST['ok'])){
-        $ng_slide1_nom = $_POST['slide1'];
-        $ng_slide1_value1 = $_POST['slide1-1'];
-        $ng_slide1_value2 = $_POST['slide1-2'];
+        // $ng_slide1_nom = $_POST['slide1'];
+        // $ng_slide1_value1 = $_POST['slide1-1'];
+        // $ng_slide1_value2 = $_POST['slide1-2'];
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide1_value1 . '<!-- /wp:paragraph -->' . 
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide1_value2 . '<!-- /wp:paragraph -->';
+        // $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide1_value1 . '<!-- /wp:paragraph -->' . 
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide1_value2 . '<!-- /wp:paragraph -->';
 
 
-        if($ng_slide1_nom == 'slide10') {
-            $num_cat = 22;
-        }if($ng_slide1_nom == 'slide12') {
-            $num_cat = 16;
-        }if($ng_slide1_nom == 'slide14') {
-            $num_cat = 17;
-        }if($ng_slide1_nom == 'slide17') {
-            $num_cat = 13;
-        }if($ng_slide1_nom == 'slide18') {
-            $num_cat =14;
-        }
+        // if($ng_slide1_nom == 'slide10') {
+        //     $num_cat = 22;
+        // }if($ng_slide1_nom == 'slide12') {
+        //     $num_cat = 16;
+        // }if($ng_slide1_nom == 'slide14') {
+        //     $num_cat = 17;
+        // }if($ng_slide1_nom == 'slide17') {
+        //     $num_cat = 13;
+        // }if($ng_slide1_nom == 'slide18') {
+        //     $num_cat =14;
+        // }
         
-        $ng_info_article = array(
-            'post_content'  => $ng_content,
-            'post_category' => array( $num_cat ),
-            'tags_input' => array('1'),
-            'post_type' => 'post'
-        );
+        // $ng_info_article = array(
+        //     'post_content'  => $ng_content,
+        //     'post_category' => array( $num_cat ),
+        //     'tags_input' => array('1'),
+        //     'post_type' => 'post'
+        // );
             
-        wp_insert_post($ng_info_article);
+        // wp_insert_post($ng_info_article);
 
-        $ng_slide7_nom = $_POST['slide7'];
-        $ng_slide7_value1 = $_POST['slide7-1'];
-        $ng_slide7_value2 = $_POST['slide7-2'];
-        $ng_slide7_value3 = $_POST['slide7-3'];
-        $ng_slide7_value4 = $_POST['slide7-4'];
-        $ng_slide7_value5 = $_POST['slide7-5'];
-        $ng_slide7_value6 = $_POST['slide7-6'];
-        $ng_slide7_value7 = $_POST['slide7-7'];
+        // $ng_slide7_nom = $_POST['slide7'];
+        // $ng_slide7_value1 = $_POST['slide7-1'];
+        // $ng_slide7_value2 = $_POST['slide7-2'];
+        // $ng_slide7_value3 = $_POST['slide7-3'];
+        // $ng_slide7_value4 = $_POST['slide7-4'];
+        // $ng_slide7_value5 = $_POST['slide7-5'];
+        // $ng_slide7_value6 = $_POST['slide7-6'];
+        // $ng_slide7_value7 = $_POST['slide7-7'];
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide7_value1 . '<!-- /wp:paragraph -->' . 
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide7_value2 . '<!-- /wp:paragraph -->' . 
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide7_value3 . '<!-- /wp:paragraph -->' . 
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide7_value4 . '<!-- /wp:paragraph -->' . 
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide7_value5 . '<!-- /wp:paragraph -->' . 
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide7_value6 . '<!-- /wp:paragraph -->' . 
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide7_value7 . '<!-- /wp:paragraph -->';
+        // $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide7_value1 . '<!-- /wp:paragraph -->' . 
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide7_value2 . '<!-- /wp:paragraph -->' . 
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide7_value3 . '<!-- /wp:paragraph -->' . 
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide7_value4 . '<!-- /wp:paragraph -->' . 
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide7_value5 . '<!-- /wp:paragraph -->' . 
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide7_value6 . '<!-- /wp:paragraph -->' . 
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide7_value7 . '<!-- /wp:paragraph -->';
 
-        $ng_info_article = array(
-            'post_content'  => $ng_content,
-            'post_category' => array( 12 ),
-            'tags_input' => array('1'),
-            'post_type' => 'post'
-        );
+        // $ng_info_article = array(
+        //     'post_content'  => $ng_content,
+        //     'post_category' => array( 12 ),
+        //     'tags_input' => array('1'),
+        //     'post_type' => 'post'
+        // );
             
-        wp_insert_post($ng_info_article);
+        // wp_insert_post($ng_info_article);
 
         $ng_slide11_nom = $_POST['slide11'];
         $ng_slide11_value1 = $_POST['slide11-1'];
@@ -136,50 +136,53 @@
             
         wp_insert_post($ng_info_article);
 
-        $ng_slide8_nom = $_POST['slide8'];
-        $ng_slide8_value1 = $_POST['slide8-1'];
-        $ng_slide8_value2 = $_POST['slide8-2'];
-        $ng_slide8_value3 = $_POST['slide8-3'];
+        $info_slide = array('slide11', plugin_dir_path(__FILE__) . 'public/views/slide_11.php');
+        $slide = apply_filters('ng_article_pour_template', $info_slide);
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide8_value1 . '<!-- /wp:paragraph -->' .
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide8_value2 . '<!-- /wp:paragraph -->' . 
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide8_value3 . '<!-- /wp:paragraph -->';
+        // $ng_slide8_nom = $_POST['slide8'];
+        // $ng_slide8_value1 = $_POST['slide8-1'];
+        // $ng_slide8_value2 = $_POST['slide8-2'];
+        // $ng_slide8_value3 = $_POST['slide8-3'];
+
+        // $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide8_value1 . '<!-- /wp:paragraph -->' .
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide8_value2 . '<!-- /wp:paragraph -->' . 
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide8_value3 . '<!-- /wp:paragraph -->';
                         
-        $ng_info_article = array(
-            'post_content'  => $ng_content,
-            'post_category' => array( 11 ),
-            'tags_input' => array('1'),
-            'post_type' => 'post'
-        );
+        // $ng_info_article = array(
+        //     'post_content'  => $ng_content,
+        //     'post_category' => array( 11 ),
+        //     'tags_input' => array('1'),
+        //     'post_type' => 'post'
+        // );
 
-        wp_insert_post($ng_info_article);
+        // wp_insert_post($ng_info_article);
 
-        $ng_slide13_nom = $_POST['slide13'];
-        $ng_slide13_value1 = $_POST['slide13-1'];
-        $ng_slide13_value2 = $_POST['slide13-2'];
-        $ng_slide13_value3 = $_POST['slide13-3'];
-        $ng_slide13_value4 = $_POST['slide13-4'];
+        // $ng_slide13_nom = $_POST['slide13'];
+        // $ng_slide13_value1 = $_POST['slide13-1'];
+        // $ng_slide13_value2 = $_POST['slide13-2'];
+        // $ng_slide13_value3 = $_POST['slide13-3'];
+        // $ng_slide13_value4 = $_POST['slide13-4'];
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide13_value1 . '<!-- /wp:paragraph -->' .
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide8_value2 . '<!-- /wp:paragraph -->' . 
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide8_value3 . '<!-- /wp:paragraph -->' .
-                        '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
-                        $ng_slide8_value3 . '<!-- /wp:paragraph -->';
+        // $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide13_value1 . '<!-- /wp:paragraph -->' .
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide8_value2 . '<!-- /wp:paragraph -->' . 
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide8_value3 . '<!-- /wp:paragraph -->' .
+        //                 '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' . 
+        //                 $ng_slide8_value3 . '<!-- /wp:paragraph -->';
 
-        $ng_info_article = array(
-            'post_content'  => $ng_content,
-            'post_category' => array( 15 ),
-            'tags_input' => array('1'),
-            'post_type' => 'post'
-        );
+        // $ng_info_article = array(
+        //     'post_content'  => $ng_content,
+        //     'post_category' => array( 15 ),
+        //     'tags_input' => array('1'),
+        //     'post_type' => 'post'
+        // );
 
-        wp_insert_post($ng_info_article);
+        // wp_insert_post($ng_info_article);
 
 
     }
