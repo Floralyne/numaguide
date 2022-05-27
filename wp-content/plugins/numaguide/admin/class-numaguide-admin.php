@@ -332,7 +332,6 @@ class Numaguide_Admin
 
     }
 }
-}
 
 /*Change la photo de profil par défaut*/
 
