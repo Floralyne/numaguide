@@ -42,11 +42,28 @@
 ?>
 
 <?php
-
+$handle = fopen("C:\\xampp\\htdocs\\wordpress\\test.txt", "w");
+$filename = 'test.txt';
 $dom = new DOMDocument('1.0', 'utf-8'); 
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
 
+//Variables
+$d_abstract = "";
+$d_keyword = "";
+$d_language = "";
+$d_writingDate = "";
+$d_Licence = "";
+$d_classification = "";
+$d_comment = "";
+$d_collaboration = "";
+$d_seeAlso = "";
+$d_anrProject = "";
+$d_europeanProject = "";
+$d_funding = "";
+$d_popularLevel = "";
+$d_type = "";
+$d_domain = "";
 
 //creation des principaux elements, sans valeurs
 $all = $dom->createElement('metadonnees');
@@ -131,10 +148,9 @@ $choix->appendChild($domain);
 if(isset($_POST['ok'])){
     
     echo "<xmp>".$res= $dom->saveXML()."</xmp>";
-    $dom->save("test.xml");
+   // $dom->save("test.xml");
+    $somecontent = $res ;
 
-//print $dom->saveXML();
-    //echo file_get_contents("test.txt");
 }
 ?>
 </div>
