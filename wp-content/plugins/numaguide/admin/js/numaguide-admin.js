@@ -40,52 +40,52 @@
 			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>'); 
 		}
 		else if (choix == '4') {
-			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '5') {
-			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '6') {
-			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '7') {
-			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '8') {
-			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '9') {
-			$(this).parent().append('<div class="form-group"><input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"></div>')
+			$(this).parent().append('<div class="form-group"><input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"></div>');
 		}
 		else if (choix == '10') {
-			$(this).parent().append('<div class="form-group"><input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '11') {
-			$(this).parent().append('<div class="form-group"><input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '12') {
-			$(this).parent().append('<div class="form-group"><input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '13') {
-			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea><input class="form-control" placeholder="URL" required><textarea placeholder="Entrer une légende (Max. 200)" maxlength="200" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea><input class="form-control" placeholder="URL" required><textarea placeholder="Entrer une légende (Max. 200)" maxlength="200" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '14') {
-			$(this).parent().append('<div class="form-group"><input class="form-control" placeholder="URL" required><textarea placeholder="Entrer une légende (Max. 200)" maxlength="200" wrap="soft" class="form-control mb-3 mt-3"></textarea><input class="form-control" placeholder="URL" required><textarea placeholder="Entrer une légende (Max. 200)" maxlength="200" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><input class="form-control" placeholder="URL" required><textarea placeholder="Entrer une légende (Max. 200)" maxlength="200" wrap="soft" class="form-control mb-3 mt-3"></textarea><input class="form-control" placeholder="URL" required><textarea placeholder="Entrer une légende (Max. 200)" maxlength="200" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '15') {
-			$(this).parent().append('<div class="form-group"><input class="form-control" placeholder="URL" required></div>')
+			$(this).parent().append('<div class="form-group"><input class="form-control" placeholder="URL" required></div>');
 		}
 		else if (choix == '16') {
-			$(this).parent().append('<div class="form-group"><input class="form-control" placeholder="URL" required><textarea placeholder="Entrer une légende (Max. 200)" maxlength="200" wrap="soft" class="form-control mb-3 mt-3"></textarea><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><input class="form-control" placeholder="URL" required><textarea placeholder="Entrer une légende (Max. 200)" maxlength="200" wrap="soft" class="form-control mb-3 mt-3"></textarea><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '17') {
-			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea><input class="form-control" placeholder="URL" required>')
+			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea><input class="form-control" placeholder="URL" required>');
 		}
 		else if (choix == '18') {
-			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else if (choix == '19') { 
-			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>')
+			$(this).parent().append('<div class="form-group"><textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft" class="form-control mb-3 mt-3"></textarea></div>');
 		}
 		else {
 			$(this).parent().append("Choisir un format de slide.");

@@ -113,13 +113,13 @@
                         <input type="text" class="form-control" name="nom de la section" required>
                     </div>
                     <hr>
-                    <div>Slide :</div>
+                    <!-- <div>Slide :</div>
                     <div class="form-group pb-sm">
                         <textarea placeholder="Entrer du texte (Max. 500)" maxlength="500" wrap="soft"
                             class="form-control mb-3 mt-3"></textarea>
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
                             class="parcourir">
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <button type="button" class="boutonForm boutonAjouter boutonPetit ml-auto mr-auto format_slide">Ajouter une
                             slide</button>
