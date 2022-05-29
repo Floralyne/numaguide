@@ -77,11 +77,11 @@
                 </label>
                 <div class="collapse" id="automne">
                     <div class="card card-body" id="paletteautomne">
-                        <div id="numaC58768">#C58768</div>
-                        <div id="numa313232">#313232</div>
+                        <div id="numaE7D6C2">#E7D6C2</div>
+                        <div id="numaADA296">#ADA296</div>
                         <div id="numaF5F1DF">#F5F1DF</div>
-                        <div id="numaA2B1A7">#A2B1A7</div>
-                        <div id="numa817677">#817677</div>
+                        <div id="numaD4D7C9">#D4D7C9</div>
+                        <div id="numaC1B3A8">#C1B3A8</div>
                     </div>
                 </div>
                 </button>
