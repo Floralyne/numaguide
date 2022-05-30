@@ -33,7 +33,6 @@
 <?php
 
 //variables    
-
     $d_titre = "";
     $d_auteur = "";
     $d_url = "";
@@ -64,8 +63,6 @@
 }
 
 //creation du DOMDocument
-Header('Content-type: text/xml');
-
 $dom = new DOMDocument('1.0', 'utf-8'); 
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
@@ -154,11 +151,8 @@ if(isset($_POST['ok'])){
     
     echo "<xmp>".$res= $dom->saveXML()."</xmp>";
 
-
-
 }
 ?>
-
 
 </div>
    
