@@ -42,8 +42,16 @@
 ?>
 
 <?php
-$handle = fopen("C:\\xampp\\htdocs\\wordpress\\test.txt", "w");
-$filename = 'test.txt';
+
+$handle = fopen("test.txt", "w");
+
+
+readfile("test.txt");
+
+$fileName = 'test.txt';
+$filePath = 'test.txt';
+
+
 $dom = new DOMDocument('1.0', 'utf-8'); 
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
@@ -143,15 +151,35 @@ $facultatif->appendChild($popularLevel);
 $choix->appendChild($type);
 $choix->appendChild($domain);
 
-
 //affichage des métadonnées avec balises xml apparentes
 if(isset($_POST['ok'])){
     
-    echo "<xmp>".$res= $dom->saveXML()."</xmp>";
-   // $dom->save("test.xml");
-    $somecontent = $res ;
+     "<xmp>".$res= $dom->saveXML($dom)."</xmp>";
+ //Start le buffering
+ ob_start();
+
+             // Define headers
+             header("Cache-Control: public");
+             header("Content-Description: File Transfer");
+             header("Content-Disposition: attachment; filename=$fileName");
+             header("Content-Type: text/xml");
+             header("Content-Transfer-Encoding: binary");
+
+             $somecontent = $res ;
+             readfile($filePath);
+
+ //Fin du buffering et retourne son contenu
+$test = ob_get_clean();
+die(var_dump($test));
+
+    
+     // $dom->save("test.xml");
+
+    exit;
 
 }
 ?>
+
+
 </div>
    
