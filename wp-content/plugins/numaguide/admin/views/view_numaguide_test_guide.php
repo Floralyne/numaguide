@@ -94,7 +94,6 @@
 	'_builtin' => false,
 	'show_in_nav_menus' => false
         ));
-        die("finito");
         
         //Slide avec trois textes
         if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
