@@ -111,7 +111,7 @@ function urlFonction() {
 		//Regex pour tous les caractères spéciaux
 		var regex = new RegExp("\\\W|_", "g");
 		//Par quoi c'est remplacer
-		var replace = "-";
+		var replace = "";
 		//Limite la taille pour l'url
 		str = str.substring(0,20);
 		//Remplace les accents par des lettres sans accent
