@@ -65,6 +65,7 @@
 <?php
     if (isset($_POST['ok'])) {
         //Titre du guide
+        $slide = "";
         $ng_guide_nom = $_POST['nomGuide'];
 
         //Slide avec trois textes
@@ -192,6 +193,7 @@
             $ng_slide5text_value3 = $_POST['slide5text-3'];
             $ng_slide5text_value4 = $_POST['slide5text-4'];
             $ng_slide5text_value5 = $_POST['slide5text-5'];
+            
 
             $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
                 $ng_slide5text_value1 . '<!-- /wp:paragraph -->' .
