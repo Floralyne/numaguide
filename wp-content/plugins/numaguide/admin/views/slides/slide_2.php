@@ -26,7 +26,7 @@
     <section id="slide_2">
         <div id="slide_2_c" class="container-fluid">
             <div id="slide_2_r" class="row vh-100">
-                <div id="slide_2_div" class="col text-justify mt-auto mb-auto p-5">
+                <div id="slide_2_div" class="col text-center mt-auto mb-auto p-5">
                     <div id="slide_2_titre_principal" class="slide_2_titre">       
                         <p>Titre :    
                         <?php

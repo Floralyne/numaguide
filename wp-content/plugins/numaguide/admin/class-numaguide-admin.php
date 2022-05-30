@@ -283,9 +283,6 @@ class Numaguide_Admin
      * @param string $user
      * @param array $allowed_roles la liste des rôles concernés
 
-     * @param int $parent_id id d'un parent, par défaut NULL
-     *
-     * @return int $page_id
      */
 
     public function numaguide_cacher_menus()
@@ -296,7 +293,7 @@ class Numaguide_Admin
         if (array_intersect($allowed_roles, $user->roles)) {
 
             remove_menu_page('index.php'); //Dashboard
-            remove_menu_page('jetpack'); //Jetpack*
+            remove_menu_page('jetpack'); //Jetpack
             remove_menu_page('edit.php'); //Articles
             remove_menu_page('upload.php'); //Media
             remove_menu_page('edit.php?post_type=page'); //Pages
@@ -318,10 +315,7 @@ class Numaguide_Admin
      *
      * @param WP_Admin_Bar $wp_admin_bar WP_Admin Bar instance.
      * @param array $allowed_roles la liste des rôles concernés
-
-     * @param int $parent_id id d'un parent, par défaut NULL
      *
-     * @return int $page_id
      */
 
     public function numaguide_vider_barre_admin($wp_admin_bar)

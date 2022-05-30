@@ -32,6 +32,7 @@ add_action('wp_enqueue_styles', 'numaguide_register_assets');
 add_filter('document_title_separator', 'numaguide_title_separator');
 
 //Permet de supprimer les <p> indésirables une fois le guide généré
+
 function numaguide_supprimer_p( $content ) {
   remove_filter( 'the_content', 'wpautop' );
   remove_filter( 'the_excerpt', 'wpautop' );
