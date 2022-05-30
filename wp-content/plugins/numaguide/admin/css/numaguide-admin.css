@@ -1,0 +1,339 @@
+/**
+ * CSS PARTIE ADMINISTRATEUR
+ */
+
+ /* Couleurs et police interface administrateur */
+ @font-face {
+	font-family: "Poppins";
+	src: url("font/Poppins-Regular.ttf");
+}
+
+#adminmenu,
+#adminmenu .wp-submenu,
+#adminmenuback,
+#adminmenuwrap {
+	background-color: #363440;
+}
+
+#wpadminbar {
+	background: #363440;
+}
+
+body,
+td,
+textarea,
+input,
+select,
+a,
+#wpcontent,
+#wp-admin-bar-root-default .ab-item,
+#wpadminbar #wp-toolbar .display-name,
+#wp-admin-bar-top-secondary .ab-sub-wrapper,
+#wp-admin-bar-top-secondary .ab-item,
+#wp-admin-bar-root-default .ab-label {
+	font-family: 'Poppins', sans-serif;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+#adminmenu .wp-menu-arrow,
+#adminmenu .wp-menu-arrow div,
+#adminmenu li.current a.menu-top,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+	background-color: #35A6B1;
+}
+
+#adminmenu .wp-submenu-wrap {
+	background-color: #35A6B1;
+}
+
+#adminmenu div.wp-menu-image::before {
+	color: #e99350;
+}
+
+#adminmenu div.wp-menu-image:hover:before {
+	color: #e99350;
+}
+
+#adminmenu .wp-submenu a:focus,
+#adminmenu .wp-submenu a:hover,
+#adminmenu a:hover,
+#adminmenu li.menu-top>a:focus,
+#wpadminbar ul.ab-top-menu>li>a:hover {
+	color: #e99350 !important;
+}
+
+#wpadminbar:not(.mobile)>#wp-toolbar a:focus span.ab-label,
+#wpadminbar:not(.mobile)>#wp-toolbar li:hover span.ab-label,
+#wpadminbar>#wp-toolbar li.hover span.ab-label {
+	color: #e99350 !important;
+}
+
+#wpadminbar .quicklinks .menupop ul li a,
+#wpadminbar .quicklinks .menupop ul li a strong,
+#wpadminbar .quicklinks .menupop.hover ul li a,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a,
+#wpadminbar li .ab-item:focus .ab-icon::before,
+#wpadminbar li .ab-item:focus::before,
+#wpadminbar li.hover .ab-icon::before,
+#wpadminbar li.hover .ab-item::before,
+#wpadminbar li:hover .ab-icon::before,
+#wpadminbar li:hover .ab-item::before {
+	color: #ffffff !important;
+}
+
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub>a.menu-top,
+#adminmenu li>a.menu-top:focus {
+	color: #e99350 !important;
+}
+
+#adminmenu li a:focus div.wp-menu-image::before,
+#adminmenu li.opensub div.wp-menu-image::before,
+#adminmenu li:hover div.wp-menu-image::before {
+	color: #fff;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu a:hover,
+div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu ul.wp-submenu.wp-submenu-wrap li>a:hover,
+div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-submenu:hover {
+	color: #000 !important;
+}
+
+#wpadminbar .menupop .ab-sub-wrapper,
+#wpadminbar .shortlink-input {
+	background-color: #35A6B1;
+}
+
+#collapse-button,
+#collapse-button:focus {
+	color: #fff;
+}
+
+#collapse-button:hover {
+	background-color: #35A6B1;
+	color: #000;
+}
+
+#wpadminbar .menupop .ab-sub-wrapper,
+#wpadminbar .shortlink-input>a.ab-item:hover,
+#wpadminbar .quicklinks .menupop ul li a:hover {
+	color: #000;
+}
+
+#wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover>a,
+#wpadminbar .quicklinks .menupop ul li a:focus,
+#wpadminbar .quicklinks .menupop ul li a:focus strong,
+#wpadminbar .quicklinks .menupop ul li a:hover,
+#wpadminbar .quicklinks .menupop ul li a:hover strong,
+#wpadminbar .quicklinks .menupop.hover ul li a:focus,
+#wpadminbar .quicklinks .menupop.hover ul li a:hover,
+#wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:focus,
+#wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:hover,
+#wpadminbar li #adminbarsearch.adminbar-focused::before,
+#wpadminbar li:hover #adminbarsearch::before,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover {
+	color: #000 !important;
+}
+
+#wpadminbar .ab-top-menu>li.hover>.ab-item,
+#wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus,
+#wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item,
+#wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
+	color: #e99350 !important;
+	background-color: #1d2327;
+}
+
+/*** Formulaires ***/
+
+/*Apparence des boutons du formulaire*/
+
+.boutonForm {
+    border-radius: 5px;
+    color: #000000;
+    text-align: center;
+    transition: all 0.3s ease-in;
+	display: block;
+	width: 100%;
+	border: 2px solid;
+	padding: .5rem 1rem;
+	margin-bottom:0.5rem;
+}
+
+.boutonValider {
+    background-color: #35A6B1;
+    border: 2px solid #35A6B1;
+}
+
+.boutonValider:hover {
+    background-color: #fff;
+}
+
+.boutonAjouter{
+    background-color: #363440;
+    border: 2px solid #363440;
+    color: #fff;
+}
+
+.boutonAjouter:hover {
+    background-color: #fff;
+    color: #000000;
+}
+
+.boutonSupprimer{
+    background-color: #E57654;
+    border: 2px solid #E57654 !important
+}
+
+.boutonSupprimer:hover {
+    background-color: #fff;
+}
+
+.boutonAction {
+    background-color: #e99350;
+    border: 2px solid #e99350;
+}
+
+.boutonAction:hover {
+    background-color: #fff;
+    border: 2px solid #e99350;
+}
+
+/***Titres du formulaire***/
+
+.titreForm{
+	font-weight: bold;
+	margin-top: 1rem;
+	font-size: 18pt;
+}
+
+.soustitreForm{
+	margin-top: 1rem;
+	font-size: 15pt;
+	margin-bottom: 1rem;
+}
+
+#formCrea{
+	max-width: 65%;
+}
+
+#validerGuide{
+	margin-top: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#indexer{
+	position:relative;
+}
+
+#divIndexer{
+	padding:0;
+}
+
+.boutonMarges{
+	
+	margin-top: 0.5rem;
+}
+
+.boutonPetit{
+	width:60%;
+}
+
+
+/**Palettes**/
+
+/*Palette Numaguide*/
+
+#palettenumaguide
+{
+	text-align: center;
+}
+
+#numa363440{
+	background-color: #363440;
+	color: white;
+}
+#numa35A6B1{
+	background-color: #35A6B1;
+}
+#numaE57654{
+	background-color: #E57654;
+}
+#numaE99350{
+	background-color: #e99350;
+}
+#numaFFF{
+	background-color: #ffffff;
+}
+
+/*Palette Pastel*/
+
+#palettepastel{
+	text-align: center;
+}
+
+#numaEEF9FF{
+	background-color: #EEF9FF;
+}
+#numaFFF7FC{
+	background-color: #FFF7FC;
+}
+#numaFFFDED{
+	background-color: #FFFDED;
+}
+#numaFFF7EC{
+	background-color: #FFF7EC;
+}
+#numaFFFBFB{
+	background-color: #FFFBFB;
+}
+
+/*Palette Automne*/
+
+#paletteautomne{
+	text-align: center;
+}
+
+#numaE7D6C2{
+	background-color: #E7D6C2;
+}
+#numaADA296{
+	background-color: #ADA296;
+}
+#numaF5F1DF{
+	background-color: #F5F1DF;
+}
+#numaD4D7C9{
+	background-color: #D4D7C9;
+}
+#numaC1B3A8{
+	background-color: #C1B3A8;
+}
+
+/*Palette Sombre*/
+
+#palettesombre{
+	text-align: center;
+}
+
+#numa002029{
+	background-color: #002029;
+	color:white;
+}
+#numa0C1D1D{
+	background-color: #0C1D1D;
+	color:white;
+}
+#numa0E1717{
+	background-color: #0E1717;
+	color:white;
+}
+#numa170E1D{
+	background-color: #170E1D;
+	color:white;
+}
+#numa100F0F{
+	background-color: #100F0F;
+	color:white;
+}
