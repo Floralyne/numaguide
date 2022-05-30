@@ -19,6 +19,8 @@ function numaguide_register_assets()
   wp_enqueue_style('slide');
   wp_register_style('page_404', get_template_directory_uri() . '/assets/css/404.css',  []);
   wp_enqueue_style('page_404');
+  wp_register_style('front-page', get_template_directory_uri() . '/assets/css/front-page.css',  []);
+  wp_enqueue_style('front-page');
 }
 
 function numaguide_title_separator()
