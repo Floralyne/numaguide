@@ -65,7 +65,10 @@
 <?php
     if (isset($_POST['ok'])) {
         //Titre du guide
-        $slide = "";
+        $slide = "<style>html[lang] {
+            margin-top: 0 !important;
+          }
+          </style>";
         $ng_guide_nom = $_POST['nomGuide'];
 
         //Slide avec trois textes
