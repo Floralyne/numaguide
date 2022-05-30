@@ -64,6 +64,8 @@
 }
 
 //creation du DOMDocument
+Header('Content-type: text/xml');
+
 $dom = new DOMDocument('1.0', 'utf-8'); 
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
