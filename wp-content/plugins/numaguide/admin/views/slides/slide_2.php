@@ -12,12 +12,11 @@
     $post_tab = $args['article'];
     $post = $post_tab[0];
     $blocks = parse_blocks($post->post_content);
-
     $paragraphes = array();
+
     foreach ($blocks as $block) {
     if ($block['blockName'] == 'core/paragraph') {
-        $paragraphe = substr($block['innerContent'][0], 4);
-        $paragraphe = substr($paragraphe, 0, -5);
+        $paragraphe = $block['innerContent'][0];
         $paragraphes[] = $paragraphe;
         }
     }
