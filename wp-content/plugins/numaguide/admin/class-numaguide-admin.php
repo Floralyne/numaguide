@@ -271,7 +271,7 @@ class Numaguide_Admin
             )
         );
         echo "Le guide numérique : \"" . $titre_guide . " (ID: " . $page_id . ")\" a été crée ! <br>";
-        echo "<a href=\"http://localhost/wordpress/" . strtolower(str_replace(' ', '-', trim($titre_guide))) . "\">Appuyez pour voir le guide !</a>";
+        echo "<a href=\"" . get_site_url() . "/" . strtolower(str_replace(' ', '-', trim($titre_guide))) . "\">Appuyez pour voir le guide !</a>";
         return $page_id;
     }
 
