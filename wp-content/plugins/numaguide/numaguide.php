@@ -78,5 +78,3 @@ function run_numaguide()
 	$plugin->run();
 }
 run_numaguide();
-
-
