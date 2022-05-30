@@ -31,38 +31,43 @@
         </form>
 
 <?php
-        if(isset($_POST['ok'])){
-    $d_titre = $_POST['title'];
-    $d_auteur = $_POST['author'];
-    $d_url = $_POST['url'];
-    $d_subtitle = $_POST['subtitle'];
-    $d_identifier = $_POST['identifier'];
 
+//variables    
+
+    $d_titre = "";
+    $d_auteur = "";
+    $d_url = "";
+    $d_subtitle ="";
+    $d_identifier= "";
+    $d_abstract = "";
+    $d_keyword = "";
+    $d_language = "";
+    $d_writingDate = "";
+    $d_Licence = "";
+    $d_classification = "";
+    $d_comment = "";
+    $d_collaboration = "";
+    $d_seeAlso = "";
+    $d_anrProject = "";
+    $d_europeanProject = "";
+    $d_funding = "";
+    $d_popularLevel = "";
+    $d_type = "";
+    $d_domain = "";
+
+    if(isset($_POST['ok'])){
+        $d_titre = $_POST['title'];
+        $d_auteur = $_POST['author'];
+        $d_url = $_POST['url'];
+        $d_subtitle = $_POST['subtitle'];
+        $d_identifier = $_POST['identifier'];
 }
-?>
 
-<?php
-
+//creation du DOMDocument
 $dom = new DOMDocument('1.0', 'utf-8'); 
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
 
-//Variables
-$d_abstract = "";
-$d_keyword = "";
-$d_language = "";
-$d_writingDate = "";
-$d_Licence = "";
-$d_classification = "";
-$d_comment = "";
-$d_collaboration = "";
-$d_seeAlso = "";
-$d_anrProject = "";
-$d_europeanProject = "";
-$d_funding = "";
-$d_popularLevel = "";
-$d_type = "";
-$d_domain = "";
 
 //creation des principaux elements, sans valeurs
 $all = $dom->createElement('metadonnees');
@@ -142,7 +147,7 @@ $facultatif->appendChild($popularLevel);
 $choix->appendChild($type);
 $choix->appendChild($domain);
 
-//affichage des métadonnées avec balises xml apparentes
+//affichage des métadonnées avec balises xml apparentes et indentées
 if(isset($_POST['ok'])){
     
     echo "<xmp>".$res= $dom->saveXML()."</xmp>";
