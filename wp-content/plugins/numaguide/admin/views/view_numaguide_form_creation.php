@@ -48,7 +48,7 @@
                         <div id="numaFFA86B">#FFA86B</div>
                         <div id="numaFFCC84">#FFCC84</div>
                         <div id="numaFFE69E">#FFE69E</div>
-                        <div id="numaDCF1BF">#DCF1BF</div>
+                        <div id="numaFFFFEB">#FFFFEB</div>
                         <div id="numaCCF6EE">#CCF6EE</div>
                     </div>
                 </div>
