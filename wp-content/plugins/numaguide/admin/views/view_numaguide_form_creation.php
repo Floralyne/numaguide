@@ -41,15 +41,15 @@
             <div class="col">
             <label class="boutonForm boutonAjouter">
                     <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="collapseExample" data-target="#numaguide">NumaGuide
+                        aria-expanded="false" aria-controls="collapseExample" data-target="#ete">Été
                 </label>
-                <div class="collapse" id="numaguide">
-                    <div class="card card-body" id="palettenumaguide">
-                        <div id="numa363440">#363440</div>
-                        <div id="numa35A6B1">#35A6B1</div>
-                        <div id="numaE57654">#E57654</div>
-                        <div id="numaE99350">#E99350</div>
-                        <div id="numaFFF">#FFFFFF</div>
+                <div class="collapse" id="ete">
+                    <div class="card card-body" id="paletteete">
+                        <div id="numaFFA86B">#FFA86B</div>
+                        <div id="numaFFCC84">#FFCC84</div>
+                        <div id="numaFFE69E">#FFE69E</div>
+                        <div id="numaDCF1BF">#DCF1BF</div>
+                        <div id="numaCCF6EE">#CCF6EE</div>
                     </div>
                 </div>
                 </button>
@@ -94,10 +94,10 @@
                 <div class="collapse" id="sombre">
                     <div class="card card-body" id="palettesombre">
                         <div id="numa002029">#002029</div>
-                        <div id="numa0C1D1D">#0C1D1D</div>
-                        <div id="numa0E1717">#0E1717</div>
-                        <div id="numa170E1D">#170E1D</div>
-                        <div id="numa100F0F">#100F0F</div>
+                        <div id="numa032934">#032934</div>
+                        <div id="numa04323E">#04323E</div>
+                        <div id="numa0D3B47">#0D3B47</div>
+                        <div id="numa144B58">#144B58</div>
                     </div>
                 </div>
                 </button>

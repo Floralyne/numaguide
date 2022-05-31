@@ -243,28 +243,27 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 
 /**Palettes**/
 
-/*Palette Numaguide*/
+/*Palette Été*/
 
-#palettenumaguide
+#paletteete
 {
 	text-align: center;
 }
 
-#numa363440{
-	background-color: #363440;
-	color: white;
+#numaFFA86B{
+	background-color: #FFA86B;
 }
-#numa35A6B1{
-	background-color: #35A6B1;
+#numaFFCC84{
+	background-color: #FFCC84;
 }
-#numaE57654{
-	background-color: #E57654;
+#numaFFE69E{
+	background-color: #FFE69E;
 }
-#numaE99350{
-	background-color: #e99350;
+#numaDCF1BF{
+	background-color: #DCF1BF;
 }
-#numaFFF{
-	background-color: #ffffff;
+#numaCCF6EE{
+	background-color: #CCF6EE;
 }
 
 /*Palette Pastel*/
@@ -321,19 +320,19 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 	background-color: #002029;
 	color:white;
 }
-#numa0C1D1D{
-	background-color: #0C1D1D;
+#numa032934{
+	background-color: #032934;
 	color:white;
 }
-#numa0E1717{
-	background-color: #0E1717;
+#numa04323E{
+	background-color: #04323E;
 	color:white;
 }
-#numa170E1D{
-	background-color: #170E1D;
+#numa0D3B47{
+	background-color: #0D3B47;
 	color:white;
 }
-#numa100F0F{
-	background-color: #100F0F;
+#numa144B58{
+	background-color: #144B58;
 	color:white;
 }
