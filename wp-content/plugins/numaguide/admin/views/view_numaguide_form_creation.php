@@ -52,12 +52,11 @@
                         <div id="numaCCF6EE">#CCF6EE</div>
                     </div>
                 </div>
-                </button>
             </div>
             <div class="col">
-                <label class="boutonForm boutonAjouter">
+            <label class="boutonForm boutonAjouter">
                     <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="collapseExample" data-target="#pastel">Pastel
+                        aria-expanded="false" aria-controls="collapseExample" data-target="#pastel" checked>Pastel
                 </label>
                 <div class="collapse" id="pastel">
                     <div class="card card-body" id="palettepastel">
@@ -68,23 +67,21 @@
                         <div id="numaFFFBFB">#FFFBFB</div>
                     </div>
                 </div>
-                </button>
             </div>
             <div class="col">
             <label class="boutonForm boutonAjouter">
                     <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="collapseExample" data-target="#automne">Automne
+                        aria-expanded="false" aria-controls="collapseExample" data-target="#campagne">Campagne
                 </label>
-                <div class="collapse" id="automne">
-                    <div class="card card-body" id="paletteautomne">
-                        <div id="numaE7D6C2">#E7D6C2</div>
-                        <div id="numaADA296">#ADA296</div>
-                        <div id="numaF5F1DF">#F5F1DF</div>
-                        <div id="numaD4D7C9">#D4D7C9</div>
-                        <div id="numaC1B3A8">#C1B3A8</div>
+                <div class="collapse" id="campagne">
+                    <div class="card card-body" id="palettecampagne">
+                        <div id="numaD3C1C3">#D3C1C3</div>
+                        <div id="numaE2D0BE">#E2D0BE</div>
+                        <div id="numaEEE5BF">#EEE5BF</div>
+                        <div id="numaE8F8C1">#E8F8C1</div>
+                        <div id="numaD0F0B9">#D0F0B9</div>
                     </div>
                 </div>
-                </button>
             </div>
             <div class="col">
             <label class="boutonForm boutonAjouter">
@@ -100,7 +97,6 @@
                         <div id="numa144B58">#144B58</div>
                     </div>
                 </div>
-                </button>
             </div>
         </div>
         <div class="container-section" id="container-section">
