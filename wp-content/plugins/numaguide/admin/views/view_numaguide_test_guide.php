@@ -83,30 +83,8 @@
         $ng_guide_nom = substr($ng_guide_nom, 0, 20);
 
         /*Créer la taxonomie*/
-        
-    //     register_taxonomy($ng_guide_nom, "post", $args = array(
-    //         "hierarchical" => true,
-	//     "label" => "Guide",
-	// "singular_label" => "Guide",
-	// 'query_var' => true,
-	// 'rewrite' => array( 'slug' => 'tutorial', 'with_front' => false ),
-	// 'public' => true,
-	// 'show_ui' => true,
-	// 'show_tagcloud' => true,
-	// '_builtin' => false,
-	// 'show_in_nav_menus' => false
-    //     ));
 
-/*Test wordpress qui ne fonctionne pas*/
-
-    function wpdocs_create_book_tax() {
-        register_taxonomy( 'genre', 'book', array(
-            'label'        => __( 'Genre', 'textdomain' ),
-            'rewrite'      => array( 'slug' => 'genre' ),
-            'hierarchical' => true,
-        ) );
-    }
-    add_action( 'init', 'wpdocs_create_book_tax', 0 );
+        wp_create_term($ng_guide_nom);
         
         //Slide avec trois textes
         if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
