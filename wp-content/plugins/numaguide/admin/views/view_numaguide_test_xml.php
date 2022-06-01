@@ -149,7 +149,7 @@ $choix->appendChild($domain);
 //affichage des métadonnées avec balises xml apparentes et indentées
 if(isset($_POST['ok'])){
     
-    echo "<xmp>".$res= $dom->saveXML()."</xmp>";
+    echo "<div id=\"meta\"><xmp id=\"to-copy\"><textarea>".$res= $dom->saveXML()."</textarea></xmp><button onclick=\"copy()\">Copier le texte</button></div>";
 
 }
 ?>
