@@ -22,7 +22,7 @@
 
 	// Génére la liste des formats de slides
 	$(".format_slide").click(function () {
-		var liste_slide = '<div class="liste_slide"><label for="select-slide">Choisir un format de slide :</label><select><option value="">------</option><optgroup label="Introduction :"><option value="1">Slide 1 : Titre, sous-titre(s), auteur(s)</option><option value="2">Slide 2 : Titre, sous-titre(s), auteur(s), mot(s)-clé(s)</option><option value="3">Slide 3 : Remerciements</option><option value="4">Slide 4 : Résumé</option><option value="5">Slide 5 : Introduction</option></optgroup><optgroup label="Texte :"><option value="6">Slide 6</option><option value="7">Slide 7</option><option value="8">Slide 8</option></optgroup><optgroup label="Avec une image :"><option value="9">Slide 9</option><option value="10">Slide 10</option><option value="11">Slide 11</option><option value="12>Slide 12</option></optgroup><optgroup label="Avec du son :"><option value="13">Slide 13</option><option value="14">Slide 14</option></optgroup><optgroup label="Avec une vidéo :"><option value="15">Slide 15</option><option value="16">Slide 16</option><option value="17">Slide 17</option></optgroup><optgroup label="Références :"><option value="18">Slide 18 : Bibliographie</option><option value="19">Slide 19 : Bibliographie (2)</option></optgroup></select><button type="button" class="boutonForm boutonValider choix_format">Valider</button></div>'; 
+		var liste_slide = '<div class="liste_slide"><label for="select-slide">Choisir un format de slide :</label><select><option value="">------</option><optgroup label="Introduction :"><option value="1">Slide 1 : Titre, sous-titre(s), auteur(s)</option><option value="2">Slide 2 : Titre, sous-titre(s), auteur(s), mot(s)-clé(s)</option><option value="3">Slide 3 : Remerciements</option><option value="4">Slide 4 : Résumé</option><option value="5">Slide 5 : Introduction</option></optgroup><optgroup label="Texte :"><option value="6">Slide 6</option><option value="7">Slide 7</option><option value="8">Slide 8</option></optgroup><optgroup label="Avec une image :"><option value="9">Slide 9</option><option value="10">Slide 10</option><option value="11">Slide 11</option><option value="12">Slide 12</option></optgroup><optgroup label="Avec du son :"><option value="13">Slide 13</option><option value="14">Slide 14</option></optgroup><optgroup label="Avec une vidéo :"><option value="15">Slide 15</option><option value="16">Slide 16</option><option value="17">Slide 17</option></optgroup><optgroup label="Références :"><option value="18">Slide 18 : Bibliographie</option><option value="19">Slide 19 : Bibliographie (2)</option></optgroup></select><button type="button" class="boutonForm boutonValider choix_format">Valider</button></div>'; 
 		$(this).parent().append(liste_slide);
 	});
 
@@ -93,11 +93,11 @@
 	});
 
 
-	// Supprimer liste des formats et slides 
-	$(".supprimer_liste").click(function(event) {
-		event.stopPropagation();
-		$(this).closest('liste_slide').empty();
-   });
+// 	// Supprimer liste des formats et slides 
+// 	$(".supprimer_liste").click(function(event) {
+// 		event.stopPropagation();
+// 		$(this).closest('liste_slide').empty();
+//    });
 
   });
 
