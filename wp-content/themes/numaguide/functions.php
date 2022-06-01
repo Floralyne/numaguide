@@ -15,8 +15,6 @@ function numaguide_register_assets()
   wp_register_script('jquery', 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js', [], false, true);
   wp_enqueue_style('bootstrap');
   wp_enqueue_script('bootstrap');
-  wp_register_style('slide', get_template_directory_uri() . '/assets/css/slides.css',  []);
-  wp_enqueue_style('slide');
   wp_register_style('page_404', get_template_directory_uri() . '/assets/css/404.css',  []);
   wp_enqueue_style('page_404');
   wp_register_style('front-page', get_template_directory_uri() . '/assets/css/front-page.css',  []);

@@ -2,11 +2,11 @@
 
 <main id="site-content">
 
-    <?php
-        $info_slide = array('slide10', 'slides/10');
-        $slide = apply_filters('ng_article_pour_template', $info_slide);
-        //apply_filters('ng_creer_guide','Slide 14 gone 9', $slide);
-    ?>
+<?php
+
+the_content();
+
+?>
 
 </main>
 
