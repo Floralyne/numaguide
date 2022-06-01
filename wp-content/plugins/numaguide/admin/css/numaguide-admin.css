@@ -407,3 +407,7 @@ input[type="radio"]:checked + label {
     padding: 13px 50px 13px;
   }
 }
+
+.NoumaAccueil {
+	margin: 1rem !important;
+}

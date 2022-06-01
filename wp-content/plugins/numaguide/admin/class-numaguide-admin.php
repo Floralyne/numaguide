@@ -140,12 +140,8 @@ class Numaguide_Admin
 
         function ng_admin_page_contents()
         {
-            ?>
-						<h1>
-							<?php esc_html_e('Test Numaguide', 'Numaguide');?>
-						</h1>
-			<?php
-}
+            include_once 'views/view_numaguide_page_accueil.php';
+        }
 
         function ng_submenu_form_creation()
         {
@@ -181,10 +177,6 @@ class Numaguide_Admin
      */
     public function numaguide_article_pour_template($info_slide)
     {
-        //TO DO
-        //RAJOUTER LES VARIABLES D'ENTREE
-        //POUR AUTOMATISER LA CATEGORIE/ETIQUETTE/GUIDE
-
         $slide = "";
         $nbSlide = 1;
 
