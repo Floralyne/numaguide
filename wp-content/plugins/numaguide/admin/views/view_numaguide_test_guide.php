@@ -103,11 +103,13 @@
             $ng_info_article = array(
                 'post_content' => $ng_content,
                 'post_category' => array(51),
-                'tags_input' => array('1'),
+                'tags_input' => array('1', $ng_guide_nom),
                 'post_type' => 'post',
             );
 
             wp_insert_post($ng_info_article);
+
+            die("monkey");
 
             $info_slide = array($ng_slide1_nom, 'views/slides/slide_1.php');
             $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
@@ -151,7 +153,7 @@
             $ng_info_article = array(
                 'post_content' => $ng_content,
                 'post_category' => array($num_cat),
-                'tags_input' => array('1'),
+                'tags_input' => array('1', $ng_guide_nom),
                 'post_type' => 'post',
             );
 
@@ -193,7 +195,7 @@
             $ng_info_article = array(
                 'post_content' => $ng_content,
                 'post_category' => array($num_cat),
-                'tags_input' => array('1'),
+                'tags_input' => array('1', $ng_guide_nom),
                 'post_type' => 'post',
             );
 
@@ -238,7 +240,7 @@
             $ng_info_article = array(
                 'post_content' => $ng_content,
                 'post_category' => array($num_cat),
-                'tags_input' => array('1'),
+                'tags_input' => array('1', $ng_guide_nom),
                 'post_type' => 'post',
             );
 

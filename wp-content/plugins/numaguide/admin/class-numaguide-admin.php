@@ -90,7 +90,7 @@ class Numaguide_Admin
             'Créer un guide',
             'edit_posts',
             'ng_creerguide',
-            'ng_submenu_page_content'
+            'ng_submenu_form_creation'
         );
 
         add_submenu_page(
@@ -99,7 +99,7 @@ class Numaguide_Admin
             'Modifier un guide',
             'edit_posts',
             'ng_modifierguide',
-            'ng_submenu_page_content'
+            'ng_submenu_form_creation'
         );
 
         add_submenu_page(
@@ -108,7 +108,7 @@ class Numaguide_Admin
             'Liste des guides',
             'edit_posts',
             'ng_listeguide',
-            'ng_submenu_page_content'
+            'ng_submenu_form_creation'
         );
 
         add_submenu_page(
@@ -117,7 +117,7 @@ class Numaguide_Admin
             'Configuration',
             'edit_posts',
             'ng_configuration',
-            'ng_submenu_page_content'
+            'ng_submenu_form_configuration'
         );
 
         add_submenu_page(
@@ -147,9 +147,14 @@ class Numaguide_Admin
 			<?php
 }
 
-        function ng_submenu_page_content()
+        function ng_submenu_form_creation()
         {
             include_once 'views/view_numaguide_form_creation.php';
+        }
+
+        function ng_submenu_form_configuration()
+        {
+            include_once 'views/view_numaguide_form_configuration.php';
         }
 
         function ng_submenu_xml_test()
