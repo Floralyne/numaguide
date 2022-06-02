@@ -72,6 +72,7 @@
             <div class="form-group pb-sm-2">
                 <label for="language">Langue du document : </label>
                 <select class="form-control" id="language">
+                    <option value="" selected="selected"></option>
                     <option value="FR">Français</option>
                     <option value="EN">Anglais</option>
                     <option value="IT">Italien</option>
@@ -92,143 +93,207 @@
 
             <div class="form-group pb-sm-2">
                 <label for="keyword">Mots clés :</label>
-                <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-                <div class="collapse multi-collapse" id="multiCollapseExample1">
-                <div class="card card-body">
                 <input type="text" class="form-control" name="keyword">
-                </div>
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="abstract">Résumé :</label>
-                <textarea type="text" class="form-control" name="identifier" rows="5"></textarea>
+                <textarea type="text" class="form-control" name="abstract" rows="5"></textarea>
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="licence">Licence :</label>
-                <input type="text" class="form-control" name="identifier">
+                <select class="form-control" id="licence">
+                <option value="" selected="selected"></option>
+                <option value="http://creativecommons.org/licenses/by/">CC BY - Paternité</option>
+                <option value="http://creativecommons.org/licenses/by-nc/">CC BY NC - Paternité - Pas d'utilisation commerciale</option>
+                <option value="http://creativecommons.org/licenses/by-nd/">CC BY ND - Paternité - Pas de modifications</option>
+                <option value="http://creativecommons.org/licenses/by-sa/">CC BY SA - Paternité - Partage selon les Conditions Initiales</option>
+                <option value="http://creativecommons.org/licenses/by-nc-nd/">CC BY NC ND - Paternité - Pas d'utilisation commerciale - Pas de modification</option>
+                <option value="http://creativecommons.org/licenses/by-nc-sa/">CC BY NC SA - Paternité - Pas d'utilisation commerciale - Partage selon les Conditions Initiales</option>
+                <option value="http://creativecommons.org/choose/mark/">NC - Marque du Domaine Public</option>
+                <option value="http://creativecommons.org/publicdomain/zero/1.0/">CC0 - Transfert dans le Domaine Public</option>
+                <option value="http://hal.archives-ouvertes.fr/licences/etalab/">ETALAB - Licence Ouverte</option>
+                <option value="http://hal.archives-ouvertes.fr/licences/copyright/">Copyright (Tous droits réservés)</option>
+                <option value="http://hal.archives-ouvertes.fr/licences/publicDomain/">Domaine public</option>
+                </select>
             </div>
 
-
+            <div class="form-group pb-sm-2">
+                <label for="doi">DOI :</label>
+                <input type="text" class="form-control" name="doi">
+            </div>
 
             <div class="form-group pb-sm-2">
-                <label for="identifier">Identifiant auteur :</label>
-                <input type="text" class="form-control" name="identifier">
+                <label for="identifier">Identifiant HAL :</label>
+                <input type="text" class="form-control" name="idHal">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="writingDate">Date de début de production :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="date" class="form-control" name="date" min="1970-01-01" max="2030-12-31">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="edate">Date de publication électronique :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="date" class="form-control" name="date" min="1970-01-01" max="2030-12-31">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="reportType">Type de rapport :</label>
-                <input type="text" class="form-control" name="identifier">
+                <select class="form-control" name="reportType">
+                <option value="" selected="selected"></option>
+                <option value="6">Rapport de recherche</option>
+                <option value="4">Rapport Technique</option>
+                <option value="2">Contrat</option>
+                <option value="3">Interne</option>
+                <option value="0">Autre</option>
+                </select>
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="lectureType">Niveau du cours :</label>
-                <input type="text" class="form-control" name="identifier">
+                <select name="lectureType" class="form-control">
+                    <option value="" selected="selected"></option>
+                    <option value="1">DEA</option>
+                    <option value="2">École thématique</option>
+                    <option value="7">3ème cycle</option>
+                    <option value="10">École d'ingénieur</option>
+                    <option value="11">Licence</option>
+                    <option value="12">Master</option>
+                    <option value="13" selected="selected">Doctorat</option>
+                    <option value="14">DEUG</option>
+                    <option value="15">Maitrise</option>
+                </select>
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="conferenceTitle">Titre conférence :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="conferenceTitle">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="conferenceStartDate">Date conférence :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="date" class="form-control" name="conferenceStartDate" min="1970-01-01" max="2030-12-31">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="publisherLink">URL du congrès ou de l'éditeur :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="publisherLink">
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="popularLevel">Niveau de vulgarisation :</label>
-                <input type="text" class="form-control" name="identifier">
+                <label for="popularLevel">Vulgarisation :</label>
+                <select name="popularLevel" class="form-control">
+                    <option value="" selected="selected"></option>
+                    <option value="0">Oui</option>
+                    <option value="1">Non</option>
+                </select>
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="peerReviewing">Comité de lecture  </label>
-                <input type="checkbox" class="form-check-input" name="peerReviewing">
+                <label for="peerReviewing">Comité de lecture :</label>
+                <select class="form-control" name="peerReviewing">
+                    <option value="" selected="selected"></option>
+                    <option value="0">Oui</option>
+                    <option value="1">Non</option>
+                </select>
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="audience">Audience :</label>
-                <input type="text" class="form-control" name="identifier">
+                <select class="form-control" name="audience">
+                    <option value="" selected="selected"></option>
+                    <option value="2">Internationale</option>
+                    <option value="3">Nationale</option>
+                    <option value="1">Non spécifiée</option>
+                </select>    
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="classification">Classification :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="classification">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="collaboration">Collaboration :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="collaboration">
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="number">Label :</label>
-                <input type="text" class="form-control" name="identifier">
+                <label for="Volumenumber">Numéro du Volume
+                     :</label>
+                <input type="text" class="form-control" name="Volumenumber">
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="revue">Nom de la revue :</label>
+                <input type="text" class="form-control" name="revue">
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="Revuenumber">Numéro de la revue:</label>
+                <input type="text" class="form-control" name="number">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="volume">Volume :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="volume">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="serie">Série :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="serie">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="authorityInstitution">Institution :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="authorityInstitution">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="director">Nom directeur :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="director">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="funding">Financement :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="funding">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="anrProject">Projets ANR :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="anrProject">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="europeanProject">Projets européens :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="europeanProject">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="city">Ville :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="city">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="country">Pays :</label>
-                <input type="text" class="form-control" name="identifier">
+                <select class="form-control" name="country">
+                    <option value="de">Allemagne</option>
+                    <option value="be">Belgique</option>
+                    <option value="ca">Canada</option>
+                    <option value="es">Espagne</option>
+                    <option value="us">États Unis</option>
+                    <option value="fr">France</option>
+                    <option value="ie">Ireland</option>
+                    <option value="it">Italy</option>
+                    <option value="gb">Royaume-Uni</option>
+                </select>   
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="seeAlso">Voir aussi :</label>
-                <input type="text" class="form-control" name="identifier">
+                <input type="text" class="form-control" name="seeAlso">
             </div>
     
 
