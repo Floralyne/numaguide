@@ -10,8 +10,9 @@
             <input type="text" class="form-control" id="nomGuide" name="nomGuide">
         </div>
 
+        <hr>
 
-        <div class="form-group pb-sm-2">
+        <div class="form-group pb-sm-2" id="groupeIntro">
             <div class="soustitreForm">Slide 1 - Titre, sous-titre, auteur(s)</div>
             <div class="row">
                 <div class="col col-lg-3 mb-auto mt-auto">
@@ -27,7 +28,7 @@
                 </div>
             </div>
 
-
+            <hr>
             <div class="soustitreForm">Slide 2 - Titre, sous-titre, auteur(e)(s), affiliation(s), mots-clés</div>
             <div class="row">
                 <div class="col col-lg-3 mb-auto mt-auto">
@@ -44,7 +45,7 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide2-5"></textarea>
                 </div>
             </div>
-
+            <hr>
 
             <div class="soustitreForm">Slide 3 - Remerciements</div>
             <div class="row">
@@ -58,7 +59,7 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide3-1"></textarea>
                 </div>
             </div>
-
+            <hr>
             <div class="soustitreForm">Slide 4 - Résumé</div>
             <div class="row">
                 <div class="col col-lg-3 mb-auto mt-auto">
@@ -71,7 +72,7 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide4-1"></textarea>
                 </div>
             </div>
-
+            <hr>
             <div class="soustitreForm">Slide 5 - Introduction</div>
             <div class="row">
                 <div class="col col-lg-3 mb-auto mt-auto">
@@ -82,6 +83,121 @@
                 </div>
                 <div class="col">
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide5-1"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group pb-sm-2" id="groupeTexte">
+            <div class="soustitreForm">Slide 6 - Paragraphe</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_6.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide1-1"></textarea>
+                </div>
+            </div>
+
+            <hr>
+            <div class="soustitreForm">Slide 7 - Deux paragraphes verticaux</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_7.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide7-1"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide7-2"></textarea>
+                </div>
+            </div>
+            <hr>
+
+            <div class="soustitreForm">Slide 8 - Deux paragraphes horizontaux</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_8.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide8-1"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide8-2"></textarea>
+
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group pb-sm-2" id="groupeImages">
+            <div class="soustitreForm">Slide 9 - Image plein écran</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_9.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide9-1">
+                </div>
+            </div>
+
+            <hr>
+            <div class="soustitreForm">Slide 10 - Un paragraphe et une image</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_10.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide10-2"></textarea>
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide10-1">
+                </div>
+            </div>
+            <hr>
+
+            <div class="soustitreForm">Slide 11 - Une image et un paragraphe</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_11.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide11-1">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide11-2"></textarea>
+
+                </div>
+            </div>
+
+            <hr>
+            <div class="soustitreForm">Slide 12 - Un paragraphe et une image</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_12.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide10-2"></textarea>
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide10-1">
                 </div>
             </div>
         </div>
