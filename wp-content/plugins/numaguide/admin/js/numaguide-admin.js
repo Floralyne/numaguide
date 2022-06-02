@@ -146,10 +146,10 @@ function supp_accent(my_string)
 	return my_string;
 }
 
+// Fonction pour copier le XML
 function copierTexte() {
 	// Selectionne l'élément à prendre
 	let texteACopier = document.querySelectorAll("#a-copier")[0];
-	console.log(texteACopier);
 
 	// Met en sélection chaque charactère
 	var range = document.createRange();
@@ -158,7 +158,19 @@ function copierTexte() {
     selection.removeAllRanges();
     selection.addRange(range);
 
+	// Action pour notifier que le texte à été copié
+	const btn = document.getElementById("btnCopier");
+	console.log(btn);
+	
+	if(btn.innerText === "Copier le texte"){
+		btn.innerText = "Bien copié !";
+	}else{
+		btn.innerText= "Copier le texte";
+	}
+
 	// Met dans le presse-papier
 	document.execCommand("copy");
   }
+
+
   
