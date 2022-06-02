@@ -108,7 +108,7 @@ class Numaguide_Admin
             'Liste des guides',
             'edit_posts',
             'ng_listeguide',
-            'ng_submenu_form_creation'
+            'ng_submenu_form_liste'
         );
 
         add_submenu_page(
@@ -151,6 +151,11 @@ class Numaguide_Admin
         function ng_submenu_form_configuration()
         {
             include_once 'views/view_numaguide_form_configuration.php';
+        }
+
+        function ng_submenu_form_liste()
+        {
+            include_once 'views/view_numaguide_liste_guides.php';
         }
 
         function ng_submenu_xml_test()

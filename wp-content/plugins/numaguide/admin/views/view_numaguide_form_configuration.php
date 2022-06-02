@@ -22,13 +22,13 @@
         </select>
     </div>
 
-    <div>OU</div>
+    <div><b>OU</b></div>
 
     <div class="form-group mt-2 mb-2">
         <label>Redirection : </label>
         <input type="url" placeholder="Exemple : https://www.msh-vdl.fr/" disabled>
     </div>
 
-    <button class="boutonForm boutonValider mt-5" disabled>Valider le choix</button>
+    <button class="boutonForm boutonValider mt-4" disabled>Valider le choix</button>
 
 </div>

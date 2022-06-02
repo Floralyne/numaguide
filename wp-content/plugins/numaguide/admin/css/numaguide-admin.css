@@ -399,3 +399,24 @@ textarea:invalid {
 	font-size: 0.8rem;
 	font-style:italic;
 }
+
+/*Types de publications*/
+
+.typeArticle{
+	color:red
+}
+
+
+.typeCommu{
+	color:rgb(94, 54, 54)
+}
+
+
+.typeOuvrage{
+	color:#00be53
+}
+
+
+.typePrePub{
+	color:#e45151
+}
