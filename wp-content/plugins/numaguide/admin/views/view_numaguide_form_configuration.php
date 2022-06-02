@@ -1,40 +1,34 @@
-<!Doctype html>
-    <html>
-        
-        <head>
-            
-            <meta charset="utf-8">
-            
-            <link rel="stylesheet" href="formulaires.css"/>
+<div class="container" id="formCrea">
 
-            <title>Configuration</title>
-        
-        </head>
-        
-        <body>
+    <div class="titreForm">Configuration de la page d'accueil</div>
+    <hr>
+    <div class="soustitreForm">Paramètres de la page d'accueil</div>
+    <hr>
+    <div class="form-group mt-2 mb-2">
+        <label for="mode_accueil">Affichage de la page d'accueil : </label>
+        <select name="mode_accueil" disabled>
+            <option value="redirection">Un guide</option>
+            <option value="portail">Une redirection</option>
+            <option value="portail">Un portail</option>
+        </select>
+    </div>
 
-            
-            <h3>Définition du mode en page d'acceuil</h3>
-            <label for="mode_acceuil">
-                <select name="mode_acceuil" required>
-                    <option value="">Choix de l'option</option>
-                    <option value="portail">Un portail</option>
-                    <option value="redirection">Une redirection</option>
-                </select>
-            </label>
-            <h3>Définition du guide numérique</h3>
-            <label for="mode_acceuil">
-                <select name="mode_acceuil" required>
-                    <option value="">Choix du guide</option>
-                    <option value="fête_science">Fête de la science</option>
-                </select>
-            </label>
+    <hr>
 
-            <p>Tous les guides dans la catégorie portail seront rajoutés sur le portail Numaguide.</p>
-            <button>Valider le choix</button>
+    <div class="form-group mt-2 mb-2">
+        <label for="mode_accueil">Choix du guide :</label>
+        <select name="mode_accueil" disabled>
+            <option value="redirection">Fête de la Science</option>
+        </select>
+    </div>
 
-            <h3>URL de redirection</h3>
-            <input type="url" placeholder="Exemple : https://www.msh-vdl.fr/">
-            <button>Valider le choix</button>
-        </body>
-</html>
+    <div>OU</div>
+
+    <div class="form-group mt-2 mb-2">
+        <label>Redirection : </label>
+        <input type="url" placeholder="Exemple : https://www.msh-vdl.fr/" disabled>
+    </div>
+
+    <button class="boutonForm boutonValider mt-5" disabled>Valider le choix</button>
+
+</div>

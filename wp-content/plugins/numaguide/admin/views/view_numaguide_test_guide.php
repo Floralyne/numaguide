@@ -7,17 +7,18 @@
     <hr>
 
     <form name="form" action="" method="post">
+        <div class="obligatoire">* champs obligatoires</div>
     <div class="form-group pb-sm">
-            <label for="nom_guide">Titre du guide :</label>
+            <label for="nom_guide">Titre du guide* :</label>
             <input type="text" class="form-control" id="nomGuide" name="nomGuide" maxlength="40" >
         </div>
 
         <div class="form-group pb-sm">
-            <label for="auteur_guide">Auteur(e)(s) du guide :</label>
+            <label for="auteur_guide">Auteur(e)(s) du guide* :</label>
             <input type="auteur" class="form-control" name="auteurGuide" >
-            <small class="text-muted">
+            <!-- <small class="text-muted">
                 Nom de famille en majuscules, prénom en minuscules, séparer les noms d'une virgule si plusieurs auteurs.
-            </small>
+            </small> -->
         </div>
 
         <hr>
@@ -110,6 +111,13 @@
                 </div>
             </div>
         </div>
+        <hr>
+        <div id="sectiondesac"><div class="soustitreForm">Section</div>
+        <hr>
+        <div class="form-group pb-sm">
+            <label for="nom_guide">Titre de la section :</label>
+            <input type="text" class="form-control" id="nomGuide" name="nomGuide" maxlength="40" disabled>
+        </div></div>
         <hr>
         <div class="soustitreForm">Choix des slides</div>
         <hr>

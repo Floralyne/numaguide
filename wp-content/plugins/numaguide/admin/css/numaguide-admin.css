@@ -2,8 +2,8 @@
  * CSS PARTIE ADMINISTRATEUR
  */
 
- /* Couleurs et police interface administrateur */
- @font-face {
+/* Couleurs et police interface administrateur */
+@font-face {
 	font-family: "Poppins";
 	src: url("font/Poppins-Regular.ttf");
 }
@@ -149,232 +149,253 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 /*Apparence des boutons du formulaire*/
 
 .boutonForm {
-    border-radius: 5px;
-    color: #000000;
-    text-align: center;
-    transition: all 0.3s ease-in;
+	border-radius: 5px;
+	color: #000000;
+	text-align: center;
+	transition: all 0.3s ease-in;
 	display: block;
 	width: 100%;
 	border: 2px solid;
 	padding: .5rem 1rem;
-	margin-bottom:0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .boutonValider {
-    background-color: #35A6B1;
-    border: 2px solid #35A6B1;
+	background-color: #35A6B1;
+	border: 2px solid #35A6B1;
 }
 
 .boutonValider:hover {
-    background-color: #fff;
+	background-color: #fff;
 }
 
-.boutonAjouter{
-    background-color: #363440;
-    border: 2px solid #363440;
-    color: #fff;
-}
-
-input[type="radio"]{
-	display:none;
+.boutonAjouter {
+	background-color: #363440;
+	border: 2px solid #363440;
+	color: #fff;
 }
 
 .boutonAjouter:hover {
-    background-color: #fff;
-    color: #000000;
+	background-color: #fff;
+	color: #000000;
 }
 
-input[type="radio"]:checked + label {
-    background-color: #fff !important;
-    color: #000000 !important;
+input[type="radio"] {
+	display: none;
 }
 
-.boutonSupprimer{
-    background-color: #E57654;
-    border: 2px solid #E57654 !important
+input[type="radio"]:checked+label {
+	background-color: #fff !important;
+	color: #000000 !important;
+}
+
+.boutonSupprimer {
+	background-color: #E57654;
+	border: 2px solid #E57654 !important
 }
 
 .boutonSupprimer:hover {
-    background-color: #fff;
+	background-color: #fff;
 }
 
 .boutonAction {
-    background-color: #e99350;
-    border: 2px solid #e99350;
+	background-color: #e99350;
+	border: 2px solid #e99350;
 }
 
 .boutonAction:hover {
-    background-color: #fff;
-    border: 2px solid #e99350;
+	background-color: #fff;
+	border: 2px solid #e99350;
 }
 
 /***Titres du formulaire***/
 
-.titreForm{
+#formCrea {
+	max-width: 80%;
+}
+
+.titreForm {
 	font-weight: bold;
 	margin-top: 1rem;
 	font-size: 18pt;
 }
 
-.soustitreForm{
+.soustitreForm {
 	margin-top: 1rem;
 	font-size: 15pt;
 	margin-bottom: 1rem;
 }
 
-.soustitreForm2{
+.soustitreForm2 {
 	margin-top: 1rem;
 	font-size: 13pt;
 	margin-bottom: 1rem;
 }
 
-#formCrea{
-	max-width: 80%;
-}
-
-#validerGuide{
+#validerGuide {
 	margin-top: 2rem;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-#indexer{
-	position:relative;
+/* #indexer {
+	position: relative;
 }
 
-#divIndexer{
-	padding:0;
-}
+#divIndexer {
+	padding: 0;
+} */
 
-.boutonMarges{
-	
+.boutonMarges {
+
 	margin-top: 0.5rem;
 }
 
-.boutonPetit{
-	width:60%;
+.boutonPetit {
+	width: 60%;
 }
 
-
-/**Palettes**/
+/**Palettes colorées du formulaire**/
 
 /*Palette Été*/
 
-#paletteete
-{
+#paletteete {
 	text-align: center;
 }
 
-#numaFFA86B{
+#numaFFA86B {
 	background-color: #FFA86B;
 }
-#numaFFCC84{
+
+#numaFFCC84 {
 	background-color: #FFCC84;
 }
-#numaFFE69E{
+
+#numaFFE69E {
 	background-color: #FFE69E;
 }
-#numaFFFFEB{
+
+#numaFFFFEB {
 	background-color: #FFFFEB;
 }
-#numaCCF6EE{
+
+#numaCCF6EE {
 	background-color: #CCF6EE;
 }
 
 /*Palette Pastel*/
 
-#palettepastel{
+#palettepastel {
 	text-align: center;
 }
 
-#numaEEF9FF{
+#numaEEF9FF {
 	background-color: #EEF9FF;
 }
-#numaFFF7FC{
+
+#numaFFF7FC {
 	background-color: #FFF7FC;
 }
-#numaFFFDED{
+
+#numaFFFDED {
 	background-color: #FFFDED;
 }
-#numaFFF7EC{
+
+#numaFFF7EC {
 	background-color: #FFF7EC;
 }
-#numaFFFBFB{
+
+#numaFFFBFB {
 	background-color: #FFFBFB;
 }
 
 /*Palette Automne*/
 
-#palettecampagne{
+#palettecampagne {
 	text-align: center;
 }
 
-#numaD3C1C3{
+#numaD3C1C3 {
 	background-color: #D3C1C3;
 }
-#numaE2D0BE{
+
+#numaE2D0BE {
 	background-color: #E2D0BE;
 }
-#numaEEE5BF{
+
+#numaEEE5BF {
 	background-color: #EEE5BF;
 }
-#numaE8F8C1{
+
+#numaE8F8C1 {
 	background-color: #E8F8C1;
 }
-#numaD0F0B9{
+
+#numaD0F0B9 {
 	background-color: #D0F0B9;
 }
 
 /*Palette Sombre*/
 
-#palettesombre{
+#palettesombre {
 	text-align: center;
 }
 
-#numa002029{
+#numa002029 {
 	background-color: #002029;
-	color:white;
+	color: white;
 }
-#numa032934{
+
+#numa032934 {
 	background-color: #032934;
-	color:white;
+	color: white;
 }
-#numa04323E{
+
+#numa04323E {
 	background-color: #04323E;
-	color:white;
+	color: white;
 }
-#numa0D3B47{
+
+#numa0D3B47 {
 	background-color: #0D3B47;
-	color:white;
+	color: white;
 }
-#numa144B58{
+
+#numa144B58 {
 	background-color: #144B58;
-	color:white;
+	color: white;
 }
 
-/*Métadonnées*/
+/***Métadonnées du formulaire***/
 
-#meta{
+#meta {
 	margin-top: 2rem;
 	background-color: #363440;
 	color: white;
 	border-radius: 3%;
-	padding-top:2%;
-	padding-bottom:2%;
-	padding-left:3%;
-	padding-right:3%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 3%;
+	padding-right: 3%;
 }
 
 .NoumaAccueil {
 	margin: 1rem !important;
 }
 
-/*Formulaire*/
+/***Saisies du formulaire***/
 
 textarea {
 	resize: none;
-  }
+}
 
-  textarea:invalid {
+textarea:invalid {
 	border: 2px dashed #E57654;
-  }
+}
+
+.obligatoire{
+	text-align: right;
+	color: rgb(125, 125, 125);
+	font-size: 0.8rem;
+	font-style:italic;
+}
