@@ -27,6 +27,18 @@
                 <input type="text" class="form-control" name="identifier" required>
             </div>
 
+            <div class="form-group pb-sm-2">
+                <label for="">Identifant :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="identifier">Identifant :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+    
+
             <input type=submit name="ok" value="Envoyer">
         </form>
 
@@ -149,7 +161,7 @@ $choix->appendChild($domain);
 //affichage des métadonnées avec balises xml apparentes et indentées
 if(isset($_POST['ok'])){
     
-    echo "<div id=\"meta\"><xmp id=\"a-copier\">".$res= $dom->saveXML()."</xmp></div><div class=\"text-center\"><br><button id=\"btnCopier\" class=\"boutonForm boutonAction\" onclick=\"copierTexte()\">Copier le texte</button></div>";
+    echo "<div id=\"meta\"><xmp id=\"a-copier\">".$res= $dom->saveXML()."</xmp></div><div class=\"text-center\"><button class=\"button-52\" onclick=\"copierTexte()\">Copier le texte</button></div>";
 
 }
 ?>
