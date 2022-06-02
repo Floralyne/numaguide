@@ -402,21 +402,48 @@ textarea:invalid {
 
 /*Types de publications*/
 
-.typeArticle{
-	color:red
+#infoMeta{
+	border: 2px dashed;
+	border-color: #35A6B1;
+	border-radius: 5px;
 }
 
+.type{
+	font-weight: bold;
+}
+
+.typeTous{
+	color:#959595;
+	font-size: 0.8rem;
+}
+
+/* 
+.typeArticle{
+	color:#000000;
+	font-size: 0.8rem;
+}
 
 .typeCommu{
-	color:rgb(94, 54, 54)
+	color:#000000;
+	font-size: 0.8rem;
 }
-
 
 .typeOuvrage{
-	color:#00be53
+	color:#000000;
+	font-size: 0.8rem;
 }
-
 
 .typePrePub{
-	color:#e45151
+	color:#000000;
+	font-size: 0.8rem;
 }
+
+.typeRapport{
+	color:#000000;
+	font-size: 0.8rem;
+}
+
+.typeCours{
+	color:#000000;
+	font-size: 0.8rem;
+} */

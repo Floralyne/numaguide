@@ -1,3 +1,9 @@
+<style>
+    #wpfooter {
+        position: relative;
+    }
+</style>
+
 <div class="container" id="formCrea">
     <div class="titreForm">Informations du guide</div>
     <hr>
@@ -36,13 +42,13 @@
 
         <details>
             <summary>Métadonnées facultatives</summary>
-            <div class="mt-3 mb-3 text-justify">Pour chaque type de publication, une couleur est associée aux métadonnées nécessaires à un dépôt sur HAL. Les <span class="typeArticle">articles</span> sont marqués d'une étoile rouge, les communications d'une étoile bleue, les ouvrages d'une étoile jaune, les pré-publications d'une étoile verte, et les rapports d'une étoile violette. Les cours sont marqués d'une étoile orange.</div>
+            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, une couleur et un chiffre sont associés aux métadonnées nécessaires à un dépôt sur HAL. Les métadonnées obligatoires communes à <span class="type">tous types de publications</span> sont marquées d'un <span class="typeTous">(0)</span>. Les métadonnées nécessaires à la publication d'<span class="type">articles</span> sont marqués d'un <span class="typeArticle">(1)</span>, celles pour les <span class="type">communications</span> d'un <span class="typeCommu">(2)</span>, celles pour les <span class="type">ouvrages</span> d'un <span class="typeOuvrage">(3)</span>, pour les <span class="type">pré-publications</span> d'un <span class="typePrePub">(4)</span>, pour les <span class="type">rapports</span> d'un <span class="typeRapport">(5)</span>, et celles pour les <span class="type">cours</span> sont marquées d'un <span class="typeCours">(6)</span>.</div>
             <div class="form-group mt-1">
-                <label for="subtitle">Sous-titre : <span class="typeArticle">*</span></label>
+                <label for="subtitle">Sous-titre : <span class="typeTous">(0)</span></label>
                 <input type="text" class="form-control" name="subtitle">
             </div>
             <div class="form-group pb-sm-2">
-                <label for="type">Type : <span class="typeArticle">*</span></label>
+                <label for="type">Type : <span class="typeTous">(0)</span></label>
                 <select class="form-control" id="type">
                     <option>------</option>
                     <option>Article</option>
@@ -58,7 +64,7 @@
             </div>
 
             <div class="form-group">
-                <label for="domain">Domaine :</label>
+                <label for="domain">Domaine : <span class="typeTous">(0)</span></label>
                 <select class="form-control" id="domain">
                     <option value="">--- Sciences de l'Homme et Société ---</option>
                     <option value="shs.anthro-bio">Athropologie biologique</option>
@@ -92,7 +98,7 @@
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="language">Langue du document : </label>
+                <label for="language">Langue du document : <span class="typeTous">(0)</span></label>
                 <select class="form-control" id="language">
                     <option value="FR">Français</option>
                     <option value="EN">Anglais</option>
@@ -103,7 +109,12 @@
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="date">Date :</label>
+                    <label for="authorityInstitution">Institution : <span class="typeTous">(0)</span></label>
+                    <input type="text" class="form-control" name="identifier">
+                </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="date">Date : <span class="typeTous">(1)</span></label>
                 <input type="date" class="form-control" name="date" min="1970-01-01" max="2030-12-31">
             </div>
 
@@ -211,11 +222,6 @@
 
                 <div class="form-group pb-sm-2">
                     <label for="serie">Série :</label>
-                    <input type="text" class="form-control" name="identifier">
-                </div>
-
-                <div class="form-group pb-sm-2">
-                    <label for="authorityInstitution">Institution :</label>
                     <input type="text" class="form-control" name="identifier">
                 </div>
 
