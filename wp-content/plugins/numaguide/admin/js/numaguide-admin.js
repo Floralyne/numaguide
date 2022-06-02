@@ -160,7 +160,6 @@ function copierTexte() {
 
 	// Action pour notifier que le texte à été copié
 	const btn = document.getElementById("btnCopier");
-	console.log(btn);
 	
 	if(btn.innerText === "Copier le texte"){
 		btn.innerText = "Bien copié !";
