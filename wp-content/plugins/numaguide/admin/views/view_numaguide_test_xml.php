@@ -13,7 +13,7 @@
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="url">URL</label>
+                <label for="url">URL :</label>
                 <input type="url" class="form-control" name='url' value="https://numaguide.fr/" required>
             </div>
 
@@ -23,20 +23,169 @@
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="identifier">Identifant :</label>
+                <label for="identifier">Type :</label>
                 <input type="text" class="form-control" name="identifier" required>
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="">Identifant :</label>
+                <label for="domain">Domaine :</label>
                 <input type="text" class="form-control" name="identifier" required>
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="identifier">Identifant :</label>
+                <label for="category">Catégorie de publication :</label>
                 <input type="text" class="form-control" name="identifier" required>
             </div>
 
+            <div class="form-group pb-sm-2">
+                <label for="language">Langue du document :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="date">Date :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="description">Description :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="keyword">Mots clés :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="abstract">Résumé :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="licence">Licence :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="identifier">Identifiant auteur :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="writingDate">Date de début de production :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="edate">Date de publication électronique :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="reportType">Type de rapport :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="lectureType">Niveau du cours :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="conferenceTitle">Titre conférence :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="conferenceStartDate">Date conférence :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="publisherLink">URL du congrès ou de l'éditeur :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="popularLevel">Niveau de vulgarisation :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="peerReviewing">Comité de lecture :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="audience">Audience :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="classification">Classification :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="collaboration">Collaboration :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="number">Label :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="volume">Volume :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="serie">Série :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="authorityInstitution">Institution :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="director">Nom directeur :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="funding">Financement :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="anrProject">Projets ANR :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="europeanProject">Projets européens :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="city">Ville :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="country">Pays :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="seeAlso">Voir aussi :</label>
+                <input type="text" class="form-control" name="identifier" required>
+            </div>
     
 
             <input type=submit name="ok" value="Envoyer">
