@@ -9,12 +9,12 @@
     <form name="form" action="" method="post">
     <div class="form-group pb-sm">
             <label for="nom_guide">Titre du guide :</label>
-            <input type="text" class="form-control" id="nomGuide" name="nomGuide" maxlength="40" required>
+            <input type="text" class="form-control" id="nomGuide" name="nomGuide" maxlength="40" >
         </div>
 
         <div class="form-group pb-sm">
             <label for="auteur_guide">Auteur(e)(s) du guide :</label>
-            <input type="auteur" class="form-control" name="auteurGuide" required>
+            <input type="auteur" class="form-control" name="auteurGuide" >
             <small class="text-muted">
                 Nom de famille en majuscules, prénom en minuscules, séparer les noms d'une virgule si plusieurs auteurs.
             </small>
@@ -30,7 +30,7 @@
                         http://numaguide.msh-vdl.fr/
                     </div>
                 </div>
-                <input class="form-control" type="text" pattern="/\W|_/g" maxlength="20" id="urlGuide" placeholder="Adresse du guide" required>
+                <input class="form-control" type="text" pattern="/\W|_/g" maxlength="20" id="urlGuide" placeholder="Adresse du guide" >
             </div>
         </div>
 <hr>
@@ -240,8 +240,8 @@
                     </figure>
                 </div>
                 <div class="col">
-                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
-                            class="parcourir" name="slide9-1">
+                <input type="file" name="slide9-1" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" >
                 </div>
             </div>
 
@@ -477,200 +477,264 @@
             <input type=submit name="ok" value="Créer le mini guide">
     </form>
 
+    <form form name="form" action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="upload_logo" id="upload_logo" /> 
+        <input type=submit name="check" value="Créer le mini guide">        
+    </form>
+
 </div>
 
 <?php
-    if (isset($_POST['ok'])) {
-        //Titre du guide
-        $slide = "<style>html[lang] {
+
+if (isset($_POST['check'])) {
+    require( ABSPATH . 'wp-load.php' );
+    // Slide avec une image
+    $wordpress_upload_dir = wp_upload_dir();
+    // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
+    // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+    $i = 1; // compteur si le même nom de fichier
+
+    $imgSlide9 = $_FILES['upload_logo'];
+    $new_file_path = $wordpress_upload_dir['path'] . '/' . $imgSlide9['name'];
+    die(var_dump($new_file_path));
+    $new_file_mime = mime_content_type($imgSlide9['tmp_name']);
+
+    if (empty($imgSlide9)) {
+        die('File is not selected.');
+    }
+
+    if ($imgSlide9['error']) {
+        die($imgSlide9['error']);
+    }
+
+    if ($imgSlide9['size'] > wp_max_upload_size()) {
+        die('La taille de l\'image est trop grande.');
+    }
+
+    if (!in_array($new_file_mime, get_allowed_mime_types())) {
+        die('Le type de l\'image n\'est pas valide');
+    }
+
+    while (file_exists($new_file_path)) {
+        $i++;
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $imgSlide9['name'];
+    }
+    
+    die(var_dump(move_uploaded_file($imgSlide9['tmp_name'], $new_file_path)));
+    // Ajout de l'image dans wordpress
+    if (move_uploaded_file($imgSlide9['tmp_name'], $new_file_path)) {
+
+        $upload_id = wp_insert_attachment(array(
+            'guid' => $new_file_path,
+            'post_mime_type' => $new_file_mime,
+            'post_title' => preg_replace('/\.[^.]+$/', '', $imgSlide9['name']),
+            'post_content' => '',
+            'post_status' => 'inherit',
+        ), $new_file_path);
+
+        // wp_generate_attachment_metadata() won't work if you do not include this file
+        //require_once ABSPATH . 'wp-admin/includes/image.php';
+
+        // Generate and save the attachment metas into the database
+        wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path));
+
+        // Show the uploaded file in browser
+        wp_redirect($wordpress_upload_dir['url'] . '/' . basename($new_file_path));
+        die("monkey");
+    }
+}
+
+
+
+if (isset($_POST['ok'])) {
+    //Titre du guide
+    $slide = "<style>html[lang] {
             margin-top: 0 !important;
           }
           </style>";
-        $ng_guide_nom = $_POST['nomGuide'];
-        $enleveaccent_array = array('Š' => 'S', 'š' => 's', 'Ž' => 'Z', 'ž' => 'z', 'À' => 'A', 'Á' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'A', 'Ç' => 'C', 'È' => 'E', 'É' => 'E',
-            'Ê' => 'E', 'Ë' => 'E', 'Ì' => 'I', 'Í' => 'I', 'Î' => 'I', 'Ï' => 'I', 'Ñ' => 'N', 'Ò' => 'O', 'Ó' => 'O', 'Ô' => 'O', 'Õ' => 'O', 'Ö' => 'O', 'Ø' => 'O', 'Ù' => 'U',
-            'Ú' => 'U', 'Û' => 'U', 'Ü' => 'U', 'Ý' => 'Y', 'Þ' => 'B', 'ß' => 'Ss', 'à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'å' => 'a', 'æ' => 'a', 'ç' => 'c',
-            'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i', 'ð' => 'o', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o',
-            'ö' => 'o', 'ø' => 'o', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ý' => 'y', 'þ' => 'b', 'ÿ' => 'y');
-        
-        $ng_guide_nom = strtr($ng_guide_nom, $enleveaccent_array);
-        $ng_guide_nom = str_replace('\'', '', trim($ng_guide_nom));
-        $ng_guide_nom = preg_replace('/[^A-Za-z0-9-]/', '', $ng_guide_nom);
-        $ng_guide_nom = preg_replace('/-+/', '-', $ng_guide_nom);
-        $ng_guide_nom = substr($ng_guide_nom, 0, 20);
+    $ng_guide_nom = $_POST['nomGuide'];
+    $enleveaccent_array = array('Š' => 'S', 'š' => 's', 'Ž' => 'Z', 'ž' => 'z', 'À' => 'A', 'Á' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'A', 'Ç' => 'C', 'È' => 'E', 'É' => 'E',
+        'Ê' => 'E', 'Ë' => 'E', 'Ì' => 'I', 'Í' => 'I', 'Î' => 'I', 'Ï' => 'I', 'Ñ' => 'N', 'Ò' => 'O', 'Ó' => 'O', 'Ô' => 'O', 'Õ' => 'O', 'Ö' => 'O', 'Ø' => 'O', 'Ù' => 'U',
+        'Ú' => 'U', 'Û' => 'U', 'Ü' => 'U', 'Ý' => 'Y', 'Þ' => 'B', 'ß' => 'Ss', 'à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'å' => 'a', 'æ' => 'a', 'ç' => 'c',
+        'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i', 'ð' => 'o', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o',
+        'ö' => 'o', 'ø' => 'o', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ý' => 'y', 'þ' => 'b', 'ÿ' => 'y');
 
-        /*Créer la taxonomie*/
+    $ng_guide_nom = strtr($ng_guide_nom, $enleveaccent_array);
+    $ng_guide_nom = str_replace('\'', '', trim($ng_guide_nom));
+    $ng_guide_nom = preg_replace('/[^A-Za-z0-9-]/', '', $ng_guide_nom);
+    $ng_guide_nom = preg_replace('/-+/', '-', $ng_guide_nom);
+    $ng_guide_nom = substr($ng_guide_nom, 0, 20);
 
-        wp_create_term($ng_guide_nom);
-        
-        //Slide avec trois textes
-        if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
-            $ng_slide1_nom = $_POST['slide1'];
-            $ng_slide1_value1 = $_POST['slide1-1'];
-            $ng_slide1_value2 = $_POST['slide1-2'];
-            $ng_slide1_value3 = $_POST['slide1-2'];
+    // Creation du tag pour lier les articles
 
-            $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide1_value1 . '<!-- /wp:paragraph -->' .
-                '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide1_value2 . '<!-- /wp:paragraph -->' .
-                '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide1_value3 . '<!-- /wp:paragraph -->';
+    wp_create_term($ng_guide_nom);
 
-            $ng_info_article = array(
-                'post_content' => $ng_content,
-                'post_category' => array(51),
-                'tags_input' => array('1', $ng_guide_nom),
-                'post_type' => 'post',
-            );
+    //Slide avec trois textes
+    if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
+        $ng_slide1_nom = $_POST['slide1'];
+        $ng_slide1_value1 = $_POST['slide1-1'];
+        $ng_slide1_value2 = $_POST['slide1-2'];
+        $ng_slide1_value3 = $_POST['slide1-2'];
 
-            wp_insert_post($ng_info_article);
+        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide1_value1 . '<!-- /wp:paragraph -->' .
+            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide1_value2 . '<!-- /wp:paragraph -->' .
+            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide1_value3 . '<!-- /wp:paragraph -->';
 
-            die("monkey");
+        $ng_info_article = array(
+            'post_content' => $ng_content,
+            'post_category' => array(51),
+            'tags_input' => array('1', $ng_guide_nom),
+            'post_type' => 'post',
+        );
 
-            $info_slide = array($ng_slide1_nom, 'views/slides/slide_1.php');
-            $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+        wp_insert_post($ng_info_article);
 
-        }
+        die("monkey");
 
-        //Slides avec un texte
-        if ($_POST['slide1text-1'] !== '') {
-            $ng_slide1text_nom = $_POST['slide1text'];
-            $ng_slide1text_value1 = $_POST['slide1text-1'];
+        $info_slide = array($ng_slide1_nom, 'views/slides/slide_1.php');
+        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
-            $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide1text_value1 . '<!-- /wp:paragraph -->';
-
-            if ($ng_slide1text_nom == 'slide3') {
-                $num_cat = 53;
-                $nom_slide = 'slide_3';
-            }if ($ng_slide1text_nom == 'slide4') {
-                $num_cat = 54;
-                $nom_slide = 'slide_4';
-            }if ($ng_slide1text_nom == 'slide5') {
-                $num_cat = 55;
-                $nom_slide = 'slide_5';
-            }if ($ng_slide1text_nom == 'slide6') {
-                $num_cat = 56;
-                $nom_slide = 'slide_6';
-            }if ($ng_slide1text_nom == 'slide10') {
-                $num_cat = 60;
-                $nom_slide = 'slide_10';
-            }if ($ng_slide1text_nom == 'slide11') {
-                $num_cat = 61;
-                $nom_slide = 'slide_11';
-            }if ($ng_slide1text_nom == 'slide12') {
-                $num_cat = 62;
-                $nom_slide = 'slide_12';
-            }if ($ng_slide1text_nom == 'slide17') {
-                $num_cat = 67;
-                $nom_slide = 'slide_17';
-            }
-
-            $ng_info_article = array(
-                'post_content' => $ng_content,
-                'post_category' => array($num_cat),
-                'tags_input' => array('1', $ng_guide_nom),
-                'post_type' => 'post',
-            );
-
-            wp_insert_post($ng_info_article);
-
-            $info_slide = array($ng_slide1text_nom, 'views/slides/' . $nom_slide . '.php');
-            $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
-
-        }
-
-        //Slides avec deux textes
-        if ($_POST['slide2text-1'] !== ''&$_POST['slide2text-2'] !== '') {
-            $ng_slide2text_nom = $_POST['slide2text'];
-            $ng_slide2text_value1 = $_POST['slide2text-1'];
-            $ng_slide2text_value2 = $_POST['slide2text-2'];
-
-            $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide2text_value1 . '<!-- /wp:paragraph -->' .
-                '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide2text_value2 . '<!-- /wp:paragraph -->';
-
-            if ($ng_slide2text_nom == 'slide7') {
-                $num_cat = 57;
-                $nom_slide = 'slide_7';
-            }if ($ng_slide2text_nom == 'slide8') {
-                $num_cat = 58;
-                $nom_slide = 'slide_8';
-            }if ($ng_slide2text_nom == 'slide13') {
-                $num_cat = 63;
-                $nom_slide = 'slide_13';
-            }if ($ng_slide2text_nom == 'slide14') {
-                $num_cat = 64;
-                $nom_slide = 'slide_14';
-            }if ($ng_slide2text_nom == 'slide16') {
-                $num_cat = 66;
-                $nom_slide = 'slide_16';
-            }
-
-            $ng_info_article = array(
-                'post_content' => $ng_content,
-                'post_category' => array($num_cat),
-                'tags_input' => array('1', $ng_guide_nom),
-                'post_type' => 'post',
-            );
-
-            wp_insert_post($ng_info_article);
-
-            $info_slide = array($ng_slide2text_nom, 'views/slides/' . $nom_slide . '.php');
-            $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
-        }
-
-        //Slides avec cinq textes
-        if ($_POST['slide5text-1'] !== ''&$_POST['slide5text-2'] !== ''&$_POST['slide5text-3'] !== ''&$_POST['slide5text-4'] !== ''&$_POST['slide5text-5'] !== '') {
-            $ng_slide5text_nom = $_POST['slide5text'];
-            $ng_slide5text_value1 = $_POST['slide5text-1'];
-            $ng_slide5text_value2 = $_POST['slide5text-2'];
-            $ng_slide5text_value3 = $_POST['slide5text-3'];
-            $ng_slide5text_value4 = $_POST['slide5text-4'];
-            $ng_slide5text_value5 = $_POST['slide5text-5'];
-            
-
-            $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide5text_value1 . '<!-- /wp:paragraph -->' .
-                '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide5text_value2 . '<!-- /wp:paragraph -->' .
-                '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide5text_value3 . '<!-- /wp:paragraph -->' .
-                '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide5text_value4 . '<!-- /wp:paragraph -->' .
-                '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-                $ng_slide5text_value5 . '<!-- /wp:paragraph -->';
-
-            if ($ng_slide5text_nom == 'slide2') {
-                $num_cat = 52;
-                $nom_slide = 'slide_2';
-            }if ($ng_slide5text_nom == 'slide18') {
-                $num_cat = 68;
-                $nom_slide = 'slide_18';
-            }if ($ng_slide5text_nom == 'slide19') {
-                $num_cat = 69;
-                $nom_slide = 'slide_19';
-            }
-
-            $ng_info_article = array(
-                'post_content' => $ng_content,
-                'post_category' => array($num_cat),
-                'tags_input' => array('1', $ng_guide_nom),
-                'post_type' => 'post',
-            );
-
-            wp_insert_post($ng_info_article);
-
-            $info_slide = array($ng_slide5text_nom, 'views/slides/' . $nom_slide . '.php');
-            $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
-        }
-
-        if ($slide !== NULL) {
-            apply_filters('ng_creer_guide', $ng_guide_nom, $slide);
-        }
     }
 
+    //Slides avec un texte
+    if ($_POST['slide1text-1'] !== '') {
+        $ng_slide1text_nom = $_POST['slide1text'];
+        $ng_slide1text_value1 = $_POST['slide1text-1'];
+
+        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide1text_value1 . '<!-- /wp:paragraph -->';
+
+        if ($ng_slide1text_nom == 'slide3') {
+            $num_cat = 53;
+            $nom_slide = 'slide_3';
+        }if ($ng_slide1text_nom == 'slide4') {
+            $num_cat = 54;
+            $nom_slide = 'slide_4';
+        }if ($ng_slide1text_nom == 'slide5') {
+            $num_cat = 55;
+            $nom_slide = 'slide_5';
+        }if ($ng_slide1text_nom == 'slide6') {
+            $num_cat = 56;
+            $nom_slide = 'slide_6';
+        }if ($ng_slide1text_nom == 'slide10') {
+            $num_cat = 60;
+            $nom_slide = 'slide_10';
+        }if ($ng_slide1text_nom == 'slide11') {
+            $num_cat = 61;
+            $nom_slide = 'slide_11';
+        }if ($ng_slide1text_nom == 'slide12') {
+            $num_cat = 62;
+            $nom_slide = 'slide_12';
+        }if ($ng_slide1text_nom == 'slide17') {
+            $num_cat = 67;
+            $nom_slide = 'slide_17';
+        }
+
+        $ng_info_article = array(
+            'post_content' => $ng_content,
+            'post_category' => array($num_cat),
+            'tags_input' => array('1', $ng_guide_nom),
+            'post_type' => 'post',
+        );
+
+        wp_insert_post($ng_info_article);
+
+        $info_slide = array($ng_slide1text_nom, 'views/slides/' . $nom_slide . '.php');
+        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+
+    }
+
+    //Slides avec deux textes
+    if ($_POST['slide2text-1'] !== ''&$_POST['slide2text-2'] !== '') {
+        $ng_slide2text_nom = $_POST['slide2text'];
+        $ng_slide2text_value1 = $_POST['slide2text-1'];
+        $ng_slide2text_value2 = $_POST['slide2text-2'];
+
+        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide2text_value1 . '<!-- /wp:paragraph -->' .
+            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide2text_value2 . '<!-- /wp:paragraph -->';
+
+        if ($ng_slide2text_nom == 'slide7') {
+            $num_cat = 57;
+            $nom_slide = 'slide_7';
+        }if ($ng_slide2text_nom == 'slide8') {
+            $num_cat = 58;
+            $nom_slide = 'slide_8';
+        }if ($ng_slide2text_nom == 'slide13') {
+            $num_cat = 63;
+            $nom_slide = 'slide_13';
+        }if ($ng_slide2text_nom == 'slide14') {
+            $num_cat = 64;
+            $nom_slide = 'slide_14';
+        }if ($ng_slide2text_nom == 'slide16') {
+            $num_cat = 66;
+            $nom_slide = 'slide_16';
+        }
+
+        $ng_info_article = array(
+            'post_content' => $ng_content,
+            'post_category' => array($num_cat),
+            'tags_input' => array('1', $ng_guide_nom),
+            'post_type' => 'post',
+        );
+
+        wp_insert_post($ng_info_article);
+
+        $info_slide = array($ng_slide2text_nom, 'views/slides/' . $nom_slide . '.php');
+        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+    }
+
+    //Slides avec cinq textes
+    if ($_POST['slide5text-1'] !== ''&$_POST['slide5text-2'] !== ''&$_POST['slide5text-3'] !== ''&$_POST['slide5text-4'] !== ''&$_POST['slide5text-5'] !== '') {
+        $ng_slide5text_nom = $_POST['slide5text'];
+        $ng_slide5text_value1 = $_POST['slide5text-1'];
+        $ng_slide5text_value2 = $_POST['slide5text-2'];
+        $ng_slide5text_value3 = $_POST['slide5text-3'];
+        $ng_slide5text_value4 = $_POST['slide5text-4'];
+        $ng_slide5text_value5 = $_POST['slide5text-5'];
+
+        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide5text_value1 . '<!-- /wp:paragraph -->' .
+            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide5text_value2 . '<!-- /wp:paragraph -->' .
+            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide5text_value3 . '<!-- /wp:paragraph -->' .
+            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide5text_value4 . '<!-- /wp:paragraph -->' .
+            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $ng_slide5text_value5 . '<!-- /wp:paragraph -->';
+
+        if ($ng_slide5text_nom == 'slide2') {
+            $num_cat = 52;
+            $nom_slide = 'slide_2';
+        }if ($ng_slide5text_nom == 'slide18') {
+            $num_cat = 68;
+            $nom_slide = 'slide_18';
+        }if ($ng_slide5text_nom == 'slide19') {
+            $num_cat = 69;
+            $nom_slide = 'slide_19';
+        }
+
+        $ng_info_article = array(
+            'post_content' => $ng_content,
+            'post_category' => array($num_cat),
+            'tags_input' => array('1', $ng_guide_nom),
+            'post_type' => 'post',
+        );
+
+        wp_insert_post($ng_info_article);
+
+        $info_slide = array($ng_slide5text_nom, 'views/slides/' . $nom_slide . '.php');
+        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+    }
+
+    if ($slide !== null) {
+        apply_filters('ng_creer_guide', $ng_guide_nom, $slide);
+    }
+}
 
 ?>
