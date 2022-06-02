@@ -1,3 +1,5 @@
+/*Importation des polices*/
+
 @font-face {
     font-family: "Poppins";
     src: url("font/Poppins-Regular.ttf");
@@ -9,13 +11,108 @@
     font-family: 'Poppins', sans-serif !important;
 }
 
+/***Thèmes colorés***/
+
+/*Thème été*/
+
+#slide_1, #slide_2, #slide_3, #slide_4, #slide_5, #slide_18, #slide_19 {
+    background-color: #FFA86B;
+}
+
+#slide_6, #slide_7, #slide_8 {
+    background-color: #FFCC84;
+}
+
+#slide_9, #slide_10, #slide_11, #slide_12 {
+    background-color: #FFE69E;
+}
+
+#slide_13, #slide_14 {
+    background-color: #FFFFEB;
+}
+
+#slide_15, #slide_16, #slide_17 {
+    background-color: #CCF6EE;
+}
+
+/*Thème pastel*/
+
+/* #slide_1, #slide_2, #slide_3, #slide_4, #slide_5, #slide_18, #slide_19 {
+    background-color: #EEF9FF;
+}
+
+#slide_6, #slide_7, #slide_8 {
+    background-color: #FFF7FC;
+}
+
+#slide_9, #slide_10, #slide_11, #slide_12 {
+    background-color: #FFFDED;
+}
+
+#slide_13, #slide_14 {
+    background-color: #FFF7EC;
+}
+
+#slide_15, #slide_16, #slide_17 {
+    background-color: #FFFBFB;
+} */
+
+/*Thème campagne*/
+
+/* #slide_1, #slide_2, #slide_3, #slide_4, #slide_5, #slide_18, #slide_19 {
+    background-color: #D3C1C3;
+}
+
+#slide_6, #slide_7, #slide_8 {
+    background-color: #E2D0BE;
+}
+
+#slide_9, #slide_10, #slide_11, #slide_12 {
+    background-color: #EEE5BF;
+}
+
+#slide_13, #slide_14 {
+    background-color: #E8F8C1
+}
+
+#slide_15, #slide_16, #slide_17 {
+    background-color: #D0F0B9;
+} */
+
+/*Thème sombre*/
+
+/* #slide_1, #slide_2, #slide_3, #slide_4, #slide_5, #slide_18, #slide_19 {
+    background-color: #002029;
+    color: white;
+}
+
+#slide_6, #slide_7, #slide_8 {
+    background-color: #032934;
+    color: white;
+}
+
+#slide_9, #slide_10, #slide_11, #slide_12 {
+    background-color: #04323E;
+    color: white,
+}
+
+#slide_13, #slide_14 {
+    background-color: #0D3B47;
+    color: white;
+}
+
+#slide_15, #slide_16, #slide_17 {
+    background-color: #144B58;
+    color: white;
+} */
+
 /***Slides d'ouverture du guide***/
 
 /*Page de titre - Slide 1*/
 
-#slide_1 {
+/* #slide_1 {
     background-color: #38979f;
-}
+} */
 
 #slide_1_r{
     overflow: auto;
@@ -34,9 +131,9 @@
 
 /*Slide 2 - Page de titre pour publication scientifique*/
 
-#slide_2 {
+/* #slide_2 {
     background-color: #38979f;
-}
+} */
 
 #slide_2_r{
     overflow: auto;
@@ -48,9 +145,9 @@
 
 /*Slide 3 - Slide contenant des remerciements*/
 
-#slide_3 {
+/* #slide_3 {
     background-color: #e77050;
-}
+} */
 
 #slide_3_r{
     overflow: auto;
@@ -69,9 +166,9 @@
 
 /*Slide 4 - Slide contenant un résumé*/
 
-#slide_4 {
+/* #slide_4 {
     background-color: #38979f;
-}
+} */
 
 #slide_4_r{
     overflow: auto;
@@ -90,9 +187,9 @@
 
 /*Slide 5 - Slide contenant une introduction*/
 
-#slide_5 {
+/* #slide_5 {
     background-color: #e77050;
-}
+} */
 
 #slide_5_titre {
     font-size: 2rem;
@@ -108,9 +205,9 @@
 
 /*Slide 6 - Slide avec un texte plein*/
 
-#slide_6{
+/* #slide_6{
     background-color: #e77050;
-}
+} */
 
 #slide_6_div{
     text-align: justify;
@@ -122,10 +219,10 @@
 
 /*Slide 7 - Slide avec deux colonnes de texte*/
 
-#slide_7 {
+/* #slide_7 {
     background-color: #363440;
     color: white;
-}
+} */
 
 #slide_7_c{
     overflow: auto;
@@ -141,10 +238,10 @@
 
 /*Slide 8 - Slide avec deux rangées de texte*/
 
-#slide_8 {
+/* #slide_8 {
     background-color: #363440;
     color: white;
-}
+} */
 
 #slide_8_c{
     overflow: auto;
@@ -164,10 +261,7 @@
 
 #slide_9 {
     padding: 0;
-}
-
-#slide_9_r{
-    background-color: #363440;
+    /* background-color: #363440; */
 }
 
 #slide_9_image{
@@ -177,10 +271,10 @@ max-height: 100vh;
 
 /*Slide 10 - Slide contenant une colonne de texte et une image responsive*/
 
-#slide_10 {
+/* #slide_10 {
     background-color: #e99350;
     color: white;
-}
+} */
 
 #slide_10_div1{
     text-align: justify;
@@ -216,10 +310,10 @@ max-height: 100vh;
 
 /*Slide 11 - Slide contenant une image responsive et une colonne de texte*/
 
-#slide_11 {
+/* #slide_11 {
     background-color: #363440;
     color: white;
-}
+} */
 
 #slide_11_div2{
     text-align: justify;
@@ -269,10 +363,10 @@ max-height: 50vh;
     overflow: auto;
 }
 
-#slide_12 {
+/* #slide_12 {
     background-color: #363440;
     color: white;
-}
+} */
 
 #slide_12_div1{
     text-align: justify;
@@ -294,9 +388,9 @@ max-height: 50vh;
     --bs-gutter-x: 0;
 }
 
-#slide_13_c{
+/* #slide_13_c{
     background-color: #38979f;
-}
+} */
 
 #slide_13_son{
     --bs-gutter-x: 0;
@@ -317,9 +411,9 @@ max-height: 50vh;
     overflow: auto;
 }
 
-#slide_14_c{
+/* #slide_14_c{
     background-color: #38979f;
-}
+} */
 
 #slide_14_son{
     --bs-gutter-x: 0;
@@ -339,9 +433,9 @@ max-height: 50vh;
 
 /*Slide 15 - Slide contenant une vidéo en pleine écran*/
 
-#slide_15_c{
+/* #slide_15_c{
     background-color: #38979f;
-}
+} */
 
 /*Slide 16 - Slide contenant une vidéo avec un titre et un texte*/
 
@@ -349,10 +443,10 @@ max-height: 50vh;
     text-align: justify;
 }
 
-#slide_16 {
+/* #slide_16 {
     background-color: #e99350;
     color: white;
-}
+} */
 
 #slide_16_div1{
     text-align: justify;
@@ -373,9 +467,9 @@ max-height: 50vh;
 
 /*Slide 17 - Slide contenant un texte et une vidéo*/
 
-#slide_17 {
+/* #slide_17 {
     background-color: #e99350;
-}
+} */
 
 #slide_17_div1{
     text-align: justify;
@@ -405,9 +499,9 @@ max-height: 70vh;
 
 /*Slide 18 - Bibliographie*/
 
-#slide_18 {
+/* #slide_18 {
     background-color: #e99857;
-}
+} */
 
 #slide_18_bib {
     font-size: 2rem;
@@ -426,9 +520,9 @@ max-height: 70vh;
 
 /*Slide 19 - Bibliographie sans titre*/
 
-#slide_19 {
+/* #slide_19 {
     background-color: #e99857;
-}
+} */
 
 .slide_19_livre {
     font-size: 1rem;

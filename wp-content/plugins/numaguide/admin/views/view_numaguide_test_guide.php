@@ -102,7 +102,7 @@
             </div>
         </div>
         <hr>
-        <div class="titreForm">Choix des slides</div>
+        <div class="soustitreForm">Choix des slides</div>
         <hr>
         <details>
     <summary>Slides introductives</summary>
