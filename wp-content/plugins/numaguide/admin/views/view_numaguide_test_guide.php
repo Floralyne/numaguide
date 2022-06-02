@@ -499,7 +499,7 @@ if (isset($_POST['check'])) {
 
     $imgSlide9 = $_FILES['upload_logo'];
     $new_file_path = $wordpress_upload_dir['path'] . '/' . $imgSlide9['name'];
-    die(var_dump($new_file_path));
+   
     $new_file_mime = mime_content_type($imgSlide9['tmp_name']);
 
     if (empty($imgSlide9)) {
@@ -523,7 +523,6 @@ if (isset($_POST['check'])) {
         $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $imgSlide9['name'];
     }
     
-    die(var_dump(move_uploaded_file($imgSlide9['tmp_name'], $new_file_path)));
     // Ajout de l'image dans wordpress
     if (move_uploaded_file($imgSlide9['tmp_name'], $new_file_path)) {
 
@@ -543,7 +542,7 @@ if (isset($_POST['check'])) {
 
         // Show the uploaded file in browser
         wp_redirect($wordpress_upload_dir['url'] . '/' . basename($new_file_path));
-        die("monkey");
+        
     }
 }
 

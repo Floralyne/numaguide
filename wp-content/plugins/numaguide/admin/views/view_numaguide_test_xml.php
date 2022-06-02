@@ -23,168 +23,212 @@
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="identifier">Type :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                 <label for="type">Type :</label>
+                 <select class="form-control" id="type">
+                      <option>------</option>
+                      <option>Article</option>
+                      <option>Communication</option>
+                      <option>Ouvrage</option>
+                      <option>Pré-publication</option>
+                      <option>Rapport</option>
+                      <option>Cours</option>
+                 </select>
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="domain">Domaine :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                 <label for="domain">Domaine :</label>
+                 <select class="form-control" id="domain">
+                      <option value="">--- Sciences de l'Homme et Société ---</option>
+                      <option value="shs.anthro-bio">Athropologie biologique</option>
+                      <option value="shs.anthro-se">Anthropologie sociale et ethnologie</option>
+                      <option value="shs.archeo">Archéologie et Préhistoire</option>
+                      <option value="shs.archi">Architecture, aménagement de l'espace</option>
+                      <option value="shs.art">Art et histoire de l'art</option>
+                      <option value="shs.class">Études classiques</option>
+                      <option value="shs.demo">Démographie</option>
+                      <option value="shs.droit">Droit</option>
+                      <option value="shs.eco">Économies et finances</option>
+                      <option value="shs.edu">Éducation</option>
+                      <option value="shs.envir">Études de l'environnement</option>
+                      <option value="shs.genre">Études sur le genre</option>
+                      <option value="shs.geo">Géographie</option>
+                      <option value="shs.gestion">Gestion et management</option>
+                      <option value="shs.hisphilso">Histoire, Philosophie et Scociologie des sciences</option>
+                      <option value="shs.hist">Histoire</option>
+                      <option value="shs.info">Sciences de l'information et de la communication</option>
+                      <option value="shs.langue">Linguistique</option>
+                      <option value="shs.litt">Littératures</option>
+                      <option value="shs.museo">Héritage culturel et muséologie</option>
+                      <option value="shs.musiq">Musique, musicologie et arts de la scène</option>
+                      <option value="shs.phil">Philosophie</option>
+                      <option value="shs.psy">Psychologie</option>
+                      <option value="shs.relig">Religions</option>
+                      <option value="shs.scipo">Science politique</option>
+                      <option value="shs.socio">Sociologie</option>
+                      <option value="shs.stat">Méthodes et statsitiques</option>
+                 </select>
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="category">Catégorie de publication :</label>
-                <input type="text" class="form-control" name="identifier" required>
-            </div>
-
-            <div class="form-group pb-sm-2">
-                <label for="language">Langue du document :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <label for="language">Langue du document : </label>
+                <select class="form-control" id="language">
+                    <option value="FR">Français</option>
+                    <option value="EN">Anglais</option>
+                    <option value="IT">Italien</option>
+                    <option value="ES">Espagnol</option>
+                    <option value="DE">Allemand</option>
+                </select>
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="date">Date :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="date" class="form-control" name="date" min="1970-01-01" max="2030-12-31">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="description">Description :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <textarea type="text" class="form-control" name="description" rows="3"></textarea>
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="keyword">Mots clés :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                <input type="text" class="form-control" name="keyword">
+                </div>
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="abstract">Résumé :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <textarea type="text" class="form-control" name="identifier" rows="5"></textarea>
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="licence">Licence :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
+
+
 
             <div class="form-group pb-sm-2">
                 <label for="identifier">Identifiant auteur :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="writingDate">Date de début de production :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="edate">Date de publication électronique :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="reportType">Type de rapport :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="lectureType">Niveau du cours :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="conferenceTitle">Titre conférence :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="conferenceStartDate">Date conférence :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="publisherLink">URL du congrès ou de l'éditeur :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="popularLevel">Niveau de vulgarisation :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
-                <label for="peerReviewing">Comité de lecture :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <label for="peerReviewing">Comité de lecture  </label>
+                <input type="checkbox" class="form-check-input" name="peerReviewing">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="audience">Audience :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="classification">Classification :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="collaboration">Collaboration :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="number">Label :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="volume">Volume :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="serie">Série :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="authorityInstitution">Institution :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="director">Nom directeur :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="funding">Financement :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="anrProject">Projets ANR :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="europeanProject">Projets européens :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="city">Ville :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="country">Pays :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
 
             <div class="form-group pb-sm-2">
                 <label for="seeAlso">Voir aussi :</label>
-                <input type="text" class="form-control" name="identifier" required>
+                <input type="text" class="form-control" name="identifier">
             </div>
     
 
