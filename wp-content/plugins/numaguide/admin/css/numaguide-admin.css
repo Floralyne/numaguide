@@ -369,3 +369,9 @@ input[type="radio"]:checked + label {
 .NoumaAccueil {
 	margin: 1rem !important;
 }
+
+/*Formulaire*/
+
+textarea {
+	resize: none;
+  }

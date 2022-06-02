@@ -1,5 +1,8 @@
 <div class="container">
-    <h2 class="pb-sm-4">Création d'un guide</h2>
+    <div class="titreForm">Création du guide</div>
+
+    <div class="soustitreForm">Création du guide</div>
+    <hr>
 
     <form name="form" action="" method="post">
         <div class="form-group pb-sm-2">
@@ -7,57 +10,125 @@
             <input type="text" class="form-control" id="nomGuide" name="nomGuide">
         </div>
 
-        <div class="form-group pb-sm-2">
-            <label for="slide1">Slide avec trois textes</label>
-            <input type="text" id="slide1" name="slide1" value="slide1" readonly="readonly" />
-            <input type="text" class="form-control" name="slide1-1">
-            <input type="text" class="form-control" name="slide1-2">
-            <input type="text" class="form-control" name="slide1-3">
-        </div>
 
         <div class="form-group pb-sm-2">
-            <label for="slide1text">Choisir une slide avec un texte</label>
-            <select name="slide1text">
-                <option value="slide3" selected>Slide 3</option>
-                <option value="slide4">Slide 4</option>
-                <option value="slide5">Slide 5</option>
-                <option value="slide6">Slide 6</option>
-                <option value="slide10">Slide 10</option>
-                <option value="slide11">Slide 11</option>
-                <option value="slide12">Slide 12</option>
-                <option value="slide17">Slide 17</option>
-            </select>
-            <input type="text" class="form-control" name="slide1text-1">
+            <div class="soustitreForm">Slide 1 - Titre, sous-titre, auteur(s)</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_1.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide1-1"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide1-2"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide1-3"></textarea>
+                </div>
+            </div>
+
+
+            <div class="soustitreForm">Slide 2 - Titre, sous-titre, auteur(e)(s), affiliation(s), mots-clés</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_2.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide2-1"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide2-2"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide2-3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide2-4"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide2-5"></textarea>
+                </div>
+            </div>
+
+
+            <div class="soustitreForm">Slide 3 - Remerciements</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_3.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide3-1"></textarea>
+                </div>
+            </div>
+
+            <div class="soustitreForm">Slide 4 - Résumé</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_4.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide4-1"></textarea>
+                </div>
+            </div>
+
+            <div class="soustitreForm">Slide 5 - Introduction</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_5.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide5-1"></textarea>
+                </div>
+            </div>
         </div>
 
-        <div class="form-group pb-sm-2">
-            <label for="slide2text">Choisir une slide avec deux textes</label>
-            <select name="slide2text">
-                <option value="slide7" selected>Slide 7</option>
-                <option value="slide8">Slide 8</option>
-                <option value="slide13">Slide 13</option>
-                <option value="slide14">Slide 14</option>
-                <option value="slide16">Slide 16</option>
-            </select>
-            <input type="text" class="form-control" name="slide2text-1">
-            <input type="text" class="form-control" name="slide2text-2">
-        </div>
+            <div class="form-group pb-sm-2">
+                <label for="slide1text">Choisir une slide avec un texte</label>
+                <select name="slide1text">
+                    <option value="slide3" selected>Slide 3</option>
+                    <option value="slide4">Slide 4</option>
+                    <option value="slide5">Slide 5</option>
+                    <option value="slide6">Slide 6</option>
+                    <option value="slide10">Slide 10</option>
+                    <option value="slide11">Slide 11</option>
+                    <option value="slide12">Slide 12</option>
+                    <option value="slide17">Slide 17</option>
+                </select>
+                <input type="text" class="form-control" name="slide1text-1">
+            </div>
 
-        <div class="form-group pb-sm-2">
-            <label for="slide5text">Choisir une slide avec cinq textes</label>
-            <select name="slide5text">
-                <option value="slide2" selected>Slide 2</option>
-                <option value="slide18">Slide 18</option>
-                <option value="slide19">Slide 19</option>
-            </select>
-            <input type="text" class="form-control" name="slide5text-1">
-            <input type="text" class="form-control" name="slide5text-2">
-            <input type="text" class="form-control" name="slide5text-3">
-            <input type="text" class="form-control" name="slide5text-4">
-            <input type="text" class="form-control" name="slide5text-5">
-        </div>
+            <div class="form-group pb-sm-2">
+                <label for="slide2text">Choisir une slide avec deux textes</label>
+                <select name="slide2text">
+                    <option value="slide7" selected>Slide 7</option>
+                    <option value="slide8">Slide 8</option>
+                    <option value="slide13">Slide 13</option>
+                    <option value="slide14">Slide 14</option>
+                    <option value="slide16">Slide 16</option>
+                </select>
+                <input type="text" class="form-control" name="slide2text-1">
+                <input type="text" class="form-control" name="slide2text-2">
+            </div>
 
-        <input type=submit name="ok" value="Créer le mini guide">
+            <div class="form-group pb-sm-2">
+                <label for="slide5text">Choisir une slide avec cinq textes</label>
+                <select name="slide5text">
+                    <option value="slide2" selected>Slide 2</option>
+                    <option value="slide18">Slide 18</option>
+                    <option value="slide19">Slide 19</option>
+                </select>
+                <input type="text" class="form-control" name="slide5text-1">
+                <input type="text" class="form-control" name="slide5text-2">
+                <input type="text" class="form-control" name="slide5text-3">
+                <input type="text" class="form-control" name="slide5text-4">
+                <input type="text" class="form-control" name="slide5text-5">
+            </div>
+
+            <input type=submit name="ok" value="Créer le mini guide">
     </form>
 
 </div>

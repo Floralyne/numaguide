@@ -9,7 +9,7 @@
             <label for="nom_guide">Titre du guide :</label>
             <input type="text" class="form-control" id="nomGuide" onChange="urlFonction()" name="nom du guide" maxlength="40" required>
         </div>
-        <div class="form-group pb-sm">
+        <!-- <div class="form-group pb-sm">
             <label for="auteur_guide">Lien du guide :</label>
             <div class="input-group mb-2">
                 <div class="input-group-prepend">
@@ -19,7 +19,7 @@
                 </div>
                 <input class="form-control" type="text" pattern="/\W|_/g" maxlength="20" id="urlGuide" placeholder="Adresse du guide" required>
             </div>
-        </div>
+        </div> -->
         <div class="form-group pb-sm">
             <label for="auteur_guide">Auteur(es) du guide :</label>
             <input type="auteur" class="form-control" name="auteur du guide" required>
@@ -39,10 +39,9 @@
         <div class="soustitreForm">Thèmes colorés</div>
         <div class="form-group row">
             <div class="col">
-            <label class="boutonForm boutonAjouter">
-                    <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="collapseExample" data-target="#ete">Été
-                </label>
+                <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="collapseExample" data-target="#ete">
+                        <label class="boutonForm boutonAjouter">Été</label>
                 <div class="collapse" id="ete">
                     <div class="card card-body" id="paletteete">
                         <div id="numaFFA86B">#FFA86B</div>
@@ -117,7 +116,7 @@
                             class="parcourir">
                     </div> -->
                     <div class="form-group">
-                        <button type="button" class="boutonForm boutonAjouter boutonPetit ml-auto mr-auto format_slide">Ajouter une
+                        <button type="button" id="add_field_button" class="boutonForm boutonAjouter boutonPetit ml-auto mr-auto format_slide">Ajouter une
                             slide</button>
                     </div>
                     <div class="form-group row">
@@ -138,7 +137,7 @@
                         onClick="alert('Supprimer ?')">Supprimer une section</button>
                 </div>
                 <div class="col-sm">
-                    <button type="button" class="boutonForm boutonAjouter" id="ajout_section">Ajouter une
+                    <button type="button" class="boutonForm boutonAjouter" id="ajout_section" style="visibility: visible" >Ajouter une
                         section</button>
                 </div>
             </div>
