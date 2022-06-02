@@ -181,17 +181,16 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 	width: 0;
   } */
 
+input[type="radio"]{
+	display:none;
+}
+
 .boutonAjouter:hover {
     background-color: #fff;
     color: #000000;
 }
 
 input[type="radio"]:checked + label {
-    background-color: #fff !important;
-    color: #000000 !important;
-}
-
-#option1 .boutonAjouter input[type="radio"]:focus-visible {
     background-color: #fff !important;
     color: #000000 !important;
 }
@@ -380,4 +379,8 @@ input[type="radio"]:checked + label {
 
 textarea {
 	resize: none;
+  }
+
+  textarea:invalid {
+	border: 2px dashed #E57654;
   }
