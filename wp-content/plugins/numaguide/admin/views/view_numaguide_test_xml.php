@@ -284,7 +284,7 @@
                     <option value="ca">Canada</option>
                     <option value="es">Espagne</option>
                     <option value="us">États Unis</option>
-                    <option value="fr">France</option>
+                    <option value="fr" selected="selected">France</option>
                     <option value="ie">Ireland</option>
                     <option value="it">Italy</option>
                     <option value="gb">Royaume-Uni</option>
