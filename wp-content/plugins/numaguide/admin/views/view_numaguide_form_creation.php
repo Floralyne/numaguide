@@ -41,7 +41,7 @@
             <div class="col">
                 <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
                         aria-expanded="false" aria-controls="collapseExample" data-target="#ete">
-                        <label class="boutonForm boutonAjouter">Été</label>
+                        <label class="boutonForm boutonAjouter" for="option1">Été</label>
                 <div class="collapse" id="ete">
                     <div class="card card-body" id="paletteete">
                         <div id="numaFFA86B">#FFA86B</div>
@@ -53,10 +53,9 @@
                 </div>
             </div>
             <div class="col">
-            <label class="boutonForm boutonAjouter">
-                    <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="collapseExample" data-target="#pastel" checked>Pastel
-                </label>
+            <input type="radio" name="options" id="option2" autocomplete="off" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="collapseExample" data-target="#pastel">
+                        <label class="boutonForm boutonAjouter" for="option2">Pastel</label>
                 <div class="collapse" id="pastel">
                     <div class="card card-body" id="palettepastel">
                         <div id="numaEEF9FF">#EEF9FF</div>
