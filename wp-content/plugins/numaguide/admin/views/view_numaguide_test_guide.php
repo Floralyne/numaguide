@@ -34,6 +34,15 @@
             </div>
         </div>
 <hr>
+
+<details>
+    <summary>Métadonnées facultatives</summary>
+    <div class="form-group mt-1">
+                <label for="subtitle">Sous-titre :</label>
+                <input type="text" class="form-control" name="subtitle">
+            </div>
+</details>
+<hr>
         <div class="titreForm">Création du guide</div>
 <hr>
 <div class="soustitreForm">Thèmes colorés</div>
@@ -277,7 +286,6 @@
                 <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
                             class="parcourir" name="slide11-1">
                     <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1" name="slide11-2"></textarea>
-
                 </div>
             </div>
 
@@ -477,7 +485,7 @@
                 <input type="text" class="form-control" name="slide5text-5">
             </div>
 
-            <input type=submit name="ok" value="Créer le mini guide">
+            <input type=submit name="ok" class="boutonForm boutonValider" value="Créer le mini guide">
     </form>
 
     <form form name="form" action="" method="post" enctype="multipart/form-data">
