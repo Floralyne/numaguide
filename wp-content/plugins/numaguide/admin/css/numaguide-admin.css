@@ -230,7 +230,7 @@ input[type="radio"]:checked + label {
 }
 
 #formCrea{
-	max-width: 65%;
+	max-width: 80%;
 }
 
 #validerGuide{

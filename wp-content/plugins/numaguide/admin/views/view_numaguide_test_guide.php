@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="formCrea">
     <div class="titreForm">Création du guide</div>
 
     <div class="soustitreForm">Création du guide</div>
@@ -195,12 +195,142 @@
                     </figure>
                 </div>
                 <div class="col">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide10-2"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide12-1"></textarea>
                 <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
-                            class="parcourir" name="slide10-1">
+                            class="parcourir" name="slide12-2">
                 </div>
             </div>
         </div>
+
+        <hr>
+
+        <div class="form-group pb-sm-2" id="groupeSon">
+            <div class="soustitreForm">Slide 13 - Paragraphe, son, légende</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_13.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide13-1"></textarea>
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide13-2">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide13-3"></textarea>
+                </div>
+            </div>
+
+            <hr>
+            <div class="soustitreForm">Slide 14 - Son et légende, son et légende</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_14.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide14-1">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide14-2"></textarea>
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide14-3">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide14-4"></textarea>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+
+        <div class="form-group pb-sm-2" id="groupeVideos">
+            <div class="soustitreForm">Slide 15 - Vidéo plein écran</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_15.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide15-1">
+                </div>
+            </div>
+
+            <hr>
+            <div class="soustitreForm">Slide 16 - Vidéo et légende, paragraphe</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_16.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide16-1">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide16-2"></textarea>
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide16-3">
+                </div>
+            </div>
+
+            <hr>
+            <div class="soustitreForm">Slide 17 - Paragraphe et vidéo</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_17.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide17-1"></textarea>
+                <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" name="slide17-2">
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="form-group pb-sm-2" id="groupeFin">
+            <div class="soustitreForm">Slide 18 - Bibliographie</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_18.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide18-1"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide18-2"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide18-3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide18-4"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide18-5"></textarea>
+                </div>
+            </div>
+
+            <hr>
+            <div class="soustitreForm">Slide 19 - Bibliographie</div>
+            <div class="row">
+                <div class="col col-lg-3 mb-auto mt-auto">
+                    <figure class="figure">
+                        <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_19.png'; ?>"
+                            class="figure-img img-fluid rounded">
+                    </figure>
+                </div>
+                <div class="col">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide19-1"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide19-2"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide19-3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide19-4"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="slide19-5"></textarea>
+                </div>
+            </div>
+        </div>
+        <hr>
 
             <div class="form-group pb-sm-2">
                 <label for="slide1text">Choisir une slide avec un texte</label>
