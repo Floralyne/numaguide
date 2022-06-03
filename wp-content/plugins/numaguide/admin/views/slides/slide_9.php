@@ -19,13 +19,14 @@
             $link = substr($link, 0, -56);
         }
     }
+    // die(var_dump($link));
 ?>
 
 <section id="slide_9">
     <div id="slide_9_c" class="container-fluid">
         <div id="slide_9_r" class="row vh-100">
             <div id="slide_9" class="col text-center m-auto">
-                <img id="slide_19_image" class="img-fluid" src=<?=$link?>>
+                <img id="slide_9_image" class="img-fluid" src=<?=$link?>>
             </div>
         </div>
     </div>
