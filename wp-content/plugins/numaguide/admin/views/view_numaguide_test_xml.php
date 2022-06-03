@@ -31,7 +31,6 @@
                       <option>Ouvrage</option>
                       <option>Pré-publication</option>
                       <option>Rapport</option>
-                      <option>Cours</option>
                  </select>
             </div>
 
