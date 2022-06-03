@@ -412,38 +412,7 @@ textarea:invalid {
 	font-weight: bold;
 }
 
-.typeTous{
+.typePubli{
 	color:#959595;
 	font-size: 0.8rem;
 }
-
-/* 
-.typeArticle{
-	color:#000000;
-	font-size: 0.8rem;
-}
-
-.typeCommu{
-	color:#000000;
-	font-size: 0.8rem;
-}
-
-.typeOuvrage{
-	color:#000000;
-	font-size: 0.8rem;
-}
-
-.typePrePub{
-	color:#000000;
-	font-size: 0.8rem;
-}
-
-.typeRapport{
-	color:#000000;
-	font-size: 0.8rem;
-}
-
-.typeCours{
-	color:#000000;
-	font-size: 0.8rem;
-} */

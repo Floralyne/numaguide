@@ -42,7 +42,7 @@
 
         <details>
             <summary>Métadonnées facultatives</summary>
-            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, une couleur et un chiffre sont associés aux métadonnées nécessaires à un dépôt sur HAL. Les métadonnées obligatoires communes à <span class="type">tous types de publications</span> sont marquées d'un <span class="typeTous">(0)</span>. Les métadonnées nécessaires à la publication d'<span class="type">articles</span> sont marqués d'un <span class="typeArticle">(1)</span>, celles pour les <span class="type">communications</span> d'un <span class="typeCommu">(2)</span>, celles pour les <span class="type">ouvrages</span> d'un <span class="typeOuvrage">(3)</span>, pour les <span class="type">pré-publications</span> d'un <span class="typePrePub">(4)</span>, pour les <span class="type">rapports</span> d'un <span class="typeRapport">(5)</span>, et celles pour les <span class="type">cours</span> sont marquées d'un <span class="typeCours">(6)</span>.</div>
+            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, une couleur et un chiffre sont associés aux métadonnées nécessaires à un dépôt sur HAL. Les métadonnées obligatoires communes à <span class="type">tous types de publications</span> sont marquées d'un <span class="typeTous">(0)</span>. Les métadonnées nécessaires à la publication d'<span class="type">articles</span> sont marqués d'un <span class="typeArticle">(1)</span>, celles pour les <span class="type">communications</span> d'un <span class="typeCommu">(2)</span>, pour les <span class="type">pré-publications</span> d'un <span class="typePrePub">(3)</span>, pour les <span class="type">rapports</span> d'un <span class="typeRapport">(4)</span>.</div>
             <div class="form-group mt-1">
                 <label for="subtitle">Sous-titre : <span class="typeTous">(0)</span></label>
                 <input type="text" class="form-control" name="subtitle">
@@ -162,11 +162,6 @@
 
                 <div class="form-group pb-sm-2">
                     <label for="reportType">Type de rapport :</label>
-                    <input type="text" class="form-control" name="identifier">
-                </div>
-
-                <div class="form-group pb-sm-2">
-                    <label for="lectureType">Niveau du cours :</label>
                     <input type="text" class="form-control" name="identifier">
                 </div>
 
