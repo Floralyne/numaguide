@@ -42,9 +42,10 @@
 
         <details>
             <summary>Métadonnées facultatives</summary>
-            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, un chiffre est associé aux métadonnées nécessaires à un dépôt sur HAL. Les métadonnées obligatoires communes à <span class="type">tous types de publications</span> sont marquées d'un (0). Les métadonnées nécessaires à la publication d'<span class="type">articles</span> sont marqués d'un <span class="typeArticle">(1)</span>, celles pour les <span class="type">communications</span> d'un <span class="typeCommu">(2)</span>, pour les <span class="type">pré-publications</span> d'un <span class="typePrePub">(3)</span>, pour les <span class="type">rapports</span> d'un <span class="typeRapport">(4)</span>.</div>
+            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, un chiffre est associé aux métadonnées nécessaires à un dépôt sur HAL. Les métadonnées obligatoires communes à tous types de publications. Les métadonnées nécessaires à la publication d'<span class="type">articles</span> sont marqués d'un <span class="typeArticle">(1)</span>, celles pour les <span class="type">communications</span> d'un <span class="typeCommu">(2)</span>, pour les <span class="type">pré-publications</span> d'un <span class="typePrePub">(3)</span>, pour les <span class="type">rapports</span> d'un <span class="typeRapport">(4)</span>.</div>
             <div class="form-group pb-sm-2">
-                <label for="type">Type : <small class="text-muted"><em>Obligatoire sur HAL<em></small></label>
+            <div class="mb-2" id="metaObli">Les métadonnées suivants sont obligatoires pour une publication sur HAL :</div>    
+                <label for="type">Type :</label>
                 <select class="form-control" id="type">
                     <option value="" selected="selected"></option>
                     <option value="ART" >Article</option>
@@ -55,12 +56,12 @@
                     <option value="REPORT">Rapport</option>
                 </select>
                 <small class="text-muted">
-                Correspond au type de publication.
+                Le type correspond au type de publication sur HAL.
                 </small>
             </div>
 
                 <div class="form-group">
-                    <label for="domain">Domaine : <span class="typeTous">(0)</span></label>
+                    <label for="domain">Domaine :</label>
                     <select class="form-control" id="domain">
                         <option value="shs">--- Sciences de l'Homme et Société ---</option>
                         <option value="shs.anthro-bio">Athropologie biologique</option>
@@ -96,7 +97,7 @@
                 </div>
 
                 <div class="form-group pb-sm-2">
-                    <label for="language">Langue du document : <span class="typeTous">(0)</span></label>
+                    <label for="language">Langue du document :</label>
                     <select class="form-control" id="language">
                         <option value="FR">Français</option>
                         <option value="EN">Anglais</option>
@@ -109,14 +110,14 @@
                 </div>
 
                 <div class="form-group pb-sm-2">
-                        <label for="authorityInstitution">Institution : <span class="typeTous">(0)</span></label>
+                        <label for="authorityInstitution">Institution :</label>
                         <input type="text" class="form-control" name="authorityInstitution">
                         <small class="text-muted">
                 </small>
                     </div>
 
                     <div class="form-group pb-sm-2">
-                    <label for="DatedePublication">Date de publication: <span class="typeTous">(O)</span></label>
+                    <label for="DatedePublication">Date de publication:</label>
                     <input type="date" class="form-control" name="DatedePublication" min="1970-01-01" max="2030-12-31">
                     <small class="text-muted">
                 </small>
@@ -915,10 +916,8 @@
                     </div>
                 </div>
         </details>
+        <input type=submit name="ok" class="boutonForm boutonValider mt-5" value="Créer le mini guide">
 </div>
-<hr>
-
-<input type=submit name="ok" class="boutonForm boutonValider" value="Créer le mini guide">
 </form>
 
 </div>

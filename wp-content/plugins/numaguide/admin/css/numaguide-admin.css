@@ -408,6 +408,10 @@ textarea:invalid {
 	border-radius: 5px;
 }
 
+#metaObli{
+	font-style: italic;
+}
+
 .type{
 	font-weight: bold;
 }
