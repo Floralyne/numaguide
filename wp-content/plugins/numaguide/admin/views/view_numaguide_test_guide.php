@@ -44,7 +44,7 @@
             <summary>Métadonnées facultatives</summary>
             <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, un chiffre est associé aux métadonnées nécessaires à un dépôt sur HAL. Les métadonnées obligatoires communes à tous types de publications. Les métadonnées nécessaires à la publication d'<span class="type">articles</span> sont marqués d'un <span class="typeArticle">(1)</span>, celles pour les <span class="type">communications</span> d'un <span class="typeCommu">(2)</span>, pour les <span class="type">pré-publications</span> d'un <span class="typePrePub">(3)</span>, pour les <span class="type">rapports</span> d'un <span class="typeRapport">(4)</span>.</div>
             <div class="form-group pb-sm-2">
-            <div class="mb-2" id="metaObli">Les métadonnées suivants sont obligatoires pour une publication sur HAL :</div>    
+            <div class="mb-2" id="metaObli">Les métadonnées suivantes sont obligatoires pour <span class="type">tout type de publication</span> sur HAL :</div>    
                 <label for="type">Type :</label>
                 <select class="form-control" id="type">
                     <option value="" selected="selected"></option>
@@ -123,37 +123,40 @@
                 </small>
                 </div>
 <hr>
+<div class="mb-3" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour un <span class="type">article</span> sur HAL :</div>    
             
                 <div class="form-group pb-sm-2">
-                    <label for="Nomdelarevue">Nom de la revue :<span class="typeArticle">(1)</span></label>
+                    <label for="Nomdelarevue">Nom de la revue :</label>
                     <input type="text" class="form-control" name="Nomdelarevue">
                     <small class="text-muted">
                 </small>
                 </div>
 <hr>
+<div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour une <span class="type">communication</span> et une <span class="type">communication de congrès</span> sur HAL :</div>    
+
                 <div class="form-group pb-sm-2">
-                        <label for="TitreduCongres">Titre du congrès :<span class="typeCongres">(2)</span><span class="typecomCongres">(3)</span></label>
+                        <label for="TitreduCongres">Titre du congrès :</label>
                         <input type="text" class="form-control" name="TitreduCongres">
                         <small class="text-muted">
                 </small>
                     </div>
 
                     <div class="form-group pb-sm-2">
-                        <label for="Datedebutducongres">Date de début du congrès :<span class="typeCongres">(2)</span><span class="typecomCongres">(3)</span></label>
+                        <label for="Datedebutducongres">Date de début du congrès :</label>
                         <input type="date" class="form-control" name="Datedebutducongres" min="1970-01-01" max="2030-12-31">
                         <small class="text-muted">
                 </small>
                     </div>
 
                     <div class="form-group pb-sm-2">
-                    <label for="city">Ville :<span class="typeCongres">(2)</span><span class="typecomCongres">(3)</span></label>
+                    <label for="city">Ville :</label>
                     <input type="text" class="form-control" name="city">
                     <small class="text-muted">
                 </small>
                 </div>
 
                 <div class="form-group pb-sm-2">
-                    <label for="country">Pays :<span class="typeCongres">(2)</span><span class="typecomCongres">(3)</span></label>
+                    <label for="country">Pays :</label>
                     <select class="form-control" name="country">
                         <option value="de">Allemagne</option>
                         <option value="be">Belgique</option>
@@ -171,16 +174,19 @@
 
 <hr>
 
+<div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour un <span class="type">type autre</span> de publication sur HAL :</div>    
+
                 <div class="form-group pb-sm-2">
-                    <label for="description">Description :<span class="typeAutre">(4)</span></label>
+                    <label for="description">Description :</label>
                     <textarea type="text" class="form-control" name="description" rows="3"></textarea>
                     <small class="text-muted">
                 </small>
                 </div>
 <hr>
+<div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour un <span class="type">rapport</span> sur HAL :</div>    
 
                 <div class="form-group pb-sm-2">
-                    <label for="reportType">Type de rapport :<span class="typeRapport">(5)</span></label>
+                    <label for="reportType">Type de rapport :</label>
                     <select class="form-control" name="reportType">
                     <option value="" selected="selected"></option>
                     <option value="6">Rapport de recherche</option>
@@ -193,6 +199,9 @@
                 </small>
                 </div>
 <hr>
+
+<div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont facultatives pour <span class="type">tout dépôt</span> sur HAL :</div>    
+
 
                 <div class="form-group mt-1">
                     <label for="Soustitre">Sous-titre :</label>
