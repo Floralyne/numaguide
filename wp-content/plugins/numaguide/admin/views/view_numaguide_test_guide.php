@@ -12,7 +12,7 @@
     <div class="soustitreForm">Métadonnnées</div>
     <hr>
 
-    <form name="form" action="" method="post">
+    <form name="form" action="" method="post" enctype="multipart/form-data" >
         <div class="obligatoire">* champs obligatoires</div>
         <div class="form-group pb-sm">
             <label for="nom_guide">Titre du guide* :</label>
@@ -492,7 +492,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="slide9-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir">
+                        <input type="file" name="slide9-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" />
                     </div>
                 </div>
 
@@ -746,75 +746,12 @@
 <input type=submit name="ok" class="boutonForm boutonValider" value="Créer le mini guide">
 </form>
 
-<form form name="form" action="" method="post" enctype="multipart/form-data">
-    <input type="file" name="upload_logo" id="upload_logo" />
-    <input type=submit name="check" value="Créer le mini guide">
-</form>
-
 </div>
 
 <?php
 
-if (isset($_POST['check'])) {
-    require( ABSPATH . 'wp-load.php' );
-    // Slide avec une image
-    $wordpress_upload_dir = wp_upload_dir();
-    // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
-    // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
-    $i = 1; // compteur si le même nom de fichier
-
-    $imgSlide9 = $_FILES['upload_logo'];
-    $new_file_path = $wordpress_upload_dir['path'] . '/' . $imgSlide9['name'];
-   
-    $new_file_mime = mime_content_type($imgSlide9['tmp_name']);
-
-    if (empty($imgSlide9)) {
-        die('File is not selected.');
-    }
-
-    if ($imgSlide9['error']) {
-        die($imgSlide9['error']);
-    }
-
-    if ($imgSlide9['size'] > wp_max_upload_size()) {
-        die('La taille de l\'image est trop grande.');
-    }
-
-    if (!in_array($new_file_mime, get_allowed_mime_types())) {
-        die('Le type de l\'image n\'est pas valide');
-    }
-
-    while (file_exists($new_file_path)) {
-        $i++;
-        $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $imgSlide9['name'];
-    }
-    
-    // Ajout de l'image dans wordpress
-    if (move_uploaded_file($imgSlide9['tmp_name'], $new_file_path)) {
-
-        $upload_id = wp_insert_attachment(array(
-            'guid' => $new_file_path,
-            'post_mime_type' => $new_file_mime,
-            'post_title' => preg_replace('/\.[^.]+$/', '', $imgSlide9['name']),
-            'post_content' => '',
-            'post_status' => 'inherit',
-        ), $new_file_path);
-
-        // wp_generate_attachment_metadata() won't work if you do not include this file
-        //require_once ABSPATH . 'wp-admin/includes/image.php';
-
-        // Generate and save the attachment metas into the database
-        wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path));
-
-        // Show the uploaded file in browser
-        wp_redirect($wordpress_upload_dir['url'] . '/' . basename($new_file_path));
-        
-    }
-}
-
-
-
 if (isset($_POST['ok'])) {
+
     //Titre du guide
     $slide = "<style>html[lang] {
             margin-top: 0 !important;
@@ -836,6 +773,90 @@ if (isset($_POST['ok'])) {
     // Creation du tag pour lier les articles
 
     wp_create_term($ng_guide_nom);
+
+    //Slide 9 image
+    if ($_FILES['slide9-1'] != NULL) {
+
+        require( ABSPATH . 'wp-load.php' );
+        // Slide avec une image
+        $wordpress_upload_dir = wp_upload_dir();
+        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
+        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        $i = 1; // compteur si le même nom de fichier
+    
+        $imgSlide9 = $_FILES['slide9-1'];
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $imgSlide9['name'];
+       
+        $new_file_mime = mime_content_type($imgSlide9['tmp_name']);
+    
+        if (empty($imgSlide9)) {
+            die('File is not selected.');
+        }
+    
+        if ($imgSlide9['error']) {
+            die($imgSlide9['error']);
+        }
+    
+        if ($imgSlide9['size'] > wp_max_upload_size()) {
+            die('La taille de l\'image est trop grande.');
+        }
+    
+        if (!in_array($new_file_mime, get_allowed_mime_types())) {
+            die('Le type de l\'image n\'est pas valide');
+        }
+    
+        while (file_exists($new_file_path)) {
+            $i++;
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $imgSlide9['name'];
+            $nomImg = preg_replace('/\.[^.]+$/', '',  $imgSlide9['name']) . "-" . $i;
+        }
+        
+        // Ajout de l'image dans wordpress
+        if (move_uploaded_file($imgSlide9['tmp_name'], $new_file_path)) {
+    
+            $upload_id = wp_insert_attachment(array(
+                'guid' => $new_file_path,
+                'post_mime_type' => $new_file_mime,
+                'post_title' => preg_replace('/\.[^.]+$/', '', $imgSlide9['name']),
+                'post_content' => '',
+                'post_status' => 'inherit',
+            ), $new_file_path);
+    
+            // wp_generate_attachment_metadata() won't work if you do not include this file
+            require_once ABSPATH . 'wp-admin/includes/image.php';
+    
+            // Generate and save the attachment metas into the database
+            wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path));
+    
+            $args = array(
+                'post_type' => 'attachment',
+                'name' => sanitize_title($nomImg),
+                'posts_per_page' => 1,
+                'post_status' => 'inherit',
+              );
+    
+              $imgObj = get_posts( $args );
+              $imgID =  $imgObj[0]->ID;
+              $imgURL = wp_get_attachment_image_src($imgID, 'full');
+    
+              $ng_content ='<!-- wp:image {"id":' . $imgID . ',"sizeSlug":"full","linkDestination":"none"} -->
+              <figure class="wp-block-image size-full"><img src="' . $imgURL[0] . '" alt="" class="wp-image-190"/></figure>
+              <!-- /wp:image -->';
+    
+              $ng_info_article = array(
+                'post_content' => $ng_content,
+                'post_category' => array(59),
+                'tags_input' => array('1', $ng_guide_nom),
+                'post_type' => 'post',
+            );
+    
+            wp_insert_post($ng_info_article);
+    
+            $info_slide = array($ng_slide1_nom, 'views/slides/slide_9.php');
+            $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+        }
+
+    }
 
     //Slide avec trois textes
     if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
@@ -859,8 +880,6 @@ if (isset($_POST['ok'])) {
         );
 
         wp_insert_post($ng_info_article);
-
-        die("monkey");
 
         $info_slide = array($ng_slide1_nom, 'views/slides/slide_1.php');
         $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
