@@ -42,7 +42,7 @@
 
         <details>
             <summary>Métadonnées facultatives</summary>
-            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, une couleur et un chiffre sont associés aux métadonnées nécessaires à un dépôt sur HAL. Les métadonnées obligatoires communes à <span class="type">tous types de publications</span> sont marquées d'un <span class="typeTous">(0)</span>. Les métadonnées nécessaires à la publication d'<span class="type">articles</span> sont marqués d'un <span class="typeArticle">(1)</span>, celles pour les <span class="type">communications</span> d'un <span class="typeCommu">(2)</span>, pour les <span class="type">pré-publications</span> d'un <span class="typePrePub">(3)</span>, pour les <span class="type">rapports</span> d'un <span class="typeRapport">(4)</span>.</div>
+            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, un chiffre est associé aux métadonnées nécessaires à un dépôt sur HAL. Les métadonnées obligatoires communes à <span class="type">tous types de publications</span> sont marquées d'un (0). Les métadonnées nécessaires à la publication d'<span class="type">articles</span> sont marqués d'un <span class="typeArticle">(1)</span>, celles pour les <span class="type">communications</span> d'un <span class="typeCommu">(2)</span>, pour les <span class="type">pré-publications</span> d'un <span class="typePrePub">(3)</span>, pour les <span class="type">rapports</span> d'un <span class="typeRapport">(4)</span>.</div>
             <div class="form-group mt-1">
                 <label for="subtitle">Sous-titre : <span class="typeTous">(0)</span></label>
                 <input type="text" class="form-control" name="subtitle">
@@ -53,10 +53,8 @@
                     <option>------</option>
                     <option>Article</option>
                     <option>Communication</option>
-                    <option>Ouvrage</option>
                     <option>Pré-publication</option>
                     <option>Rapport</option>
-                    <option>Cours</option>
                 </select>
                 <small class="text-muted">
                 Correspond au type de publication.
@@ -112,11 +110,13 @@
                     <label for="authorityInstitution">Institution : <span class="typeTous">(0)</span></label>
                     <input type="text" class="form-control" name="identifier">
                 </div>
-
+<hr>
             <div class="form-group pb-sm-2">
                 <label for="date">Date : <span class="typeTous">(1)</span></label>
                 <input type="date" class="form-control" name="date" min="1970-01-01" max="2030-12-31">
             </div>
+
+            
 
             <div class="form-group pb-sm-2">
                 <label for="description">Description :</label>
