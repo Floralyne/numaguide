@@ -257,7 +257,7 @@ class Numaguide_Admin
             'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i', 'ð' => 'o', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o',
             'ö' => 'o', 'ø' => 'o', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ý' => 'y', 'þ' => 'b', 'ÿ' => 'y');
         $titre_guide = strtr($titre_guide, $enleveaccent_array);
-		$titre_guide = str_replace('\'', '', $titre_guide);
+        $titre_guide = str_replace('\'', '', $titre_guide);
 
         $page_id = wp_insert_post(
             array(
@@ -341,24 +341,21 @@ class Numaguide_Admin
      * @param string $texte2
      * @param string $texte3
      * @param string $slide
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide1($ng_guide_nom, $texte1, $texte2, $texte3, $slide) 
+    public function numaguide_cree_slide1($ng_guide_nom, $texte1, $texte2, $texte3, $slide)
     {
         $ng_slide1_nom = "slide1";
-        $ng_slide1_value1 = $_POST['slide1-1'];
-        $ng_slide1_value2 = $_POST['slide1-2'];
-        $ng_slide1_value3 = $_POST['slide1-3'];
 
         $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide1_value1 . '<!-- /wp:paragraph -->' .
+            $texte1 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide1_value2 . '<!-- /wp:paragraph -->' .
+            $texte2 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide1_value3 . '<!-- /wp:paragraph -->';
+            $texte3 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
@@ -375,7 +372,7 @@ class Numaguide_Admin
         return $slide;
     }
 
-        /*
+    /*
      * SLIDE 2
      * ///////
      * Récupère les infos du formilère de création de guide
@@ -390,34 +387,29 @@ class Numaguide_Admin
      * @param string $texte4
      * @param string $texte5
      * @param string $slide
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide2($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide) 
+    public function numaguide_cree_slide2($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide)
     {
         $ng_slide2_nom = "slide2";
-        $ng_slide2_value1 = $_POST['slide2-1'];
-        $ng_slide2_value2 = $_POST['slide2-2'];
-        $ng_slide2_value3 = $_POST['slide2-3'];
-        $ng_slide2_value4 = $_POST['slide2-4'];
-        $ng_slide2_value5 = $_POST['slide2-5'];
 
         $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2_value1 . '<!-- /wp:paragraph -->' .
+            $texte1 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2_value2 . '<!-- /wp:paragraph -->' .
+            $texte2 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2_value3 . '<!-- /wp:paragraph -->' .
+            $texte3 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2_value4 . '<!-- /wp:paragraph -->' .
+            $texte4 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2_value5 . '<!-- /wp:paragraph -->';
+            $texte5 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 52 ),
+            'post_category' => array(52),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
@@ -441,22 +433,21 @@ class Numaguide_Admin
      * @param string $ng_guide_nom
      * @param string $texte1
      * @param string $slide
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide3($ng_guide_nom, $texte1, $slide) 
+    public function numaguide_cree_slide3($ng_guide_nom, $texte1, $slide)
     {
         $ng_slide3_nom = 'slide3';
-        $ng_slide3_value1 = $_POST['slide3-1'];
 
         $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide3_value1 . '<!-- /wp:paragraph -->';
+            $texte1 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 53 ),
+            'post_category' => array(53),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
@@ -480,22 +471,21 @@ class Numaguide_Admin
      * @param string $ng_guide_nom
      * @param string $texte1
      * @param string $slide
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide4($ng_guide_nom, $texte1, $slide) 
+    public function numaguide_cree_slide4($ng_guide_nom, $texte1, $slide)
     {
         $ng_slide4_nom = 'slide4';
-        $ng_slide4_value1 = $_POST['slide4-1'];
 
         $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide4_value1 . '<!-- /wp:paragraph -->';
+            $texte1 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 54 ),
+            'post_category' => array(54),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
@@ -508,7 +498,7 @@ class Numaguide_Admin
         return $slide;
     }
 
-        /*
+    /*
      * SLIDE 5
      * ///////
      * Récupère les infos du formilère de création de guide
@@ -519,22 +509,21 @@ class Numaguide_Admin
      * @param string $ng_guide_nom
      * @param string $texte1
      * @param string $slide
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide5($ng_guide_nom, $texte1, $slide) 
+    public function numaguide_cree_slide5($ng_guide_nom, $texte1, $slide)
     {
         $ng_slide5_nom = 'slide5';
-        $ng_slide5_value1 = $_POST['slide5-1'];
 
         $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide5_value1 . '<!-- /wp:paragraph -->';
+            $texte1 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 55 ),
+            'post_category' => array(55),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
@@ -547,7 +536,7 @@ class Numaguide_Admin
         return $slide;
     }
 
-        /*
+    /*
      * SLIDE 6
      * ///////
      * Récupère les infos du formilère de création de guide
@@ -558,22 +547,21 @@ class Numaguide_Admin
      * @param string $ng_guide_nom
      * @param string $texte1
      * @param string $slide
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide6($ng_guide_nom, $texte1, $slide) 
+    public function numaguide_cree_slide6($ng_guide_nom, $texte1, $slide)
     {
         $ng_slide6_nom = 'slide6';
-        $ng_slide6_value1 = $_POST['slide6-1'];
 
         $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide6_value1 . '<!-- /wp:paragraph -->';
+            $texte1 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 56 ),
+            'post_category' => array(56),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
@@ -598,25 +586,23 @@ class Numaguide_Admin
      * @param string $texte1
      * @param string $texte2
      * @param string $slide
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide7($ng_guide_nom, $texte1, $texte2, $slide) 
+    public function numaguide_cree_slide7($ng_guide_nom, $texte1, $texte2, $slide)
     {
         $ng_slide7_nom = 'slide7';
-        $ng_slide7_value1 = $_POST['slide7-1'];
-        $ng_slide7_value2 = $_POST['slide7-2'];
 
         $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide7_value1 . '<!-- /wp:paragraph -->' .
+            $texte1 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide7_value2 . '<!-- /wp:paragraph -->';
+            $texte2 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 57 ),
+            'post_category' => array(57),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
@@ -641,25 +627,23 @@ class Numaguide_Admin
      * @param string $texte1
      * @param string $texte2
      * @param string $slide
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide8($ng_guide_nom, $texte1, $texte2, $slide) 
+    public function numaguide_cree_slide8($ng_guide_nom, $texte1, $texte2, $slide)
     {
         $ng_slide8_nom = 'slide8';
-        $ng_slide8_value1 = $_POST['slide8-1'];
-        $ng_slide8_value2 = $_POST['slide8-2'];
 
         $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide8_value1 . '<!-- /wp:paragraph -->' .
+            $texte1 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide8_value2 . '<!-- /wp:paragraph -->';
+            $texte2 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 58 ),
+            'post_category' => array(58),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
@@ -675,7 +659,7 @@ class Numaguide_Admin
     /*
      * SLIDE 9
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 9
      *
      * @since Numaguide 1.0.0
@@ -683,46 +667,44 @@ class Numaguide_Admin
      * @param string $ng_guide_nom
      * @param string $image1
      * @param string $slide
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide9($ng_guide_nom, $image1, $slide) 
+    public function numaguide_cree_slide9($ng_guide_nom, $image1, $slide)
     {
-        require( ABSPATH . 'wp-load.php' );
-        // Slide avec une image
+        require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
         // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
         // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
-    
-        $image1 = $_FILES['slide9-1'];
+
         $new_file_path = $wordpress_upload_dir['path'] . '/' . $image1['name'];
-       
+
         $new_file_mime = mime_content_type($image1['tmp_name']);
-    
+
         if ($image1['error']) {
             die($image1['error']);
         }
-    
+
         if ($image1['size'] > wp_max_upload_size()) {
             die('La taille de l\'image est trop grande.');
         }
-    
+
         if (!in_array($new_file_mime, get_allowed_mime_types())) {
             die('Le type de l\'image n\'est pas valide');
         }
-    
+
         while (file_exists($new_file_path)) {
             $i++;
             $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
-            $nomImg = preg_replace('/\.[^.]+$/', '',  $image1['name']) . "-" . $i;
+            $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']) . "-" . $i;
         }
-        
+
         // Ajout de l'image dans wordpress
         if (move_uploaded_file($image1['tmp_name'], $new_file_path)) {
-    
+
             $upload_id = wp_insert_attachment(array(
                 'guid' => $new_file_path,
                 'post_mime_type' => $new_file_mime,
@@ -730,187 +712,353 @@ class Numaguide_Admin
                 'post_content' => '',
                 'post_status' => 'inherit',
             ), $new_file_path);
-    
-            // wp_generate_attachment_metadata() won't work if you do not include this file
+
+            // wp_generate_attachment_metadata() sans cet include
             require_once ABSPATH . 'wp-admin/includes/image.php';
-    
-            // Generate and save the attachment metas into the database
+
+            // Genere et sauvegarde les métadonnées associé dans la BDD
             wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path));
-    
+
             $args = array(
                 'post_type' => 'attachment',
                 'name' => sanitize_title($nomImg),
                 'posts_per_page' => 1,
                 'post_status' => 'inherit',
-              );
-    
-              $imgObj = get_posts( $args );
-              $imgID =  $imgObj[0]->ID;
-              $imgURL = wp_get_attachment_image_src($imgID, 'full');
-    
-              $ng_content ='<!-- wp:image {"id":' . $imgID . ',"sizeSlug":"full","linkDestination":"none"} -->
+            );
+
+            $imgObj = get_posts($args);
+            $imgID = $imgObj[0]->ID;
+            $imgURL = wp_get_attachment_image_src($imgID, 'full');
+
+            $ng_content = '<!-- wp:image {"id":' . $imgID . ',"sizeSlug":"full","linkDestination":"none"} -->
               <figure class="wp-block-image size-full"><img src="' . $imgURL[0] . '" alt="" class="wp-image-190"/></figure>
               <!-- /wp:image -->';
-    
-              $ng_info_article = array(
+
+            $ng_info_article = array(
                 'post_content' => $ng_content,
                 'post_category' => array(59),
                 'tags_input' => array('1', $ng_guide_nom),
                 'post_type' => 'post',
             );
-    
+
             wp_insert_post($ng_info_article);
-    
+
             $info_slide = array($ng_slide1_nom, 'views/slides/slide_9.php');
             $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+
+            return $slide;
         }
     }
 
-    public function numaguide_cree_slide10($texte1, $image1) 
+    /*
+     * SLIDE 10
+     * ///////
+     * Récupère les infos du formulaire de création de guide
+     * créé un article et génère la slide 10
+     *
+     * @since Numaguide 1.0.0
+     *
+     * @param string $ng_guide_nom
+     * @param string $image1
+     * @param string $texte1
+     * @param string $slide
+     *
+     * @return string $slide
+     *
+     */
+
+    public function numaguide_cree_slide10($ng_guide_nom, $texte1, $image1, $slide)
     {
-        $ng_slide1text_nom = $_POST['slide1text'];
-        $ng_slide1text_value1 = $_POST['slide1text-1'];
+        require ABSPATH . 'wp-load.php';
+        $wordpress_upload_dir = wp_upload_dir();
+        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
+        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        $i = 1; // compteur si le même nom de fichier
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide1text_value1 . '<!-- /wp:paragraph -->';
+        $ng_slide10_nom = 'slide10';
+        $ng_content = '';
 
-        if ($ng_slide1text_nom == 'slide3') {
-            $num_cat = 53;
-            $nom_slide = 'slide_3';
-        }if ($ng_slide1text_nom == 'slide4') {
-            $num_cat = 54;
-            $nom_slide = 'slide_4';
-        }if ($ng_slide1text_nom == 'slide5') {
-            $num_cat = 55;
-            $nom_slide = 'slide_5';
-        }if ($ng_slide1text_nom == 'slide6') {
-            $num_cat = 56;
-            $nom_slide = 'slide_6';
-        }if ($ng_slide1text_nom == 'slide10') {
-            $num_cat = 60;
-            $nom_slide = 'slide_10';
-        }if ($ng_slide1text_nom == 'slide11') {
-            $num_cat = 61;
-            $nom_slide = 'slide_11';
-        }if ($ng_slide1text_nom == 'slide12') {
-            $num_cat = 62;
-            $nom_slide = 'slide_12';
-        }if ($ng_slide1text_nom == 'slide17') {
-            $num_cat = 67;
-            $nom_slide = 'slide_17';
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $image1['name'];
+
+        $new_file_mime = mime_content_type($image1['tmp_name']);
+
+        if ($image1['error']) {
+            die($image1['error']);
         }
+
+        if ($image1['size'] > wp_max_upload_size()) {
+            die('La taille de l\'image est trop grande.');
+        }
+
+        if (!in_array($new_file_mime, get_allowed_mime_types())) {
+            die('Le type de l\'image n\'est pas valide');
+        }
+
+        while (file_exists($new_file_path)) {
+            $i++;
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
+            $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']) . "-" . $i;
+        }
+
+        // Ajout de l'image dans wordpress
+        if (move_uploaded_file($image1['tmp_name'], $new_file_path)) {
+
+            $upload_id = wp_insert_attachment(array(
+                'guid' => $new_file_path,
+                'post_mime_type' => $new_file_mime,
+                'post_title' => preg_replace('/\.[^.]+$/', '', $image1['name']),
+                'post_content' => '',
+                'post_status' => 'inherit',
+            ), $new_file_path);
+
+            // wp_generate_attachment_metadata() sans cet include
+            require_once ABSPATH . 'wp-admin/includes/image.php';
+
+            // Genere et sauvegarde les métadonnées associé dans la BDD
+            wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path));
+
+            $args = array(
+                'post_type' => 'attachment',
+                'name' => sanitize_title($nomImg),
+                'posts_per_page' => 1,
+                'post_status' => 'inherit',
+            );
+
+            $imgObj = get_posts($args);
+            $imgID = $imgObj[0]->ID;
+            $imgURL = wp_get_attachment_image_src($imgID, 'full');
+
+            $ng_content = '<!-- wp:image {"id":' . $imgID . ',"sizeSlug":"full","linkDestination":"none"} -->
+              <figure class="wp-block-image size-full"><img src="' . $imgURL[0] . '" alt="" class="wp-image-190"/></figure>
+              <!-- /wp:image -->';
+        }
+
+        // Ajout du paragraphe pour la création de l'article
+        $ng_content = $ng_content . '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $texte1 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array($num_cat),
+            'post_category' => array(60),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
 
         wp_insert_post($ng_info_article);
 
-        $info_slide = array($ng_slide1text_nom, 'views/slides/' . $nom_slide . '.php');
+        $info_slide = array($ng_slide10_nom, 'views/slides/slide_10.php');
         $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
+        return $slide;
     }
 
-    public function numaguide_cree_slide11($texte1, $image1) 
+/*
+     * SLIDE 11
+     * ///////
+     * Récupère les infos du formulaire de création de guide
+     * créé un article et génère la slide 11
+     *
+     * @since Numaguide 1.0.0
+     *
+     * @param string $ng_guide_nom
+     * @param string $image1
+     * @param string $texte1
+     * @param string $slide
+     *
+     * @return string $slide
+     *
+     */
+
+    public function numaguide_cree_slide11($ng_guide_nom, $texte1, $image1, $slide)
     {
-        $ng_slide1text_nom = $_POST['slide1text'];
-        $ng_slide1text_value1 = $_POST['slide1text-1'];
+        require ABSPATH . 'wp-load.php';
+        $wordpress_upload_dir = wp_upload_dir();
+        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
+        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        $i = 1; // compteur si le même nom de fichier
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide1text_value1 . '<!-- /wp:paragraph -->';
+        $ng_slide11_nom = 'slide11';
+        $ng_content = '';
 
-        if ($ng_slide1text_nom == 'slide3') {
-            $num_cat = 53;
-            $nom_slide = 'slide_3';
-        }if ($ng_slide1text_nom == 'slide4') {
-            $num_cat = 54;
-            $nom_slide = 'slide_4';
-        }if ($ng_slide1text_nom == 'slide5') {
-            $num_cat = 55;
-            $nom_slide = 'slide_5';
-        }if ($ng_slide1text_nom == 'slide6') {
-            $num_cat = 56;
-            $nom_slide = 'slide_6';
-        }if ($ng_slide1text_nom == 'slide10') {
-            $num_cat = 60;
-            $nom_slide = 'slide_10';
-        }if ($ng_slide1text_nom == 'slide11') {
-            $num_cat = 61;
-            $nom_slide = 'slide_11';
-        }if ($ng_slide1text_nom == 'slide12') {
-            $num_cat = 62;
-            $nom_slide = 'slide_12';
-        }if ($ng_slide1text_nom == 'slide17') {
-            $num_cat = 67;
-            $nom_slide = 'slide_17';
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $image1['name'];
+
+        $new_file_mime = mime_content_type($image1['tmp_name']);
+
+        if ($image1['error']) {
+            die($image1['error']);
         }
+
+        if ($image1['size'] > wp_max_upload_size()) {
+            die('La taille de l\'image est trop grande.');
+        }
+
+        if (!in_array($new_file_mime, get_allowed_mime_types())) {
+            die('Le type de l\'image n\'est pas valide');
+        }
+
+        while (file_exists($new_file_path)) {
+            $i++;
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
+            $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']) . "-" . $i;
+        }
+
+        // Ajout de l'image dans wordpress
+        if (move_uploaded_file($image1['tmp_name'], $new_file_path)) {
+
+            $upload_id = wp_insert_attachment(array(
+                'guid' => $new_file_path,
+                'post_mime_type' => $new_file_mime,
+                'post_title' => preg_replace('/\.[^.]+$/', '', $image1['name']),
+                'post_content' => '',
+                'post_status' => 'inherit',
+            ), $new_file_path);
+
+            // wp_generate_attachment_metadata() sans cet include
+            require_once ABSPATH . 'wp-admin/includes/image.php';
+
+            // Genere et sauvegarde les métadonnées associé dans la BDD
+            wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path));
+
+            $args = array(
+                'post_type' => 'attachment',
+                'name' => sanitize_title($nomImg),
+                'posts_per_page' => 1,
+                'post_status' => 'inherit',
+            );
+
+            $imgObj = get_posts($args);
+            $imgID = $imgObj[0]->ID;
+            $imgURL = wp_get_attachment_image_src($imgID, 'full');
+
+            $ng_content = '<!-- wp:image {"id":' . $imgID . ',"sizeSlug":"full","linkDestination":"none"} -->
+              <figure class="wp-block-image size-full"><img src="' . $imgURL[0] . '" alt="" class="wp-image-190"/></figure>
+              <!-- /wp:image -->';
+        }
+
+        // Ajout du paragraphe pour la création de l'article
+        $ng_content = $ng_content . '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $texte1 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array($num_cat),
+            'post_category' => array(61),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
 
         wp_insert_post($ng_info_article);
 
-        $info_slide = array($ng_slide1text_nom, 'views/slides/' . $nom_slide . '.php');
+        $info_slide = array($ng_slide11_nom, 'views/slides/slide_11.php');
         $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
+        return $slide;
     }
 
-    public function numaguide_cree_slide12($texte1, $image1) 
+    /*
+     * SLIDE 12
+     * ///////
+     * Récupère les infos du formulaire de création de guide
+     * créé un article et génère la slide 12
+     *
+     * @since Numaguide 1.0.0
+     *
+     * @param string $ng_guide_nom
+     * @param string $image1
+     * @param string $texte1
+     * @param string $slide
+     *
+     * @return string $slide
+     *
+     */
+
+    public function numaguide_cree_slide12($ng_guide_nom, $texte1, $image1, $slide)
     {
-        $ng_slide1text_nom = $_POST['slide1text'];
-        $ng_slide1text_value1 = $_POST['slide1text-1'];
+        require ABSPATH . 'wp-load.php';
+        $wordpress_upload_dir = wp_upload_dir();
+        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
+        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        $i = 1; // compteur si le même nom de fichier
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide1text_value1 . '<!-- /wp:paragraph -->';
+        $ng_slide12_nom = 'slide12';
+        $ng_content = '';
 
-        if ($ng_slide1text_nom == 'slide3') {
-            $num_cat = 53;
-            $nom_slide = 'slide_3';
-        }if ($ng_slide1text_nom == 'slide4') {
-            $num_cat = 54;
-            $nom_slide = 'slide_4';
-        }if ($ng_slide1text_nom == 'slide5') {
-            $num_cat = 55;
-            $nom_slide = 'slide_5';
-        }if ($ng_slide1text_nom == 'slide6') {
-            $num_cat = 56;
-            $nom_slide = 'slide_6';
-        }if ($ng_slide1text_nom == 'slide10') {
-            $num_cat = 60;
-            $nom_slide = 'slide_10';
-        }if ($ng_slide1text_nom == 'slide11') {
-            $num_cat = 61;
-            $nom_slide = 'slide_11';
-        }if ($ng_slide1text_nom == 'slide12') {
-            $num_cat = 62;
-            $nom_slide = 'slide_12';
-        }if ($ng_slide1text_nom == 'slide17') {
-            $num_cat = 67;
-            $nom_slide = 'slide_17';
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $image1['name'];
+
+        $new_file_mime = mime_content_type($image1['tmp_name']);
+
+        if ($image1['error']) {
+            die($image1['error']);
         }
+
+        if ($image1['size'] > wp_max_upload_size()) {
+            die('La taille de l\'image est trop grande.');
+        }
+
+        if (!in_array($new_file_mime, get_allowed_mime_types())) {
+            die('Le type de l\'image n\'est pas valide');
+        }
+
+        while (file_exists($new_file_path)) {
+            $i++;
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
+            $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']) . "-" . $i;
+        }
+
+        // Ajout de l'image dans wordpress
+        if (move_uploaded_file($image1['tmp_name'], $new_file_path)) {
+
+            $upload_id = wp_insert_attachment(array(
+                'guid' => $new_file_path,
+                'post_mime_type' => $new_file_mime,
+                'post_title' => preg_replace('/\.[^.]+$/', '', $image1['name']),
+                'post_content' => '',
+                'post_status' => 'inherit',
+            ), $new_file_path);
+
+            // wp_generate_attachment_metadata() sans cet include
+            require_once ABSPATH . 'wp-admin/includes/image.php';
+
+            // Genere et sauvegarde les métadonnées associé dans la BDD
+            wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path));
+
+            $args = array(
+                'post_type' => 'attachment',
+                'name' => sanitize_title($nomImg),
+                'posts_per_page' => 1,
+                'post_status' => 'inherit',
+            );
+
+            $imgObj = get_posts($args);
+            $imgID = $imgObj[0]->ID;
+            $imgURL = wp_get_attachment_image_src($imgID, 'full');
+
+            $ng_content = '<!-- wp:image {"id":' . $imgID . ',"sizeSlug":"full","linkDestination":"none"} -->
+              <figure class="wp-block-image size-full"><img src="' . $imgURL[0] . '" alt="" class="wp-image-190"/></figure>
+              <!-- /wp:image -->';
+        }
+
+        // Ajout du paragraphe pour la création de l'article
+        $ng_content = $ng_content . '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $texte1 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array($num_cat),
+            'post_category' => array(62),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
 
         wp_insert_post($ng_info_article);
 
-        $info_slide = array($ng_slide1text_nom, 'views/slides/' . $nom_slide . '.php');
+        $info_slide = array($ng_slide12_nom, 'views/slides/slide_12.php');
         $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
+        return $slide;
     }
 
-    public function numaguide_cree_slide13($texte1, $texte2, $son1) 
+
+    // TO DO
+    public function numaguide_cree_slide13($texte1, $texte2, $son1)
     {
         $ng_slide2text_nom = $_POST['slide2text'];
         $ng_slide2text_value1 = $_POST['slide2text-1'];
@@ -952,7 +1100,8 @@ class Numaguide_Admin
 
     }
 
-    public function numaguide_cree_slide14($texte1, $texte2, $son1, $son2) 
+    //TO DO
+    public function numaguide_cree_slide14($texte1, $texte2, $son1, $son2)
     {
         $ng_slide2text_nom = $_POST['slide2text'];
         $ng_slide2text_value1 = $_POST['slide2text-1'];
@@ -994,12 +1143,14 @@ class Numaguide_Admin
 
     }
 
-    public function numaguide_cree_slide15($video1) 
+    //TO DO
+    public function numaguide_cree_slide15($video1)
     {
 
     }
 
-    public function numaguide_cree_slide16($texte1, $texte2, $video1) 
+    //TO DO
+    public function numaguide_cree_slide16($texte1, $texte2, $video1)
     {
         $ng_slide2text_nom = $_POST['slide2text'];
         $ng_slide2text_value1 = $_POST['slide2text-1'];
@@ -1041,7 +1192,8 @@ class Numaguide_Admin
 
     }
 
-    public function numaguide_cree_slide17($texte1, $video1) 
+    //TO DO
+    public function numaguide_cree_slide17($texte1, $video1)
     {
         $ng_slide1text_nom = $_POST['slide1text'];
         $ng_slide1text_value1 = $_POST['slide1text-1'];
@@ -1089,7 +1241,7 @@ class Numaguide_Admin
 
     }
 
-       /*
+    /*
      * SLIDE 18
      * ///////
      * Récupère les infos du formilère de création de guide
@@ -1103,12 +1255,12 @@ class Numaguide_Admin
      * @param string $texte3
      * @param string $texte4
      * @param string $texte5
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide18($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide) 
+    public function numaguide_cree_slide18($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide)
     {
         $ng_slide18_nom = "slide18";
         $ng_slide18_value1 = $_POST['slide18-1'];
@@ -1130,7 +1282,7 @@ class Numaguide_Admin
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 68 ),
+            'post_category' => array(68),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
@@ -1143,7 +1295,7 @@ class Numaguide_Admin
         return $slide;
     }
 
-       /*
+    /*
      * SLIDE 19
      * ///////
      * Récupère les infos du formilère de création de guide
@@ -1157,12 +1309,12 @@ class Numaguide_Admin
      * @param string $texte3
      * @param string $texte4
      * @param string $texte5
-     * 
+     *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide19($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide) 
+    public function numaguide_cree_slide19($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide)
     {
 
         $ng_slide19_nom = "slide19";
@@ -1185,7 +1337,7 @@ class Numaguide_Admin
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 69 ),
+            'post_category' => array(69),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
@@ -1201,4 +1353,4 @@ class Numaguide_Admin
 
 /*Change la photo de profil par défaut*/
 
-update_option( 'avatar_default', 'https://zupimages.net/up/22/21/3hzz.png' );
+update_option('avatar_default', 'https://zupimages.net/up/22/21/3hzz.png');
