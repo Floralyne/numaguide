@@ -646,7 +646,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide7($ng_guide_nom, $texte1, $texte2, $slide) 
+    public function numaguide_cree_slide8($ng_guide_nom, $texte1, $texte2, $slide) 
     {
         $ng_slide8_nom = 'slide8';
         $ng_slide8_value1 = $_POST['slide8-1'];
