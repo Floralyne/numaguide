@@ -18,6 +18,9 @@
             $video = $block['attrs']['url'];
         }
     }
+
+    $video = str_replace("watch?v=", "embed/", $video)
+
 ?>
 
     <section id="slide_15">
