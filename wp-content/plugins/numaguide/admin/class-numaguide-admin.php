@@ -331,7 +331,7 @@ class Numaguide_Admin
     /*
      * SLIDE 1
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 1
      *
      * @since Numaguide 1.0.0
@@ -346,7 +346,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide1($ng_guide_nom, $texte1, $texte2, $texte3, $slide)
+    public function numaguide_creer_slide1($ng_guide_nom, $texte1, $texte2, $texte3, $slide)
     {
         $ng_slide1_nom = "slide1";
 
@@ -375,7 +375,7 @@ class Numaguide_Admin
     /*
      * SLIDE 2
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 2
      *
      * @since Numaguide 1.0.0
@@ -392,7 +392,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide2($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide)
+    public function numaguide_creer_slide2($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide)
     {
         $ng_slide2_nom = "slide2";
 
@@ -425,7 +425,7 @@ class Numaguide_Admin
     /*
      * SLIDE 3
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 3
      *
      * @since Numaguide 1.0.0
@@ -438,7 +438,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide3($ng_guide_nom, $texte1, $slide)
+    public function numaguide_creer_slide3($ng_guide_nom, $texte1, $slide)
     {
         $ng_slide3_nom = 'slide3';
 
@@ -463,7 +463,7 @@ class Numaguide_Admin
     /*
      * SLIDE 4
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 4
      *
      * @since Numaguide 1.0.0
@@ -476,7 +476,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide4($ng_guide_nom, $texte1, $slide)
+    public function numaguide_creer_slide4($ng_guide_nom, $texte1, $slide)
     {
         $ng_slide4_nom = 'slide4';
 
@@ -501,7 +501,7 @@ class Numaguide_Admin
     /*
      * SLIDE 5
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 5
      *
      * @since Numaguide 1.0.0
@@ -514,7 +514,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide5($ng_guide_nom, $texte1, $slide)
+    public function numaguide_creer_slide5($ng_guide_nom, $texte1, $slide)
     {
         $ng_slide5_nom = 'slide5';
 
@@ -539,7 +539,7 @@ class Numaguide_Admin
     /*
      * SLIDE 6
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 6
      *
      * @since Numaguide 1.0.0
@@ -552,7 +552,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide6($ng_guide_nom, $texte1, $slide)
+    public function numaguide_creer_slide6($ng_guide_nom, $texte1, $slide)
     {
         $ng_slide6_nom = 'slide6';
 
@@ -577,7 +577,7 @@ class Numaguide_Admin
     /*
      * SLIDE 7
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 7
      *
      * @since Numaguide 1.0.0
@@ -591,7 +591,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide7($ng_guide_nom, $texte1, $texte2, $slide)
+    public function numaguide_creer_slide7($ng_guide_nom, $texte1, $texte2, $slide)
     {
         $ng_slide7_nom = 'slide7';
 
@@ -618,7 +618,7 @@ class Numaguide_Admin
     /*
      * SLIDE 8
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 8
      *
      * @since Numaguide 1.0.0
@@ -632,7 +632,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide8($ng_guide_nom, $texte1, $texte2, $slide)
+    public function numaguide_creer_slide8($ng_guide_nom, $texte1, $texte2, $slide)
     {
         $ng_slide8_nom = 'slide8';
 
@@ -672,7 +672,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide9($ng_guide_nom, $image1, $slide)
+    public function numaguide_creer_slide9($ng_guide_nom, $image1, $slide)
     {
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
@@ -767,7 +767,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide10($ng_guide_nom, $texte1, $image1, $slide)
+    public function numaguide_creer_slide10($ng_guide_nom, $image1, $texte1, $slide)
     {
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
@@ -869,7 +869,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide11($ng_guide_nom, $texte1, $image1, $slide)
+    public function numaguide_creer_slide11($ng_guide_nom, $image1, $texte1, $slide)
     {
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
@@ -971,7 +971,7 @@ class Numaguide_Admin
      *
      */
 
-    public function numaguide_cree_slide12($ng_guide_nom, $texte1, $image1, $slide)
+    public function numaguide_creer_slide12($ng_guide_nom, $image1, $texte1, $slide)
     {
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
@@ -1058,193 +1058,193 @@ class Numaguide_Admin
 
 
     // TO DO
-    public function numaguide_cree_slide13($texte1, $texte2, $son1)
-    {
-        $ng_slide2text_nom = $_POST['slide2text'];
-        $ng_slide2text_value1 = $_POST['slide2text-1'];
-        $ng_slide2text_value2 = $_POST['slide2text-2'];
+    // public function numaguide_creer_slide13($texte1, $texte2, $son1)
+    // {
+    //     $ng_slide2text_nom = $_POST['slide2text'];
+    //     $ng_slide2text_value1 = $_POST['slide2text-1'];
+    //     $ng_slide2text_value2 = $_POST['slide2text-2'];
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2text_value1 . '<!-- /wp:paragraph -->' .
-            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2text_value2 . '<!-- /wp:paragraph -->';
+    //     $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+    //         $ng_slide2text_value1 . '<!-- /wp:paragraph -->' .
+    //         '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+    //         $ng_slide2text_value2 . '<!-- /wp:paragraph -->';
 
-        if ($ng_slide2text_nom == 'slide7') {
-            $num_cat = 57;
-            $nom_slide = 'slide_7';
-        }if ($ng_slide2text_nom == 'slide8') {
-            $num_cat = 58;
-            $nom_slide = 'slide_8';
-        }if ($ng_slide2text_nom == 'slide13') {
-            $num_cat = 63;
-            $nom_slide = 'slide_13';
-        }if ($ng_slide2text_nom == 'slide14') {
-            $num_cat = 64;
-            $nom_slide = 'slide_14';
-        }if ($ng_slide2text_nom == 'slide16') {
-            $num_cat = 66;
-            $nom_slide = 'slide_16';
-        }
+    //     if ($ng_slide2text_nom == 'slide7') {
+    //         $num_cat = 57;
+    //         $nom_slide = 'slide_7';
+    //     }if ($ng_slide2text_nom == 'slide8') {
+    //         $num_cat = 58;
+    //         $nom_slide = 'slide_8';
+    //     }if ($ng_slide2text_nom == 'slide13') {
+    //         $num_cat = 63;
+    //         $nom_slide = 'slide_13';
+    //     }if ($ng_slide2text_nom == 'slide14') {
+    //         $num_cat = 64;
+    //         $nom_slide = 'slide_14';
+    //     }if ($ng_slide2text_nom == 'slide16') {
+    //         $num_cat = 66;
+    //         $nom_slide = 'slide_16';
+    //     }
 
-        $ng_info_article = array(
-            'post_content' => $ng_content,
-            'post_category' => array($num_cat),
-            'tags_input' => array('1', $ng_guide_nom),
-            'post_type' => 'post',
-        );
+    //     $ng_info_article = array(
+    //         'post_content' => $ng_content,
+    //         'post_category' => array($num_cat),
+    //         'tags_input' => array('1', $ng_guide_nom),
+    //         'post_type' => 'post',
+    //     );
 
-        wp_insert_post($ng_info_article);
+    //     wp_insert_post($ng_info_article);
 
-        $info_slide = array($ng_slide2text_nom, 'views/slides/' . $nom_slide . '.php');
-        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+    //     $info_slide = array($ng_slide2text_nom, 'views/slides/' . $nom_slide . '.php');
+    //     $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
-    }
-
-    //TO DO
-    public function numaguide_cree_slide14($texte1, $texte2, $son1, $son2)
-    {
-        $ng_slide2text_nom = $_POST['slide2text'];
-        $ng_slide2text_value1 = $_POST['slide2text-1'];
-        $ng_slide2text_value2 = $_POST['slide2text-2'];
-
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2text_value1 . '<!-- /wp:paragraph -->' .
-            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2text_value2 . '<!-- /wp:paragraph -->';
-
-        if ($ng_slide2text_nom == 'slide7') {
-            $num_cat = 57;
-            $nom_slide = 'slide_7';
-        }if ($ng_slide2text_nom == 'slide8') {
-            $num_cat = 58;
-            $nom_slide = 'slide_8';
-        }if ($ng_slide2text_nom == 'slide13') {
-            $num_cat = 63;
-            $nom_slide = 'slide_13';
-        }if ($ng_slide2text_nom == 'slide14') {
-            $num_cat = 64;
-            $nom_slide = 'slide_14';
-        }if ($ng_slide2text_nom == 'slide16') {
-            $num_cat = 66;
-            $nom_slide = 'slide_16';
-        }
-
-        $ng_info_article = array(
-            'post_content' => $ng_content,
-            'post_category' => array($num_cat),
-            'tags_input' => array('1', $ng_guide_nom),
-            'post_type' => 'post',
-        );
-
-        wp_insert_post($ng_info_article);
-
-        $info_slide = array($ng_slide2text_nom, 'views/slides/' . $nom_slide . '.php');
-        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
-
-    }
+    // }
 
     //TO DO
-    public function numaguide_cree_slide15($video1)
-    {
+    // public function numaguide_creer_slide14($texte1, $texte2, $son1, $son2)
+    // {
+    //     $ng_slide2text_nom = $_POST['slide2text'];
+    //     $ng_slide2text_value1 = $_POST['slide2text-1'];
+    //     $ng_slide2text_value2 = $_POST['slide2text-2'];
 
-    }
+    //     $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+    //         $ng_slide2text_value1 . '<!-- /wp:paragraph -->' .
+    //         '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+    //         $ng_slide2text_value2 . '<!-- /wp:paragraph -->';
 
-    //TO DO
-    public function numaguide_cree_slide16($texte1, $texte2, $video1)
-    {
-        $ng_slide2text_nom = $_POST['slide2text'];
-        $ng_slide2text_value1 = $_POST['slide2text-1'];
-        $ng_slide2text_value2 = $_POST['slide2text-2'];
+    //     if ($ng_slide2text_nom == 'slide7') {
+    //         $num_cat = 57;
+    //         $nom_slide = 'slide_7';
+    //     }if ($ng_slide2text_nom == 'slide8') {
+    //         $num_cat = 58;
+    //         $nom_slide = 'slide_8';
+    //     }if ($ng_slide2text_nom == 'slide13') {
+    //         $num_cat = 63;
+    //         $nom_slide = 'slide_13';
+    //     }if ($ng_slide2text_nom == 'slide14') {
+    //         $num_cat = 64;
+    //         $nom_slide = 'slide_14';
+    //     }if ($ng_slide2text_nom == 'slide16') {
+    //         $num_cat = 66;
+    //         $nom_slide = 'slide_16';
+    //     }
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2text_value1 . '<!-- /wp:paragraph -->' .
-            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide2text_value2 . '<!-- /wp:paragraph -->';
+    //     $ng_info_article = array(
+    //         'post_content' => $ng_content,
+    //         'post_category' => array($num_cat),
+    //         'tags_input' => array('1', $ng_guide_nom),
+    //         'post_type' => 'post',
+    //     );
 
-        if ($ng_slide2text_nom == 'slide7') {
-            $num_cat = 57;
-            $nom_slide = 'slide_7';
-        }if ($ng_slide2text_nom == 'slide8') {
-            $num_cat = 58;
-            $nom_slide = 'slide_8';
-        }if ($ng_slide2text_nom == 'slide13') {
-            $num_cat = 63;
-            $nom_slide = 'slide_13';
-        }if ($ng_slide2text_nom == 'slide14') {
-            $num_cat = 64;
-            $nom_slide = 'slide_14';
-        }if ($ng_slide2text_nom == 'slide16') {
-            $num_cat = 66;
-            $nom_slide = 'slide_16';
-        }
+    //     wp_insert_post($ng_info_article);
 
-        $ng_info_article = array(
-            'post_content' => $ng_content,
-            'post_category' => array($num_cat),
-            'tags_input' => array('1', $ng_guide_nom),
-            'post_type' => 'post',
-        );
+    //     $info_slide = array($ng_slide2text_nom, 'views/slides/' . $nom_slide . '.php');
+    //     $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
-        wp_insert_post($ng_info_article);
-
-        $info_slide = array($ng_slide2text_nom, 'views/slides/' . $nom_slide . '.php');
-        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
-
-    }
+    // }
 
     //TO DO
-    public function numaguide_cree_slide17($texte1, $video1)
-    {
-        $ng_slide1text_nom = $_POST['slide1text'];
-        $ng_slide1text_value1 = $_POST['slide1text-1'];
+    // public function numaguide_creer_slide15($video1)
+    // {
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-            $ng_slide1text_value1 . '<!-- /wp:paragraph -->';
+    // }
 
-        if ($ng_slide1text_nom == 'slide3') {
-            $num_cat = 53;
-            $nom_slide = 'slide_3';
-        }if ($ng_slide1text_nom == 'slide4') {
-            $num_cat = 54;
-            $nom_slide = 'slide_4';
-        }if ($ng_slide1text_nom == 'slide5') {
-            $num_cat = 55;
-            $nom_slide = 'slide_5';
-        }if ($ng_slide1text_nom == 'slide6') {
-            $num_cat = 56;
-            $nom_slide = 'slide_6';
-        }if ($ng_slide1text_nom == 'slide10') {
-            $num_cat = 60;
-            $nom_slide = 'slide_10';
-        }if ($ng_slide1text_nom == 'slide11') {
-            $num_cat = 61;
-            $nom_slide = 'slide_11';
-        }if ($ng_slide1text_nom == 'slide12') {
-            $num_cat = 62;
-            $nom_slide = 'slide_12';
-        }if ($ng_slide1text_nom == 'slide17') {
-            $num_cat = 67;
-            $nom_slide = 'slide_17';
-        }
+    //TO DO
+    // public function numaguide_creer_slide16($texte1, $texte2, $video1)
+    // {
+    //     $ng_slide2text_nom = $_POST['slide2text'];
+    //     $ng_slide2text_value1 = $_POST['slide2text-1'];
+    //     $ng_slide2text_value2 = $_POST['slide2text-2'];
 
-        $ng_info_article = array(
-            'post_content' => $ng_content,
-            'post_category' => array($num_cat),
-            'tags_input' => array('1', $ng_guide_nom),
-            'post_type' => 'post',
-        );
+    //     $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+    //         $ng_slide2text_value1 . '<!-- /wp:paragraph -->' .
+    //         '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+    //         $ng_slide2text_value2 . '<!-- /wp:paragraph -->';
 
-        wp_insert_post($ng_info_article);
+    //     if ($ng_slide2text_nom == 'slide7') {
+    //         $num_cat = 57;
+    //         $nom_slide = 'slide_7';
+    //     }if ($ng_slide2text_nom == 'slide8') {
+    //         $num_cat = 58;
+    //         $nom_slide = 'slide_8';
+    //     }if ($ng_slide2text_nom == 'slide13') {
+    //         $num_cat = 63;
+    //         $nom_slide = 'slide_13';
+    //     }if ($ng_slide2text_nom == 'slide14') {
+    //         $num_cat = 64;
+    //         $nom_slide = 'slide_14';
+    //     }if ($ng_slide2text_nom == 'slide16') {
+    //         $num_cat = 66;
+    //         $nom_slide = 'slide_16';
+    //     }
 
-        $info_slide = array($ng_slide1text_nom, 'views/slides/' . $nom_slide . '.php');
-        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+    //     $ng_info_article = array(
+    //         'post_content' => $ng_content,
+    //         'post_category' => array($num_cat),
+    //         'tags_input' => array('1', $ng_guide_nom),
+    //         'post_type' => 'post',
+    //     );
 
-    }
+    //     wp_insert_post($ng_info_article);
+
+    //     $info_slide = array($ng_slide2text_nom, 'views/slides/' . $nom_slide . '.php');
+    //     $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+
+    // }
+
+    //TO DO
+    // public function numaguide_cree_slide17($texte1, $video1)
+    // {
+    //     $ng_slide1text_nom = $_POST['slide1text'];
+    //     $ng_slide1text_value1 = $_POST['slide1text-1'];
+
+    //     $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+    //         $ng_slide1text_value1 . '<!-- /wp:paragraph -->';
+
+    //     if ($ng_slide1text_nom == 'slide3') {
+    //         $num_cat = 53;
+    //         $nom_slide = 'slide_3';
+    //     }if ($ng_slide1text_nom == 'slide4') {
+    //         $num_cat = 54;
+    //         $nom_slide = 'slide_4';
+    //     }if ($ng_slide1text_nom == 'slide5') {
+    //         $num_cat = 55;
+    //         $nom_slide = 'slide_5';
+    //     }if ($ng_slide1text_nom == 'slide6') {
+    //         $num_cat = 56;
+    //         $nom_slide = 'slide_6';
+    //     }if ($ng_slide1text_nom == 'slide10') {
+    //         $num_cat = 60;
+    //         $nom_slide = 'slide_10';
+    //     }if ($ng_slide1text_nom == 'slide11') {
+    //         $num_cat = 61;
+    //         $nom_slide = 'slide_11';
+    //     }if ($ng_slide1text_nom == 'slide12') {
+    //         $num_cat = 62;
+    //         $nom_slide = 'slide_12';
+    //     }if ($ng_slide1text_nom == 'slide17') {
+    //         $num_cat = 67;
+    //         $nom_slide = 'slide_17';
+    //     }
+
+    //     $ng_info_article = array(
+    //         'post_content' => $ng_content,
+    //         'post_category' => array($num_cat),
+    //         'tags_input' => array('1', $ng_guide_nom),
+    //         'post_type' => 'post',
+    //     );
+
+    //     wp_insert_post($ng_info_article);
+
+    //     $info_slide = array($ng_slide1text_nom, 'views/slides/' . $nom_slide . '.php');
+    //     $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+
+    // }
 
     /*
      * SLIDE 18
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 1
      *
      * @since Numaguide 1.0.0
@@ -1255,12 +1255,13 @@ class Numaguide_Admin
      * @param string $texte3
      * @param string $texte4
      * @param string $texte5
+     * @param string $slide
      *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide18($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide)
+    public function numaguide_creer_slide18($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide)
     {
         $ng_slide18_nom = "slide18";
         $ng_slide18_value1 = $_POST['slide18-1'];
@@ -1298,7 +1299,7 @@ class Numaguide_Admin
     /*
      * SLIDE 19
      * ///////
-     * Récupère les infos du formilère de création de guide
+     * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 1
      *
      * @since Numaguide 1.0.0
@@ -1309,12 +1310,13 @@ class Numaguide_Admin
      * @param string $texte3
      * @param string $texte4
      * @param string $texte5
+     * @param string $slide
      *
      * @return string $slide
      *
      */
 
-    public function numaguide_cree_slide19($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide)
+    public function numaguide_creer_slide19($ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide)
     {
 
         $ng_slide19_nom = "slide19";
