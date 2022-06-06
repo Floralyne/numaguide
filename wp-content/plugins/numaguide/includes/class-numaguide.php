@@ -158,9 +158,9 @@ class Numaguide
         $this->loader->add_filter('ng_creer_slide10', $plugin_admin, 'numaguide_creer_slide10', 10, 4);
         $this->loader->add_filter('ng_creer_slide11', $plugin_admin, 'numaguide_creer_slide11', 10, 4);
         $this->loader->add_filter('ng_creer_slide12', $plugin_admin, 'numaguide_creer_slide12', 10, 4);
-        //$this->loader->add_filter('ng_creer_slide13', $plugin_admin, 'numaguide_creer_slide13',10, 5);
-        //$this->loader->add_filter('ng_creer_slide14', $plugin_admin, 'numaguide_creer_slide14',10, 6);
-        //$this->loader->add_filter('ng_creer_slide15', $plugin_admin, 'numaguide_creer_slide15',10, 3);
+        $this->loader->add_filter('ng_creer_slide13', $plugin_admin, 'numaguide_creer_slide13',10, 5);
+        $this->loader->add_filter('ng_creer_slide14', $plugin_admin, 'numaguide_creer_slide14',10, 6);
+        $this->loader->add_filter('ng_creer_slide15', $plugin_admin, 'numaguide_creer_slide15',10, 3);
         //$this->loader->add_filter('ng_creer_slide16', $plugin_admin, 'numaguide_creer_slide16',10, 5);
         //$this->loader->add_filter('ng_creer_slide17', $plugin_admin, 'numaguide_creer_slide17',10, 4);
         $this->loader->add_filter('ng_creer_slide18', $plugin_admin, 'numaguide_creer_slide18', 10, 7);

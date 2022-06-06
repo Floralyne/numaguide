@@ -15,6 +15,8 @@
 
 /*Thème été*/
 
+/*Slides de début et de fin*/
+
 #slide_1,
 #slide_2,
 #slide_3,
@@ -25,11 +27,15 @@
     background-color: #FFA86B;
 }
 
+/*Slides de texte*/
+
 #slide_6,
 #slide_7,
 #slide_8 {
     background-color: #FFCC84;
 }
+
+/*Slides d'images*/
 
 #slide_9,
 #slide_10,
@@ -38,10 +44,14 @@
     background-color: #FFE69E;
 }
 
+/*Slides de son*/
+
 #slide_13,
 #slide_14 {
     background-color: #FFFFEB;
 }
+
+/*Slides de vidéos*/
 
 #slide_15,
 #slide_16,
@@ -184,6 +194,10 @@
 }
 
 /*Slide 5 - Slide contenant une introduction*/
+
+#slide_5_r {
+    overflow: auto;
+}
 
 #slide_5_titre {
     font-size: 2rem;

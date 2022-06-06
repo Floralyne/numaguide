@@ -26,12 +26,9 @@
     <section id="slide_15">
         <div id="slide_15_c" class="container-fluid">
             <div id="slide_15_r" class="row vh-100 p-5">
-                <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
-                    <div class="wp-block-embed__wrapper">
-                        <?=$video?>
-                    </div>
-                </figure>
+            <div class="embed-responsive">
+                <iframe src=<?=$video?> class="embed-responsive-item"></iframe>
+            </div>   
             </div>
         </div>
-
     </section>
