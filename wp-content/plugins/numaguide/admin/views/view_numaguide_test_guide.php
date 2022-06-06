@@ -933,141 +933,160 @@
 
 <?php
 
-// if (isset($_POST['ok'])) {
+if (isset($_POST['ok'])) {
 
-//     //Titre du guide
-//     $slide = "<style>html[lang] {
-//             margin-top: 0 !important;
-//           }
-//           </style>";
-//     $ng_guide_nom = $_POST['nomGuide'];
-//     $enleveaccent_array = array('Š' => 'S', 'š' => 's', 'Ž' => 'Z', 'ž' => 'z', 'À' => 'A', 'Á' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'A', 'Ç' => 'C', 'È' => 'E', 'É' => 'E',
-//         'Ê' => 'E', 'Ë' => 'E', 'Ì' => 'I', 'Í' => 'I', 'Î' => 'I', 'Ï' => 'I', 'Ñ' => 'N', 'Ò' => 'O', 'Ó' => 'O', 'Ô' => 'O', 'Õ' => 'O', 'Ö' => 'O', 'Ø' => 'O', 'Ù' => 'U',
-//         'Ú' => 'U', 'Û' => 'U', 'Ü' => 'U', 'Ý' => 'Y', 'Þ' => 'B', 'ß' => 'Ss', 'à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'å' => 'a', 'æ' => 'a', 'ç' => 'c',
-//         'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i', 'ð' => 'o', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o',
-//         'ö' => 'o', 'ø' => 'o', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ý' => 'y', 'þ' => 'b', 'ÿ' => 'y');
+    //Titre du guide
+    $slide = "<style>html[lang] {
+            margin-top: 0 !important;
+          }
+          </style>";
+    $ng_guide_nom = $_POST['nomGuide'];
+    $enleveaccent_array = array('Š' => 'S', 'š' => 's', 'Ž' => 'Z', 'ž' => 'z', 'À' => 'A', 'Á' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'A', 'Ç' => 'C', 'È' => 'E', 'É' => 'E',
+        'Ê' => 'E', 'Ë' => 'E', 'Ì' => 'I', 'Í' => 'I', 'Î' => 'I', 'Ï' => 'I', 'Ñ' => 'N', 'Ò' => 'O', 'Ó' => 'O', 'Ô' => 'O', 'Õ' => 'O', 'Ö' => 'O', 'Ø' => 'O', 'Ù' => 'U',
+        'Ú' => 'U', 'Û' => 'U', 'Ü' => 'U', 'Ý' => 'Y', 'Þ' => 'B', 'ß' => 'Ss', 'à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'å' => 'a', 'æ' => 'a', 'ç' => 'c',
+        'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i', 'ð' => 'o', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o',
+        'ö' => 'o', 'ø' => 'o', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ý' => 'y', 'þ' => 'b', 'ÿ' => 'y');
 
-//     $ng_guide_nom = strtr($ng_guide_nom, $enleveaccent_array);
-//     $ng_guide_nom = str_replace('\'', '', trim($ng_guide_nom));
-//     $ng_guide_nom = preg_replace('/[^A-Za-z0-9-]/', '', $ng_guide_nom);
-//     $ng_guide_nom = preg_replace('/-+/', '-', $ng_guide_nom);
-//     $ng_guide_nom = substr($ng_guide_nom, 0, 20);
+    $ng_guide_nom = strtr($ng_guide_nom, $enleveaccent_array);
+    $ng_guide_nom = str_replace('\'', '', trim($ng_guide_nom));
+    $ng_guide_nom = preg_replace('/[^A-Za-z0-9-]/', '', $ng_guide_nom);
+    $ng_guide_nom = preg_replace('/-+/', '-', $ng_guide_nom);
+    $ng_guide_nom = substr($ng_guide_nom, 0, 20);
 
-//     // Creation du tag pour lier les articles
+    // Creation du tag pour lier les articles
 
-//     wp_create_term($ng_guide_nom);
+    wp_create_term($ng_guide_nom);
 
-//     // Slide 1
-//     if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
-//         $texte1 = $_POST['slide1-1'];
-//         $texte2 = $_POST['slide1-2'];
-//         $texte3 = $_POST['slide1-3'];
+    // Slide 1
+    if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
+        $texte1 = $_POST['slide1-1'];
+        $texte2 = $_POST['slide1-2'];
+        $texte3 = $_POST['slide1-3'];
         
-//         $slide = apply_filters('ng_creer_slide1', $ng_guide_nom, $texte1, $texte2, $texte3, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide1', $ng_guide_nom, $texte1, $texte2, $texte3, $slide);
+    }
 
-//     // Slide 2
-//     if ($_POST['slide2-1'] !== ''&$_POST['slide2-2'] !== ''&$_POST['slide2-3'] !== ''&$_POST['slide2-4'] !== ''&$_POST['slide2-5'] !== '') {
-//         $texte1 = $_POST['slide2-1'];
-//         $texte2 = $_POST['slide2-2'];
-//         $texte3 = $_POST['slide2-3'];
-//         $texte4 = $_POST['slide2-4'];
-//         $texte5 = $_POST['slide2-5'];
+    // Slide 2
+    if ($_POST['slide2-1'] !== ''&$_POST['slide2-2'] !== ''&$_POST['slide2-3'] !== ''&$_POST['slide2-4'] !== ''&$_POST['slide2-5'] !== '') {
+        $texte1 = $_POST['slide2-1'];
+        $texte2 = $_POST['slide2-2'];
+        $texte3 = $_POST['slide2-3'];
+        $texte4 = $_POST['slide2-4'];
+        $texte5 = $_POST['slide2-5'];
         
-//         $slide = apply_filters('ng_creer_slide2', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide2', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
+    }
 
-//     //Slide 3
-//     if ($_POST['slide3-1'] !== '') {
-//         $texte1 = $_POST['slide3-1'];
+    //Slide 3
+    if ($_POST['slide3-1'] !== '') {
+        $texte1 = $_POST['slide3-1'];
         
-//         $slide = apply_filters('ng_creer_slide3', $ng_guide_nom, $texte1, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide3', $ng_guide_nom, $texte1, $slide);
+    }
 
-//     //Slide 4
-//     if ($_POST['slide4-1'] !== '') {
-//         $texte1 = $_POST['slide4-1'];
+    //Slide 4
+    if ($_POST['slide4-1'] !== '') {
+        $texte1 = $_POST['slide4-1'];
         
-//         $slide = apply_filters('ng_creer_slide4', $ng_guide_nom, $texte1, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide4', $ng_guide_nom, $texte1, $slide);
+    }
 
-//     //Slide 5
-//     if ($_POST['slide5-1'] !== '') {
-//         $texte1 = $_POST['slide5-1'];
+    //Slide 5
+    if ($_POST['slide5-1'] !== '') {
+        $texte1 = $_POST['slide5-1'];
         
-//         $slide = apply_filters('ng_creer_slide5', $ng_guide_nom, $texte1, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide5', $ng_guide_nom, $texte1, $slide);
+    }
 
-//     //Slide 6
-//     if ($_POST['slide6-1'] !== '') {
-//         $texte1 = $_POST['slide6-1'];
+    //Slide 6
+    if ($_POST['slide6-1'] !== '') {
+        $texte1 = $_POST['slide6-1'];
         
-//         $slide = apply_filters('ng_creer_slide6', $ng_guide_nom, $texte1, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide6', $ng_guide_nom, $texte1, $slide);
+    }
 
-//     //Slide 7
-//     if ($_POST['slide7-1'] !== ''&$_POST['slide7-2'] !== '') {
-//         $texte1 = $_POST['slide7-1'];
-//         $texte2 = $_POST['slide7-2'];
+    //Slide 7
+    if ($_POST['slide7-1'] !== ''&$_POST['slide7-2'] !== '') {
+        $texte1 = $_POST['slide7-1'];
+        $texte2 = $_POST['slide7-2'];
         
-//         $slide = apply_filters('ng_creer_slide7', $ng_guide_nom, $texte1, $texte2, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide7', $ng_guide_nom, $texte1, $texte2, $slide);
+    }
 
-//     //Slide 8
-//     if ($_POST['slide8-1'] !== ''&$_POST['slide8-2'] !== '') {
-//         $texte1 = $_POST['slide8-1'];
-//         $texte2 = $_POST['slide8-2'];
+    //Slide 8
+    if ($_POST['slide8-1'] !== ''&$_POST['slide8-2'] !== '') {
+        $texte1 = $_POST['slide8-1'];
+        $texte2 = $_POST['slide8-2'];
         
-//         $slide = apply_filters('ng_creer_slide8', $ng_guide_nom, $texte1, $texte2, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide8', $ng_guide_nom, $texte1, $texte2, $slide);
+    }
 
-//     // Slide 9
-//     if ($_FILES['slide9-1'] != null) {
-//         $image1 = $_FILES['slide9-1'];
+    // Slide 9
+    if ($_FILES['slide9-1'] != null) {
+        $image1 = $_FILES['slide9-1'];
         
-//         $slide = apply_filters('ng_creer_slide9', $ng_guide_nom, $image1, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide9', $ng_guide_nom, $image1, $slide);
+    }
 
-//     // Slide 10
-//     if ($_FILES['slide10-1'] != null&$_POST['slide10-2'] !== '') {
-//         $image1 = $_FILES['slide10-1'];
-//         $texte1 = $_POST['slide10-2'];
+    // Slide 10
+    if ($_FILES['slide10-1'] != null&$_POST['slide10-2'] !== '') {
+        $image1 = $_FILES['slide10-1'];
+        $texte1 = $_POST['slide10-2'];
         
-//         $slide = apply_filters('ng_creer_slide10', $ng_guide_nom, $image1, $texte1, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide10', $ng_guide_nom, $image1, $texte1, $slide);
+    }
 
-//     // Slide 11
-//     if ($_FILES['slide11-1'] != null&$_POST['slide11-2'] !== '') {
-//         $image1 = $_FILES['slide11-1'];
-//         $texte1 = $_POST['slide11-2'];
+    // Slide 11
+    if ($_FILES['slide11-1'] != null&$_POST['slide11-2'] !== '') {
+        $image1 = $_FILES['slide11-1'];
+        $texte1 = $_POST['slide11-2'];
         
-//         $slide = apply_filters('ng_creer_slide11', $ng_guide_nom, $image1, $texte1, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide11', $ng_guide_nom, $image1, $texte1, $slide);
+    }
 
-//     // Slide 12
-//     if ($_FILES['slide12-1'] != null&$_POST['slide12-2'] !== '') {
-//         $image1 = $_FILES['slide12-1'];
-//         $texte1 = $_POST['slide12-2'];
+    // Slide 12
+    if ($_FILES['slide12-1'] != null&$_POST['slide12-2'] !== '') {
+        $image1 = $_FILES['slide12-1'];
+        $texte1 = $_POST['slide12-2'];
         
-//         $slide = apply_filters('ng_creer_slide12', $ng_guide_nom, $image1, $texte1, $slide);
-//     }
+        $slide = apply_filters('ng_creer_slide12', $ng_guide_nom, $image1, $texte1, $slide);
+    }
 
-//     //TO DO 13 à 17
+    //TO DO 13 à 17
 
-//     // Slide 18
-//     if ($_POST['slide18-1'] !== ''&$_POST['slide18-2'] !== ''&$_POST['slide18-3'] !== ''&$_POST['slide18-4'] !== ''&$_POST['slide18-5'] !== '') {
+    // Slide 15
+    if ($_POST['slide15-1'] !== '') {
+        $video1 = $_POST['slide15-1'];
+        
+        $slide = apply_filters('ng_creer_slide15', $ng_guide_nom, $video1, $slide);
+    }
 
-//     }
+    // Slide 18
+    if ($_POST['slide18-1'] !== ''&$_POST['slide18-2'] !== ''&$_POST['slide18-3'] !== ''&$_POST['slide18-4'] !== ''&$_POST['slide18-5'] !== '') {
+        $texte1 = $_POST['slide18-1'];
+        $texte2 = $_POST['slide18-2'];
+        $texte3 = $_POST['slide18-3'];
+        $texte4 = $_POST['slide18-4'];
+        $texte5 = $_POST['slide18-5'];
+        
+        $slide = apply_filters('ng_creer_slide18', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
+    }
 
-//     // Slide 19
-//     if ($_POST['slide19-1'] !== ''&$_POST['slide19-2'] !== ''&$_POST['slide19-3'] !== ''&$_POST['slide19-4'] !== ''&$_POST['slide19-5'] !== '') {
+    // Slide 19
+    if ($_POST['slide19-1'] !== ''&$_POST['slide19-2'] !== ''&$_POST['slide19-3'] !== ''&$_POST['slide19-4'] !== ''&$_POST['slide19-5'] !== '') {
+        $texte1 = $_POST['slide19-1'];
+        $texte2 = $_POST['slide19-2'];
+        $texte3 = $_POST['slide19-3'];
+        $texte4 = $_POST['slide19-4'];
+        $texte5 = $_POST['slide19-5'];
+        
+        $slide = apply_filters('ng_creer_slide19', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
+    }
 
-//     }
-
-//     if ($slide !== null) {
-//         apply_filters('ng_creer_guide', $ng_guide_nom, $slide);
-//     }
-// }
+    if ($slide !== null) {
+        apply_filters('ng_creer_guide', $ng_guide_nom, $slide);
+    }
+}
 
 
 ?>

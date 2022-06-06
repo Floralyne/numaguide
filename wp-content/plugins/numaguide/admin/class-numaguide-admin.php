@@ -1143,11 +1143,43 @@ class Numaguide_Admin
 
     // }
 
-    //TO DO
-    // public function numaguide_creer_slide15($video1)
-    // {
+    /*
+     * SLIDE 15
+     * ///////
+     * Récupère les infos du formulaire de création de guide
+     * créé un article et génère la slide 15
+     *
+     * @since Numaguide 1.0.0
+     *
+     * @param string $ng_guide_nom
+     * @param string $video1
+     * @param string $slide
+     *
+     * @return string $slide
+     *
+     */
+    public function numaguide_creer_slide15($video1)
+    {
+        $ng_slide15_nom = 'slide15';
 
-    // }
+        $ng_content = '<!-- wp:embed {"url":"' . $video1 . '","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
+    <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">'
+    . $video1 . '</div></figure><!-- /wp:embed -->';
+
+        $ng_info_article = array(
+            'post_content' => $ng_content,
+            'post_category' => array(65),
+            'tags_input' => array('1', $ng_guide_nom),
+            'post_type' => 'post',
+        );
+
+        wp_insert_post($ng_info_article);
+
+        $info_slide = array($ng_slide5_nom, 'views/slides/slide_15.php');
+        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+
+        return $slide;
+    }
 
     //TO DO
     // public function numaguide_creer_slide16($texte1, $texte2, $video1)
