@@ -674,6 +674,8 @@ class Numaguide_Admin
 
     public function numaguide_creer_slide9($ng_guide_nom, $image1, $slide)
     {
+        $ng_slide9_nom = 'slide9';
+
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
         // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
@@ -695,6 +697,8 @@ class Numaguide_Admin
         if (!in_array($new_file_mime, get_allowed_mime_types())) {
             die('Le type de l\'image n\'est pas valide');
         }
+        
+        $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']);
 
         while (file_exists($new_file_path)) {
             $i++;
@@ -743,7 +747,7 @@ class Numaguide_Admin
 
             wp_insert_post($ng_info_article);
 
-            $info_slide = array($ng_slide1_nom, 'views/slides/slide_9.php');
+            $info_slide = array($ng_slide9_nom, 'views/slides/slide_9.php');
             $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
             return $slide;
@@ -1158,7 +1162,7 @@ class Numaguide_Admin
      * @return string $slide
      *
      */
-    public function numaguide_creer_slide15($video1)
+    public function numaguide_creer_slide15($ng_guide_nom, $video1, $slide)
     {
         $ng_slide15_nom = 'slide15';
 
@@ -1175,7 +1179,7 @@ class Numaguide_Admin
 
         wp_insert_post($ng_info_article);
 
-        $info_slide = array($ng_slide5_nom, 'views/slides/slide_15.php');
+        $info_slide = array($ng_slide15_nom, 'views/slides/slide_15.php');
         $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
         return $slide;

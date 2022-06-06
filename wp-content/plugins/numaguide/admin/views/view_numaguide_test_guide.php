@@ -26,7 +26,7 @@
 
             <hr>
 
-            <div class="form-group pb-sm">
+            <!-- <div class="form-group pb-sm">
                 <label for="auteur_guide">Lien du guide :</label>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
@@ -37,7 +37,7 @@
                     <input class="form-control" type="text" pattern="/\W|_/g" maxlength="20" id="urlGuide"
                         placeholder="Adresse du guide">
                 </div>
-            </div>
+            </div> -->
         <hr>
 
         <details>
@@ -666,7 +666,7 @@
                     </div>
                     <div class="col">
                         <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide1-1"></textarea>
+                            name="slide6-1"></textarea>
                     </div>
                 </div>
 
