@@ -195,6 +195,10 @@
 
 /*Slide 5 - Slide contenant une introduction*/
 
+#slide_5_r {
+    overflow: auto;
+}
+
 #slide_5_titre {
     font-size: 2rem;
     margin-bottom: 2%;
