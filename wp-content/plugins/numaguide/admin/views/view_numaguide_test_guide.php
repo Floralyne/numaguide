@@ -766,8 +766,8 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide12-1"></textarea>
-                        <input type="file" name="slide12-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                            name="slide12-2"></textarea>
+                        <input type="file" name="slide12-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
                     </div>
                 </div>
             </div>
