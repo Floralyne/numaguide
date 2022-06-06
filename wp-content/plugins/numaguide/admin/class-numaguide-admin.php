@@ -678,13 +678,13 @@ class Numaguide_Admin
 
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
-        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
+        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
         // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
-        $new_file_path = $wordpress_upload_dir['path'] . '/' . $image1['name'];
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . sanitize_file_name($image1['name']);
 
-        $new_file_mime = mime_content_type($image1['tmp_name']);
+        $new_file_mime = mime_content_type(sanitize_file_name($image1['tmp_name']));
 
         if ($image1['error']) {
             die($image1['error']);
@@ -698,21 +698,21 @@ class Numaguide_Admin
             die('Le type de l\'image n\'est pas valide');
         }
         
-        $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']);
+        $nomImg = sanitize_file_name($image1['name']);
 
         while (file_exists($new_file_path)) {
             $i++;
             $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
-            $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']) . "-" . $i;
+            $nomImg = $nomImg . "-" . $i;
         }
 
         // Ajout de l'image dans wordpress
-        if (move_uploaded_file($image1['tmp_name'], $new_file_path)) {
+        if (move_uploaded_file(sanitize_file_name($image1['tmp_name']), $new_file_path)) {
 
             $upload_id = wp_insert_attachment(array(
                 'guid' => $new_file_path,
                 'post_mime_type' => $new_file_mime,
-                'post_title' => preg_replace('/\.[^.]+$/', '', $image1['name']),
+                'post_title' => $nomImg,
                 'post_content' => '',
                 'post_status' => 'inherit',
             ), $new_file_path);
@@ -775,7 +775,7 @@ class Numaguide_Admin
     {
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
-        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
+        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
         // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
@@ -798,10 +798,12 @@ class Numaguide_Admin
             die('Le type de l\'image n\'est pas valide');
         }
 
+        $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']);
+
         while (file_exists($new_file_path)) {
             $i++;
             $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
-            $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']) . "-" . $i;
+            $nomImg = $nomImg . "-" . $i;
         }
 
         // Ajout de l'image dans wordpress
@@ -810,7 +812,7 @@ class Numaguide_Admin
             $upload_id = wp_insert_attachment(array(
                 'guid' => $new_file_path,
                 'post_mime_type' => $new_file_mime,
-                'post_title' => preg_replace('/\.[^.]+$/', '', $image1['name']),
+                'post_title' => $nomImg,
                 'post_content' => '',
                 'post_status' => 'inherit',
             ), $new_file_path);
@@ -877,7 +879,7 @@ class Numaguide_Admin
     {
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
-        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
+        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
         // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
@@ -900,10 +902,12 @@ class Numaguide_Admin
             die('Le type de l\'image n\'est pas valide');
         }
 
+        $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']);
+
         while (file_exists($new_file_path)) {
             $i++;
             $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
-            $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']) . "-" . $i;
+            $nomImg = $nomImg . "-" . $i;
         }
 
         // Ajout de l'image dans wordpress
@@ -912,7 +916,7 @@ class Numaguide_Admin
             $upload_id = wp_insert_attachment(array(
                 'guid' => $new_file_path,
                 'post_mime_type' => $new_file_mime,
-                'post_title' => preg_replace('/\.[^.]+$/', '', $image1['name']),
+                'post_title' => $nomImg,
                 'post_content' => '',
                 'post_status' => 'inherit',
             ), $new_file_path);
@@ -979,7 +983,7 @@ class Numaguide_Admin
     {
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
-        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2017/05)
+        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
         // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
@@ -990,6 +994,7 @@ class Numaguide_Admin
 
         $new_file_mime = mime_content_type($image1['tmp_name']);
 
+        // Condition pour tester s'il n'y a pas d'erreur
         if ($image1['error']) {
             die($image1['error']);
         }
@@ -1002,19 +1007,21 @@ class Numaguide_Admin
             die('Le type de l\'image n\'est pas valide');
         }
 
+        $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']);
+
         while (file_exists($new_file_path)) {
             $i++;
             $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
-            $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']) . "-" . $i;
+            $nomImg = $nomImg . "-" . $i;
         }
 
-        // Ajout de l'image dans wordpress
+        // Ajout du son dans wordpress
         if (move_uploaded_file($image1['tmp_name'], $new_file_path)) {
 
             $upload_id = wp_insert_attachment(array(
                 'guid' => $new_file_path,
                 'post_mime_type' => $new_file_mime,
-                'post_title' => preg_replace('/\.[^.]+$/', '', $image1['name']),
+                'post_title' => $nomImg,
                 'post_content' => '',
                 'post_status' => 'inherit',
             ), $new_file_path);
@@ -1060,92 +1067,263 @@ class Numaguide_Admin
         return $slide;
     }
 
+    /*
+     * SLIDE 13
+     * ///////
+     * Récupère les infos du formulaire de création de guide
+     * créé un article et génère la slide 13
+     *
+     * @since Numaguide 1.0.0
+     *
+     * @param string $ng_guide_nom
+     * @param string $texte1
+     * @param string $texte2
+     * @param string $son1
+     * @param string $slide
+     *
+     * @return string $slide
+     *
+     */
+    public function numaguide_creer_slide13($ng_guide_nom, $texte1, $texte2, $son1, $slide)
+    {
+        $ng_slide13_nom = 'slide13';
+        $ng_content = '';
 
-    // TO DO
-    // public function numaguide_creer_slide13($texte1, $texte2, $son1)
-    // {
-    //     $ng_slide2text_nom = $_POST['slide2text'];
-    //     $ng_slide2text_value1 = $_POST['slide2text-1'];
-    //     $ng_slide2text_value2 = $_POST['slide2text-2'];
+        require ABSPATH . 'wp-load.php';
+        $wordpress_upload_dir = wp_upload_dir();
+        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
+        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        $i = 1; // compteur si le même nom de fichier
 
-    //     $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-    //         $ng_slide2text_value1 . '<!-- /wp:paragraph -->' .
-    //         '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-    //         $ng_slide2text_value2 . '<!-- /wp:paragraph -->';
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $son1['name'];
 
-    //     if ($ng_slide2text_nom == 'slide7') {
-    //         $num_cat = 57;
-    //         $nom_slide = 'slide_7';
-    //     }if ($ng_slide2text_nom == 'slide8') {
-    //         $num_cat = 58;
-    //         $nom_slide = 'slide_8';
-    //     }if ($ng_slide2text_nom == 'slide13') {
-    //         $num_cat = 63;
-    //         $nom_slide = 'slide_13';
-    //     }if ($ng_slide2text_nom == 'slide14') {
-    //         $num_cat = 64;
-    //         $nom_slide = 'slide_14';
-    //     }if ($ng_slide2text_nom == 'slide16') {
-    //         $num_cat = 66;
-    //         $nom_slide = 'slide_16';
-    //     }
+        $new_file_mime = mime_content_type($son1['tmp_name']);
 
-    //     $ng_info_article = array(
-    //         'post_content' => $ng_content,
-    //         'post_category' => array($num_cat),
-    //         'tags_input' => array('1', $ng_guide_nom),
-    //         'post_type' => 'post',
-    //     );
+        if ($son1['error']) {
+            die($son1['error']);
+        }
 
-    //     wp_insert_post($ng_info_article);
+        if ($son1['size'] > wp_max_upload_size()) {
+            die('La taille du fichier audio est trop grande.');
+        }
 
-    //     $info_slide = array($ng_slide2text_nom, 'views/slides/' . $nom_slide . '.php');
-    //     $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+        if (!in_array($new_file_mime, get_allowed_mime_types())) {
+            die('Le format du fichier audio n\'est pas valide');
+        }
+        
+        $nomSon = preg_replace('/\.[^.]+$/', '', $son1['name']);
 
-    // }
+        while (file_exists($new_file_path)) {
+            $i++;
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $son1['name'];
+            $nomSon = $nomSon . "-" . $i;
+        }
 
-    //TO DO
-    // public function numaguide_creer_slide14($texte1, $texte2, $son1, $son2)
-    // {
-    //     $ng_slide2text_nom = $_POST['slide2text'];
-    //     $ng_slide2text_value1 = $_POST['slide2text-1'];
-    //     $ng_slide2text_value2 = $_POST['slide2text-2'];
+        // Ajout de l'image dans wordpress
+        if (move_uploaded_file($son1['tmp_name'], $new_file_path)) {
 
-    //     $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-    //         $ng_slide2text_value1 . '<!-- /wp:paragraph -->' .
-    //         '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
-    //         $ng_slide2text_value2 . '<!-- /wp:paragraph -->';
+            $upload_id = wp_insert_attachment(array(
+                'guid' => $new_file_path,
+                'post_mime_type' => $new_file_mime,
+                'post_title' => $nomSon,
+                'post_content' => '',
+                'post_status' => 'inherit',
+            ), $new_file_path);
 
-    //     if ($ng_slide2text_nom == 'slide7') {
-    //         $num_cat = 57;
-    //         $nom_slide = 'slide_7';
-    //     }if ($ng_slide2text_nom == 'slide8') {
-    //         $num_cat = 58;
-    //         $nom_slide = 'slide_8';
-    //     }if ($ng_slide2text_nom == 'slide13') {
-    //         $num_cat = 63;
-    //         $nom_slide = 'slide_13';
-    //     }if ($ng_slide2text_nom == 'slide14') {
-    //         $num_cat = 64;
-    //         $nom_slide = 'slide_14';
-    //     }if ($ng_slide2text_nom == 'slide16') {
-    //         $num_cat = 66;
-    //         $nom_slide = 'slide_16';
-    //     }
+            // wp_generate_attachment_metadata() sans cet include (ligne 477, marche pour image/son et video)
+            require_once ABSPATH . 'wp-admin/includes/image.php';
 
-    //     $ng_info_article = array(
-    //         'post_content' => $ng_content,
-    //         'post_category' => array($num_cat),
-    //         'tags_input' => array('1', $ng_guide_nom),
-    //         'post_type' => 'post',
-    //     );
+            // Genere et sauvegarde les métadonnées associé dans la BDD
+            wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path));
 
-    //     wp_insert_post($ng_info_article);
+            $args = array(
+                'post_type' => 'attachment',
+                'name' => sanitize_title($nomSon),
+                'posts_per_page' => 1,
+                'post_status' => 'inherit',
+            );
 
-    //     $info_slide = array($ng_slide2text_nom, 'views/slides/' . $nom_slide . '.php');
-    //     $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+            $sonObj = get_posts($args);
+            $sonID = $sonObj[0]->ID;
+            $sonURL = wp_get_attachment_url($sonID);
 
-    // }
+            $ng_content = '<!-- wp:audio {"id":' . $sonID . '} -->
+            <figure class="wp-block-audio"><audio controls src="' . $sonURL[0] . '</audio></figure>
+            <!-- /wp:audio -->';
+
+        }
+
+        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $texte1 . '<!-- /wp:paragraph -->' .
+            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $texte2 . '<!-- /wp:paragraph -->';
+
+        $ng_info_article = array(
+            'post_content' => $ng_content,
+            'post_category' => array( 63 ),
+            'tags_input' => array('1', $ng_guide_nom),
+            'post_type' => 'post',
+        );
+
+        wp_insert_post($ng_info_article);
+
+        $info_slide = array($ng_slide13_nom, 'views/slides/slide_13.php');
+        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+
+    }
+
+    /*
+     * SLIDE 14
+     * ///////
+     * Récupère les infos du formulaire de création de guide
+     * créé un article et génère la slide 14
+     *
+     * @since Numaguide 1.0.0
+     *
+     * @param string $ng_guide_nom
+     * @param string $texte1
+     * @param string $texte2
+     * @param array $son1
+     * @param array $son2
+     * @param string $slide
+     *
+     * @return string $slide
+     *
+     */
+    public function numaguide_creer_slide14($ng_guide_nom, $texte1, $texte2, $son1, $son2, $slide)
+    {
+        $ng_slide13_nom = 'slide14';
+        $ng_content = '';
+
+        require ABSPATH . 'wp-load.php';
+        $wordpress_upload_dir = wp_upload_dir();
+        // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
+        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        $i = 1; // compteur si le même nom de fichier
+
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $son1['name'];
+        $new_file_path2 = $wordpress_upload_dir['path'] . '/' . $son2['name'];
+
+        $new_file_mime = mime_content_type($son1['tmp_name']);
+        $new_file_mime2 = mime_content_type($son2['tmp_name']);
+
+        if ($son1['error']) {
+            die($son1['error']);
+        }
+
+        if ($son2['error']) {
+            die($son2['error']);
+        }
+
+        if ($son1['size'] > wp_max_upload_size()||$son2['size'] > wp_max_upload_size()) {
+            die('La taille du fichier audio est trop grande.');
+        }
+
+        if (!in_array($new_file_mime, get_allowed_mime_types())||!in_array($new_file_mime2, get_allowed_mime_types())) {
+            die('Le format du fichier audio n\'est pas valide');
+        }
+        
+        $nomSon = preg_replace('/\.[^.]+$/', '', $son1['name']);
+        $nomSon2 = preg_replace('/\.[^.]+$/', '', $son2['name']);
+
+        while (file_exists($new_file_path)) {
+            $i++;
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $son1['name'];
+            $nomSon = $nomSon . "-" . $i;
+        }
+
+        while (file_exists($new_file_path2)) {
+            $i++;
+            $new_file_path2 = $wordpress_upload_dir['path'] . '/' . $i . '_' . $son2['name'];
+            $nomSon2 = $nomSon2 . "-" . $i;
+        }
+
+        // Ajout du premier audio dans wordpress
+        if (move_uploaded_file($son1['tmp_name'], $new_file_path)) {
+
+            $upload_id = wp_insert_attachment(array(
+                'guid' => $new_file_path,
+                'post_mime_type' => $new_file_mime,
+                'post_title' => $nomSon,
+                'post_content' => '',
+                'post_status' => 'inherit',
+            ), $new_file_path);
+
+            // wp_generate_attachment_metadata() sans cet include (ligne 477, marche pour image/son et video)
+            require_once ABSPATH . 'wp-admin/includes/image.php';
+
+            // Genere et sauvegarde les métadonnées associé dans la BDD
+            wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path));
+
+            $args = array(
+                'post_type' => 'attachment',
+                'name' => sanitize_title($nomSon),
+                'posts_per_page' => 1,
+                'post_status' => 'inherit',
+            );
+
+            $sonObj = get_posts($args);
+            $sonID = $sonObj[0]->ID;
+            $sonURL = wp_get_attachment_url($sonID);
+
+            $ng_content = '<!-- wp:audio {"id":' . $sonID . '} -->
+            <figure class="wp-block-audio"><audio controls src="' . $sonURL[0] . '</audio></figure>
+            <!-- /wp:audio -->';
+
+        }
+
+        // Ajout du premier audio dans wordpress
+        if (move_uploaded_file($son2['tmp_name'], $new_file_path2)) {
+
+            $upload_id = wp_insert_attachment(array(
+                'guid' => $new_file_path2,
+                'post_mime_type' => $new_file_mime2,
+                'post_title' => $nomSon2,
+                'post_content' => '',
+                'post_status' => 'inherit',
+            ), $new_file_path2);
+
+            // wp_generate_attachment_metadata() sans cet include (ligne 477, marche pour image/son et video)
+            require_once ABSPATH . 'wp-admin/includes/image.php';
+
+            // Genere et sauvegarde les métadonnées associé dans la BDD
+            wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path2));
+
+            $args = array(
+                'post_type' => 'attachment',
+                'name' => sanitize_title($nomSon2),
+                'posts_per_page' => 1,
+                'post_status' => 'inherit',
+            );
+
+            $sonObj = get_posts($args);
+            $sonID = $sonObj[0]->ID;
+            $sonURL = wp_get_attachment_url($sonID);
+
+            $ng_content = $ng_content . '<!-- wp:audio {"id":' . $sonID . '} -->
+            <figure class="wp-block-audio"><audio controls src="' . $sonURL[0] . '</audio></figure>
+            <!-- /wp:audio -->';
+
+        }
+
+        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $texte1 . '<!-- /wp:paragraph -->' .
+            '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+            $texte2 . '<!-- /wp:paragraph -->';
+
+        $ng_info_article = array(
+            'post_content' => $ng_content,
+            'post_category' => array( 63 ),
+            'tags_input' => array('1', $ng_guide_nom),
+            'post_type' => 'post',
+        );
+
+        wp_insert_post($ng_info_article);
+
+        $info_slide = array($ng_slide13_nom, 'views/slides/slide_13.php');
+        $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
+
+    }
 
     /*
      * SLIDE 15
