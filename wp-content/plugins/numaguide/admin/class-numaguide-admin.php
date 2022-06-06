@@ -681,8 +681,8 @@ class Numaguide_Admin
         // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
         // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
-
-        $new_file_path = $wordpress_upload_dir['path'] . '/' . $image1['name'];
+$nomImg = sanitize_file_name($image1['name']);
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $nomImg;
 
         $new_file_mime = mime_content_type($image1['tmp_name']);
 
@@ -697,12 +697,10 @@ class Numaguide_Admin
         if (!in_array($new_file_mime, get_allowed_mime_types())) {
             die('Le type de l\'image n\'est pas valide');
         }
-        
-        $nomImg = sanitize_file_name($image1['name']);
 
         while (file_exists($new_file_path)) {
             $i++;
-            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $nomImg;
             $nomImg = $nomImg . "-" . $i;
         }
 
