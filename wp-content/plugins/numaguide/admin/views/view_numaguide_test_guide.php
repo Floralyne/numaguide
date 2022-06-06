@@ -840,10 +840,11 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="slide16-1" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <input type="text" name="slide16-1" class="form-control"/>
+                        <textarea type="text" class="form-control m-1" rows="1"
                             name="slide16-2"></textarea>
-                        <input type="file" name="slide16-3" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                        <textarea type="text" class="form-control m-1" rows="1"
+                            name="slide16-3"></textarea>
                     </div>
                 </div>
 
@@ -859,7 +860,7 @@
                     <div class="col">
                         <textarea type="text" class="form-control m-1" rows="1"
                             name="slide17-1"></textarea>
-                        <input type="file" name="slide17-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                        <input type="text" name="slide17-2" class="form-control"/>
                     </div>
                 </div>
             </div>
@@ -1067,6 +1068,23 @@ if (isset($_POST['ok'])) {
     
 
     //TO DO 16 / 17
+
+    // Slide 16
+    if ($_POST['slide16-1'] !== ''&$_POST['slide16-2'] !== ''&$_POST['slide16-3'] !== '') {
+        $video1 = $_POST['slide16-1'];
+        $texte1 = $_POST['slide16-2'];
+        $texte2 = $_POST['slide16-3'];
+        
+        $slide = apply_filters('ng_creer_slide15', $ng_guide_nom, $video1, $texte1, $texte2, $slide);
+    }
+
+    // Slide 17
+    if ($_POST['slide17-1'] !== ''&$_POST['slide17-2'] !== '') {
+        $video1 = $_POST['slide17-2'];
+        $texte1 = $_POST['slide17-1'];
+        
+        $slide = apply_filters('ng_creer_slide15', $ng_guide_nom, $video1, $texte1, $slide);
+    }
 
     // Slide 18
     if ($_POST['slide18-1'] !== ''&$_POST['slide18-2'] !== ''&$_POST['slide18-3'] !== ''&$_POST['slide18-4'] !== ''&$_POST['slide18-5'] !== '') {
