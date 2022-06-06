@@ -681,7 +681,9 @@ class Numaguide_Admin
         // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
         // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
-$nomImg = sanitize_file_name($image1['name']);
+
+        $nomImg = sanitize_file_name($image1['name']);
+
         $new_file_path = $wordpress_upload_dir['path'] . '/' . $nomImg;
 
         $new_file_mime = mime_content_type($image1['tmp_name']);
@@ -780,7 +782,9 @@ $nomImg = sanitize_file_name($image1['name']);
         $ng_slide10_nom = 'slide10';
         $ng_content = '';
 
-        $new_file_path = $wordpress_upload_dir['path'] . '/' . $image1['name'];
+        $nomImg = sanitize_file_name($image1['name']);
+
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $nomImg;
 
         $new_file_mime = mime_content_type($image1['tmp_name']);
 
@@ -796,11 +800,9 @@ $nomImg = sanitize_file_name($image1['name']);
             die('Le type de l\'image n\'est pas valide');
         }
 
-        $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']);
-
         while (file_exists($new_file_path)) {
             $i++;
-            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $nomImg;
             $nomImg = $nomImg . "-" . $i;
         }
 
@@ -884,7 +886,9 @@ $nomImg = sanitize_file_name($image1['name']);
         $ng_slide11_nom = 'slide11';
         $ng_content = '';
 
-        $new_file_path = $wordpress_upload_dir['path'] . '/' . $image1['name'];
+        $nomImg = sanitize_file_name($image1['name']);
+
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $nomImg;
 
         $new_file_mime = mime_content_type($image1['tmp_name']);
 
@@ -900,11 +904,9 @@ $nomImg = sanitize_file_name($image1['name']);
             die('Le type de l\'image n\'est pas valide');
         }
 
-        $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']);
-
         while (file_exists($new_file_path)) {
             $i++;
-            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $nomImg;
             $nomImg = $nomImg . "-" . $i;
         }
 
@@ -988,7 +990,9 @@ $nomImg = sanitize_file_name($image1['name']);
         $ng_slide12_nom = 'slide12';
         $ng_content = '';
 
-        $new_file_path = $wordpress_upload_dir['path'] . '/' . $image1['name'];
+        $nomImg = sanitize_file_name($image1['name']);
+
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $nomImg;
 
         $new_file_mime = mime_content_type($image1['tmp_name']);
 
@@ -1005,11 +1009,9 @@ $nomImg = sanitize_file_name($image1['name']);
             die('Le type de l\'image n\'est pas valide');
         }
 
-        $nomImg = preg_replace('/\.[^.]+$/', '', $image1['name']);
-
         while (file_exists($new_file_path)) {
             $i++;
-            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $image1['name'];
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $nomImg;
             $nomImg = $nomImg . "-" . $i;
         }
 
@@ -1093,7 +1095,9 @@ $nomImg = sanitize_file_name($image1['name']);
         // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
-        $new_file_path = $wordpress_upload_dir['path'] . '/' . $son1['name'];
+        $nomSon = sanitize_file_name($son1['name']);
+
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $nomSon;
 
         $new_file_mime = mime_content_type($son1['tmp_name']);
 
@@ -1108,12 +1112,10 @@ $nomImg = sanitize_file_name($image1['name']);
         if (!in_array($new_file_mime, get_allowed_mime_types())) {
             die('Le format du fichier audio n\'est pas valide');
         }
-        
-        $nomSon = preg_replace('/\.[^.]+$/', '', $son1['name']);
 
         while (file_exists($new_file_path)) {
             $i++;
-            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $son1['name'];
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $nomSon;
             $nomSon = $nomSon . "-" . $i;
         }
 
@@ -1199,8 +1201,11 @@ $nomImg = sanitize_file_name($image1['name']);
         // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
-        $new_file_path = $wordpress_upload_dir['path'] . '/' . $son1['name'];
-        $new_file_path2 = $wordpress_upload_dir['path'] . '/' . $son2['name'];
+        $nomSon = sanitize_file_name($son1['name']);
+        $nomSon2 = sanitize_file_name($son2['name']);
+
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $nomSon;
+        $new_file_path2 = $wordpress_upload_dir['path'] . '/' . $nomSon2;
 
         $new_file_mime = mime_content_type($son1['tmp_name']);
         $new_file_mime2 = mime_content_type($son2['tmp_name']);
@@ -1220,19 +1225,16 @@ $nomImg = sanitize_file_name($image1['name']);
         if (!in_array($new_file_mime, get_allowed_mime_types())||!in_array($new_file_mime2, get_allowed_mime_types())) {
             die('Le format du fichier audio n\'est pas valide');
         }
-        
-        $nomSon = preg_replace('/\.[^.]+$/', '', $son1['name']);
-        $nomSon2 = preg_replace('/\.[^.]+$/', '', $son2['name']);
 
         while (file_exists($new_file_path)) {
             $i++;
-            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $son1['name'];
+            $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $nomSon;
             $nomSon = $nomSon . "-" . $i;
         }
 
         while (file_exists($new_file_path2)) {
             $i++;
-            $new_file_path2 = $wordpress_upload_dir['path'] . '/' . $i . '_' . $son2['name'];
+            $new_file_path2 = $wordpress_upload_dir['path'] . '/' . $i . '_' . $nomSon2;
             $nomSon2 = $nomSon2 . "-" . $i;
         }
 
