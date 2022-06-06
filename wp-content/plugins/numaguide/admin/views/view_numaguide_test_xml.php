@@ -31,7 +31,7 @@
                             http://numaguide.msh-vdl.fr/
                         </div>
                     </div>
-                    <input class="form-control" type="text" pattern="/\W|_/g" maxlength="20" name="urlGuide"
+                    <input class="form-control" type="text" maxlength="20" name="urlGuide"
                         placeholder="Adresse du guide">
                 </div>
             </div>
@@ -483,7 +483,9 @@ $d_titre = "";
 $d_auteur = "";
 $d_url = "";
 $d_type = "";
+$d_type_texte = "";
 $d_domaine = "";
+$d_domaine_texte="";
 $d_langue = "";
 $d_institution =  "";
 $d_datepublication = "";
@@ -530,7 +532,7 @@ $d_financement = "";
 
     if(isset($_POST['ok'])){
         $d_titre = $_POST['titreGuide'];
-        $d_auteur == $_POST['auteurGuide'];
+        $d_auteur = $_POST['auteurGuide'];
         $d_url = $_POST['urlGuide'];
         $d_type = $_POST['type'];
         $d_domaine = $_POST['domaine'];
@@ -578,6 +580,39 @@ $d_financement = "";
         $d_projeteurop = $_POST['Projeteuropeen'];
         $d_financement = $_POST['financement'];
 
+        
+
+        if ($d_domaine != "") {
+            if ($d_domaine == "shs") { $d_domaine_texte = "--- Sciences de l'Homme et Société ---"; }
+            if ($d_domaine == "shs.anthro-bio") { $d_domaine_texte = "Athropologie biologique"; }
+            if ($d_domaine == "shs.anthro-se") { $d_domaine_texte = "Anthropologie sociale et ethnologie"; }
+            if ($d_domaine == "shs.archeo") { $d_domaine_texte = "Archéologie et Préhistoire"; }
+            if ($d_domaine == "shs.archi") { $d_domaine_texte = "Architecture, aménagement de l'espace"; }
+            if ($d_domaine == "shs.art") { $d_domaine_texte = "Art et histoire de l'art"; }
+            if ($d_domaine == "shs.class") { $d_domaine_texte = "Études classiques"; }
+            if ($d_domaine == "shs.demo") { $d_domaine_texte = "Démographie"; }
+            if ($d_domaine == "shs.droit") { $d_domaine_texte = "Droit"; }
+            if ($d_domaine == "shs.eco") { $d_domaine_texte = "Économies et finances"; }
+            if ($d_domaine == "shs.edu") { $d_domaine_texte = "Éducation"; }
+            if ($d_domaine == "shs.envir") { $d_domaine_texte = "Études de l'environnement"; }
+            if ($d_domaine == "shs.genre") { $d_domaine_texte = "Études sur le genre"; }
+            if ($d_domaine == "shs.geo") { $d_domaine_texte = "Géographie"; }
+            if ($d_domaine == "shs.gestion") {$d_domaine_texte = "Gestion et management"; }
+            if ($d_domaine == "shs.hisphilso") { $d_domaine_texte = "Histoire, Philosophie et Scociologie des sciences"; }
+            if ($d_domaine == "shs.hist") { $d_domaine_texte = "Histoire"; }
+            if ($d_domaine == "shs.info") { $d_domaine_texte = "Sciences de l'information et de la communication"; }
+            if ($d_domaine == "shs.langue") { $d_domaine_texte = "Linguistique"; }
+            if ($d_domaine == "shs.litt") { $d_domaine_texte = "Littératures"; }
+            if ($d_domaine == "shs.museo") { $d_domaine_texte = "Héritage culturel et muséologie"; }
+            if ($d_domaine == "shs.musiq") { $d_domaine_texte = "Musique, musicologie et arts de la scène"; }
+            if ($d_domaine == "shs.phil") { $d_domaine_texte = "Philosophie"; }
+            if ($d_domaine == "shs.psy") { $d_domaine_texte = "Psychologie"; }
+            if ($d_domaine == "shs.relig") { $d_domaine_texte = "Religions"; }
+            if ($d_domaine == "shs.scipo") { $d_domaine_texte = "Science politique"; }
+            if ($d_domaine == "shs.socio") { $d_domaine_texte = "Sociologie"; }
+            if ($d_domaine == "shs.stat") { $d_domaine_texte = "Méthodes et statistiques"; }
+            
+        }
 }
 
 //creation du DOMDocument
@@ -607,7 +642,7 @@ $titre = $dom->createElement('title',$d_titre);
 $auteur = $dom->createElement('searchAuthor', $d_auteur);
 $url = $dom->createElement('urlGuide', $d_url);
 $type = $dom->createElement('type', $d_type);
-$domaine = $dom->createElement('domain', $d_domaine);
+$domaine = $dom->createElement('domain', $d_domaine_texte);
 $langue = $dom->createElement('language', $d_langue);
 $institution = $dom->createElement('authorityInstitution', $d_institution);
 $datepublication = $dom->createElement('date-id', $d_datepublication);
