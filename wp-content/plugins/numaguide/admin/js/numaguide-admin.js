@@ -158,6 +158,9 @@ function copierTexte() {
     selection.removeAllRanges();
     selection.addRange(range);
 
+	// Met dans le presse-papier
+	document.execCommand("copy");
+
     // Action pour notifier que le texte à été copié
     const btn = document.getElementById("btnCopier");
 
