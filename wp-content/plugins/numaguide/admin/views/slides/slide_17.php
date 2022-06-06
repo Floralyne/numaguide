@@ -14,17 +14,26 @@
     $blocks = parse_blocks($post->post_content);
     $video = '';
     foreach ($blocks as $block) {
-        if ($block['blockName'] == 'core/video') {
-            $video = substr($block['innerContent'][0], 52);
-            $video = substr($video, 0, -19);
+        if ($block['blockName'] == 'core/embed') {
+            $video = $block['attrs']['url'];
         }
+    }
+
+    if (str_contains($video, 'youtube')) {
+        $video = str_replace("watch?v=", "embed/", $video);
+    } 
+    else if (str_contains($video, 'dailymotion')) {
+        $video = str_replace(".com/video", ".com/embed/video", $video);
+    }
+    else {
+        $video = $video;
     }
 ?>
 
 
 <section id="slide_17">
         <div id="slide_17_c" class="container-fluid">
-            <div id="slide_17_r" class="row vh-100">
+            <div id="slide_17_r" class="row vh-100 vw-100">
                 <div id="slide_17_div1" class="col text-justify mt-auto mb-auto p-5">
                     <div id="slide_17_texte1" class="slide_17_texte">
                     <?php
@@ -42,7 +51,7 @@
                     </div>
                 </div>
                 <div id="slide_17_div2" class="col text-center mt-auto mb-auto p-5">
-                        <iframe width="100%" height="100%" src=<?=$video?> allowfullscreen></iframe>
+                    <div class="embed-responsive"><iframe src=<?=$video?> class="embed-responsive-item" id="slide_17_video"></iframe></div>
                 </div>
             </div>
         </div>

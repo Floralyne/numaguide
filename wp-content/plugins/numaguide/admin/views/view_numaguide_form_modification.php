@@ -5,6 +5,22 @@
 </style>
 
 <div class="container" id="formCrea">
+<div class="titreForm">Liste des guides</div>
+    <hr>
+    <nav class="navbar">
+
+        <form class="form">
+            <div class="row">
+                <div class="col"> <input class="" type="search" placeholder="Rechercher un guide" aria-label="Search" disabled>
+                </div>
+                <div class="col"> <button class="boutonForm boutonAction" type="submit" disabled>Search</button>
+                </div>
+            </div>
+
+    </nav>
+
+    </form>
+
     <div class="titreForm">Informations du guide</div>
     <hr>
 
@@ -16,17 +32,17 @@
         <div class="obligatoire">* champs obligatoires</div>
         <div class="form-group pb-sm">
             <label for="nom_guide">Titre du guide* :</label>
-            <input type="text" class="form-control" id="nomGuide" name="nomGuide" maxlength="40">
+            <input type="text" class="form-control" id="nomGuide" name="nomGuide" maxlength="40" disabled>
         </div>
 
             <div class="form-group pb-sm">
                 <label for="auteur_guide">Auteur(e)(s) du guide* :</label>
-                <input type="auteur" class="form-control" name="auteurGuide" required>
+                <input type="auteur" class="form-control" name="auteurGuide" disabled>
             </div>
 
             <hr>
 
-            <!-- <div class="form-group pb-sm">
+            <div class="form-group pb-sm">
                 <label for="auteur_guide">Lien du guide :</label>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
@@ -35,9 +51,9 @@
                         </div>
                     </div>
                     <input class="form-control" type="text" pattern="/\W|_/g" maxlength="20" id="urlGuide"
-                        placeholder="Adresse du guide">
+                        placeholder="Adresse du guide" disabled>
                 </div>
-            </div> -->
+            </div>
         <hr>
 
         <details>
@@ -483,7 +499,7 @@
                 </div>
 
         </details>
-        <input class="boutonForm boutonValider mt-3" type=submit name="ok" value="Envoyer">
+        <input class="boutonForm boutonValider mt-3" type=submit name="ok" value="Envoyer" disabled>
         <hr>
         <div class="titreForm">Création du guide</div>
         <hr>
@@ -491,7 +507,7 @@
         <div class="form-group row">
             <div class="col">
                 <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="collapseExample" data-target="#ete">
+                    aria-expanded="false" aria-controls="collapseExample" data-target="#ete" disabled>
                 <label class="boutonForm boutonAjouter" for="option1">Été</label>
                 <div class="collapse" id="ete">
                     <div class="card card-body" id="paletteete">
@@ -505,7 +521,7 @@
             </div>
             <div class="col">
                 <input type="radio" name="options" id="option2" autocomplete="off" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="collapseExample" data-target="#pastel">
+                    aria-expanded="false" aria-controls="collapseExample" data-target="#pastel" disabled>
                 <label class="boutonForm boutonAjouter" for="option2">Pastel</label>
 
                 <div class="collapse" id="pastel">
@@ -521,7 +537,7 @@
             <div class="col">
 
                 <input type="radio" name="options" id="option3" autocomplete="off" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="collapseExample" data-target="#campagne">
+                    aria-expanded="false" aria-controls="collapseExample" data-target="#campagne" disabled>
                 <label class="boutonForm boutonAjouter" for="option3">Campagne</label>
 
 
@@ -538,7 +554,7 @@
             <div class="col">
 
                 <input type="radio" name="options" id="option4" autocomplete="off" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="collapseExample" data-target="#sombre">
+                    aria-expanded="false" aria-controls="collapseExample" data-target="#sombre" disabled>
                 <label class="boutonForm boutonAjouter" for="option4">Sombre</label>
 
                 <div class="collapse" id="sombre">
@@ -577,11 +593,11 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide1-1"></textarea>
+                            name="slide1-1" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide1-2"></textarea>
+                            name="slide1-2" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide1-3"></textarea>
+                            name="slide1-3" disabled></textarea>
                     </div>
                 </div>
 
@@ -596,15 +612,15 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide2-1"></textarea>
+                            name="slide2-1" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide2-2"></textarea>
+                            name="slide2-2" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide2-3"></textarea>
+                            name="slide2-3" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide2-4"></textarea>
+                            name="slide2-4" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide2-5"></textarea>
+                            name="slide2-5" disabled></textarea>
                     </div>
                 </div>
                 <hr>
@@ -619,7 +635,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide3-1"></textarea>
+                            name="slide3-1" disabled></textarea>
                     </div>
                 </div>
                 <hr>
@@ -633,7 +649,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide4-1"></textarea>
+                            name="slide4-1" disabled></textarea>
                     </div>
                 </div>
                 <hr>
@@ -647,7 +663,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide5-1"></textarea>
+                            name="slide5-1" disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -666,7 +682,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide6-1"></textarea>
+                            name="slide6-1" disabled></textarea>
                     </div>
                 </div>
 
@@ -681,9 +697,9 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide7-1"></textarea>
+                            name="slide7-1" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide7-2"></textarea>
+                            name="slide7-2" disabled></textarea>
                     </div>
                 </div>
                 <hr>
@@ -698,9 +714,9 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide8-1"></textarea>
+                            name="slide8-1" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide8-2"></textarea>
+                            name="slide8-2" disabled></textarea>
 
                     </div>
                 </div>
@@ -719,7 +735,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="slide9-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" />
+                        <input type="file" name="slide9-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled/>
                     </div>
                 </div>
 
@@ -734,8 +750,8 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide10-2"></textarea>
-                        <input type="file" name="slide10-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" />
+                            name="slide10-2" disabled></textarea>
+                        <input type="file" name="slide10-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled />
                     </div>
                 </div>
                 <hr>
@@ -751,7 +767,7 @@
                     <div class="col">
                         <input type="file" name="slide11-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
                         <textarea type="text"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide11-2"></textarea>
+                            name="slide11-2" disabled></textarea>
                     </div>
                 </div>
 
@@ -766,8 +782,8 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide12-2"></textarea>
-                        <input type="file" name="slide12-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                            name="slide12-2" disabled></textarea>
+                        <input type="file" name="slide12-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled/>
                     </div>
                 </div>
             </div>
@@ -786,9 +802,9 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-1"></textarea>
-                        <input type="file" name="slide13-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
-                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-3"></textarea>
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-1" disabled></textarea>
+                        <input type="file" name="slide13-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled/>
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-3" disabled></textarea>
                     </div>
                 </div>
 
@@ -802,12 +818,12 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="slide14-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                        <input type="file" name="slide14-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled/>
                         <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide14-2"></textarea>
-                        <input  type="file" name="slide14-3" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                            name="slide14-2" disabled></textarea>
+                        <input  type="file" name="slide14-3" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled />
                         <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide14-4"></textarea>
+                            name="slide14-4" disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -831,7 +847,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="text" name="slide15-1" class="form-control" placeholder="Lien de la vidéo"/>
+                        <input type="text" name="slide15-1" class="form-control" placeholder="Lien de la vidéo" disabled/>
                     </div>
                 </div>
 
@@ -845,11 +861,11 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="text" name="slide16-1" class="form-control" placeholder="Lien de la vidéo"/>
+                        <input type="text" name="slide16-1" class="form-control" placeholder="Lien de la vidéo" disabled/>
                         <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide16-2"></textarea>
+                            name="slide16-2" disabled></textarea>
                         <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide16-3"></textarea>
+                            name="slide16-3" disabled></textarea>
                     </div>
                 </div>
 
@@ -864,8 +880,8 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide17-1"></textarea>
-                        <input type="text" name="slide17-2" class="form-control" placeholder="Lien de la vidéo"/>
+                            name="slide17-1" disabled></textarea>
+                        <input type="text" name="slide17-2" class="form-control" placeholder="Lien de la vidéo" disabled/>
                     </div>
                 </div>
             </div>
@@ -884,15 +900,15 @@
                     </div>
                     <div class="col">
                         <textarea type="text" name="slide18-1" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            ></textarea>
+                        disabled></textarea>
                         <textarea type="text"  name="slide18-2"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                           ></textarea>
+                        disabled></textarea>
                         <textarea type="text" name="slide18-3"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            ></textarea>
+                        disabled></textarea>
                         <textarea type="text" name="slide18-4"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            ></textarea>
+                        disabled></textarea>
                         <textarea type="text" name="slide18-5"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            ></textarea>
+                        disabled></textarea>
                     </div>
                 </div>
 
@@ -907,213 +923,20 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide19-1"></textarea>
+                            name="slide19-1" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide19-2"></textarea>
+                            name="slide19-2" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide19-3"></textarea>
+                            name="slide19-3" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide19-4"></textarea>
+                            name="slide19-4" disabled></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide19-5"></textarea>
+                            name="slide19-5" disabled></textarea>
                     </div>
                 </div>
         </details>
-        <input type=submit name="ok" class="boutonForm boutonValider mt-5" value="Créer le mini guide">
+        <input type=submit name="ok" class="boutonForm boutonValider mt-5" value="Créer le mini guide" disabled>
 </div>
 </form>
 
 </div>
-
-<?php
-
-if (isset($_POST['ok'])) {
-    //Titre du guide
-    $slide = "<style>html[lang] {
-            margin-top: 0 !important;
-          }
-          </style>";
-    $ng_guide_nom = $_POST['nomGuide'];
-    $enleveaccent_array = array('Š' => 'S', 'š' => 's', 'Ž' => 'Z', 'ž' => 'z', 'À' => 'A', 'Á' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'A', 'Ç' => 'C', 'È' => 'E', 'É' => 'E',
-        'Ê' => 'E', 'Ë' => 'E', 'Ì' => 'I', 'Í' => 'I', 'Î' => 'I', 'Ï' => 'I', 'Ñ' => 'N', 'Ò' => 'O', 'Ó' => 'O', 'Ô' => 'O', 'Õ' => 'O', 'Ö' => 'O', 'Ø' => 'O', 'Ù' => 'U',
-        'Ú' => 'U', 'Û' => 'U', 'Ü' => 'U', 'Ý' => 'Y', 'Þ' => 'B', 'ß' => 'Ss', 'à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'å' => 'a', 'æ' => 'a', 'ç' => 'c',
-        'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i', 'ð' => 'o', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o',
-        'ö' => 'o', 'ø' => 'o', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ý' => 'y', 'þ' => 'b', 'ÿ' => 'y');
-
-    $ng_guide_nom = strtr($ng_guide_nom, $enleveaccent_array);
-    $ng_guide_nom = str_replace('\'', '', trim($ng_guide_nom));
-    $ng_guide_nom = preg_replace('/[^A-Za-z0-9-]/', '', $ng_guide_nom);
-    $ng_guide_nom = preg_replace('/-+/', '-', $ng_guide_nom);
-    $ng_guide_nom = substr($ng_guide_nom, 0, 20);
-
-    // Creation du tag pour lier les articles
-
-    wp_create_term($ng_guide_nom);
-
-    // Slide 1
-    if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
-        $texte1 = $_POST['slide1-1'];
-        $texte2 = $_POST['slide1-2'];
-        $texte3 = $_POST['slide1-3'];
-        
-        $slide = apply_filters('ng_creer_slide1', $ng_guide_nom, $texte1, $texte2, $texte3, $slide);
-    }
-
-    // Slide 2
-    if ($_POST['slide2-1'] !== ''&$_POST['slide2-2'] !== ''&$_POST['slide2-3'] !== ''&$_POST['slide2-4'] !== ''&$_POST['slide2-5'] !== '') {
-        $texte1 = $_POST['slide2-1'];
-        $texte2 = $_POST['slide2-2'];
-        $texte3 = $_POST['slide2-3'];
-        $texte4 = $_POST['slide2-4'];
-        $texte5 = $_POST['slide2-5'];
-        
-        $slide = apply_filters('ng_creer_slide2', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
-    }
-
-    //Slide 3
-    if ($_POST['slide3-1'] !== '') {
-        $texte1 = $_POST['slide3-1'];
-        
-        $slide = apply_filters('ng_creer_slide3', $ng_guide_nom, $texte1, $slide);
-    }
-
-    //Slide 4
-    if ($_POST['slide4-1'] !== '') {
-        $texte1 = $_POST['slide4-1'];
-        
-        $slide = apply_filters('ng_creer_slide4', $ng_guide_nom, $texte1, $slide);
-    }
-
-    //Slide 5
-    if ($_POST['slide5-1'] !== '') {
-        $texte1 = $_POST['slide5-1'];
-        
-        $slide = apply_filters('ng_creer_slide5', $ng_guide_nom, $texte1, $slide);
-    }
-
-    //Slide 6
-    if ($_POST['slide6-1'] !== '') {
-        $texte1 = $_POST['slide6-1'];
-        
-        $slide = apply_filters('ng_creer_slide6', $ng_guide_nom, $texte1, $slide);
-    }
-
-    //Slide 7
-    if ($_POST['slide7-1'] !== ''&$_POST['slide7-2'] !== '') {
-        $texte1 = $_POST['slide7-1'];
-        $texte2 = $_POST['slide7-2'];
-        
-        $slide = apply_filters('ng_creer_slide7', $ng_guide_nom, $texte1, $texte2, $slide);
-    }
-
-    //Slide 8
-    if ($_POST['slide8-1'] !== ''&$_POST['slide8-2'] !== '') {
-        $texte1 = $_POST['slide8-1'];
-        $texte2 = $_POST['slide8-2'];
-        
-        $slide = apply_filters('ng_creer_slide8', $ng_guide_nom, $texte1, $texte2, $slide);
-    }
-
-    // Slide 9
-    if ($_FILES['slide9-1']["name"] != "") {
-        $image1 = $_FILES['slide9-1'];
-        
-        $slide = apply_filters('ng_creer_slide9', $ng_guide_nom, $image1, $slide);
-    }
-
-    // Slide 10
-    if ($_FILES['slide10-1']["name"] != ""&$_POST['slide10-2'] !== '') {
-        $image1 = $_FILES['slide10-1'];
-        $texte1 = $_POST['slide10-2'];
-        
-        $slide = apply_filters('ng_creer_slide10', $ng_guide_nom, $image1, $texte1, $slide);
-    }
-
-    // Slide 11
-    if ($_FILES['slide11-1']["name"] != ""&$_POST['slide11-2'] !== '') {
-        $image1 = $_FILES['slide11-1'];
-        $texte1 = $_POST['slide11-2'];
-        
-        $slide = apply_filters('ng_creer_slide11', $ng_guide_nom, $image1, $texte1, $slide);
-    }
-
-    // Slide 12
-    if ($_FILES['slide12-1']["name"] != ""&$_POST['slide12-2'] !== '') {
-        $image1 = $_FILES['slide12-1'];
-        $texte1 = $_POST['slide12-2'];
-        
-        $slide = apply_filters('ng_creer_slide12', $ng_guide_nom, $image1, $texte1, $slide);
-    }
-
-    // Slide 13
-    if ($_FILES['slide13-2']["name"] != ""&$_POST['slide13-1'] !== ''&$_POST['slide13-3'] !== '') {
-        $texte1 = $_POST['slide13-1'];
-        $texte2 = $_POST['slide13-3'];
-        $son1 = $_FILES['slide13-2'];
-        
-        $slide = apply_filters('ng_creer_slide13', $ng_guide_nom, $texte1, $texte2, $son1, $slide);
-    }
-
-    // Slide 14
-    if ($_FILES['slide14-1']["name"] != ""&$_FILES['slide14-3']["name"] != ""&$_POST['slide14-2'] !== ''&$_POST['slide14-4'] !== '') {
-        $texte1 = $_POST['slide14-2'];
-        $texte2 = $_POST['slide14-4'];
-        $son1 = $_FILES['slide14-1'];
-        $son2 = $_FILES['slide14-3'];
-        
-        $slide = apply_filters('ng_creer_slide14', $ng_guide_nom, $texte1, $texte2, $son1, $son2, $slide);
-    }
-
-    // Slide 15
-    if ($_POST['slide15-1'] !== '') {
-        $video1 = $_POST['slide15-1'];
-        
-        $slide = apply_filters('ng_creer_slide15', $ng_guide_nom, $video1, $slide);
-    }
-
-    // Slide 16
-    if ($_POST['slide16-1'] !== ''&$_POST['slide16-2'] !== ''&$_POST['slide16-3'] !== '') {
-        $video1 = $_POST['slide16-1'];
-        $texte1 = $_POST['slide16-2'];
-        $texte2 = $_POST['slide16-3'];
-        
-        $slide = apply_filters('ng_creer_slide16', $ng_guide_nom, $video1, $texte1, $texte2, $slide);
-    }
-
-    // Slide 17
-    if ($_POST['slide17-1'] !== ''&$_POST['slide17-2'] !== '') {
-        $video1 = $_POST['slide17-2'];
-        $texte1 = $_POST['slide17-1'];
-        
-        $slide = apply_filters('ng_creer_slide17', $ng_guide_nom, $video1, $texte1, $slide);
-    }
-
-    // Slide 18
-    if ($_POST['slide18-1'] !== ''&$_POST['slide18-2'] !== ''&$_POST['slide18-3'] !== ''&$_POST['slide18-4'] !== ''&$_POST['slide18-5'] !== '') {
-        $texte1 = $_POST['slide18-1'];
-        $texte2 = $_POST['slide18-2'];
-        $texte3 = $_POST['slide18-3'];
-        $texte4 = $_POST['slide18-4'];
-        $texte5 = $_POST['slide18-5'];
-        
-        $slide = apply_filters('ng_creer_slide18', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
-    }
-
-    // Slide 19
-    if ($_POST['slide19-1'] !== ''&$_POST['slide19-2'] !== ''&$_POST['slide19-3'] !== ''&$_POST['slide19-4'] !== ''&$_POST['slide19-5'] !== '') {
-        $texte1 = $_POST['slide19-1'];
-        $texte2 = $_POST['slide19-2'];
-        $texte3 = $_POST['slide19-3'];
-        $texte4 = $_POST['slide19-4'];
-        $texte5 = $_POST['slide19-5'];
-        
-        $slide = apply_filters('ng_creer_slide19', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
-    }
-
-    if ($slide !== null) {
-        apply_filters('ng_creer_guide', $ng_guide_nom, $slide);
-    }
-}
-
-
-?>

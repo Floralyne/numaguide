@@ -99,7 +99,7 @@ class Numaguide_Admin
             'Modifier un guide',
             'edit_posts',
             'ng_modifierguide',
-            'ng_submenu_form_creation'
+            'ng_submenu_form_modification'
         );
 
         add_submenu_page(
@@ -146,6 +146,11 @@ class Numaguide_Admin
         function ng_submenu_form_creation()
         {
             include_once 'views/view_numaguide_form_creation.php';
+        }
+
+        function ng_submenu_form_modification()
+        {
+            include_once 'views/view_numaguide_form_modification.php';
         }
 
         function ng_submenu_form_configuration()

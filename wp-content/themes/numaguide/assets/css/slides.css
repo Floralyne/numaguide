@@ -437,6 +437,8 @@
 #slide_17_r {
     --bs-gutter-x: 0;
     overflow: auto;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 #slide_17_c {
@@ -444,13 +446,11 @@
     overflow: auto;
 }
 
-#slide_17_image {
-    max-width: 100vw;
-    max-height: 70vh;
+#slide_17_video {
+    position: relative;
 }
 
 #slide_17_div2 {
-    max-width: 100vw;
     padding: 0;
 }
 
