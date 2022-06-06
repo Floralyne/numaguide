@@ -654,14 +654,117 @@ $projeteurop = $dom->createElement('europeanProject', $d_projeteurop);
 $financement = $dom->createElement('funding', $d_financement);
 
 
-//creation attributs des balises 
+//creation des attributs dans les balises 
+$type_value = $dom->createAttribute('value');
+$type_value-> value = $d_type;
+
+$domaine_value = $dom->createAttribute('value');
+$domaine_value->value = $d_domaine;
+
+$langue_value = $dom->createAttribute('value');
+$langue_value-> value = $d_langue;
+
+$datepublication_when = $dom->createAttribute('when');
+$datepublication_when-> value = $d_datepublication;
+
+$datedebutcongres_when = $dom->createAttribute('when');
+$datedebutcongres_when-> value = $d_datedebutcongres;
+
+$pays_key = $dom->createAttribute('key');
+$pays_key-> value = $d_pays;
+
+$typerapport_value = $dom->createAttribute('value'); 
+$typerapport_value-> value = $d_typerapport;
+
+$motscles_n = $dom->createAttribute('n'); 
+$motscles_n-> value = "1";
+
 $id_type = $dom->createAttribute('type');
-$id_type->value = 'DOI';
+$id_type->value = "DOI";
+
+$dateproduction_when = $dom->createAttribute('when');
+$dateproduction_when-> value = $d_dateproduction;
+
+$licence_type = $dom->createAttribute('type');
+$licence_type-> value = $d_licence;
+
+$vulgarisation_value = $dom->createAttribute('value'); 
+$vulgarisation_value-> value = $d_vulgarisation;
+
+$comitelecture_value = $dom->createAttribute('value'); 
+$comitelecture_value-> value = $d_comitedelecture;
+
+$invite_value = $dom->createAttribute('value'); 
+$invite_value-> value = $d_invite;
+
+$audience_value = $dom->createAttribute('value'); 
+$audience_value -> value = $d_audience; 
+
+$actes_value = $dom->createAttribute('value'); 
+$actes_value-> value = $d_actes;
+
+$aparaitre_value = $dom->createAttribute('value'); 
+$aparaitre_value-> value = $d_aparaitre; 
+
+$edate_when = $dom->createAttribute('when');
+$edate_when-> value = $d_datepublicationelec; 
+
+$serie_value = $dom->createAttribute('value'); 
+$serie_value-> value = $d_titrevolume; 
+
+$volume_value = $dom->createAttribute('value'); 
+$volume_value-> value = $d_volume;
+
+$numero_value = $dom->createAttribute('value'); 
+$numero_value-> value = $d_numero;
+
+$nrapport_n = $dom->createAttribute('n');
+$nrapport_n-> value = $d_nrapport; 
+
+$pageid_value = $dom->createAttribute('value'); 
+$pageid_value-> value = $d_pageid;
+
+$urleditreu_url = $dom->createAttribute('url'); 
+$urleditreu_url-> value = $d_urlcediteur;
+
+$classification_value = $dom->createAttribute('value'); 
+$classification_value-> value = $d_classification;
+
+$anrp_value = $dom->createAttribute('value'); 
+$anrp_value-> value = $d_projetanr;
+
+$europrojet_value = $dom->createAttribute('value');
+$europrojet_value-> value = $d_projeteurop;
 
 
 //ajout de l'attribut
+$type->appendChild($type_value);
+$domaine->appendChild($domaine_value);
+$langue->appendChild($langue_value);
+$datepublication->appendChild($datepublication_when);
+$datedebutcongres->appendChild($datedebutcongres_when);
+$pays->appendChild($pays_key);
+$typerapport->appendChild($typerapport_value);
+$motscles->appendChild($motscles_n);
 $doipublication->appendChild($id_type);
-
+$dateproduction->appendChild($dateproduction_when);
+$licence->appendChild($licence_type);
+$vulgarisation->appendChild($vulgarisation_value);
+$comitedelecture->appendChild($comitelecture_value);
+$invite->appendChild($invite_value);
+$audience->appendChild($audience_value);
+$actes->appendChild($actes_value);
+$aparaitre->appendChild($aparaitre_value);
+$datepublicationelec->appendChild($edate_when);
+$titrevolume->appendChild($serie_value);
+$volume->appendChild($volume_value);
+$numero->appendChild($numero_value);
+$nrapport->appendChild($nrapport_n);
+$pageid->appendChild($pageid_value);
+$urlcediteur->appendChild($urleditreu_url);
+$classification->appendChild($classification_value);
+$projetanr->appendChild($anrp_value);
+$projeteurop->appendChild($europrojet_value);
 
 //creation de la structure xml
 $dom->appendChild($all);
