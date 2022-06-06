@@ -922,7 +922,6 @@
 <?php
 
 if (isset($_POST['ok'])) {
-    die(var_dump($_FILES['slide10-1']));
     //Titre du guide
     $slide = "<style>html[lang] {
             margin-top: 0 !important;
