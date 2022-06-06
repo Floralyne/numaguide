@@ -816,6 +816,11 @@
 
         <details>
             <summary>Slides vidéos</summary>
+            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta"><span class="comment">Comment importer une vidéo ?</span><br>
+                <br>- Si l'hébergeur est <span class="type">Youtube</span>, veuillez copier le lien direct de la vidéo <br> <span class="typePubli">(Exemple : https://www.youtube.com/watch?v=1eXOOotL5pk)</span>
+                <br>- Si l'hébergeur est <span class="type">Dailymotion</span>, veuillez copier le lien direct de la vidéo <br><span class="typePubli">(Exemple : https://www.dailymotion.com/video/x7wt1qq)</span>
+                <br>- Si l'hébergeur est <span class="type">Canal U</span>, veuillez copier le lien embed de la vidéo <br><span class="typePubli">(Exemple : https://www.canal-u.tv/embed/116919?t=0)</span>
+            </div>
             <div class="form-group pb-sm-2" id="groupeVideos">
                 <div class="soustitreForm">Slide 15 - Vidéo plein écran</div>
                 <div class="row">
@@ -826,7 +831,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="text" name="slide15-1" class="form-control"/>
+                        <input type="text" name="slide15-1" class="form-control" placeholder="Lien de la vidéo"/>
                     </div>
                 </div>
 
@@ -840,7 +845,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="text" name="slide16-1" class="form-control"/>
+                        <input type="text" name="slide16-1" class="form-control" placeholder="Lien de la vidéo"/>
                         <textarea type="text" class="form-control m-1" rows="1"
                             name="slide16-2"></textarea>
                         <textarea type="text" class="form-control m-1" rows="1"
@@ -860,7 +865,7 @@
                     <div class="col">
                         <textarea type="text" class="form-control m-1" rows="1"
                             name="slide17-1"></textarea>
-                        <input type="text" name="slide17-2" class="form-control"/>
+                        <input type="text" name="slide17-2" class="form-control" placeholder="Lien de la vidéo"/>
                     </div>
                 </div>
             </div>

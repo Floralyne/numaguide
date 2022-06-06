@@ -19,7 +19,16 @@
         }
     }
 
-    $video = str_replace("watch?v=", "embed/", $video)
+    if (str_contains($video, 'youtube')) {
+        $video = str_replace("watch?v=", "embed/", $video);
+    } 
+    else if (str_contains($video, 'dailymotion')) {
+        $video = str_replace(".com/video", ".com/embed/video", $video);
+    }
+    else {
+        $video = $video;
+    }
+
 
 ?>
 

@@ -400,6 +400,10 @@ textarea:invalid {
 	font-style:italic;
 }
 
+.comment{
+	font-style: italic;
+}
+
 /*Types de publications*/
 
 #infoMeta{
