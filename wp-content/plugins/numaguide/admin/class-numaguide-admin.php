@@ -682,9 +682,9 @@ class Numaguide_Admin
         // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
-        $new_file_path = $wordpress_upload_dir['path'] . '/' . sanitize_file_name($image1['name']);
+        $new_file_path = $wordpress_upload_dir['path'] . '/' . $image1['name'];
 
-        $new_file_mime = mime_content_type(sanitize_file_name($image1['tmp_name']));
+        $new_file_mime = mime_content_type($image1['tmp_name']);
 
         if ($image1['error']) {
             die($image1['error']);
@@ -707,7 +707,7 @@ class Numaguide_Admin
         }
 
         // Ajout de l'image dans wordpress
-        if (move_uploaded_file(sanitize_file_name($image1['tmp_name']), $new_file_path)) {
+        if (move_uploaded_file($image1['tmp_name'], $new_file_path)) {
 
             $upload_id = wp_insert_attachment(array(
                 'guid' => $new_file_path,
