@@ -9,13 +9,16 @@
 <?php get_header() ?>
 
 <?php
+
     $post_tab = $args['article'];
+    
     $post = $post_tab[0];
     $blocks = parse_blocks($post->post_content);
     $audio = '';
     foreach ($blocks as $block) {
         if ($block['blockName'] == 'core/audio') {
-            $audio = substr($block['innerContent'][0], 52);
+            $audio = trim($block['innerContent'][0]);
+            $audio = substr($audio, 52);
             $audio = substr($audio, 0, -19);
         }
     }

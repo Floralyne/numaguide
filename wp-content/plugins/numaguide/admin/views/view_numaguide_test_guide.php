@@ -1051,14 +1051,12 @@ if (isset($_POST['ok'])) {
     // Slide 14
     if ($_FILES['slide14-1']["name"] != ""&$_FILES['slide14-3']["name"] != ""&$_POST['slide14-2'] !== ''&$_POST['slide14-4'] !== '') {
         $texte1 = $_POST['slide14-2'];
-        $texte1 = $_POST['slide14-4'];
+        $texte2 = $_POST['slide14-4'];
         $son1 = $_FILES['slide14-1'];
         $son2 = $_FILES['slide14-3'];
         
         $slide = apply_filters('ng_creer_slide14', $ng_guide_nom, $texte1, $texte2, $son1, $son2, $slide);
     }
-
-    //TO DO 13 à 17
 
     // Slide 15
     if ($_POST['slide15-1'] !== '') {
@@ -1066,6 +1064,9 @@ if (isset($_POST['ok'])) {
         
         $slide = apply_filters('ng_creer_slide15', $ng_guide_nom, $video1, $slide);
     }
+    
+
+    //TO DO 16 / 17
 
     // Slide 18
     if ($_POST['slide18-1'] !== ''&$_POST['slide18-2'] !== ''&$_POST['slide18-3'] !== ''&$_POST['slide18-4'] !== ''&$_POST['slide18-5'] !== '') {

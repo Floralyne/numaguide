@@ -665,7 +665,7 @@ class Numaguide_Admin
      * @since Numaguide 1.0.0
      *
      * @param string $ng_guide_nom
-     * @param string $image1
+     * @param array $image1
      * @param string $slide
      *
      * @return string $slide
@@ -763,7 +763,7 @@ class Numaguide_Admin
      * @since Numaguide 1.0.0
      *
      * @param string $ng_guide_nom
-     * @param string $image1
+     * @param array $image1
      * @param string $texte1
      * @param string $slide
      *
@@ -1078,7 +1078,7 @@ class Numaguide_Admin
      * @param string $ng_guide_nom
      * @param string $texte1
      * @param string $texte2
-     * @param string $son1
+     * @param array $son1
      * @param string $slide
      *
      * @return string $slide
@@ -1147,13 +1147,12 @@ class Numaguide_Admin
             $sonID = $sonObj[0]->ID;
             $sonURL = wp_get_attachment_url($sonID);
 
-            $ng_content = '<!-- wp:audio {"id":' . $sonID . '} -->
-            <figure class="wp-block-audio"><audio controls src="' . $sonURL[0] . '</audio></figure>
+            $ng_content = '<!-- wp:audio {"id":' . $sonID . ',"className":"wp-block-audio"} -->
+            <figure class="wp-block-audio"><audio controls src="' . $sonURL . '"></audio></figure>
             <!-- /wp:audio -->';
-
         }
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+        $ng_content = $ng_content . '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
             $texte1 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
             $texte2 . '<!-- /wp:paragraph -->';
@@ -1170,6 +1169,7 @@ class Numaguide_Admin
         $info_slide = array($ng_slide13_nom, 'views/slides/slide_13.php');
         $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
+        return $slide;
     }
 
     /*
@@ -1192,7 +1192,7 @@ class Numaguide_Admin
      */
     public function numaguide_creer_slide14($ng_guide_nom, $texte1, $texte2, $son1, $son2, $slide)
     {
-        $ng_slide13_nom = 'slide14';
+        $ng_slide14_nom = 'slide14';
         $ng_content = '';
 
         require ABSPATH . 'wp-load.php';
@@ -1266,8 +1266,8 @@ class Numaguide_Admin
             $sonID = $sonObj[0]->ID;
             $sonURL = wp_get_attachment_url($sonID);
 
-            $ng_content = '<!-- wp:audio {"id":' . $sonID . '} -->
-            <figure class="wp-block-audio"><audio controls src="' . $sonURL[0] . '</audio></figure>
+            $ng_content = '<!-- wp:audio {"id":' . $sonID . ',"className":"wp-block-audio"} -->
+            <figure class="wp-block-audio"><audio controls src="' . $sonURL . '"></audio></figure>
             <!-- /wp:audio -->';
 
         }
@@ -1300,29 +1300,30 @@ class Numaguide_Admin
             $sonID = $sonObj[0]->ID;
             $sonURL = wp_get_attachment_url($sonID);
 
-            $ng_content = $ng_content . '<!-- wp:audio {"id":' . $sonID . '} -->
-            <figure class="wp-block-audio"><audio controls src="' . $sonURL[0] . '</audio></figure>
+            $ng_content = $ng_content . '<!-- wp:audio {"id":' . $sonID . ',"className":"wp-block-audio"} -->
+            <figure class="wp-block-audio"><audio controls src="' . $sonURL . '"></audio></figure>
             <!-- /wp:audio -->';
 
         }
 
-        $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
+        $ng_content = $ng_content . '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
             $texte1 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
             $texte2 . '<!-- /wp:paragraph -->';
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 63 ),
+            'post_category' => array( 64 ),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
-
+   
         wp_insert_post($ng_info_article);
 
-        $info_slide = array($ng_slide13_nom, 'views/slides/slide_13.php');
+        $info_slide = array($ng_slide14_nom, 'views/slides/slide_14.php');
         $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
+        return $slide;
     }
 
     /*

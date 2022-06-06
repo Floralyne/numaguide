@@ -16,9 +16,11 @@
     $audios = array();
     foreach ($blocks as $block) {
         if ($block['blockName'] == 'core/audio') {
-            $audio = substr($block['innerContent'][0], 52);
+            $audio = trim($block['innerContent'][0]);
+            $audio = substr($audio, 52);
             $audio = substr($audio, 0, -19);
             $audios[] = $audio;
+        
         }
     }
 ?>
