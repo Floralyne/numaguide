@@ -576,11 +576,11 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide1-1"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide1-2"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide1-3"></textarea>
                     </div>
                 </div>
@@ -595,15 +595,15 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide2-1"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide2-2"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide2-3"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide2-4"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide2-5"></textarea>
                     </div>
                 </div>
@@ -618,7 +618,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide3-1"></textarea>
                     </div>
                 </div>
@@ -632,7 +632,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide4-1"></textarea>
                     </div>
                 </div>
@@ -646,7 +646,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide5-1"></textarea>
                     </div>
                 </div>
@@ -665,7 +665,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide6-1"></textarea>
                     </div>
                 </div>
@@ -680,9 +680,9 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide7-1"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide7-2"></textarea>
                     </div>
                 </div>
@@ -697,9 +697,9 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide8-1"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide8-2"></textarea>
 
                     </div>
@@ -733,7 +733,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide10-2"></textarea>
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
                             name="slide10-1">
@@ -752,7 +752,7 @@
                     <div class="col">
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
                             name="slide11-1">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide11-2"></textarea>
                     </div>
                 </div>
@@ -767,7 +767,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide12-1"></textarea>
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
                             name="slide12-2">
@@ -789,11 +789,11 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide13-1"></textarea>
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
                             name="slide13-2">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide13-3"></textarea>
                     </div>
                 </div>
@@ -810,11 +810,11 @@
                     <div class="col">
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
                             name="slide14-1">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide14-2"></textarea>
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
                             name="slide14-3">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide14-4"></textarea>
                     </div>
                 </div>
@@ -851,7 +851,7 @@
                     <div class="col">
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
                             name="slide16-1">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide16-2"></textarea>
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
                             name="slide16-3">
@@ -868,7 +868,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide17-1"></textarea>
                         <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
                             name="slide17-2">
@@ -889,15 +889,15 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide18-1"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide18-2"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide18-3"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide18-4"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide18-5"></textarea>
                     </div>
                 </div>
@@ -912,15 +912,15 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide19-1"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide19-2"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide19-3"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide19-4"></textarea>
-                        <textarea class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide19-5"></textarea>
                     </div>
                 </div>
@@ -934,7 +934,7 @@
 <?php
 
 if (isset($_POST['ok'])) {
-
+die(var_dump($_POST . " - monkey - " . $_FILES['slide9-1']));
     //Titre du guide
     $slide = "<style>html[lang] {
             margin-top: 0 !important;
