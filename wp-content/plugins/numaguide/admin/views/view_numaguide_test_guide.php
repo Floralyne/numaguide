@@ -735,8 +735,7 @@
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide10-2"></textarea>
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
-                            name="slide10-1">
+                        <input type="file" name="slide10-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" />
                     </div>
                 </div>
                 <hr>
@@ -750,8 +749,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
-                            name="slide11-1">
+                        <input type="file" name="slide11-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
                         <textarea type="text"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide11-2"></textarea>
                     </div>
@@ -769,8 +767,7 @@
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide12-1"></textarea>
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
-                            name="slide12-2">
+                        <input type="file" name="slide12-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
                     </div>
                 </div>
             </div>
@@ -789,12 +786,9 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide13-1"></textarea>
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
-                            name="slide13-2">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide13-3"></textarea>
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-1"></textarea>
+                        <input type="file" name="slide13-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-3"></textarea>
                     </div>
                 </div>
 
@@ -808,13 +802,11 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
-                            name="slide14-1">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <input type="file" name="slide14-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                        <textarea type="text" class="form-control m-1" rows="1"
                             name="slide14-2"></textarea>
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
-                            name="slide14-3">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <input  type="file" name="slide14-3" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                        <textarea type="text" class="form-control m-1" rows="1"
                             name="slide14-4"></textarea>
                     </div>
                 </div>
@@ -834,8 +826,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
-                            name="slide15-1">
+                        <input type="text" name="slide15-1" class="form-control"/>
                     </div>
                 </div>
 
@@ -849,12 +840,10 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
-                            name="slide16-1">
+                        <input type="file" name="slide16-1" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide16-2"></textarea>
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
-                            name="slide16-3">
+                        <input type="file" name="slide16-3" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
                     </div>
                 </div>
 
@@ -868,10 +857,9 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <textarea type="text" class="form-control m-1" rows="1"
                             name="slide17-1"></textarea>
-                        <input type="file" name="parcourir" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
-                            name="slide17-2">
+                        <input type="file" name="slide17-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
                     </div>
                 </div>
             </div>
@@ -889,16 +877,16 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide18-1"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide18-2"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide18-3"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide18-4"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide18-5"></textarea>
+                        <textarea type="text" name="slide18-1" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            ></textarea>
+                        <textarea type="text"  name="slide18-2"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                           ></textarea>
+                        <textarea type="text" name="slide18-3"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            ></textarea>
+                        <textarea type="text" name="slide18-4"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            ></textarea>
+                        <textarea type="text" name="slide18-5"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            ></textarea>
                     </div>
                 </div>
 
@@ -934,7 +922,7 @@
 <?php
 
 if (isset($_POST['ok'])) {
-die(var_dump($_POST . " - monkey - " . $_FILES['slide9-1']));
+    die(var_dump($_FILES['slide10-1']));
     //Titre du guide
     $slide = "<style>html[lang] {
             margin-top: 0 !important;
@@ -1022,14 +1010,14 @@ die(var_dump($_POST . " - monkey - " . $_FILES['slide9-1']));
     }
 
     // Slide 9
-    if ($_FILES['slide9-1'] != null) {
+    if ($_FILES['slide9-1']["name"] != "") {
         $image1 = $_FILES['slide9-1'];
         
         $slide = apply_filters('ng_creer_slide9', $ng_guide_nom, $image1, $slide);
     }
 
     // Slide 10
-    if ($_FILES['slide10-1'] != null&$_POST['slide10-2'] !== '') {
+    if ($_FILES['slide10-1']["name"] != ""&$_POST['slide10-2'] !== '') {
         $image1 = $_FILES['slide10-1'];
         $texte1 = $_POST['slide10-2'];
         
@@ -1037,7 +1025,7 @@ die(var_dump($_POST . " - monkey - " . $_FILES['slide9-1']));
     }
 
     // Slide 11
-    if ($_FILES['slide11-1'] != null&$_POST['slide11-2'] !== '') {
+    if ($_FILES['slide11-1']["name"] != ""&$_POST['slide11-2'] !== '') {
         $image1 = $_FILES['slide11-1'];
         $texte1 = $_POST['slide11-2'];
         
@@ -1045,7 +1033,7 @@ die(var_dump($_POST . " - monkey - " . $_FILES['slide9-1']));
     }
 
     // Slide 12
-    if ($_FILES['slide12-1'] != null&$_POST['slide12-2'] !== '') {
+    if ($_FILES['slide12-1']["name"] != ""&$_POST['slide12-2'] !== '') {
         $image1 = $_FILES['slide12-1'];
         $texte1 = $_POST['slide12-2'];
         
