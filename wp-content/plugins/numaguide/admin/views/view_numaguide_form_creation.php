@@ -488,7 +488,6 @@
 //variables    
 $d_titre = "";
 $d_auteur = "";
-$d_url = "";
 $d_type = "";
 $d_type_texte = "";
 $d_domaine = "";
@@ -550,7 +549,6 @@ $d_financement = "";
     if(isset($_POST['GenererMeta'])){
         $d_titre = $_POST['nomGuide'];
         $d_auteur = $_POST['auteurGuide'];
-        $d_url = $_POST['urlGuide'];
         $d_type = $_POST['type'];
         $d_domaine = $_POST['domaine'];
         $d_langue = $_POST['langage'];
@@ -596,12 +594,6 @@ $d_financement = "";
         $d_projetanr = $_POST['Projetanr'];
         $d_projeteurop = $_POST['Projeteuropeen'];
         $d_financement = $_POST['financement'];
-
-
-        if ($d_url != "") {
-           $d_url = 'http://numaguide.msh-vdl.fr/'.$d_url; 
-            
-        }
 
         if ($d_type != "") {
             if ($d_type == "") { $d_type_texte = " "; }
@@ -754,7 +746,6 @@ $licencedoc = $dom->createElement('licencedoc', 'type de licence');
 
 $titre = $dom->createElement('title',$d_titre);
 $auteur = $dom->createElement('searchAuthor', $d_auteur);
-$url = $dom->createElement('urlGuide', $d_url);
 $type = $dom->createElement('type', $d_type_texte);
 $domaine = $dom->createElement('domain', $d_domaine_texte);
 $langue = $dom->createElement('language', $d_langue_texte);
@@ -925,7 +916,6 @@ $HAL->appendChild($file);
 $HAL->appendChild($meta);
 $HAL->appendChild($author);
 
-$file->appendChild($url);
 
 $meta->appendChild($required);
 $meta->appendChild($optional);
