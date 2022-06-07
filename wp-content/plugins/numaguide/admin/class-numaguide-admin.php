@@ -106,7 +106,7 @@ class Numaguide_Admin
             'numaguide',
             'Numaguide | Liste des guides',
             'Liste des guides',
-            'edit_posts',
+            'activate_plugin',
             'ng_listeguide',
             'ng_submenu_form_liste'
         );
@@ -118,15 +118,6 @@ class Numaguide_Admin
             'activate_plugin',
             'ng_configuration',
             'ng_submenu_form_configuration'
-        );
-
-        add_submenu_page(
-            'numaguide',
-            'Numaguide | Test XML',
-            'Test XML',
-            'edit_posts',
-            'ng_xml',
-            'ng_submenu_xml_test'
         );
 
         function ng_admin_page_contents()
@@ -152,11 +143,6 @@ class Numaguide_Admin
         function ng_submenu_form_liste()
         {
             include_once 'views/view_numaguide_liste_guides.php';
-        }
-
-        function ng_submenu_xml_test()
-        {
-            include_once 'views/view_numaguide_test_xml.php';
         }
 
     }
