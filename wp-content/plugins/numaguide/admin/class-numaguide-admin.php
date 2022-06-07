@@ -129,15 +129,6 @@ class Numaguide_Admin
             'ng_submenu_xml_test'
         );
 
-        add_submenu_page(
-            'numaguide',
-            'Numaguide | Test création d\'un guide',
-            'Test guide',
-            'edit_posts',
-            'ng_test_guide',
-            'ng_submenu_guide_test'
-        );
-
         function ng_admin_page_contents()
         {
             include_once 'views/view_numaguide_page_accueil.php';
@@ -168,10 +159,6 @@ class Numaguide_Admin
             include_once 'views/view_numaguide_test_xml.php';
         }
 
-        function ng_submenu_guide_test()
-        {
-            include_once 'views/view_numaguide_test_guide.php';
-        }
     }
 
     /*
