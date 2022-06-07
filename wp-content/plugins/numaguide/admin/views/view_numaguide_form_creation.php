@@ -16,7 +16,7 @@
         <div class="obligatoire">* champs obligatoires</div>
         <div class="form-group pb-sm">
             <label for="nom_guide">Titre du guide* :</label>
-            <input type="text" class="form-control" id="nomGuide" name="nomGuide" maxlength="40">
+            <input type="text" class="form-control" id="nomGuide" name="nomGuide" onChange="urlFonction()" maxlength="40">
         </div>
 
             <div class="form-group pb-sm">
@@ -34,8 +34,8 @@
                             http://numaguide.msh-vdl.fr/
                         </div>
                     </div>
-                    <input class="form-control" type="text" pattern="/\W|_/g" maxlength="20" id="urlGuide"
-                        placeholder="Adresse du guide">
+                    <input class="form-control" type="text" maxlength="20" id="urlGuide"
+                        placeholder="Adresse du guide" disabled>
                 </div>
             </div>
         <hr>
@@ -553,7 +553,7 @@
             <hr>
             <div class="form-group pb-sm">
                 <label for="nom_guide">Titre de la section :</label>
-                <input type="text" class="form-control" id="nomGuide" name="nomGuide" maxlength="40" disabled>
+                <input type="text" class="form-control" id="nomSection" name="nomSection" maxlength="40" disabled>
             </div>
         </div>
         <hr>

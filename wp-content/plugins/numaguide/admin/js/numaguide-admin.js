@@ -109,15 +109,17 @@ function urlFonction() {
 	if (document.getElementById("nomGuide").value) {
 		str = document.getElementById("nomGuide").value;
 		// Regex pour tous les caractères spéciaux
-		var regex = new RegExp("\\\W|_", "g");
+		var regex = /[^\wçèéàòìïîÈÉÀÒÌ\s]/gi;
+		var charAChanger = " "
 		// Par quoi c'est remplacer
 		var replace = "";
+		var replace2 = "-"
 		// Limite la taille pour l'url
 		str = str.substring(0,20);
 		// Remplace les accents par des lettres sans accent
 		str = supp_accent(str);
 		// Fait la regex de remplacement et met la valeur dans l'imput
-		document.getElementById("urlGuide").value = str.replace(regex, replace).toLowerCase();
+		document.getElementById("urlGuide").value = str.replaceAll(regex, replace).replaceAll(charAChanger, replace2).toLowerCase();
 	} else {
 		document.getElementById("urlGuide").value = "";
 	}

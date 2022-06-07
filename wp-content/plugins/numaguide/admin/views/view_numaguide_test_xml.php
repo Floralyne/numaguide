@@ -90,6 +90,7 @@
                         <option value="shs.stat">Méthodes et statsitiques</option>
                     </select>
                     <small class="text-muted">
+                    Domaine d'études concerné par la publication.
                 </small>
                 </div>
 
@@ -126,6 +127,7 @@
                     <label for="Nomdelarevue">Nom de la revue :</label>
                     <input type="text" class="form-control" name="Nomdelarevue">
                     <small class="text-muted">
+                    Pour s'assurer que la revue ne pratique pas de politique d'embargo sur la publication.
                 </small>
                 </div>
 <hr>
@@ -225,6 +227,7 @@
                     <label for="DOIpublication">DOI de la publication :</label>
                     <input type="text" class="form-control" name="DOIpublication">
                     <small class="text-muted">
+                    Identifiant doi de la publication.  
                 </small>
                 </div>
 
@@ -280,6 +283,7 @@
                     <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
+                    Cette publication est-elle destinée au grand public.
                 </small>
                 </div>
 
@@ -291,6 +295,7 @@
                     <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
+                    Le contenu de cette publication a-t-il été évalué par un comité de lecture ? 
                 </small>
                 </div>
 
@@ -378,6 +383,7 @@
                 <label for="PageID">Page Indentifiant :</label>
                 <input type="text" class="form-control" name="PageID">
                 <small class="text-muted">
+                    Identifiant pérenne de la publication.
                 </small>
                 </div>
 
@@ -455,6 +461,7 @@
                     <label for="Projetanr">Projet ANR :</label>
                     <input type="text" class="form-control" name="Projetanr">
                     <small class="text-muted">
+                    Le projet anr lié à cette publication.
                 </small>
                 </div>
 
@@ -462,6 +469,7 @@
                     <label for="Projeteuropeen">Projet européen :</label>
                     <input type="text" class="form-control" name="Projeteuropeen">
                     <small class="text-muted">
+                    Le projet européen lié à cette publication
                 </small>
                 </div>
 
