@@ -37,9 +37,9 @@
             </div>
         <hr>
 
-    
+    <details>
             <summary>Métadonnées facultatives</summary>
-            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, un chiffre est associé aux métadonnées nécessaires à un dépôt sur HAL. Les métadonnées obligatoires communes à tous types de publications. Les métadonnées nécessaires à la publication d'<span class="type">articles</span> sont marqués d'un <span class="typeArticle">(1)</span>, celles pour les <span class="type">communications</span> d'un <span class="typeCommu">(2)</span>, pour les <span class="type">pré-publications</span> d'un <span class="typePrePub">(3)</span>, pour les <span class="type">rapports</span> d'un <span class="typeRapport">(4)</span>.</div>
+            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, des métadonnées nécessaires à un dépôt sur HAL sont associées. Ces métadonnées seront ensuite associées aux balises xml correspondantes, puis générées, prêtes à être copiées et utilisées.</div>
             <div class="form-group pb-sm-2">
             <div class="mb-2" id="metaObli">Les métadonnées suivantes sont obligatoires pour <span class="type">tout type de publication</span> sur HAL :</div>    
                 <label for="type">Type :</label>
@@ -472,7 +472,7 @@
                 </small>
                 </div>
     
-
+</details>
             <input type=submit name="ok" value="Envoyer">
         </form>
 

@@ -115,7 +115,7 @@ class Numaguide_Admin
             'numaguide',
             'Numaguide | Configuration',
             'Configuration',
-            'edit_posts',
+            'activate_plugin',
             'ng_configuration',
             'ng_submenu_form_configuration'
         );
