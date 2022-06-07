@@ -140,6 +140,7 @@ class Numaguide
         $this->loader->add_action('admin_menu', $plugin_admin, 'numaguide_creer_menu_admin');
         $this->loader->add_action('admin_menu', $plugin_admin, 'numaguide_cacher_menus');
         $this->loader->add_action('admin_bar_menu', $plugin_admin, 'numaguide_vider_barre_admin', 999);
+        $this->loader->add_filter('login_redirect', $plugin_admin, 'admin_default_page');
 
         // Hooks pour utiliser les fonctions pour la création d'un guide
         $this->loader->add_filter('ng_article_pour_template', $plugin_admin, 'numaguide_article_pour_template', 10, 1);

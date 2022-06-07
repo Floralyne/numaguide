@@ -321,6 +321,22 @@ class Numaguide_Admin
     }
 
     /*
+     * Redirige vers la page d'accueil du plug-in après connexion de l'utilisateur
+     *
+     * @since Numaguide 1.0.0
+     *
+     * @return string 
+     */
+
+//Change la page d'accueil
+
+    public function admin_default_page() {
+
+    return '/wordpress/wp-admin/admin.php?page=numaguide';
+    // return '/wp-admin/admin.php?page=numaguide';
+ }
+
+    /*
      * SLIDE 1
      * ///////
      * Récupère les infos du formulaire de création de guide
@@ -671,7 +687,7 @@ class Numaguide_Admin
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
         // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
-        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        // $wordpress_upload_dir['url'] le lien absolu vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
         $nomImg = sanitize_file_name($image1['name']);
@@ -768,7 +784,7 @@ class Numaguide_Admin
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
         // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
-        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        // $wordpress_upload_dir['url'] le lien absolu vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
         $ng_slide10_nom = 'slide10';
@@ -976,7 +992,7 @@ class Numaguide_Admin
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
         // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
-        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        // $wordpress_upload_dir['url'] le lien absolu vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
         $ng_slide12_nom = 'slide12';
@@ -1021,7 +1037,7 @@ class Numaguide_Admin
             // wp_generate_attachment_metadata() sans cet include
             require_once ABSPATH . 'wp-admin/includes/image.php';
 
-            // Genere et sauvegarde les métadonnées associé dans la BDD
+            // Genere et sauvegarde les métadonnées associées dans la BDD
             wp_update_attachment_metadata($upload_id, wp_generate_attachment_metadata($upload_id, $new_file_path));
 
             $args = array(
@@ -1084,7 +1100,7 @@ class Numaguide_Admin
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
         // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
-        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        // $wordpress_upload_dir['url'] le lien absolu vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
         $nomSon = sanitize_file_name($son1['name']);
@@ -1190,7 +1206,7 @@ class Numaguide_Admin
         require ABSPATH . 'wp-load.php';
         $wordpress_upload_dir = wp_upload_dir();
         // $wordpress_upload_dir['path'] est le path entier du serveur vers (wp-content/uploads/2022/05)
-        // $wordpress_upload_dir['url'] le lien absolut vers l'url du même dossier, pour montrer le lien vers le fichier
+        // $wordpress_upload_dir['url'] le lien absolu vers l'url du même dossier, pour montrer le lien vers le fichier
         $i = 1; // compteur si le même nom de fichier
 
         $nomSon = sanitize_file_name($son1['name']);
