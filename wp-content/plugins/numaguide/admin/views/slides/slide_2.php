@@ -22,46 +22,46 @@
     }
 ?>
 
-    <section id="slide_2">
-        <div id="slide_2_c" class="container-fluid">
-            <div id="slide_2_r" class="row vh-100">
-                <div id="slide_2_div" class="col text-center mt-auto mb-auto p-5">
-                    <div id="slide_2_titre_principal" class="slide_2_titre">       
-                        <p>Titre :    
+<section id="slide_2">
+    <div id="slide_2_c" class="container-fluid">
+        <div id="slide_2_r" class="row vh-100">
+            <div id="slide_2_div" class="col text-center mt-auto mb-auto p-5">
+                <div id="slide_2_titre_principal" class="slide_2_titre">
+                    <p>Titre :
                         <?php
-                            echo $paragraphes[0];
+                        echo $paragraphes[0];
                         ?>
-                        </p>
-                    </div>
-                    <div id="slide_2_sous_titre" class="slide_2_sous_titre">
-                    <p>Sous-titre :    
+                    </p>
+                </div>
+                <div id="slide_2_sous_titre" class="slide_2_sous_titre">
+                    <p>Sous-titre :
                         <?php
-                            echo $paragraphes[1];
+                        echo $paragraphes[1];
                         ?>
-                        </p>
-                    </div>
-                    <div id="slide_2_auteur" class="slide_2_auteur">
-                    <p>Auteur(s) :    
+                    </p>
+                </div>
+                <div id="slide_2_auteur" class="slide_2_auteur">
+                    <p>Auteur(s) :
                         <?php
-                           echo $paragraphes[2];
+                        echo $paragraphes[2];
                         ?>
-                        </p>
-                    </div>
-                    <div id="slide_2_aff" class="slide_2_aff">
-                    <p>Affiliations :    
+                    </p>
+                </div>
+                <div id="slide_2_aff" class="slide_2_aff">
+                    <p>Affiliations :
                         <?php
-                            echo $paragraphes[3];
+                        echo $paragraphes[3];
                         ?>
-                        </p>
-                    </div>
-                    <div id="slide_2_clef" class="slide_2_clef">
-                       <p>Mots-clés :    
+                    </p>
+                </div>
+                <div id="slide_2_clef" class="slide_2_clef">
+                    <p>Mots-clés :
                         <?php
-                            echo $paragraphes[4];
+                        echo $paragraphes[4];
                         ?>
-                        </p>
-                    </div>
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>

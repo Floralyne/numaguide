@@ -56,8 +56,8 @@
                     <?php
                         echo render_block($paragraphes[1]);
                     ?>
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
