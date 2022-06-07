@@ -324,7 +324,7 @@
                 <label for="actes">Actes :</label>
                 <select class="form-control" name="actes">
                     <option value="" selected="selected"></option>
-                    <option value="">Non</option>
+                    <option value="0">Non</option>
                     <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
