@@ -510,6 +510,7 @@ $d_projetanr = "";
 $d_projeteurop = "";
 $d_financement = "";
 
+//renvoie des valeurs à chaque variable
     if(isset($_POST['GenererMeta'])){
         $d_titre = $_POST['nomGuide'];
         $d_auteur = $_POST['auteurGuide'];
@@ -559,6 +560,8 @@ $d_financement = "";
         $d_projeteurop = $_POST['Projeteuropeen'];
         $d_financement = $_POST['financement'];
 
+
+//Creation de variables pour stocker le texte de chaque option
         if ($d_type != "") {
             if ($d_type == "") { $d_type_texte = " "; }
             elseif ($d_type == "ART") { $d_type_texte = "Article"; }
@@ -870,11 +873,7 @@ $projetanr->appendChild($anrp_value);
 $projeteurop->appendChild($europrojet_value);
 
 //creation de la structure xml
-$dom->appendChild($all);
-//die(var_dump($HAL));
-$all->appendChild($HAL);
-$all->appendChild($informations);
-
+$dom->appendChild($HAL);
 
 $HAL->appendChild($meta);
 $HAL->appendChild($author);
@@ -887,9 +886,6 @@ $author->appendChild($authorvalidity);
 $authorvalidity->appendChild($authors);
 $authors->appendChild($auteur);
 
-
-$informations->appendChild($desc);
-$informations->appendChild($licencedoc);
 
 $required->appendChild($titre);
 $required->appendChild($type);
