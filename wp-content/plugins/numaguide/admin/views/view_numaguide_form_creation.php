@@ -477,8 +477,15 @@
     
 </details>
 
+        </details>
+        <input class="boutonForm boutonValider mt-3" type=submit name="GenererMeta" value="Générer les métadonnées">
+        
+        <?php
 
-        <input class="boutonForm boutonValider mt-3" type=submit name="ok" value="Envoyer">
+if (isset($_POST['GenererMeta'])) {
+    echo "ça marche là";
+} ?>
+        
         <hr>
         <div class="titreForm">Création du guide</div>
         <hr>
@@ -914,7 +921,7 @@
                     </div>
                 </div>
         </details>
-        <input type=submit name="ok" class="boutonForm boutonValider mt-5" value="Créer le mini guide">
+        <input type=submit name="CreerGuide" class="boutonForm boutonValider mt-5" value="Créer le mini guide">
 </div>
 </form>
 
@@ -922,7 +929,7 @@
 
 <?php
 
-if (isset($_POST['ok'])) {
+if (isset($_POST['CreerGuide'])) {
     //Titre du guide
     $slide = "<style>html[lang] {
             margin-top: 0 !important;
