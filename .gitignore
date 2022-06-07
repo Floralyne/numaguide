@@ -42,4 +42,4 @@ cache
 .htaccess
 
 # Dossiers à ignorer
-wp-content/uploads
+wp-content/uploads/
