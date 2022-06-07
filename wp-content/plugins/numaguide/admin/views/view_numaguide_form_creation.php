@@ -477,638 +477,10 @@
     
 </details>
 
-
-        <input class="boutonForm boutonValider mt-3" type=submit name="ok" value="Envoyer">
-        <hr>
-        <div class="titreForm">Création du guide</div>
-        <hr>
-        <div class="soustitreForm">Thèmes colorés</div>
-        <div class="form-group row">
-            <div class="col">
-                <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="collapseExample" data-target="#ete">
-                <label class="boutonForm boutonAjouter" for="option1">Été</label>
-                <div class="collapse" id="ete">
-                    <div class="card card-body" id="paletteete">
-                        <div id="numaFFA86B">#FFA86B</div>
-                        <div id="numaFFCC84">#FFCC84</div>
-                        <div id="numaFFE69E">#FFE69E</div>
-                        <div id="numaFFFFEB">#FFFFEB</div>
-                        <div id="numaCCF6EE">#CCF6EE</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <input type="radio" name="options" id="option2" autocomplete="off" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="collapseExample" data-target="#pastel">
-                <label class="boutonForm boutonAjouter" for="option2">Pastel</label>
-
-                <div class="collapse" id="pastel">
-                    <div class="card card-body" id="palettepastel">
-                        <div id="numaEEF9FF">#EEF9FF</div>
-                        <div id="numaFFF7FC">#FFF7FC</div>
-                        <div id="numaFFFDED">#FFFDED</div>
-                        <div id="numaFFF7EC">#FFF7EC</div>
-                        <div id="numaFFFBFB">#FFFBFB</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-
-                <input type="radio" name="options" id="option3" autocomplete="off" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="collapseExample" data-target="#campagne">
-                <label class="boutonForm boutonAjouter" for="option3">Campagne</label>
-
-
-                <div class="collapse" id="campagne">
-                    <div class="card card-body" id="palettecampagne">
-                        <div id="numaD3C1C3">#D3C1C3</div>
-                        <div id="numaE2D0BE">#E2D0BE</div>
-                        <div id="numaEEE5BF">#EEE5BF</div>
-                        <div id="numaE8F8C1">#E8F8C1</div>
-                        <div id="numaD0F0B9">#D0F0B9</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-
-                <input type="radio" name="options" id="option4" autocomplete="off" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="collapseExample" data-target="#sombre">
-                <label class="boutonForm boutonAjouter" for="option4">Sombre</label>
-
-                <div class="collapse" id="sombre">
-                    <div class="card card-body" id="palettesombre">
-                        <div id="numa002029">#002029</div>
-                        <div id="numa032934">#032934</div>
-                        <div id="numa04323E">#04323E</div>
-                        <div id="numa0D3B47">#0D3B47</div>
-                        <div id="numa144B58">#144B58</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div id="sectiondesac">
-            <div class="soustitreForm">Section</div>
-            <hr>
-            <div class="form-group pb-sm">
-                <label for="nom_guide">Titre de la section :</label>
-                <input type="text" class="form-control" id="nomSection" name="nomSection" maxlength="40" disabled>
-            </div>
-        </div>
-        <hr>
-        <div class="soustitreForm">Choix des slides</div>
-        <hr>
-        <details>
-            <summary>Slides introductives</summary>
-            <div class="form-group pb-sm-2" id="groupeIntro">
-                <div class="soustitreForm2">Slide 1 - Titre, sous-titre, auteur(s)</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_1.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide1-1"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide1-2"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide1-3"></textarea>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="soustitreForm2">Slide 2 - Titre, sous-titre, auteur(e)(s), affiliation(s), mots-clés</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_2.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide2-1"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide2-2"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide2-3"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide2-4"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide2-5"></textarea>
-                    </div>
-                </div>
-                <hr>
-
-                <div class="soustitreForm">Slide 3 - Remerciements</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_3.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide3-1" maxlength="700" placeholder="700 caractères max."></textarea>
-                    </div>
-                </div>
-                <hr>
-                <div class="soustitreForm">Slide 4 - Résumé</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_4.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide4-1" maxlength="700" placeholder="700 caractères max."></textarea>
-                    </div>
-                </div>
-                <hr>
-                <div class="soustitreForm">Slide 5 - Introduction</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_5.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide5-1" maxlength="700" placeholder="700 caractères max."></textarea>
-                    </div>
-                </div>
-            </div>
         </details>
-        <hr>
-        <details>
-            <summary>Slides textuelles</summary>
-            <div class="form-group pb-sm-2" id="groupeTexte">
-                <div class="soustitreForm">Slide 6 - Paragraphe</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_6.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide6-1" maxlength="2000" placeholder="2000 caractères max."></textarea>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="soustitreForm">Slide 7 - Deux paragraphes verticaux</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_7.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide7-1" maxlength="1100" placeholder="1100 caractères max."></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide7-2" maxlength="1100" placeholder="1100 caractères max."></textarea>
-                    </div>
-                </div>
-                <hr>
-
-                <div class="soustitreForm">Slide 8 - Deux paragraphes horizontaux</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_8.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide8-1" maxlength="1100" placeholder="1100 caractères max."></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide8-2" maxlength="1100" placeholder="1100 caractères max."></textarea>
-
-                    </div>
-                </div>
-            </div>
-        </details>
-        <hr>
-        <details>
-            <summary>Slides images</summary>
-            <div class="form-group pb-sm-2" id="groupeImages">
-                <div class="soustitreForm">Slide 9 - Image plein écran</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_9.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <input type="file" name="slide9-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" />
-                    </div>
-                </div>
-
-                <hr>
-                <div class="soustitreForm">Slide 10 - Un paragraphe et une image</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_10.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide10-2" maxlength="700" placeholder="700 caractères max."></textarea>
-                        <input type="file" name="slide10-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" />
-                    </div>
-                </div>
-                <hr>
-
-                <div class="soustitreForm">Slide 11 - Une image et un paragraphe</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_11.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <input type="file" name="slide11-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
-                        <textarea type="text"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide11-2" maxlength="700" placeholder="700 caractères max."></textarea>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="soustitreForm">Slide 12 - Un paragraphe et une image</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_12.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide12-2" maxlength="700" placeholder="700 caractères max."></textarea>
-                        <input type="file" name="slide12-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
-                    </div>
-                </div>
-            </div>
-        </details>
-        <hr>
-
-        <details>
-            <summary>Slides son</summary>
-            <div class="form-group pb-sm-2" id="groupeSon">
-                <div class="soustitreForm">Slide 13 - Paragraphe, son, légende</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_13.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-1" maxlength="700" placeholder="700 caractères max."></textarea>
-                        <input type="file" name="slide13-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
-                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-3"></textarea>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="soustitreForm">Slide 14 - Son et légende, son et légende</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_14.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <input type="file" name="slide14-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
-                        <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide14-2"></textarea>
-                        <input  type="file" name="slide14-3" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
-                        <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide14-4"></textarea>
-                    </div>
-                </div>
-            </div>
-        </details>
-        <hr>
-
-        <details>
-            <summary>Slides vidéos</summary>
-            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta"><span class="comment">Comment importer une vidéo ?</span><br>
-                <br>- Si l'hébergeur est <span class="type">Youtube</span>, veuillez copier le lien direct de la vidéo <br> <span class="typePubli">(Exemple : https://www.youtube.com/watch?v=1eXOOotL5pk)</span>
-                <br>- Si l'hébergeur est <span class="type">Dailymotion</span>, veuillez copier le lien direct de la vidéo <br><span class="typePubli">(Exemple : https://www.dailymotion.com/video/x7wt1qq)</span>
-                <br>- Si l'hébergeur est <span class="type">Canal U</span>, veuillez copier le lien embed de la vidéo <br><span class="typePubli">(Exemple : https://www.canal-u.tv/embed/116919?t=0)</span>
-            </div>
-            <div class="form-group pb-sm-2" id="groupeVideos">
-                <div class="soustitreForm">Slide 15 - Vidéo plein écran</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_15.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <input type="text" name="slide15-1" class="form-control m-1" placeholder="Lien de la vidéo"/>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="soustitreForm">Slide 16 - Vidéo et légende, paragraphe</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_16.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <input type="text" name="slide16-1" class="form-control m-1" placeholder="Lien de la vidéo"/>
-                        <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide16-2"></textarea>
-                        <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide16-3" maxlength="700" placeholder="700 caractères max."></textarea>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="soustitreForm">Slide 17 - Paragraphe et vidéo</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_17.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide17-1" maxlength="700" placeholder="700 caractères max."></textarea>
-                        <input type="text" name="slide17-2" class="form-control m-1" placeholder="Lien de la vidéo"/>
-                    </div>
-                </div>
-            </div>
-        </details>
-        <hr>
-        <details>
-            <summary>Slides de fin</summary>
-            <div class="form-group pb-sm-2" id="groupeFin">
-                <div class="soustitreForm">Slide 18 - Bibliographie</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_18.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" name="slide18-1" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            ></textarea>
-                        <textarea type="text"  name="slide18-2"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                           ></textarea>
-                        <textarea type="text" name="slide18-3"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            ></textarea>
-                        <textarea type="text" name="slide18-4"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            ></textarea>
-                        <textarea type="text" name="slide18-5"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            ></textarea>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="soustitreForm">Slide 19 - Bibliographie</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_19.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide19-1"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide19-2"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide19-3"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide19-4"></textarea>
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide19-5"></textarea>
-                    </div>
-                </div>
-        </details>
-        <input type=submit name="ok" class="boutonForm boutonValider mt-5" value="Créer le mini guide">
-</div>
-</form>
-
-</div>
-
-<?php
-
-if (isset($_POST['ok'])) {
-    //Titre du guide
-    $slide = "<style>html[lang] {
-            margin-top: 0 !important;
-          }
-          </style>";
-    $ng_guide_nom = $_POST['nomGuide'];
-    $enleveaccent_array = array('Š' => 'S', 'š' => 's', 'Ž' => 'Z', 'ž' => 'z', 'À' => 'A', 'Á' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'A', 'Ç' => 'C', 'È' => 'E', 'É' => 'E',
-        'Ê' => 'E', 'Ë' => 'E', 'Ì' => 'I', 'Í' => 'I', 'Î' => 'I', 'Ï' => 'I', 'Ñ' => 'N', 'Ò' => 'O', 'Ó' => 'O', 'Ô' => 'O', 'Õ' => 'O', 'Ö' => 'O', 'Ø' => 'O', 'Ù' => 'U',
-        'Ú' => 'U', 'Û' => 'U', 'Ü' => 'U', 'Ý' => 'Y', 'Þ' => 'B', 'ß' => 'Ss', 'à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'å' => 'a', 'æ' => 'a', 'ç' => 'c',
-        'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i', 'ð' => 'o', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o',
-        'ö' => 'o', 'ø' => 'o', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ý' => 'y', 'þ' => 'b', 'ÿ' => 'y');
-
-    $ng_guide_nom = strtr($ng_guide_nom, $enleveaccent_array);
-    $ng_guide_nom = str_replace('\'', '', trim($ng_guide_nom));
-    $ng_guide_nom = preg_replace('/[^A-Za-z0-9-]/', '', $ng_guide_nom);
-    $ng_guide_nom = preg_replace('/-+/', '-', $ng_guide_nom);
-    $ng_guide_nom = substr($ng_guide_nom, 0, 20);
-
-    // Creation du tag pour lier les articles
-
-    wp_create_term($ng_guide_nom);
-
-    // Slide 1
-    if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
-        $texte1 = $_POST['slide1-1'];
-        $texte2 = $_POST['slide1-2'];
-        $texte3 = $_POST['slide1-3'];
+        <input class="boutonForm boutonValider mt-3" type=submit name="GenererMeta" value="Générer les métadonnées">
         
-        $slide = apply_filters('ng_creer_slide1', $ng_guide_nom, $texte1, $texte2, $texte3, $slide);
-    }
-
-    // Slide 2
-    if ($_POST['slide2-1'] !== ''&$_POST['slide2-2'] !== ''&$_POST['slide2-3'] !== ''&$_POST['slide2-4'] !== ''&$_POST['slide2-5'] !== '') {
-        $texte1 = $_POST['slide2-1'];
-        $texte2 = $_POST['slide2-2'];
-        $texte3 = $_POST['slide2-3'];
-        $texte4 = $_POST['slide2-4'];
-        $texte5 = $_POST['slide2-5'];
-        
-        $slide = apply_filters('ng_creer_slide2', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
-    }
-
-    //Slide 3
-    if ($_POST['slide3-1'] !== '') {
-        $texte1 = $_POST['slide3-1'];
-        
-        $slide = apply_filters('ng_creer_slide3', $ng_guide_nom, $texte1, $slide);
-    }
-
-    //Slide 4
-    if ($_POST['slide4-1'] !== '') {
-        $texte1 = $_POST['slide4-1'];
-        
-        $slide = apply_filters('ng_creer_slide4', $ng_guide_nom, $texte1, $slide);
-    }
-
-    //Slide 5
-    if ($_POST['slide5-1'] !== '') {
-        $texte1 = $_POST['slide5-1'];
-        
-        $slide = apply_filters('ng_creer_slide5', $ng_guide_nom, $texte1, $slide);
-    }
-
-    //Slide 6
-    if ($_POST['slide6-1'] !== '') {
-        $texte1 = $_POST['slide6-1'];
-        
-        $slide = apply_filters('ng_creer_slide6', $ng_guide_nom, $texte1, $slide);
-    }
-
-    //Slide 7
-    if ($_POST['slide7-1'] !== ''&$_POST['slide7-2'] !== '') {
-        $texte1 = $_POST['slide7-1'];
-        $texte2 = $_POST['slide7-2'];
-        
-        $slide = apply_filters('ng_creer_slide7', $ng_guide_nom, $texte1, $texte2, $slide);
-    }
-
-    //Slide 8
-    if ($_POST['slide8-1'] !== ''&$_POST['slide8-2'] !== '') {
-        $texte1 = $_POST['slide8-1'];
-        $texte2 = $_POST['slide8-2'];
-        
-        $slide = apply_filters('ng_creer_slide8', $ng_guide_nom, $texte1, $texte2, $slide);
-    }
-
-    // Slide 9
-    if ($_FILES['slide9-1']["name"] != "") {
-        $image1 = $_FILES['slide9-1'];
-        
-        $slide = apply_filters('ng_creer_slide9', $ng_guide_nom, $image1, $slide);
-    }
-
-    // Slide 10
-    if ($_FILES['slide10-1']["name"] != ""&$_POST['slide10-2'] !== '') {
-        $image1 = $_FILES['slide10-1'];
-        $texte1 = $_POST['slide10-2'];
-        
-        $slide = apply_filters('ng_creer_slide10', $ng_guide_nom, $image1, $texte1, $slide);
-    }
-
-    // Slide 11
-    if ($_FILES['slide11-1']["name"] != ""&$_POST['slide11-2'] !== '') {
-        $image1 = $_FILES['slide11-1'];
-        $texte1 = $_POST['slide11-2'];
-        
-        $slide = apply_filters('ng_creer_slide11', $ng_guide_nom, $image1, $texte1, $slide);
-    }
-
-    // Slide 12
-    if ($_FILES['slide12-1']["name"] != ""&$_POST['slide12-2'] !== '') {
-        $image1 = $_FILES['slide12-1'];
-        $texte1 = $_POST['slide12-2'];
-        
-        $slide = apply_filters('ng_creer_slide12', $ng_guide_nom, $image1, $texte1, $slide);
-    }
-
-    // Slide 13
-    if ($_FILES['slide13-2']["name"] != ""&$_POST['slide13-1'] !== ''&$_POST['slide13-3'] !== '') {
-        $texte1 = $_POST['slide13-1'];
-        $texte2 = $_POST['slide13-3'];
-        $son1 = $_FILES['slide13-2'];
-        
-        $slide = apply_filters('ng_creer_slide13', $ng_guide_nom, $texte1, $texte2, $son1, $slide);
-    }
-
-    // Slide 14
-    if ($_FILES['slide14-1']["name"] != ""&$_FILES['slide14-3']["name"] != ""&$_POST['slide14-2'] !== ''&$_POST['slide14-4'] !== '') {
-        $texte1 = $_POST['slide14-2'];
-        $texte2 = $_POST['slide14-4'];
-        $son1 = $_FILES['slide14-1'];
-        $son2 = $_FILES['slide14-3'];
-        
-        $slide = apply_filters('ng_creer_slide14', $ng_guide_nom, $texte1, $texte2, $son1, $son2, $slide);
-    }
-
-    // Slide 15
-    if ($_POST['slide15-1'] !== '') {
-        $video1 = $_POST['slide15-1'];
-        
-        $slide = apply_filters('ng_creer_slide15', $ng_guide_nom, $video1, $slide);
-    }
-
-    // Slide 16
-    if ($_POST['slide16-1'] !== ''&$_POST['slide16-2'] !== ''&$_POST['slide16-3'] !== '') {
-        $video1 = $_POST['slide16-1'];
-        $texte1 = $_POST['slide16-2'];
-        $texte2 = $_POST['slide16-3'];
-        
-        $slide = apply_filters('ng_creer_slide16', $ng_guide_nom, $video1, $texte1, $texte2, $slide);
-    }
-
-    // Slide 17
-    if ($_POST['slide17-1'] !== ''&$_POST['slide17-2'] !== '') {
-        $video1 = $_POST['slide17-2'];
-        $texte1 = $_POST['slide17-1'];
-        
-        $slide = apply_filters('ng_creer_slide17', $ng_guide_nom, $video1, $texte1, $slide);
-    }
-
-    // Slide 18
-    if ($_POST['slide18-1'] !== ''&$_POST['slide18-2'] !== ''&$_POST['slide18-3'] !== ''&$_POST['slide18-4'] !== ''&$_POST['slide18-5'] !== '') {
-        $texte1 = $_POST['slide18-1'];
-        $texte2 = $_POST['slide18-2'];
-        $texte3 = $_POST['slide18-3'];
-        $texte4 = $_POST['slide18-4'];
-        $texte5 = $_POST['slide18-5'];
-        
-        $slide = apply_filters('ng_creer_slide18', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
-    }
-
-    // Slide 19
-    if ($_POST['slide19-1'] !== ''&$_POST['slide19-2'] !== ''&$_POST['slide19-3'] !== ''&$_POST['slide19-4'] !== ''&$_POST['slide19-5'] !== '') {
-        $texte1 = $_POST['slide19-1'];
-        $texte2 = $_POST['slide19-2'];
-        $texte3 = $_POST['slide19-3'];
-        $texte4 = $_POST['slide19-4'];
-        $texte5 = $_POST['slide19-5'];
-        
-        $slide = apply_filters('ng_creer_slide19', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
-    }
-
-    if ($slide !== null) {
-        apply_filters('ng_creer_guide', $ng_guide_nom, $slide);
-    }
-}
+        <?php
 
 
 //PHP Métadonnées 
@@ -1175,7 +547,7 @@ $d_projetanr = "";
 $d_projeteurop = "";
 $d_financement = "";
 
-    if(isset($_POST['ok'])){
+    if(isset($_POST['GenererMeta'])){
         $d_titre = $_POST['nomGuide'];
         $d_auteur = $_POST['auteurGuide'];
         $d_url = $_POST['urlGuide'];
@@ -1613,12 +985,643 @@ $optional->appendChild($projetanr);
 $optional->appendChild($projeteurop);
 $optional->appendChild($financement);
 
-
-
 //affichage des métadonnées avec balises xml apparentes et indentées
-if(isset($_POST['ok'])){
-    
+if (isset($_POST['GenererMeta'])) {
+
     echo "<div id=\"meta\"><xmp id=\"a-copier\">".$res= $dom->saveXML()."</xmp></div><div class=\"text-center\"><br><button id=\"btnCopier\" class=\"boutonForm boutonAction\" onclick=\"copierTexte()\">Copier le texte</button></div>";
+
 
 }
 ?>
+        
+        <hr>
+        <div class="titreForm">Création du guide</div>
+        <hr>
+        <div class="soustitreForm">Thèmes colorés</div>
+        <div class="form-group row">
+            <div class="col">
+                <input type="radio" name="options" id="option1" autocomplete="off" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="collapseExample" data-target="#ete">
+                <label class="boutonForm boutonAjouter" for="option1">Été</label>
+                <div class="collapse" id="ete">
+                    <div class="card card-body" id="paletteete">
+                        <div id="numaFFA86B">#FFA86B</div>
+                        <div id="numaFFCC84">#FFCC84</div>
+                        <div id="numaFFE69E">#FFE69E</div>
+                        <div id="numaFFFFEB">#FFFFEB</div>
+                        <div id="numaCCF6EE">#CCF6EE</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <input type="radio" name="options" id="option2" autocomplete="off" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="collapseExample" data-target="#pastel">
+                <label class="boutonForm boutonAjouter" for="option2">Pastel</label>
+
+                <div class="collapse" id="pastel">
+                    <div class="card card-body" id="palettepastel">
+                        <div id="numaEEF9FF">#EEF9FF</div>
+                        <div id="numaFFF7FC">#FFF7FC</div>
+                        <div id="numaFFFDED">#FFFDED</div>
+                        <div id="numaFFF7EC">#FFF7EC</div>
+                        <div id="numaFFFBFB">#FFFBFB</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+                <input type="radio" name="options" id="option3" autocomplete="off" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="collapseExample" data-target="#campagne">
+                <label class="boutonForm boutonAjouter" for="option3">Campagne</label>
+
+
+                <div class="collapse" id="campagne">
+                    <div class="card card-body" id="palettecampagne">
+                        <div id="numaD3C1C3">#D3C1C3</div>
+                        <div id="numaE2D0BE">#E2D0BE</div>
+                        <div id="numaEEE5BF">#EEE5BF</div>
+                        <div id="numaE8F8C1">#E8F8C1</div>
+                        <div id="numaD0F0B9">#D0F0B9</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+                <input type="radio" name="options" id="option4" autocomplete="off" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="collapseExample" data-target="#sombre">
+                <label class="boutonForm boutonAjouter" for="option4">Sombre</label>
+
+                <div class="collapse" id="sombre">
+                    <div class="card card-body" id="palettesombre">
+                        <div id="numa002029">#002029</div>
+                        <div id="numa032934">#032934</div>
+                        <div id="numa04323E">#04323E</div>
+                        <div id="numa0D3B47">#0D3B47</div>
+                        <div id="numa144B58">#144B58</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="sectiondesac">
+            <div class="soustitreForm">Section</div>
+            <hr>
+            <div class="form-group pb-sm">
+                <label for="nom_guide">Titre de la section :</label>
+                <input type="text" class="form-control" id="nomSection" name="nomSection" maxlength="40" disabled>
+            </div>
+        </div>
+        <hr>
+        <div class="soustitreForm">Choix des slides</div>
+        <hr>
+        <details>
+            <summary>Slides introductives</summary>
+            <div class="form-group pb-sm-2" id="groupeIntro">
+                <div class="soustitreForm2">Slide 1 - Titre, sous-titre, auteur(s)</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_1.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide1-1"></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide1-2"></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide1-3"></textarea>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="soustitreForm2">Slide 2 - Titre, sous-titre, auteur(e)(s), affiliation(s), mots-clés</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_2.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide2-1"></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide2-2"></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide2-3"></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide2-4"></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide2-5"></textarea>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="soustitreForm">Slide 3 - Remerciements</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_3.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide3-1" maxlength="700" placeholder="700 caractères max."></textarea>
+                    </div>
+                </div>
+                <hr>
+                <div class="soustitreForm">Slide 4 - Résumé</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_4.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide4-1" maxlength="700" placeholder="700 caractères max."></textarea>
+                    </div>
+                </div>
+                <hr>
+                <div class="soustitreForm">Slide 5 - Introduction</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_5.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide5-1" maxlength="700" placeholder="700 caractères max."></textarea>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <hr>
+        <details>
+            <summary>Slides textuelles</summary>
+            <div class="form-group pb-sm-2" id="groupeTexte">
+                <div class="soustitreForm">Slide 6 - Paragraphe</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_6.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide6-1" maxlength="2000" placeholder="2000 caractères max."></textarea>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="soustitreForm">Slide 7 - Deux paragraphes verticaux</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_7.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide7-1" maxlength="1100" placeholder="1100 caractères max."></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide7-2" maxlength="1100" placeholder="1100 caractères max."></textarea>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="soustitreForm">Slide 8 - Deux paragraphes horizontaux</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_8.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide8-1" maxlength="1100" placeholder="1100 caractères max."></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide8-2" maxlength="1100" placeholder="1100 caractères max."></textarea>
+
+                    </div>
+                </div>
+            </div>
+        </details>
+        <hr>
+        <details>
+            <summary>Slides images</summary>
+            <div class="form-group pb-sm-2" id="groupeImages">
+                <div class="soustitreForm">Slide 9 - Image plein écran</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_9.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <input type="file" name="slide9-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" />
+                    </div>
+                </div>
+
+                <hr>
+                <div class="soustitreForm">Slide 10 - Un paragraphe et une image</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_10.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide10-2" maxlength="700" placeholder="700 caractères max."></textarea>
+                        <input type="file" name="slide10-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" />
+                    </div>
+                </div>
+                <hr>
+
+                <div class="soustitreForm">Slide 11 - Une image et un paragraphe</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_11.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <input type="file" name="slide11-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                        <textarea type="text"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide11-2" maxlength="700" placeholder="700 caractères max."></textarea>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="soustitreForm">Slide 12 - Un paragraphe et une image</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_12.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide12-2" maxlength="700" placeholder="700 caractères max."></textarea>
+                        <input type="file" name="slide12-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <hr>
+
+        <details>
+            <summary>Slides son</summary>
+            <div class="form-group pb-sm-2" id="groupeSon">
+                <div class="soustitreForm">Slide 13 - Paragraphe, son, légende</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_13.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-1" maxlength="700" placeholder="700 caractères max."></textarea>
+                        <input type="file" name="slide13-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-3"></textarea>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="soustitreForm">Slide 14 - Son et légende, son et légende</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_14.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <input type="file" name="slide14-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                        <textarea type="text" class="form-control m-1" rows="1"
+                            name="slide14-2"></textarea>
+                        <input  type="file" name="slide14-3" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
+                        <textarea type="text" class="form-control m-1" rows="1"
+                            name="slide14-4"></textarea>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <hr>
+
+        <details>
+            <summary>Slides vidéos</summary>
+            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta"><span class="comment">Comment importer une vidéo ?</span><br>
+                <br>- Si l'hébergeur est <span class="type">Youtube</span>, veuillez copier le lien direct de la vidéo <br> <span class="typePubli">(Exemple : https://www.youtube.com/watch?v=1eXOOotL5pk)</span>
+                <br>- Si l'hébergeur est <span class="type">Dailymotion</span>, veuillez copier le lien direct de la vidéo <br><span class="typePubli">(Exemple : https://www.dailymotion.com/video/x7wt1qq)</span>
+                <br>- Si l'hébergeur est <span class="type">Canal U</span>, veuillez copier le lien embed de la vidéo <br><span class="typePubli">(Exemple : https://www.canal-u.tv/embed/116919?t=0)</span>
+            </div>
+            <div class="form-group pb-sm-2" id="groupeVideos">
+                <div class="soustitreForm">Slide 15 - Vidéo plein écran</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_15.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="slide15-1" class="form-control m-1" placeholder="Lien de la vidéo"/>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="soustitreForm">Slide 16 - Vidéo et légende, paragraphe</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_16.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="slide16-1" class="form-control m-1" placeholder="Lien de la vidéo"/>
+                        <textarea type="text" class="form-control m-1" rows="1"
+                            name="slide16-2"></textarea>
+                        <textarea type="text" class="form-control m-1" rows="1"
+                            name="slide16-3" maxlength="700" placeholder="700 caractères max."></textarea>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="soustitreForm">Slide 17 - Paragraphe et vidéo</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_17.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" rows="1"
+                            name="slide17-1" maxlength="700" placeholder="700 caractères max."></textarea>
+                        <input type="text" name="slide17-2" class="form-control m-1" placeholder="Lien de la vidéo"/>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <hr>
+        <details>
+            <summary>Slides de fin</summary>
+            <div class="form-group pb-sm-2" id="groupeFin">
+                <div class="soustitreForm">Slide 18 - Bibliographie</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_18.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" name="slide18-1" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            ></textarea>
+                        <textarea type="text"  name="slide18-2"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                           ></textarea>
+                        <textarea type="text" name="slide18-3"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            ></textarea>
+                        <textarea type="text" name="slide18-4"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            ></textarea>
+                        <textarea type="text" name="slide18-5"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            ></textarea>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="soustitreForm">Slide 19 - Bibliographie</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_19.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide19-1"></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide19-2"></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide19-3"></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide19-4"></textarea>
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide19-5"></textarea>
+                    </div>
+                </div>
+        </details>
+        <input type=submit name="CreerGuide" class="boutonForm boutonValider mt-5" value="Créer le mini guide">
+</div>
+</form>
+
+</div>
+
+<?php
+
+if (isset($_POST['CreerGuide'])) {
+    //Titre du guide
+    $slide = "<style>html[lang] {
+            margin-top: 0 !important;
+          }
+          </style>";
+    $ng_guide_nom = $_POST['nomGuide'];
+    $enleveaccent_array = array('Š' => 'S', 'š' => 's', 'Ž' => 'Z', 'ž' => 'z', 'À' => 'A', 'Á' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'A', 'Ç' => 'C', 'È' => 'E', 'É' => 'E',
+        'Ê' => 'E', 'Ë' => 'E', 'Ì' => 'I', 'Í' => 'I', 'Î' => 'I', 'Ï' => 'I', 'Ñ' => 'N', 'Ò' => 'O', 'Ó' => 'O', 'Ô' => 'O', 'Õ' => 'O', 'Ö' => 'O', 'Ø' => 'O', 'Ù' => 'U',
+        'Ú' => 'U', 'Û' => 'U', 'Ü' => 'U', 'Ý' => 'Y', 'Þ' => 'B', 'ß' => 'Ss', 'à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'å' => 'a', 'æ' => 'a', 'ç' => 'c',
+        'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i', 'ð' => 'o', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o',
+        'ö' => 'o', 'ø' => 'o', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ý' => 'y', 'þ' => 'b', 'ÿ' => 'y');
+
+    $ng_guide_nom = strtr($ng_guide_nom, $enleveaccent_array);
+    $ng_guide_nom = str_replace('\'', '', trim($ng_guide_nom));
+    $ng_guide_nom = preg_replace('/[^A-Za-z0-9-]/', '', $ng_guide_nom);
+    $ng_guide_nom = preg_replace('/-+/', '-', $ng_guide_nom);
+    $ng_guide_nom = substr($ng_guide_nom, 0, 20);
+
+    // Creation du tag pour lier les articles
+
+    wp_create_term($ng_guide_nom);
+
+    // Slide 1
+    if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
+        $texte1 = $_POST['slide1-1'];
+        $texte2 = $_POST['slide1-2'];
+        $texte3 = $_POST['slide1-3'];
+        
+        $slide = apply_filters('ng_creer_slide1', $ng_guide_nom, $texte1, $texte2, $texte3, $slide);
+    }
+
+    // Slide 2
+    if ($_POST['slide2-1'] !== ''&$_POST['slide2-2'] !== ''&$_POST['slide2-3'] !== ''&$_POST['slide2-4'] !== ''&$_POST['slide2-5'] !== '') {
+        $texte1 = $_POST['slide2-1'];
+        $texte2 = $_POST['slide2-2'];
+        $texte3 = $_POST['slide2-3'];
+        $texte4 = $_POST['slide2-4'];
+        $texte5 = $_POST['slide2-5'];
+        
+        $slide = apply_filters('ng_creer_slide2', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
+    }
+
+    //Slide 3
+    if ($_POST['slide3-1'] !== '') {
+        $texte1 = $_POST['slide3-1'];
+        
+        $slide = apply_filters('ng_creer_slide3', $ng_guide_nom, $texte1, $slide);
+    }
+
+    //Slide 4
+    if ($_POST['slide4-1'] !== '') {
+        $texte1 = $_POST['slide4-1'];
+        
+        $slide = apply_filters('ng_creer_slide4', $ng_guide_nom, $texte1, $slide);
+    }
+
+    //Slide 5
+    if ($_POST['slide5-1'] !== '') {
+        $texte1 = $_POST['slide5-1'];
+        
+        $slide = apply_filters('ng_creer_slide5', $ng_guide_nom, $texte1, $slide);
+    }
+
+    //Slide 6
+    if ($_POST['slide6-1'] !== '') {
+        $texte1 = $_POST['slide6-1'];
+        
+        $slide = apply_filters('ng_creer_slide6', $ng_guide_nom, $texte1, $slide);
+    }
+
+    //Slide 7
+    if ($_POST['slide7-1'] !== ''&$_POST['slide7-2'] !== '') {
+        $texte1 = $_POST['slide7-1'];
+        $texte2 = $_POST['slide7-2'];
+        
+        $slide = apply_filters('ng_creer_slide7', $ng_guide_nom, $texte1, $texte2, $slide);
+    }
+
+    //Slide 8
+    if ($_POST['slide8-1'] !== ''&$_POST['slide8-2'] !== '') {
+        $texte1 = $_POST['slide8-1'];
+        $texte2 = $_POST['slide8-2'];
+        
+        $slide = apply_filters('ng_creer_slide8', $ng_guide_nom, $texte1, $texte2, $slide);
+    }
+
+    // Slide 9
+    if ($_FILES['slide9-1']["name"] != "") {
+        $image1 = $_FILES['slide9-1'];
+        
+        $slide = apply_filters('ng_creer_slide9', $ng_guide_nom, $image1, $slide);
+    }
+
+    // Slide 10
+    if ($_FILES['slide10-1']["name"] != ""&$_POST['slide10-2'] !== '') {
+        $image1 = $_FILES['slide10-1'];
+        $texte1 = $_POST['slide10-2'];
+        
+        $slide = apply_filters('ng_creer_slide10', $ng_guide_nom, $image1, $texte1, $slide);
+    }
+
+    // Slide 11
+    if ($_FILES['slide11-1']["name"] != ""&$_POST['slide11-2'] !== '') {
+        $image1 = $_FILES['slide11-1'];
+        $texte1 = $_POST['slide11-2'];
+        
+        $slide = apply_filters('ng_creer_slide11', $ng_guide_nom, $image1, $texte1, $slide);
+    }
+
+    // Slide 12
+    if ($_FILES['slide12-1']["name"] != ""&$_POST['slide12-2'] !== '') {
+        $image1 = $_FILES['slide12-1'];
+        $texte1 = $_POST['slide12-2'];
+        
+        $slide = apply_filters('ng_creer_slide12', $ng_guide_nom, $image1, $texte1, $slide);
+    }
+
+    // Slide 13
+    if ($_FILES['slide13-2']["name"] != ""&$_POST['slide13-1'] !== ''&$_POST['slide13-3'] !== '') {
+        $texte1 = $_POST['slide13-1'];
+        $texte2 = $_POST['slide13-3'];
+        $son1 = $_FILES['slide13-2'];
+        
+        $slide = apply_filters('ng_creer_slide13', $ng_guide_nom, $texte1, $texte2, $son1, $slide);
+    }
+
+    // Slide 14
+    if ($_FILES['slide14-1']["name"] != ""&$_FILES['slide14-3']["name"] != ""&$_POST['slide14-2'] !== ''&$_POST['slide14-4'] !== '') {
+        $texte1 = $_POST['slide14-2'];
+        $texte2 = $_POST['slide14-4'];
+        $son1 = $_FILES['slide14-1'];
+        $son2 = $_FILES['slide14-3'];
+        
+        $slide = apply_filters('ng_creer_slide14', $ng_guide_nom, $texte1, $texte2, $son1, $son2, $slide);
+    }
+
+    // Slide 15
+    if ($_POST['slide15-1'] !== '') {
+        $video1 = $_POST['slide15-1'];
+        
+        $slide = apply_filters('ng_creer_slide15', $ng_guide_nom, $video1, $slide);
+    }
+
+    // Slide 16
+    if ($_POST['slide16-1'] !== ''&$_POST['slide16-2'] !== ''&$_POST['slide16-3'] !== '') {
+        $video1 = $_POST['slide16-1'];
+        $texte1 = $_POST['slide16-2'];
+        $texte2 = $_POST['slide16-3'];
+        
+        $slide = apply_filters('ng_creer_slide16', $ng_guide_nom, $video1, $texte1, $texte2, $slide);
+    }
+
+    // Slide 17
+    if ($_POST['slide17-1'] !== ''&$_POST['slide17-2'] !== '') {
+        $video1 = $_POST['slide17-2'];
+        $texte1 = $_POST['slide17-1'];
+        
+        $slide = apply_filters('ng_creer_slide17', $ng_guide_nom, $video1, $texte1, $slide);
+    }
+
+    // Slide 18
+    if ($_POST['slide18-1'] !== ''&$_POST['slide18-2'] !== ''&$_POST['slide18-3'] !== ''&$_POST['slide18-4'] !== ''&$_POST['slide18-5'] !== '') {
+        $texte1 = $_POST['slide18-1'];
+        $texte2 = $_POST['slide18-2'];
+        $texte3 = $_POST['slide18-3'];
+        $texte4 = $_POST['slide18-4'];
+        $texte5 = $_POST['slide18-5'];
+        
+        $slide = apply_filters('ng_creer_slide18', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
+    }
+
+    // Slide 19
+    if ($_POST['slide19-1'] !== ''&$_POST['slide19-2'] !== ''&$_POST['slide19-3'] !== ''&$_POST['slide19-4'] !== ''&$_POST['slide19-5'] !== '') {
+        $texte1 = $_POST['slide19-1'];
+        $texte2 = $_POST['slide19-2'];
+        $texte3 = $_POST['slide19-3'];
+        $texte4 = $_POST['slide19-4'];
+        $texte5 = $_POST['slide19-5'];
+        
+        $slide = apply_filters('ng_creer_slide19', $ng_guide_nom, $texte1, $texte2, $texte3, $texte4, $texte5, $slide);
+    }
+
+    if ($slide !== null) {
+        apply_filters('ng_creer_guide', $ng_guide_nom, $slide);
+    }
+}
+
