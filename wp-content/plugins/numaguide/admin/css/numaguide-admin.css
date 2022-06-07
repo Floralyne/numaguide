@@ -409,6 +409,8 @@ input[type="radio"]:checked+label {
 	padding-bottom: 2%;
 	padding-left: 3%;
 	padding-right: 3%;
+	height: 300px;
+	overflow: auto;
 }
 
 .NoumaAccueil {
@@ -455,4 +457,9 @@ textarea:invalid {
 .typePubli {
 	color: #959595;
 	font-size: 0.8rem;
+}
+
+#a-copier{
+	font-size:0.8rem;
+	height: 300px;
 }
