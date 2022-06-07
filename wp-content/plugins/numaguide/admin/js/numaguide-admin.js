@@ -113,7 +113,7 @@ function urlFonction() {
 		var charAChanger = " "
 		// Par quoi c'est remplacer
 		var replace = "";
-		var replace2 = "-"
+		var replace2 = ""
 		// Limite la taille pour l'url
 		str = str.substring(0,20);
 		// Remplace les accents par des lettres sans accent
