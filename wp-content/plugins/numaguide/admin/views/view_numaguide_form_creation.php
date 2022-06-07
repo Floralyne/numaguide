@@ -547,7 +547,7 @@ $d_projetanr = "";
 $d_projeteurop = "";
 $d_financement = "";
 
-    if(isset($_POST['genererMeta'])){
+    if(isset($_POST['GenererMeta'])){
         $d_titre = $_POST['nomGuide'];
         $d_auteur = $_POST['auteurGuide'];
         $d_url = $_POST['urlGuide'];
