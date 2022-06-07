@@ -16,12 +16,12 @@
         <div class="obligatoire">* champs obligatoires</div>
         <div class="form-group pb-sm">
             <label for="nom_guide">Titre du guide* :</label>
-            <input type="text" class="form-control" id="nomGuide" name="nomGuide" onChange="urlFonction()" maxlength="40">
+            <input type="text" class="form-control" id="nomGuide" name="nomGuide" onChange="urlFonction()" maxlength="40" value="<?php if (isset($_POST['GenererMeta'])) { echo $_POST['nomGuide']; }?>" >
         </div>
 
             <div class="form-group pb-sm">
                 <label for="auteur_guide">Auteur(e)(s) du guide* :</label>
-                <input type="auteur" class="form-control" id="auteurGuide" name="auteurGuide" required>
+                <input type="auteur" class="form-control" id="auteurGuide" name="auteurGuide" value="<?php if (isset($_POST['GenererMeta'])) { echo $_POST['auteurGuide']; }?>" required>
             </div>
 
             <hr>
@@ -561,125 +561,125 @@ $d_financement = "";
 
         if ($d_type != "") {
             if ($d_type == "") { $d_type_texte = " "; }
-            if ($d_type == "ART") { $d_type_texte = "Article"; }
-            if ($d_type == "COMM") { $d_type_texte = "Communication de congrès"; }
-            if ($d_type == "POSTER") { $d_type_texte = "Poster"; }
-            if ($d_type == "OTHER") { $d_type_texte = "Autre publication"; }
-            if ($d_type == "UNDEFINED") { $d_type_texte = "Pré-publication Document de travail"; }
-            if ($d_type == "REPORT") { $d_type_texte = "Rapport"; }
+            elseif ($d_type == "ART") { $d_type_texte = "Article"; }
+            elseif ($d_type == "COMM") { $d_type_texte = "Communication de congrès"; }
+            elseif ($d_type == "POSTER") { $d_type_texte = "Poster"; }
+            elseif ($d_type == "OTHER") { $d_type_texte = "Autre publication"; }
+            elseif ($d_type == "UNDEFINED") { $d_type_texte = "Pré-publication Document de travail"; }
+            elseif ($d_type == "REPORT") { $d_type_texte = "Rapport"; }
             
         }
 
         if ($d_domaine != "") {
             if ($d_domaine == "shs") { $d_domaine_texte = "--- Sciences de l'Homme et Société ---"; }
-            if ($d_domaine == "shs.anthro-bio") { $d_domaine_texte = "Athropologie biologique"; }
-            if ($d_domaine == "shs.anthro-se") { $d_domaine_texte = "Anthropologie sociale et ethnologie"; }
-            if ($d_domaine == "shs.archeo") { $d_domaine_texte = "Archéologie et Préhistoire"; }
-            if ($d_domaine == "shs.archi") { $d_domaine_texte = "Architecture, aménagement de l'espace"; }
-            if ($d_domaine == "shs.art") { $d_domaine_texte = "Art et histoire de l'art"; }
-            if ($d_domaine == "shs.class") { $d_domaine_texte = "Études classiques"; }
-            if ($d_domaine == "shs.demo") { $d_domaine_texte = "Démographie"; }
-            if ($d_domaine == "shs.droit") { $d_domaine_texte = "Droit"; }
-            if ($d_domaine == "shs.eco") { $d_domaine_texte = "Économies et finances"; }
-            if ($d_domaine == "shs.edu") { $d_domaine_texte = "Éducation"; }
-            if ($d_domaine == "shs.envir") { $d_domaine_texte = "Études de l'environnement"; }
-            if ($d_domaine == "shs.genre") { $d_domaine_texte = "Études sur le genre"; }
-            if ($d_domaine == "shs.geo") { $d_domaine_texte = "Géographie"; }
-            if ($d_domaine == "shs.gestion") {$d_domaine_texte = "Gestion et management"; }
-            if ($d_domaine == "shs.hisphilso") { $d_domaine_texte = "Histoire, Philosophie et Scociologie des sciences"; }
-            if ($d_domaine == "shs.hist") { $d_domaine_texte = "Histoire"; }
-            if ($d_domaine == "shs.info") { $d_domaine_texte = "Sciences de l'information et de la communication"; }
-            if ($d_domaine == "shs.langue") { $d_domaine_texte = "Linguistique"; }
-            if ($d_domaine == "shs.litt") { $d_domaine_texte = "Littératures"; }
-            if ($d_domaine == "shs.museo") { $d_domaine_texte = "Héritage culturel et muséologie"; }
-            if ($d_domaine == "shs.musiq") { $d_domaine_texte = "Musique, musicologie et arts de la scène"; }
-            if ($d_domaine == "shs.phil") { $d_domaine_texte = "Philosophie"; }
-            if ($d_domaine == "shs.psy") { $d_domaine_texte = "Psychologie"; }
-            if ($d_domaine == "shs.relig") { $d_domaine_texte = "Religions"; }
-            if ($d_domaine == "shs.scipo") { $d_domaine_texte = "Science politique"; }
-            if ($d_domaine == "shs.socio") { $d_domaine_texte = "Sociologie"; }
-            if ($d_domaine == "shs.stat") { $d_domaine_texte = "Méthodes et statistiques"; }
+            elseif ($d_domaine == "shs.anthro-bio") { $d_domaine_texte = "Athropologie biologique"; }
+            elseif ($d_domaine == "shs.anthro-se") { $d_domaine_texte = "Anthropologie sociale et ethnologie"; }
+            elseif ($d_domaine == "shs.archeo") { $d_domaine_texte = "Archéologie et Préhistoire"; }
+            elseif ($d_domaine == "shs.archi") { $d_domaine_texte = "Architecture, aménagement de l'espace"; }
+            elseif ($d_domaine == "shs.art") { $d_domaine_texte = "Art et histoire de l'art"; }
+            elseif ($d_domaine == "shs.class") { $d_domaine_texte = "Études classiques"; }
+            elseif ($d_domaine == "shs.demo") { $d_domaine_texte = "Démographie"; }
+            elseif ($d_domaine == "shs.droit") { $d_domaine_texte = "Droit"; }
+            elseif ($d_domaine == "shs.eco") { $d_domaine_texte = "Économies et finances"; }
+            elseif ($d_domaine == "shs.edu") { $d_domaine_texte = "Éducation"; }
+            elseif ($d_domaine == "shs.envir") { $d_domaine_texte = "Études de l'environnement"; }
+            elseif ($d_domaine == "shs.genre") { $d_domaine_texte = "Études sur le genre"; }
+            elseif ($d_domaine == "shs.geo") { $d_domaine_texte = "Géographie"; }
+            elseif ($d_domaine == "shs.gestion") {$d_domaine_texte = "Gestion et management"; }
+            elseif ($d_domaine == "shs.hisphilso") { $d_domaine_texte = "Histoire, Philosophie et Scociologie des sciences"; }
+            elseif ($d_domaine == "shs.hist") { $d_domaine_texte = "Histoire"; }
+            elseif ($d_domaine == "shs.info") { $d_domaine_texte = "Sciences de l'information et de la communication"; }
+            elseif ($d_domaine == "shs.langue") { $d_domaine_texte = "Linguistique"; }
+            elseif ($d_domaine == "shs.litt") { $d_domaine_texte = "Littératures"; }
+            elseif ($d_domaine == "shs.museo") { $d_domaine_texte = "Héritage culturel et muséologie"; }
+            elseif ($d_domaine == "shs.musiq") { $d_domaine_texte = "Musique, musicologie et arts de la scène"; }
+            elseif ($d_domaine == "shs.phil") { $d_domaine_texte = "Philosophie"; }
+            elseif ($d_domaine == "shs.psy") { $d_domaine_texte = "Psychologie"; }
+            elseif ($d_domaine == "shs.relig") { $d_domaine_texte = "Religions"; }
+            elseif ($d_domaine == "shs.scipo") { $d_domaine_texte = "Science politique"; }
+            elseif ($d_domaine == "shs.socio") { $d_domaine_texte = "Sociologie"; }
+            elseif ($d_domaine == "shs.stat") { $d_domaine_texte = "Méthodes et statistiques"; }
             
         }
 
         if ($d_langue != "") {
             if ($d_langue == "fr") { $d_langue_texte = "Français"; }
-            if ($d_langue == "en") { $d_langue_texte = "Anglais"; }
-            if ($d_langue == "it") { $d_langue_texte = "Italien"; }
-            if ($d_langue == "es") { $d_langue_texte = "Espagnol"; }
-            if ($d_langue == "de") { $d_langue_texte = "Allemand"; }
+            elseif ($d_langue == "en") { $d_langue_texte = "Anglais"; }
+            elseif ($d_langue == "it") { $d_langue_texte = "Italien"; }
+            elseif ($d_langue == "es") { $d_langue_texte = "Espagnol"; }
+            elseif ($d_langue == "de") { $d_langue_texte = "Allemand"; }
         }
         if ($d_pays != "") {
             if ($d_pays == "de") { $d_pays_texte = "Allemagne"; }
-            if ($d_pays == "be") { $d_pays_texte = "Belgique"; }
-            if ($d_pays == "ca") { $d_pays_texte = "Canada"; }
-            if ($d_pays == "es") { $d_pays_texte = "Espagne"; }
-            if ($d_pays == "us") { $d_pays_texte = "États Unis"; }
-            if ($d_pays == "fr") { $d_pays_texte = "France"; }
-            if ($d_pays == "ie") { $d_pays_texte = "Irelande"; }
-            if ($d_pays == "it") { $d_pays_texte = "Italie"; }
-            if ($d_pays == "gb") { $d_pays_texte = "Royaume-Uni"; }
+            elseif ($d_pays == "be") { $d_pays_texte = "Belgique"; }
+            elseif ($d_pays == "ca") { $d_pays_texte = "Canada"; }
+            elseif ($d_pays == "es") { $d_pays_texte = "Espagne"; }
+            elseif ($d_pays == "us") { $d_pays_texte = "États Unis"; }
+            elseif ($d_pays == "fr") { $d_pays_texte = "France"; }
+            elseif ($d_pays == "ie") { $d_pays_texte = "Irelande"; }
+            elseif ($d_pays == "it") { $d_pays_texte = "Italie"; }
+            elseif ($d_pays == "gb") { $d_pays_texte = "Royaume-Uni"; }
         }
 
         if ($d_typerapport != "") {
             if ($d_typerapport == "") { $d_typerapport_texte = " "; }
-            if ($d_typerapport == "6") { $d_typerapport_texte = "Rapport de recherche"; }
-            if ($d_typerapport == "4") { $d_typerapport_texte = "Rapport Technique"; }
-            if ($d_typerapport == "2") { $d_typerapport_texte = "Contrat"; }
-            if ($d_typerapport == "3") { $d_typerapport_texte = "Interne"; }
-            if ($d_typerapport == "0") { $d_typerapport_texte = "Autre"; }
+            elseif ($d_typerapport == "6") { $d_typerapport_texte = "Rapport de recherche"; }
+            elseif ($d_typerapport == "4") { $d_typerapport_texte = "Rapport Technique"; }
+            elseif ($d_typerapport == "2") { $d_typerapport_texte = "Contrat"; }
+            elseif ($d_typerapport == "3") { $d_typerapport_texte = "Interne"; }
+            elseif ($d_typerapport == "0") { $d_typerapport_texte = "Autre"; }
         }
 
         if ($d_licence != "") {
             if ($d_licence == "") { $d_licence_texte = " "; }
-            if ($d_licence == "http://creativecommons.org/licenses/by/") { $d_licence_texte = "CC BY - Paternité"; }
-            if ($d_licence == "http://creativecommons.org/licenses/by-nc/") { $d_licence_texte = "CC BY NC - Paternité - Pas d'utilisation commerciale"; }
-            if ($d_licence == "http://creativecommons.org/licenses/by-nd/") { $d_licence_texte = "CC BY ND - Paternité - Pas de modifications"; }
-            if ($d_licence == "http://creativecommons.org/licenses/by-sa/") { $d_licence_texte = "CC BY SA - Paternité - Partage selon les Conditions Initiales"; }
-            if ($d_licence == "http://creativecommons.org/licenses/by-nc-nd/") { $d_licence_texte = "CC BY NC ND - Paternité - Pas d'utilisation commerciale - Pas de modification"; }
-            if ($d_licence == "http://creativecommons.org/licenses/by-nc-sa/") { $d_licence_texte = "CC BY NC SA - Paternité - Pas d'utilisation commerciale - Partage selon les Conditions Initiales"; }
-            if ($d_licence == "http://creativecommons.org/choose/mark/") { $d_licence_texte = "NC - Marque du Domaine Public"; }
-            if ($d_licence == "http://creativecommons.org/publicdomain/zero/1.0/") { $d_licence_texte = "CC0 - Transfert dans le Domaine Public"; }
-            if ($d_licence == "http://hal.archives-ouvertes.fr/licences/etalab/") { $d_licence_texte = "ETALAB - Licence Ouverte"; }
-            if ($d_licence == "http://hal.archives-ouvertes.fr/licences/copyright/") { $d_licence_texte = "Copyright (Tous droits réservés)"; }
-            if ($d_licence == "http://hal.archives-ouvertes.fr/licences/publicDomain/") { $d_licence_texte = "Domaine public"; }
+            elseif ($d_licence == "http://creativecommons.org/licenses/by/") { $d_licence_texte = "CC BY - Paternité"; }
+            elseif ($d_licence == "http://creativecommons.org/licenses/by-nc/") { $d_licence_texte = "CC BY NC - Paternité - Pas d'utilisation commerciale"; }
+            elseif ($d_licence == "http://creativecommons.org/licenses/by-nd/") { $d_licence_texte = "CC BY ND - Paternité - Pas de modifications"; }
+            elseif ($d_licence == "http://creativecommons.org/licenses/by-sa/") { $d_licence_texte = "CC BY SA - Paternité - Partage selon les Conditions Initiales"; }
+            elseif ($d_licence == "http://creativecommons.org/licenses/by-nc-nd/") { $d_licence_texte = "CC BY NC ND - Paternité - Pas d'utilisation commerciale - Pas de modification"; }
+            elseif ($d_licence == "http://creativecommons.org/licenses/by-nc-sa/") { $d_licence_texte = "CC BY NC SA - Paternité - Pas d'utilisation commerciale - Partage selon les Conditions Initiales"; }
+            elseif ($d_licence == "http://creativecommons.org/choose/mark/") { $d_licence_texte = "NC - Marque du Domaine Public"; }
+            elseif ($d_licence == "http://creativecommons.org/publicdomain/zero/1.0/") { $d_licence_texte = "CC0 - Transfert dans le Domaine Public"; }
+            elseif ($d_licence == "http://hal.archives-ouvertes.fr/licences/etalab/") { $d_licence_texte = "ETALAB - Licence Ouverte"; }
+            elseif ($d_licence == "http://hal.archives-ouvertes.fr/licences/copyright/") { $d_licence_texte = "Copyright (Tous droits réservés)"; }
+            elseif ($d_licence == "http://hal.archives-ouvertes.fr/licences/publicDomain/") { $d_licence_texte = "Domaine public"; }
         }
 
         if ($d_vulgarisation != "") {
             if ($d_vulgarisation == "") { $d_vulgarisation_texte = " "; }
-            if ($d_vulgarisation == "0") { $d_vulgarisation_texte = "No"; }
-            if ($d_vulgarisation == "1") { $d_vulgarisation_texte = "Yes"; }
+            elseif ($d_vulgarisation == "0") { $d_vulgarisation_texte = "No"; }
+            elseif ($d_vulgarisation == "1") { $d_vulgarisation_texte = "Yes"; }
         }
 
         if ($d_comitedelecture != "") {
             if ($d_comitedelecture == "") { $d_comitedelecture_texte = " "; }
-            if ($d_comitedelecture == "0") { $d_comitedelecture_texte = "No"; }
-            if ($d_comitedelecture == "1") { $d_comitedelecture_texte = "Yes"; }
+            elseif ($d_comitedelecture == "0") { $d_comitedelecture_texte = "No"; }
+            elseif ($d_comitedelecture == "1") { $d_comitedelecture_texte = "Yes"; }
         }
         
         if ($d_invite != "") {
             if ($d_invite == "") { $d_invite_texte = " "; }
-            if ($d_invite == "0") { $d_invite_texte = "No"; }
-            if ($d_invite == "1") { $d_invite_texte = "Yes"; }
+            elseif ($d_invite == "0") { $d_invite_texte = "No"; }
+            elseif ($d_invite == "1") { $d_invite_texte = "Yes"; }
         }
 
         if ($d_audience != "") {
             if ($d_audience == "") { $d_audience_texte = " "; }
-            if ($d_audience == "2") { $d_audience_texte = "Internationale"; }
-            if ($d_audience == "3") { $d_audience_texte = "Nationale"; }
-            if ($d_audience == "1") { $d_audience_texte = "Non spécifiée"; }
+            elseif ($d_audience == "2") { $d_audience_texte = "Internationale"; }
+            elseif ($d_audience == "3") { $d_audience_texte = "Nationale"; }
+            elseif ($d_audience == "1") { $d_audience_texte = "Non spécifiée"; }
         }
 
         if ($d_actes != "") {
             if ($d_actes == "") { $d_actes_texte = " "; }
-            if ($d_actes == "0") { $d_actes_texte = "No"; }
-            if ($d_actes == "1") { $d_actes_texte = "Yes"; }
+            elseif ($d_actes == "0") { $d_actes_texte = "No"; }
+            elseif ($d_actes == "1") { $d_actes_texte = "Yes"; }
         }
 
         if ($d_aparaitre != "") {
             if ($d_aparaitre == "") { $d_aparaitre_texte = " "; }
-            if ($d_aparaitre == "0") { $d_aparaitre_texte = "No"; }
-            if ($d_aparaitre == "1") { $d_aparaitre_texte = "Yes"; }
+            elseif ($d_aparaitre == "0") { $d_aparaitre_texte = "No"; }
+            elseif ($d_aparaitre == "1") { $d_aparaitre_texte = "Yes"; }
         }
 
 
