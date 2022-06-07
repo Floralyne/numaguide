@@ -619,7 +619,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide3-1"></textarea>
+                            name="slide3-1" maxlength="700" placeholder="700 caractères max."></textarea>
                     </div>
                 </div>
                 <hr>
@@ -633,7 +633,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide4-1"></textarea>
+                            name="slide4-1" maxlength="700" placeholder="700 caractères max."></textarea>
                     </div>
                 </div>
                 <hr>
@@ -647,7 +647,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide5-1"></textarea>
+                            name="slide5-1" maxlength="700" placeholder="700 caractères max."></textarea>
                     </div>
                 </div>
             </div>
@@ -666,7 +666,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide6-1"></textarea>
+                            name="slide6-1" maxlength="2000" placeholder="2000 caractères max."></textarea>
                     </div>
                 </div>
 
@@ -681,9 +681,9 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide7-1"></textarea>
+                            name="slide7-1" maxlength="1100" placeholder="1100 caractères max."></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide7-2"></textarea>
+                            name="slide7-2" maxlength="1100" placeholder="1100 caractères max."></textarea>
                     </div>
                 </div>
                 <hr>
@@ -698,9 +698,9 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide8-1"></textarea>
+                            name="slide8-1" maxlength="1100" placeholder="1100 caractères max."></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide8-2"></textarea>
+                            name="slide8-2" maxlength="1100" placeholder="1100 caractères max."></textarea>
 
                     </div>
                 </div>
@@ -734,7 +734,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide10-2"></textarea>
+                            name="slide10-2" maxlength="700" placeholder="700 caractères max."></textarea>
                         <input type="file" name="slide10-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" />
                     </div>
                 </div>
@@ -751,7 +751,7 @@
                     <div class="col">
                         <input type="file" name="slide11-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
                         <textarea type="text"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide11-2"></textarea>
+                            name="slide11-2" maxlength="700" placeholder="700 caractères max."></textarea>
                     </div>
                 </div>
 
@@ -766,7 +766,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide12-2"></textarea>
+                            name="slide12-2" maxlength="700" placeholder="700 caractères max."></textarea>
                         <input type="file" name="slide12-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
                     </div>
                 </div>
@@ -786,7 +786,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-1"></textarea>
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide13-1" maxlength="700" placeholder="700 caractères max."></textarea>
                         <input type="file" name="slide13-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
                         <textarea type="text" class="form-control m-1" rows="1" name="slide13-3"></textarea>
                     </div>
@@ -849,7 +849,7 @@
                         <textarea type="text" class="form-control m-1" rows="1"
                             name="slide16-2"></textarea>
                         <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide16-3"></textarea>
+                            name="slide16-3" maxlength="700" placeholder="700 caractères max."></textarea>
                     </div>
                 </div>
 
@@ -864,7 +864,7 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide17-1"></textarea>
+                            name="slide17-1" maxlength="700" placeholder="700 caractères max."></textarea>
                         <input type="text" name="slide17-2" class="form-control m-1" placeholder="Lien de la vidéo"/>
                     </div>
                 </div>
