@@ -5,13 +5,14 @@
 </style>
 
 <div class="container" id="formCrea">
-<div class="titreForm">Liste des guides</div>
+    <div class="titreForm">Liste des guides</div>
     <hr>
     <nav class="navbar">
 
         <form class="form">
             <div class="row">
-                <div class="col"> <input class="" type="search" placeholder="Rechercher un guide" aria-label="Search" disabled>
+                <div class="col"> <input class="" type="search" placeholder="Rechercher un guide" aria-label="Search"
+                        disabled>
                 </div>
                 <div class="col"> <button class="boutonForm boutonAction" type="submit" disabled>Search</button>
                 </div>
@@ -28,477 +29,487 @@
     <div class="soustitreForm">Métadonnnées</div>
     <hr>
 
-    <form name="form" action="" method="post" enctype="multipart/form-data" >
+    <form name="form" action="" method="post" enctype="multipart/form-data">
         <div class="obligatoire">* champs obligatoires</div>
         <div class="form-group pb-sm">
             <label for="nom_guide">Titre du guide* :</label>
             <input type="text" class="form-control" id="nomGuide" name="nomGuide" maxlength="40" disabled>
         </div>
 
-            <div class="form-group pb-sm">
-                <label for="auteur_guide">Auteur(e)(s) du guide* :</label>
-                <input type="auteur" class="form-control" name="auteurGuide" disabled>
-            </div>
+        <div class="form-group pb-sm">
+            <label for="auteur_guide">Auteur(e)(s) du guide* :</label>
+            <input type="auteur" class="form-control" name="auteurGuide" disabled>
+        </div>
 
-            <hr>
+        <hr>
 
-            <div class="form-group pb-sm">
-                <label for="auteur_guide">Lien du guide :</label>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            http://numaguide.msh-vdl.fr/
-                        </div>
+        <div class="form-group pb-sm">
+            <label for="auteur_guide">Lien du guide :</label>
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        http://numaguide.msh-vdl.fr/
                     </div>
-                    <input class="form-control" type="text" pattern="/\W|_/g" maxlength="20" id="urlGuide"
-                        placeholder="Adresse du guide" disabled>
                 </div>
+                <input class="form-control" type="text" pattern="/\W|_/g" maxlength="20" id="urlGuide"
+                    placeholder="Adresse du guide" disabled>
             </div>
+        </div>
         <hr>
 
         <details>
             <summary>Métadonnées facultatives</summary>
-            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, un chiffre est associé aux métadonnées nécessaires à un dépôt sur HAL. Les métadonnées obligatoires communes à tous types de publications. Les métadonnées nécessaires à la publication d'<span class="type">articles</span> sont marqués d'un <span class="typeArticle">(1)</span>, celles pour les <span class="type">communications</span> d'un <span class="typeCommu">(2)</span>, pour les <span class="type">pré-publications</span> d'un <span class="typePrePub">(3)</span>, pour les <span class="type">rapports</span> d'un <span class="typeRapport">(4)</span>.</div>
+            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta">Pour chaque type de publication, des métadonnées
+                nécessaires à un dépôt sur HAL sont associées. Ces métadonnées seront ensuite associées aux balises xml
+                correspondantes, puis générées, prêtes à être copiées et utilisées.</div>
             <div class="form-group pb-sm-2">
-            <div class="mb-2" id="metaObli">Les métadonnées suivantes sont obligatoires pour <span class="type">tout type de publication</span> sur HAL :</div>    
+                <div class="mb-2" id="metaObli">Les métadonnées suivantes sont obligatoires pour <span class="type">tout
+                        type de publication</span> sur HAL :</div>
                 <label for="type">Type :</label>
-                <select class="form-control" id="type">
+                <select class="form-control" name="type" disabled>
                     <option value="" selected="selected"></option>
-                    <option value="ART" >Article</option>
-                    <option value="COMM" >Communication de congrès</option>
-                    <option value="POSTER" >Communication</option>
-                    <option value="OTHER" >Autre publication</option>
+                    <option value="ART">Article</option>
+                    <option value="COMM">Communication de congrès</option>
+                    <option value="POSTER">Communication</option>
+                    <option value="OTHER">Autre publication</option>
                     <option value="UNDEFINED">Pré-publication Document de travail</option>
                     <option value="REPORT">Rapport</option>
                 </select>
                 <small class="text-muted">
-                Le type correspond au type de publication sur HAL.
+                    Le type correspond au type de publication sur HAL.
                 </small>
             </div>
 
-                <div class="form-group">
-                    <label for="domain">Domaine :</label>
-                    <select class="form-control" id="domain">
-                        <option value="shs">--- Sciences de l'Homme et Société ---</option>
-                        <option value="shs.anthro-bio">Athropologie biologique</option>
-                        <option value="shs.anthro-se">Anthropologie sociale et ethnologie</option>
-                        <option value="shs.archeo">Archéologie et Préhistoire</option>
-                        <option value="shs.archi">Architecture, aménagement de l'espace</option>
-                        <option value="shs.art">Art et histoire de l'art</option>
-                        <option value="shs.class">Études classiques</option>
-                        <option value="shs.demo">Démographie</option>
-                        <option value="shs.droit">Droit</option>
-                        <option value="shs.eco">Économies et finances</option>
-                        <option value="shs.edu">Éducation</option>
-                        <option value="shs.envir">Études de l'environnement</option>
-                        <option value="shs.genre">Études sur le genre</option>
-                        <option value="shs.geo">Géographie</option>
-                        <option value="shs.gestion">Gestion et management</option>
-                        <option value="shs.hisphilso">Histoire, Philosophie et Scociologie des sciences</option>
-                        <option value="shs.hist">Histoire</option>
-                        <option value="shs.info">Sciences de l'information et de la communication</option>
-                        <option value="shs.langue">Linguistique</option>
-                        <option value="shs.litt">Littératures</option>
-                        <option value="shs.museo">Héritage culturel et muséologie</option>
-                        <option value="shs.musiq">Musique, musicologie et arts de la scène</option>
-                        <option value="shs.phil">Philosophie</option>
-                        <option value="shs.psy">Psychologie</option>
-                        <option value="shs.relig">Religions</option>
-                        <option value="shs.scipo">Science politique</option>
-                        <option value="shs.socio">Sociologie</option>
-                        <option value="shs.stat">Méthodes et statsitiques</option>
-                    </select>
-                    <small class="text-muted">
+            <div class="form-group">
+                <label for="domaine">Domaine :</label>
+                <select class="form-control" name="domaine" disabled>
+                    <option value="shs">--- Sciences de l'Homme et Société ---</option>
+                    <option value="shs.anthro-bio">Athropologie biologique</option>
+                    <option value="shs.anthro-se">Anthropologie sociale et ethnologie</option>
+                    <option value="shs.archeo">Archéologie et Préhistoire</option>
+                    <option value="shs.archi">Architecture, aménagement de l'espace</option>
+                    <option value="shs.art">Art et histoire de l'art</option>
+                    <option value="shs.class">Études classiques</option>
+                    <option value="shs.demo">Démographie</option>
+                    <option value="shs.droit">Droit</option>
+                    <option value="shs.eco">Économies et finances</option>
+                    <option value="shs.edu">Éducation</option>
+                    <option value="shs.envir">Études de l'environnement</option>
+                    <option value="shs.genre">Études sur le genre</option>
+                    <option value="shs.geo">Géographie</option>
+                    <option value="shs.gestion">Gestion et management</option>
+                    <option value="shs.hisphilso">Histoire, Philosophie et Scociologie des sciences</option>
+                    <option value="shs.hist">Histoire</option>
+                    <option value="shs.info">Sciences de l'information et de la communication</option>
+                    <option value="shs.langue">Linguistique</option>
+                    <option value="shs.litt">Littératures</option>
+                    <option value="shs.museo">Héritage culturel et muséologie</option>
+                    <option value="shs.musiq">Musique, musicologie et arts de la scène</option>
+                    <option value="shs.phil">Philosophie</option>
+                    <option value="shs.psy">Psychologie</option>
+                    <option value="shs.relig">Religions</option>
+                    <option value="shs.scipo">Science politique</option>
+                    <option value="shs.socio">Sociologie</option>
+                    <option value="shs.stat">Méthodes et statsitiques</option>
+                </select>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="language">Langue du document :</label>
-                    <select class="form-control" id="language">
-                        <option value="FR">Français</option>
-                        <option value="EN">Anglais</option>
-                        <option value="IT">Italien</option>
-                        <option value="ES">Espagnol</option>
-                        <option value="DE">Allemand</option>
-                    </select>
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="langage">Langue du document :</label>
+                <select class="form-control" name="langage" disabled>
+                    <option value="fr">Français</option>
+                    <option value="en">Anglais</option>
+                    <option value="it">Italien</option>
+                    <option value="es">Espagnol</option>
+                    <option value="de">Allemand</option>
+                </select>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                        <label for="authorityInstitution">Institution :</label>
-                        <input type="text" class="form-control" name="authorityInstitution">
-                        <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="institution">Institution :</label>
+                <input type="text" class="form-control" name="institution" disabled>
+                <small class="text-muted">
                 </small>
-                    </div>
+            </div>
 
-                    <div class="form-group pb-sm-2">
-                    <label for="DatedePublication">Date de publication:</label>
-                    <input type="date" class="form-control" name="DatedePublication" min="1970-01-01" max="2030-12-31">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="DatedePublication">Date de publication:</label>
+                <input type="date" class="form-control" name="DatedePublication" min="1970-01-01" max="2030-12-31" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
-<hr>
-<div class="mb-3" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour un <span class="type">article</span> sur HAL :</div>    
-            
-                <div class="form-group pb-sm-2">
-                    <label for="Nomdelarevue">Nom de la revue :</label>
-                    <input type="text" class="form-control" name="Nomdelarevue">
-                    <small class="text-muted">
+            </div>
+            <hr>
+            <div class="mb-3" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour un <span
+                    class="type">article</span> sur HAL :</div>
+
+            <div class="form-group pb-sm-2">
+                <label for="Nomdelarevue">Nom de la revue :</label>
+                <input type="text" class="form-control" name="Nomdelarevue" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
-<hr>
-<div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour une <span class="type">communication</span> et une <span class="type">communication de congrès</span> sur HAL :</div>    
+            </div>
+            <hr>
+            <div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires
+                pour une <span class="type">communication</span> et une <span class="type">communication de
+                    congrès</span> sur HAL :</div>
 
-                <div class="form-group pb-sm-2">
-                        <label for="TitreduCongres">Titre du congrès :</label>
-                        <input type="text" class="form-control" name="TitreduCongres">
-                        <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="TitreduCongres">Titre du congrès :</label>
+                <input type="text" class="form-control" name="TitreduCongres" disabled>
+                <small class="text-muted">
                 </small>
-                    </div>
+            </div>
 
-                    <div class="form-group pb-sm-2">
-                        <label for="Datedebutducongres">Date de début du congrès :</label>
-                        <input type="date" class="form-control" name="Datedebutducongres" min="1970-01-01" max="2030-12-31">
-                        <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="Datedebutducongres">Date de début du congrès :</label>
+                <input type="date" class="form-control" name="Datedebutducongres" min="1970-01-01" max="2030-12-31" disabled>
+                <small class="text-muted">
                 </small>
-                    </div>
+            </div>
 
-                    <div class="form-group pb-sm-2">
-                    <label for="city">Ville :</label>
-                    <input type="text" class="form-control" name="city">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="ville">Ville :</label>
+                <input type="text" class="form-control" name="ville" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="country">Pays :</label>
-                    <select class="form-control" name="country">
-                        <option value="de">Allemagne</option>
-                        <option value="be">Belgique</option>
-                        <option value="ca">Canada</option>
-                        <option value="es">Espagne</option>
-                        <option value="us">États Unis</option>
-                        <option value="fr" selected="selected">France</option>
-                        <option value="ie">Ireland</option>
-                        <option value="it">Italy</option>
-                        <option value="gb">Royaume-Uni</option>
-                    </select>  
-                    <small class="text-muted">
-                </small> 
-                </div>
-
-<hr>
-
-<div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour un <span class="type">type autre</span> de publication sur HAL :</div>    
-
-                <div class="form-group pb-sm-2">
-                    <label for="description">Description :</label>
-                    <textarea type="text" class="form-control" name="description" rows="3"></textarea>
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="pays">Pays :</label>
+                <select class="form-control" name="pays" disabled>
+                    <option value="de">Allemagne</option>
+                    <option value="be">Belgique</option>
+                    <option value="ca">Canada</option>
+                    <option value="es">Espagne</option>
+                    <option value="us">États Unis</option>
+                    <option value="fr" selected="selected">France</option>
+                    <option value="ie">Ireland</option>
+                    <option value="it">Italy</option>
+                    <option value="gb">Royaume-Uni</option>
+                </select>
+                <small class="text-muted">
                 </small>
-                </div>
-<hr>
-<div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour un <span class="type">rapport</span> sur HAL :</div>    
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="reportType">Type de rapport :</label>
-                    <select class="form-control" name="reportType">
+            <hr>
+
+            <div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires
+                pour un <span class="type">type autre</span> de publication sur HAL :</div>
+
+            <div class="form-group pb-sm-2">
+                <label for="description">Description :</label>
+                <textarea type="text" class="form-control" name="description" rows="3" disabled></textarea>
+                <small class="text-muted">
+                </small>
+            </div>
+            <hr>
+            <div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires
+                pour un <span class="type">rapport</span> sur HAL :</div>
+
+            <div class="form-group pb-sm-2">
+                <label for="typerapport">Type de rapport :</label>
+                <select class="form-control" name="typerapport" disabled>
                     <option value="" selected="selected"></option>
                     <option value="6">Rapport de recherche</option>
                     <option value="4">Rapport Technique</option>
                     <option value="2">Contrat</option>
                     <option value="3">Interne</option>
                     <option value="0">Autre</option>
-                    </select>
-                    <small class="text-muted">
+                </select>
+                <small class="text-muted">
                 </small>
-                </div>
-<hr>
+            </div>
+            <hr>
 
-<div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont facultatives pour <span class="type">tout dépôt</span> sur HAL :</div>    
+            <div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont facultatives
+                pour <span class="type">tout dépôt</span> sur HAL :</div>
 
 
-                <div class="form-group mt-1">
-                    <label for="Soustitre">Sous-titre :</label>
-                    <input type="text" class="form-control" name="Soustitre">
-                    <small class="text-muted">
+            <div class="form-group mt-1">
+                <label for="Soustitre">Sous-titre :</label>
+                <input type="text" class="form-control" name="Soustitre" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                        <label for="abstract">Résumé :</label>
-                        <textarea type="text" class="form-control" name="abstract" rows="5"></textarea>
-                        <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="resume">Résumé :</label>
+                <textarea type="text" class="form-control" name="resume" rows="5" disabled></textarea>
+                <small class="text-muted">
                 </small>
-                    </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="keyword">Mots clés :</label>
-                    <input type="text" class="form-control" name="keyword">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="motscles">Mots clés :</label>
+                <input type="text" class="form-control" name="motscles" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="DOIpublication">DOI de la publication :</label>
-                    <input type="text" class="form-control" name="DOIpublication">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="DOIpublication">DOI de la publication :</label>
+                <input type="text" class="form-control" name="DOIpublication" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                
 
-                <div class="form-group pb-sm-2">
-                    <label for="Donneesassociees">Données associées :</label>
-                    <input type="text" class="form-control" name="Donneesassociees">
-                    <small class="text-muted">
+
+            <div class="form-group pb-sm-2">
+                <label for="Donneesassociees">Données associées :</label>
+                <input type="text" class="form-control" name="Donneesassociees" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
 
-                <div class="form-group pb-sm-2">
-                    <label for="Datedeproduction">Date de production :</label>
-                    <input type="date" class="form-control" name="Datedeproduction" min="1970-01-01" max="2030-12-31">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="Datedeproduction">Date de production :</label>
+                <input type="date" class="form-control" name="Datedeproduction" min="1970-01-01" max="2030-12-31" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="licence">Licence :</label>
-                <select class="form-control" id="licence">
-                <option value="" selected="selected"></option>
-                <option value="http://creativecommons.org/licenses/by/">CC BY - Paternité</option>
-                <option value="http://creativecommons.org/licenses/by-nc/">CC BY NC - Paternité - Pas d'utilisation commerciale</option>
-                <option value="http://creativecommons.org/licenses/by-nd/">CC BY ND - Paternité - Pas de modifications</option>
-                <option value="http://creativecommons.org/licenses/by-sa/">CC BY SA - Paternité - Partage selon les Conditions Initiales</option>
-                <option value="http://creativecommons.org/licenses/by-nc-nd/">CC BY NC ND - Paternité - Pas d'utilisation commerciale - Pas de modification</option>
-                <option value="http://creativecommons.org/licenses/by-nc-sa/">CC BY NC SA - Paternité - Pas d'utilisation commerciale - Partage selon les Conditions Initiales</option>
-                <option value="http://creativecommons.org/choose/mark/">NC - Marque du Domaine Public</option>
-                <option value="http://creativecommons.org/publicdomain/zero/1.0/">CC0 - Transfert dans le Domaine Public</option>
-                <option value="http://hal.archives-ouvertes.fr/licences/etalab/">ETALAB - Licence Ouverte</option>
-                <option value="http://hal.archives-ouvertes.fr/licences/copyright/">Copyright (Tous droits réservés)</option>
-                <option value="http://hal.archives-ouvertes.fr/licences/publicDomain/">Domaine public</option>
-                </select>
-                <small class="text-muted">
-                </small>
-                </div>
-                
-                <div class="form-group pb-sm-2">
-                    <label for="source">Source :</label>
-                    <input type="text" class="form-control" name="source">
-                    <small class="text-muted">
-                </small>
-                </div>
-
-                <div class="form-group pb-sm-2">
-                <label for="popularLevel">Vulgarisation :</label>
-                <select name="popularLevel" class="form-control">
+                <select class="form-control" name="licence" disabled>
                     <option value="" selected="selected"></option>
-                    <option value="0">Oui</option>
-                    <option value="1">Non</option>
+                    <option value="http://creativecommons.org/licenses/by/">CC BY - Paternité</option>
+                    <option value="http://creativecommons.org/licenses/by-nc/">CC BY NC - Paternité - Pas d'utilisation
+                        commerciale</option>
+                    <option value="http://creativecommons.org/licenses/by-nd/">CC BY ND - Paternité - Pas de
+                        modifications</option>
+                    <option value="http://creativecommons.org/licenses/by-sa/">CC BY SA - Paternité - Partage selon les
+                        Conditions Initiales</option>
+                    <option value="http://creativecommons.org/licenses/by-nc-nd/">CC BY NC ND - Paternité - Pas
+                        d'utilisation commerciale - Pas de modification</option>
+                    <option value="http://creativecommons.org/licenses/by-nc-sa/">CC BY NC SA - Paternité - Pas
+                        d'utilisation commerciale - Partage selon les Conditions Initiales</option>
+                    <option value="http://creativecommons.org/choose/mark/">NC - Marque du Domaine Public</option>
+                    <option value="http://creativecommons.org/publicdomain/zero/1.0/">CC0 - Transfert dans le Domaine
+                        Public</option>
+                    <option value="http://hal.archives-ouvertes.fr/licences/etalab/">ETALAB - Licence Ouverte</option>
+                    <option value="http://hal.archives-ouvertes.fr/licences/copyright/">Copyright (Tous droits réservés)
+                    </option>
+                    <option value="http://hal.archives-ouvertes.fr/licences/publicDomain/">Domaine public</option>
                 </select>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                <label for="peerReviewing">Comité de lecture :</label>
-                <select class="form-control" name="peerReviewing">
+            <div class="form-group pb-sm-2">
+                <label for="source">Source :</label>
+                <input type="text" class="form-control" name="source" disabled>
+                <small class="text-muted">
+                </small>
+            </div>
+
+            <div class="form-group pb-sm-2">
+                <label for="vulgarisation">Vulgarisation :</label>
+                <select name="vulgarisation" class="form-control" disabled>
                     <option value="" selected="selected"></option>
-                    <option value="0">Oui</option>
-                    <option value="1">Non</option>
+                    <option value="0">Non</option>
+                    <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
+                <label for="comitelecture">Comité de lecture :</label>
+                <select class="form-control" name="comitelecture" disabled>
+                    <option value="" selected="selected"></option>
+                    <option value="0">Non</option>
+                    <option value="1">Oui</option>
+                </select>
+                <small class="text-muted">
+                </small>
+            </div>
+
+            <div class="form-group pb-sm-2">
                 <label for="invite">Invité :</label>
-                <select class="form-control" name="invite">
+                <select class="form-control" name="invite" disabled>
                     <option value="" selected="selected"></option>
-                    <option value="0">Oui</option>
-                    <option value="1">Non</option>
+                    <option value="0">Non</option>
+                    <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="audience">Audience :</label>
-                <select class="form-control" name="audience">
+                <select class="form-control" name="audience" disabled>
                     <option value="" selected="selected"></option>
                     <option value="2">Internationale</option>
                     <option value="3">Nationale</option>
                     <option value="1">Non spécifiée</option>
-                </select>    
+                </select>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="actes">Actes :</label>
-                <select class="form-control" name="actes">
+                <select class="form-control" name="actes" disabled>
                     <option value="" selected="selected"></option>
-                    <option value="0">Oui</option>
-                    <option value="1">Non</option>
+                    <option value="">Non</option>
+                    <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="Aparaitre">Á paraitre :</label>
-                <select class="form-control" name="Aparaitre">
+                <select class="form-control" name="Aparaitre" disabled>
                     <option value="" selected="selected"></option>
-                    <option value="0">Oui</option>
-                    <option value="1">Non</option>
+                    <option value="0">Non</option>
+                    <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="edate">Date de publication électronique :</label>
-                <input type="date" class="form-control" name="edate" min="1970-01-01" max="2030-12-31">
+                <input type="date" class="form-control" name="edate" min="1970-01-01" max="2030-12-31" disabled>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="Titrevolume">Titre du volume :</label>
-                <input type="text" class="form-control" name="Titrevolume">
+                <input type="text" class="form-control" name="Titrevolume" disabled>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="volume">Volume :</label>
-                <input type="text" class="form-control" name="volume">
+                <input type="text" class="form-control" name="volume" disabled>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="numero">Numéro :</label>
-                <input type="text" class="form-control" name="numero">
+                <input type="text" class="form-control" name="numero" disabled>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="Numerorapport">N°rapport :</label>
-                <input type="text" class="form-control" name="Numerorapport">
+                <input type="text" class="form-control" name="Numerorapport" disabled>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="PageID">Page Indentifiant :</label>
-                <input type="text" class="form-control" name="PageID">
+                <input type="text" class="form-control" name="PageID" disabled>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="Editeurcommercial">Editeur commercial :</label>
-                    <input type="text" class="form-control" name="Editeurcommercial">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="Editeurcommercial">Editeur commercial :</label>
+                <input type="text" class="form-control" name="Editeurcommercial" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="Directeurcollection">Directeur de collection :</label>
-                    <input type="text" class="form-control" name="Directeurcollection">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="Directeurcollection">Directeur de collection :</label>
+                <input type="text" class="form-control" name="Directeurcollection" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="Editeurscientifique">Editeur scientifique :</label>
-                    <input type="text" class="form-control" name="Editeurscientifique">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="Editeurscientifique">Editeur scientifique :</label>
+                <input type="text" class="form-control" name="Editeurscientifique" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="Organisateurcongres">Organisateur du congrès :</label>
-                    <input type="text" class="form-control" name="Organisateurcongres">
-                    <small class="text-muted">
-                </small>
-                </div>
-
-                <div class="form-group pb-sm-2">
-                <label for="edate">Date de publication électronique :</label>
-                <input type="date" class="form-control" name="edate" min="1970-01-01" max="2030-12-31">
+                <input type="text" class="form-control" name="Organisateurcongres" disabled>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="Urlediteur">URL du congrès ou de l'éditeur :</label>
-                    <input type="text" class="form-control" name="Urlediteur">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="Urlediteur">URL du congrès ou de l'éditeur :</label>
+                <input type="text" class="form-control" name="Urlediteur" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                        <label for="classification">Classification :</label>
-                        <textarea type="text" class="form-control" name="classification" rows="3"></textarea>
-                        <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="classification">Classification :</label>
+                <textarea type="text" class="form-control" name="classification" rows="3" disabled></textarea>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                        <label for="commentaire">Commentaire :</label>
-                        <textarea type="text" class="form-control" name="commentaire" rows="5"></textarea>
-                        <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="commentaire">Commentaire :</label>
+                <textarea type="text" class="form-control" name="commentaire" rows="5" disabled></textarea>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
+            <div class="form-group pb-sm-2">
                 <label for="Referenceinterne">Reference interne :</label>
-                <input type="text" class="form-control" name="Referenceinterne">
+                <input type="text" class="form-control" name="Referenceinterne" disabled>
                 <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="Collaborationprojet">Collaboration / Projet :</label>
-                    <input type="text" class="form-control" name="Collaborationprojet">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="Collaborationprojet">Collaboration / Projet :</label>
+                <input type="text" class="form-control" name="Collaborationprojet" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="Voiraussi">Voir aussi :</label>
-                    <input type="text" class="form-control" name="Voiraussi">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="Voiraussi">Voir aussi :</label>
+                <input type="text" class="form-control" name="Voiraussi" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="Projetanr">Projet ANR :</label>
-                    <input type="text" class="form-control" name="Projetanr">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="Projetanr">Projet ANR :</label>
+                <input type="text" class="form-control" name="Projetanr" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                    <label for="Projeteuropeen">Projet européen :</label>
-                    <input type="text" class="form-control" name="Projeteuropeen">
-                    <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="Projeteuropeen">Projet européen :</label>
+                <input type="text" class="form-control" name="Projeteuropeen" disabled>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
-                <div class="form-group pb-sm-2">
-                        <label for="financement">Financement :</label>
-                        <textarea type="text" class="form-control" name="financement" rows="3"></textarea>
-                        <small class="text-muted">
+            <div class="form-group pb-sm-2">
+                <label for="financement">Financement :</label>
+                <textarea type="text" class="form-control" name="financement" rows="3" disabled></textarea>
+                <small class="text-muted">
                 </small>
-                </div>
+            </div>
 
         </details>
+
         <input class="boutonForm boutonValider mt-3" type=submit name="ok" value="Envoyer" disabled>
         <hr>
         <div class="titreForm">Création du guide</div>
@@ -735,7 +746,8 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="slide9-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled/>
+                        <input type="file" name="slide9-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
+                            disabled />
                     </div>
                 </div>
 
@@ -751,7 +763,8 @@
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide10-2" disabled></textarea>
-                        <input type="file" name="slide10-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled />
+                        <input type="file" name="slide10-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
+                            disabled />
                     </div>
                 </div>
                 <hr>
@@ -765,8 +778,9 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="slide11-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"/>
-                        <textarea type="text"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                        <input type="file" name="slide11-1" placeholder="Parcourir (PNG, JPEG, GIF..)"
+                            class="parcourir" />
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide11-2" disabled></textarea>
                     </div>
                 </div>
@@ -783,7 +797,8 @@
                     <div class="col">
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide12-2" disabled></textarea>
-                        <input type="file" name="slide12-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled/>
+                        <input type="file" name="slide12-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
+                            disabled />
                     </div>
                 </div>
             </div>
@@ -803,7 +818,8 @@
                     </div>
                     <div class="col">
                         <textarea type="text" class="form-control m-1" rows="1" name="slide13-1" disabled></textarea>
-                        <input type="file" name="slide13-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled/>
+                        <input type="file" name="slide13-2" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
+                            disabled />
                         <textarea type="text" class="form-control m-1" rows="1" name="slide13-3" disabled></textarea>
                     </div>
                 </div>
@@ -818,12 +834,12 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="file" name="slide14-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled/>
-                        <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide14-2" disabled></textarea>
-                        <input  type="file" name="slide14-3" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir" disabled />
-                        <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide14-4" disabled></textarea>
+                        <input type="file" name="slide14-1" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
+                            disabled />
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide14-2" disabled></textarea>
+                        <input type="file" name="slide14-3" placeholder="Parcourir (PNG, JPEG, GIF..)" class="parcourir"
+                            disabled />
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide14-4" disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -832,10 +848,14 @@
 
         <details>
             <summary>Slides vidéos</summary>
-            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta"><span class="comment">Comment importer une vidéo ?</span><br>
-                <br>- Si l'hébergeur est <span class="type">Youtube</span>, veuillez copier le lien direct de la vidéo <br> <span class="typePubli">(Exemple : https://www.youtube.com/watch?v=1eXOOotL5pk)</span>
-                <br>- Si l'hébergeur est <span class="type">Dailymotion</span>, veuillez copier le lien direct de la vidéo <br><span class="typePubli">(Exemple : https://www.dailymotion.com/video/x7wt1qq)</span>
-                <br>- Si l'hébergeur est <span class="type">Canal U</span>, veuillez copier le lien embed de la vidéo <br><span class="typePubli">(Exemple : https://www.canal-u.tv/embed/116919?t=0)</span>
+            <div class="mt-3 mb-3 p-3 text-justify" id="infoMeta"><span class="comment">Comment importer une vidéo
+                    ?</span><br>
+                <br>- Si l'hébergeur est <span class="type">Youtube</span>, veuillez copier le lien direct de la vidéo
+                <br> <span class="typePubli">(Exemple : https://www.youtube.com/watch?v=1eXOOotL5pk)</span>
+                <br>- Si l'hébergeur est <span class="type">Dailymotion</span>, veuillez copier le lien direct de la
+                vidéo <br><span class="typePubli">(Exemple : https://www.dailymotion.com/video/x7wt1qq)</span>
+                <br>- Si l'hébergeur est <span class="type">Canal U</span>, veuillez copier le lien embed de la vidéo
+                <br><span class="typePubli">(Exemple : https://www.canal-u.tv/embed/116919?t=0)</span>
             </div>
             <div class="form-group pb-sm-2" id="groupeVideos">
                 <div class="soustitreForm">Slide 15 - Vidéo plein écran</div>
@@ -847,7 +867,8 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="text" name="slide15-1" class="form-control" placeholder="Lien de la vidéo" disabled/>
+                        <input type="text" name="slide15-1" class="form-control" placeholder="Lien de la vidéo"
+                            disabled />
                     </div>
                 </div>
 
@@ -861,11 +882,10 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="text" name="slide16-1" class="form-control" placeholder="Lien de la vidéo" disabled/>
-                        <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide16-2" disabled></textarea>
-                        <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide16-3" disabled></textarea>
+                        <input type="text" name="slide16-1" class="form-control" placeholder="Lien de la vidéo"
+                            disabled />
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide16-2" disabled></textarea>
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide16-3" disabled></textarea>
                     </div>
                 </div>
 
@@ -879,9 +899,9 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea type="text" class="form-control m-1" rows="1"
-                            name="slide17-1" disabled></textarea>
-                        <input type="text" name="slide17-2" class="form-control" placeholder="Lien de la vidéo" disabled/>
+                        <textarea type="text" class="form-control m-1" rows="1" name="slide17-1" disabled></textarea>
+                        <input type="text" name="slide17-2" class="form-control" placeholder="Lien de la vidéo"
+                            disabled />
                     </div>
                 </div>
             </div>
@@ -899,16 +919,16 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <textarea type="text" name="slide18-1" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                        disabled></textarea>
-                        <textarea type="text"  name="slide18-2"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                        disabled></textarea>
-                        <textarea type="text" name="slide18-3"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                        disabled></textarea>
-                        <textarea type="text" name="slide18-4"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                        disabled></textarea>
-                        <textarea type="text" name="slide18-5"class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                        disabled></textarea>
+                        <textarea type="text" name="slide18-1" class="form-control m-1" id="exampleFormControlTextarea1"
+                            rows="1" disabled></textarea>
+                        <textarea type="text" name="slide18-2" class="form-control m-1" id="exampleFormControlTextarea1"
+                            rows="1" disabled></textarea>
+                        <textarea type="text" name="slide18-3" class="form-control m-1" id="exampleFormControlTextarea1"
+                            rows="1" disabled></textarea>
+                        <textarea type="text" name="slide18-4" class="form-control m-1" id="exampleFormControlTextarea1"
+                            rows="1" disabled></textarea>
+                        <textarea type="text" name="slide18-5" class="form-control m-1" id="exampleFormControlTextarea1"
+                            rows="1" disabled></textarea>
                     </div>
                 </div>
 
