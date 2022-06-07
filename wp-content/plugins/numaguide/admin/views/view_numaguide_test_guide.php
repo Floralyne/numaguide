@@ -831,7 +831,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="text" name="slide15-1" class="form-control" placeholder="Lien de la vidéo"/>
+                        <input type="text" name="slide15-1" class="form-control m-1" placeholder="Lien de la vidéo"/>
                     </div>
                 </div>
 
@@ -845,7 +845,7 @@
                         </figure>
                     </div>
                     <div class="col">
-                        <input type="text" name="slide16-1" class="form-control" placeholder="Lien de la vidéo"/>
+                        <input type="text" name="slide16-1" class="form-control m-1" placeholder="Lien de la vidéo"/>
                         <textarea type="text" class="form-control m-1" rows="1"
                             name="slide16-2"></textarea>
                         <textarea type="text" class="form-control m-1" rows="1"
@@ -865,7 +865,7 @@
                     <div class="col">
                         <textarea type="text" class="form-control m-1" rows="1"
                             name="slide17-1"></textarea>
-                        <input type="text" name="slide17-2" class="form-control" placeholder="Lien de la vidéo"/>
+                        <input type="text" name="slide17-2" class="form-control m-1" placeholder="Lien de la vidéo"/>
                     </div>
                 </div>
             </div>
