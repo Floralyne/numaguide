@@ -22,24 +22,24 @@
 ?>
 
 <section id="slide_11">
-        <div id="slide_11_c" class="container-fluid">
-            <div id="slide_11_r" class="row vh-100 mr-auto ml-auto">
-                <div id="slide_11_div2" class="col text-center mt-auto mb-auto ml-auto mr-auto">
-                    <div id="slide_11_image2">
-                        <img id="slide_11_image" class="img-fluid" src=<?=$link?>>
-                    </div>
+    <div id="slide_11_c" class="container-fluid">
+        <div id="slide_11_r" class="row vh-100 mr-auto ml-auto">
+            <div id="slide_11_div2" class="col text-center mt-auto mb-auto ml-auto mr-auto">
+                <div id="slide_11_image2">
+                    <img id="slide_11_image" class="img-fluid" src=<?=$link?>>
                 </div>
-                <div id="slide_11_div1" class="col text-justify mt-auto mb-auto p-5">
-                    <div id="slide_11_texte1" class="slide_11_texte">
-                    <?php
-                        foreach ($blocks as $block) {
-                            if ($block['blockName'] == 'core/paragraph') {
-                                echo render_block($block);
-                            }
+            </div>
+            <div id="slide_11_div1" class="col text-justify mt-auto mb-auto p-5">
+                <div id="slide_11_texte1" class="slide_11_texte">
+                <?php
+                    foreach ($blocks as $block) {
+                        if ($block['blockName'] == 'core/paragraph') {
+                            echo render_block($block);
                         }
-                    ?>
-                    </div>
+                    }
+                ?>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>

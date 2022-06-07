@@ -32,12 +32,12 @@
 
 ?>
 
-    <section id="slide_15">
-        <div id="slide_15_c" class="container-fluid">
-            <div id="slide_15_r" class="row vh-100 p-5">
+<section id="slide_15">
+    <div id="slide_15_c" class="container-fluid">
+        <div id="slide_15_r" class="row vh-100 p-5">
             <div class="embed-responsive">
                 <iframe src=<?=$video?> class="embed-responsive-item"></iframe>
-            </div>   
             </div>
         </div>
-    </section>
+    </div>
+</section>
