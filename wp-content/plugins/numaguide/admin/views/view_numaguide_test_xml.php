@@ -96,11 +96,11 @@
                 <div class="form-group pb-sm-2">
                     <label for="langage">Langue du document :</label>
                     <select class="form-control" name="langage">
-                        <option value="FR">Français</option>
-                        <option value="EN">Anglais</option>
-                        <option value="IT">Italien</option>
-                        <option value="ES">Espagnol</option>
-                        <option value="DE">Allemand</option>
+                        <option value="fr">Français</option>
+                        <option value="en">Anglais</option>
+                        <option value="it">Italien</option>
+                        <option value="es">Espagnol</option>
+                        <option value="de">Allemand</option>
                     </select>
                     <small class="text-muted">
                 </small>
@@ -276,8 +276,8 @@
                 <label for="vulgarisation">Vulgarisation :</label>
                 <select name="vulgarisation" class="form-control">
                     <option value="" selected="selected"></option>
-                    <option value="0">Oui</option>
-                    <option value="1">Non</option>
+                    <option value="0">Non</option>
+                    <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
                 </small>
@@ -287,8 +287,8 @@
                 <label for="comitelecture">Comité de lecture :</label>
                 <select class="form-control" name="comitelecture">
                     <option value="" selected="selected"></option>
-                    <option value="0">Oui</option>
-                    <option value="1">Non</option>
+                    <option value="0">Non</option>
+                    <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
                 </small>
@@ -298,8 +298,8 @@
                 <label for="invite">Invité :</label>
                 <select class="form-control" name="invite">
                     <option value="" selected="selected"></option>
-                    <option value="0">Oui</option>
-                    <option value="1">Non</option>
+                    <option value="0">Non</option>
+                    <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
                 </small>
@@ -321,8 +321,8 @@
                 <label for="actes">Actes :</label>
                 <select class="form-control" name="actes">
                     <option value="" selected="selected"></option>
-                    <option value="0">Oui</option>
-                    <option value="1">Non</option>
+                    <option value="">Non</option>
+                    <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
                 </small>
@@ -332,8 +332,8 @@
                 <label for="Aparaitre">Á paraitre :</label>
                 <select class="form-control" name="Aparaitre">
                     <option value="" selected="selected"></option>
-                    <option value="0">Oui</option>
-                    <option value="1">Non</option>
+                    <option value="0">Non</option>
+                    <option value="1">Oui</option>
                 </select>
                 <small class="text-muted">
                 </small>
@@ -487,6 +487,7 @@ $d_type_texte = "";
 $d_domaine = "";
 $d_domaine_texte="";
 $d_langue = "";
+$d_langue_texte = ""; 
 $d_institution =  "";
 $d_datepublication = "";
 $d_nomrevue = "";
@@ -494,8 +495,10 @@ $d_titrecongres = "";
 $d_datedebutcongres = ""; 
 $d_ville = "";
 $d_pays = "";
+$d_pays_texte = ""; 
 $d_description = ""; 
 $d_typerapport = "";
+$d_typerapport_texte = ""; 
 $d_soustitre = "";
 $d_resume = "";
 $d_motscles = "";
@@ -503,13 +506,20 @@ $d_doipublication = "";
 $d_donneesassociees = "";
 $d_dateproduction = "";
 $d_licence = "";
+$d_licence_texte = ""; 
 $d_source = "";
 $d_vulgarisation = ""; 
+$d_vulgarisation_texte = ""; 
 $d_comitedelecture = "";
+$d_comitedelecture_texte = ""; 
 $d_invite = "";
+$d_invite_texte = ""; 
 $d_audience = "";
+$d_audience_texte = ""; 
 $d_actes = "";
+$d_actes_texte = ""; 
 $d_aparaitre = ""; 
+$d_aparaitre_texte = ""; 
 $d_datepublicationelec = ""; 
 $d_titrevolume = "";
 $d_volume = "";
@@ -580,7 +590,22 @@ $d_financement = "";
         $d_projeteurop = $_POST['Projeteuropeen'];
         $d_financement = $_POST['financement'];
 
-        
+
+        if ($d_url != "") {
+           $d_url = 'http://numaguide.msh-vdl.fr/'.$d_url; 
+            
+        }
+
+        if ($d_type != "") {
+            if ($d_type == "") { $d_type_texte = " "; }
+            if ($d_type == "ART") { $d_type_texte = "Article"; }
+            if ($d_type == "COMM") { $d_type_texte = "Communication de congrès"; }
+            if ($d_type == "POSTER") { $d_type_texte = "Poster"; }
+            if ($d_type == "OTHER") { $d_type_texte = "Autre publication"; }
+            if ($d_type == "UNDEFINED") { $d_type_texte = "Pré-publication Document de travail"; }
+            if ($d_type == "REPORT") { $d_type_texte = "Rapport"; }
+            
+        }
 
         if ($d_domaine != "") {
             if ($d_domaine == "shs") { $d_domaine_texte = "--- Sciences de l'Homme et Société ---"; }
@@ -613,6 +638,88 @@ $d_financement = "";
             if ($d_domaine == "shs.stat") { $d_domaine_texte = "Méthodes et statistiques"; }
             
         }
+
+        if ($d_langue != "") {
+            if ($d_langue == "fr") { $d_langue_texte = "Français"; }
+            if ($d_langue == "en") { $d_langue_texte = "Anglais"; }
+            if ($d_langue == "it") { $d_langue_texte = "Italien"; }
+            if ($d_langue == "es") { $d_langue_texte = "Espagnol"; }
+            if ($d_langue == "de") { $d_langue_texte = "Allemand"; }
+        }
+        if ($d_pays != "") {
+            if ($d_pays == "de") { $d_pays_texte = "Allemagne"; }
+            if ($d_pays == "be") { $d_pays_texte = "Belgique"; }
+            if ($d_pays == "ca") { $d_pays_texte = "Canada"; }
+            if ($d_pays == "es") { $d_pays_texte = "Espagne"; }
+            if ($d_pays == "us") { $d_pays_texte = "États Unis"; }
+            if ($d_pays == "fr") { $d_pays_texte = "France"; }
+            if ($d_pays == "ie") { $d_pays_texte = "Irelande"; }
+            if ($d_pays == "it") { $d_pays_texte = "Italie"; }
+            if ($d_pays == "gb") { $d_pays_texte = "Royaume-Uni"; }
+        }
+
+        if ($d_typerapport != "") {
+            if ($d_typerapport == "") { $d_typerapport_texte = " "; }
+            if ($d_typerapport == "6") { $d_typerapport_texte = "Rapport de recherche"; }
+            if ($d_typerapport == "4") { $d_typerapport_texte = "Rapport Technique"; }
+            if ($d_typerapport == "2") { $d_typerapport_texte = "Contrat"; }
+            if ($d_typerapport == "3") { $d_typerapport_texte = "Interne"; }
+            if ($d_typerapport == "0") { $d_typerapport_texte = "Autre"; }
+        }
+
+        if ($d_licence != "") {
+            if ($d_licence == "") { $d_licence_texte = " "; }
+            if ($d_licence == "http://creativecommons.org/licenses/by/") { $d_licence_texte = "CC BY - Paternité"; }
+            if ($d_licence == "http://creativecommons.org/licenses/by-nc/") { $d_licence_texte = "CC BY NC - Paternité - Pas d'utilisation commerciale"; }
+            if ($d_licence == "http://creativecommons.org/licenses/by-nd/") { $d_licence_texte = "CC BY ND - Paternité - Pas de modifications"; }
+            if ($d_licence == "http://creativecommons.org/licenses/by-sa/") { $d_licence_texte = "CC BY SA - Paternité - Partage selon les Conditions Initiales"; }
+            if ($d_licence == "http://creativecommons.org/licenses/by-nc-nd/") { $d_licence_texte = "CC BY NC ND - Paternité - Pas d'utilisation commerciale - Pas de modification"; }
+            if ($d_licence == "http://creativecommons.org/licenses/by-nc-sa/") { $d_licence_texte = "CC BY NC SA - Paternité - Pas d'utilisation commerciale - Partage selon les Conditions Initiales"; }
+            if ($d_licence == "http://creativecommons.org/choose/mark/") { $d_licence_texte = "NC - Marque du Domaine Public"; }
+            if ($d_licence == "http://creativecommons.org/publicdomain/zero/1.0/") { $d_licence_texte = "CC0 - Transfert dans le Domaine Public"; }
+            if ($d_licence == "http://hal.archives-ouvertes.fr/licences/etalab/") { $d_licence_texte = "ETALAB - Licence Ouverte"; }
+            if ($d_licence == "http://hal.archives-ouvertes.fr/licences/copyright/") { $d_licence_texte = "Copyright (Tous droits réservés)"; }
+            if ($d_licence == "http://hal.archives-ouvertes.fr/licences/publicDomain/") { $d_licence_texte = "Domaine public"; }
+        }
+
+        if ($d_vulgarisation != "") {
+            if ($d_vulgarisation == "") { $d_vulgarisation_texte = " "; }
+            if ($d_vulgarisation == "0") { $d_vulgarisation_texte = "No"; }
+            if ($d_vulgarisation == "1") { $d_vulgarisation_texte = "Yes"; }
+        }
+
+        if ($d_comitedelecture != "") {
+            if ($d_comitedelecture == "") { $d_comitedelecture_texte = " "; }
+            if ($d_comitedelecture == "0") { $d_comitedelecture_texte = "No"; }
+            if ($d_comitedelecture == "1") { $d_comitedelecture_texte = "Yes"; }
+        }
+        
+        if ($d_invite != "") {
+            if ($d_invite == "") { $d_invite_texte = " "; }
+            if ($d_invite == "0") { $d_invite_texte = "No"; }
+            if ($d_invite == "1") { $d_invite_texte = "Yes"; }
+        }
+
+        if ($d_audience != "") {
+            if ($d_audience == "") { $d_audience_texte = " "; }
+            if ($d_audience == "2") { $d_audience_texte = "Internationale"; }
+            if ($d_audience == "3") { $d_audience_texte = "Nationale"; }
+            if ($d_audience == "1") { $d_audience_texte = "Non spécifiée"; }
+        }
+
+        if ($d_actes != "") {
+            if ($d_actes == "") { $d_actes_texte = " "; }
+            if ($d_actes == "0") { $d_actes_texte = "No"; }
+            if ($d_actes == "1") { $d_actes_texte = "Yes"; }
+        }
+
+        if ($d_aparaitre != "") {
+            if ($d_aparaitre == "") { $d_aparaitre_texte = " "; }
+            if ($d_aparaitre == "0") { $d_aparaitre_texte = "No"; }
+            if ($d_aparaitre == "1") { $d_aparaitre_texte = "Yes"; }
+        }
+
+
 }
 
 //creation du DOMDocument
@@ -641,32 +748,32 @@ $licencedoc = $dom->createElement('licencedoc', 'type de licence');
 $titre = $dom->createElement('title',$d_titre);
 $auteur = $dom->createElement('searchAuthor', $d_auteur);
 $url = $dom->createElement('urlGuide', $d_url);
-$type = $dom->createElement('type', $d_type);
+$type = $dom->createElement('type', $d_type_texte);
 $domaine = $dom->createElement('domain', $d_domaine_texte);
-$langue = $dom->createElement('language', $d_langue);
+$langue = $dom->createElement('language', $d_langue_texte);
 $institution = $dom->createElement('authorityInstitution', $d_institution);
 $datepublication = $dom->createElement('date-id', $d_datepublication);
 $nomrevue = $dom->createElement('journal', $d_nomrevue);
 $titrecongres = $dom->createElement('conferenceTitle', $d_titrecongres);
 $datedebutcongres = $dom->createElement('conferenceStartDate-id', $d_datedebutcongres);
 $ville = $dom->createElement('city', $d_ville);
-$pays = $dom->createElement('country', $d_pays);
+$pays = $dom->createElement('country', $d_pays_texte);
 $description = $dom->createElement('description', $d_description);
-$typerapport = $dom->createElement('reportType', $d_typerapport);
+$typerapport = $dom->createElement('reportType', $d_typerapport_texte);
 $soustitre = $dom->createElement('subTitle', $d_soustitre);
 $resume = $dom->createElement('abstract', $d_resume);
 $motscles = $dom->createElement('keyword', $d_motscles);
 $doipublication = $dom->createElement('identifier', $d_doipublication);
 $donneesassociees = $dom->createElement('researchdata', $d_donneesassociees);
 $dateproduction = $dom->createElement('writingDate-id', $d_dateproduction);
-$licence = $dom->createElement('licence', $d_licence);
+$licence = $dom->createElement('licence', $d_licence_texte);
 $source = $dom->createElement('source', $d_source);
-$vulgarisation = $dom->createElement('popularLevel', $d_vulgarisation);
-$comitedelecture = $dom->createElement('peerReviewing', $d_comitedelecture);
-$invite = $dom->createElement('invitedCommunication', $d_invite);
-$audience = $dom->createElement('audience', $d_audience);
-$actes = $dom->createElement('proceedings', $d_actes);
-$aparaitre = $dom->createElement('inPress', $d_aparaitre);
+$vulgarisation = $dom->createElement('popularLevel', $d_vulgarisation_texte);
+$comitedelecture = $dom->createElement('peerReviewing', $d_comitedelecture_texte);
+$invite = $dom->createElement('invitedCommunication', $d_invite_texte);
+$audience = $dom->createElement('audience', $d_audience_texte);
+$actes = $dom->createElement('proceedings', $d_actes_texte);
+$aparaitre = $dom->createElement('inPress', $d_aparaitre_texte);
 $datepublicationelec = $dom->createElement('edate-id', $d_datepublicationelec);
 $titrevolume = $dom->createElement('serie', $d_titrevolume);
 $volume = $dom->createElement('volume', $d_volume);
