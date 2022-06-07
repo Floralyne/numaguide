@@ -318,8 +318,8 @@ class Numaguide_Admin
 
     public function admin_default_page() {
 
-    return '/wordpress/wp-admin/admin.php?page=numaguide';
-    // return '/wp-admin/admin.php?page=numaguide';
+    //return '/wordpress/wp-admin/admin.php?page=numaguide';
+    return '/wp-admin/admin.php?page=numaguide';
  }
 
     /*
