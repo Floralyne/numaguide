@@ -223,7 +223,7 @@
 
 /*Slide 7 - Slide avec deux colonnes de texte*/
 
-#slide_7_c {
+#slide_7_r {
     overflow: auto;
 }
 
@@ -237,7 +237,7 @@
 
 /*Slide 8 - Slide avec deux rangées de texte*/
 
-#slide_8_c {
+#slide_8_r {
     overflow: auto;
 }
 
@@ -271,12 +271,12 @@
 
 #slide_10_r {
     --bs-gutter-x: 0;
+    overflow: auto;
 }
 
 #slide_10_c {
     padding-right: 0;
     padding-left: 0;
-    overflow: auto;
 }
 
 #slide_10_image {
@@ -306,10 +306,10 @@
 
 #slide_11_r {
     --bs-gutter-x: 0;
+    overflow: auto;
 }
 
 #slide_11_c {
-    overflow: auto;
     padding-right: 0;
     padding-left: 0;
 }
@@ -343,7 +343,7 @@
     max-width: 100vw;
 }
 
-#slide_12_c {
+#slide_12_r {
     overflow: auto;
 }
 
@@ -413,24 +413,25 @@
 
 #slide_16_div1 {
     text-align: justify;
-    margin-left:0;
+    margin-left: 0;
     margin-right: 0;
 }
 
 #slide_16_r {
     --bs-gutter-x: 0;
-    margin-left:0;
-    margin-right:0;}
+    margin-left: 0;
+    margin-right: 0;
+    overflow: auto;
+}
 
 #slide_16_c {
     padding: 0;
-    overflow: auto;
 }
 
 #slide_16_titre {
     font-style: italic;
-    display:block;
-    margin-left:0;
+    display: block;
+    margin-left: 0;
     margin-right: 0;
 }
 
@@ -438,11 +439,11 @@
     position: relative;
     width: 60vw;
     height: 50vh;
-    border:none;
+    border: none;
 }
 
 #slide_16_texte_div {
-    margin-left:0;
+    margin-left: 0;
     margin-right: 0;
 }
 
@@ -457,7 +458,6 @@
     overflow: auto;
     margin-left: 0;
     margin-right: 0;
-    overflow: auto;
 }
 
 #slide_17_c {
@@ -468,7 +468,7 @@
     position: relative;
     width: 60vw;
     height: 50vh;
-    border:none;
+    border: none;
 }
 
 #slide_17_div2 {
