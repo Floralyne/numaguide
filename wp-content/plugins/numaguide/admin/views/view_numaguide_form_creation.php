@@ -117,7 +117,7 @@
                     </div>
 
                     <div class="form-group pb-sm-2">
-                    <label for="DatedePublication">Date de publication:</label>
+                    <label for="DatedePublication">Date de publication :</label>
                     <input type="date" class="form-control" name="DatedePublication" min="1970-01-01" max="2030-12-31">
                     <small class="text-muted">
                 </small>
@@ -218,7 +218,7 @@
                     </div>
 
                 <div class="form-group pb-sm-2">
-                    <label for="motscles">Mots clés :</label>
+                    <label for="motscles">Mots-clés :</label>
                     <input type="text" class="form-control" name="motscles">
                     <small class="text-muted">
                 </small>
@@ -332,7 +332,7 @@
                 </div>
 
                 <div class="form-group pb-sm-2">
-                <label for="Aparaitre">Á paraitre :</label>
+                <label for="Aparaitre">À paraître :</label>
                 <select class="form-control" name="Aparaitre">
                     <option value="" selected="selected"></option>
                     <option value="0">Non</option>
@@ -371,21 +371,21 @@
                 </div>
 
                 <div class="form-group pb-sm-2">
-                <label for="Numerorapport">N°rapport :</label>
+                <label for="Numerorapport">N° rapport :</label>
                 <input type="text" class="form-control" name="Numerorapport">
                 <small class="text-muted">
                 </small>
                 </div>
 
                 <div class="form-group pb-sm-2">
-                <label for="PageID">Page Indentifiant :</label>
+                <label for="PageID">Page Identifiant :</label>
                 <input type="text" class="form-control" name="PageID">
                 <small class="text-muted">
                 </small>
                 </div>
 
                 <div class="form-group pb-sm-2">
-                    <label for="Editeurcommercial">Editeur commercial :</label>
+                    <label for="Editeurcommercial">Éditeur commercial :</label>
                     <input type="text" class="form-control" name="Editeurcommercial">
                     <small class="text-muted">
                 </small>
@@ -399,7 +399,7 @@
                 </div>
 
                 <div class="form-group pb-sm-2">
-                    <label for="Editeurscientifique">Editeur scientifique :</label>
+                    <label for="Editeurscientifique">Éditeur scientifique :</label>
                     <input type="text" class="form-control" name="Editeurscientifique">
                     <small class="text-muted">
                 </small>
@@ -434,7 +434,7 @@
                 </div>
 
                 <div class="form-group pb-sm-2">
-                <label for="Referenceinterne">Reference interne :</label>
+                <label for="Referenceinterne">Référence interne :</label>
                 <input type="text" class="form-control" name="Referenceinterne">
                 <small class="text-muted">
                 </small>
