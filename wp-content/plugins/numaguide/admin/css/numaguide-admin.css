@@ -118,6 +118,7 @@ a,
 div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu ul.wp-submenu.wp-submenu-wrap li>a:hover,
 div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-submenu:hover {
 	color: #000 !important;
+	background-color: white;
 }
 
 #wpadminbar .menupop .ab-sub-wrapper,
