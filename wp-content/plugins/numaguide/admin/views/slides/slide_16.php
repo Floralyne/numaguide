@@ -32,12 +32,11 @@
 
  <section id="slide_16">
         <div id="slide_16_c" class="container-fluid">
-            <div id="slide_16_r" class="row vh-100 vw-100">
-                <div id="slide_16_div1" class="row-5 text-center mt-auto mb-auto pt-5">
-                    <div id="slide_16_video" class="embed-responsive">
-                        <iframe src=<?=$video?> class="embed-responsive-item"></iframe>
-                    </div>
-                    <div id="slide_16_titre" class="text-center p-2">
+            <div id="slide_16_r" class="row vh-100">
+                <div id="slide_16_div1" class="row text-center mt-auto mb-auto pt-5">
+                        <iframe src=<?=$video?> class="mt-auto mb-auto" id="slide_16_video"></iframe>
+</div>
+                <div id="slide_16_titre" class="row text-center p-2">
                         <?php
                         $post_tab = $args['article'];
                         $post = $post_tab[0];

@@ -416,7 +416,9 @@
 }
 
 #slide_16_r {
-    --bs-gutter-x: 0;}
+    --bs-gutter-x: 0;
+    margin-left:0;
+    margin-right:0;}
 
 #slide_16_c {
     padding: 0;
@@ -425,6 +427,13 @@
 
 #slide_16_titre {
     font-style: italic;
+}
+
+#slide_16_video {
+    position: relative;
+    width: 60vw;
+    height: 50vh;
+    border:none;
 }
 
 /*Slide 17 - Slide contenant un texte et une vidéo*/
