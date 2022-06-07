@@ -16,7 +16,7 @@
                Remerciements
                 </div>
                 <div id="slide_3_merci" class="slide_3_merci">
-                <?php
+                    <?php
                         $post_tab = $args['article'];
                         $post = $post_tab[0];
                         $blocks = parse_blocks($post->post_content);
@@ -28,7 +28,7 @@
                             }
                         }
                         echo render_block($paragraphes[0]);
-?>
+                    ?>
                 </div>
             </div>
         </div>

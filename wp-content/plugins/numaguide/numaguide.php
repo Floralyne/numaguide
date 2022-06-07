@@ -78,3 +78,19 @@ function run_numaguide()
 	$plugin->run();
 }
 run_numaguide();
+
+
+function remove_dashboard_widgets(){
+     
+    global $wp_meta_boxes;
+     
+    foreach( $wp_meta_boxes["dashboard"] as $position => $core ){
+         
+        foreach( $core["core"] as $widget_id => $widget_info ){
+             
+            remove_meta_box( $widget_id, 'dashboard', $position );
+        }
+    }
+     
+}
+add_action( 'wp_dashboard_setup', 'remove_dashboard_widgets', 1000000 );

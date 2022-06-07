@@ -22,7 +22,7 @@
 
 	// Génére la liste des formats de slides
 	$(".format_slide").click(function () {
-		var liste_slide = '<div class="liste_slide"><label for="select-slide">Choisir un format de slide :</label><select><option value="">------</option><optgroup label="Introduction :"><option value="1">Slide 1 : Titre, sous-titre(s), auteur(s)</option><option value="2">Slide 2 : Titre, sous-titre(s), auteur(s), mot(s)-clé(s)</option><option value="3">Slide 3 : Remerciements</option><option value="4">Slide 4 : Résumé</option><option value="5">Slide 5 : Introduction</option></optgroup><optgroup label="Texte :"><option value="6">Slide 6</option><option value="7">Slide 7</option><option value="8">Slide 8</option></optgroup><optgroup label="Avec une image :"><option value="9">Slide 9</option><option value="10">Slide 10</option><option value="11">Slide 11</option><option value="12>Slide 12</option></optgroup><optgroup label="Avec du son :"><option value="13">Slide 13</option><option value="14">Slide 14</option></optgroup><optgroup label="Avec une vidéo :"><option value="15">Slide 15</option><option value="16">Slide 16</option><option value="17">Slide 17</option></optgroup><optgroup label="Références :"><option value="18">Slide 18 : Bibliographie</option><option value="19">Slide 19 : Bibliographie (2)</option></optgroup></select><button type="button" class="boutonForm boutonValider choix_format">Valider</button></div>'; 
+		var liste_slide = '<div class="liste_slide"><label for="select-slide">Choisir un format de slide :</label><select><option value="">------</option><optgroup label="Introduction :"><option value="1">Slide 1 : Titre, sous-titre(s), auteur(s)</option><option value="2">Slide 2 : Titre, sous-titre(s), auteur(s), mot(s)-clé(s)</option><option value="3">Slide 3 : Remerciements</option><option value="4">Slide 4 : Résumé</option><option value="5">Slide 5 : Introduction</option></optgroup><optgroup label="Texte :"><option value="6">Slide 6</option><option value="7">Slide 7</option><option value="8">Slide 8</option></optgroup><optgroup label="Avec une image :"><option value="9">Slide 9</option><option value="10">Slide 10</option><option value="11">Slide 11</option><option value="12">Slide 12</option></optgroup><optgroup label="Avec du son :"><option value="13">Slide 13</option><option value="14">Slide 14</option></optgroup><optgroup label="Avec une vidéo :"><option value="15">Slide 15</option><option value="16">Slide 16</option><option value="17">Slide 17</option></optgroup><optgroup label="Références :"><option value="18">Slide 18 : Bibliographie</option><option value="19">Slide 19 : Bibliographie (2)</option></optgroup></select><button type="button" class="boutonForm boutonValider choix_format">Valider</button></div>'; 
 		$(this).parent().append(liste_slide);
 	});
 
@@ -93,55 +93,86 @@
 	});
 
 
-	// Supprimer liste des formats et slides 
-	$(".supprimer_liste").click(function(event) {
-		event.stopPropagation();
-		$(this).closest('liste_slide').empty();
-   });
+// 	// Supprimer liste des formats et slides 
+// 	$(".supprimer_liste").click(function(event) {
+// 		event.stopPropagation();
+// 		$(this).closest('liste_slide').empty();
+//    });
 
   });
 
 })(jQuery);
 
 
-//Transforme le nom du guide vers l'url du guide dans le bon format 
+// Transforme le nom du guide vers l'url du guide dans le bon format 
 function urlFonction() {
 	if (document.getElementById("nomGuide").value) {
 		str = document.getElementById("nomGuide").value;
-		//Regex pour tous les caractères spéciaux
-		var regex = new RegExp("\\\W|_", "g");
-		//Par quoi c'est remplacer
-		var replace = "-";
-		//Limite la taille pour l'url
+		// Regex pour tous les caractères spéciaux
+		var regex = /[^\wçèéàòìïîÈÉÀÒÌ\s]/gi;
+		var charAChanger = " "
+		// Par quoi c'est remplacer
+		var replace = "";
+		var replace2 = ""
+		// Limite la taille pour l'url
 		str = str.substring(0,20);
-		//Remplace les accents par des lettres sans accent
+		// Remplace les accents par des lettres sans accent
 		str = supp_accent(str);
-		//Fait la regex de remplacement et met la valeur dans l'imput
-		document.getElementById("urlGuide").value = str.replace(regex, replace).toLowerCase();
+		// Fait la regex de remplacement et met la valeur dans l'imput
+		document.getElementById("urlGuide").value = str.replaceAll(regex, replace).replaceAll(charAChanger, replace2).toLowerCase();
 	} else {
 		document.getElementById("urlGuide").value = "";
 	}
 }
 
-//Fonction pour remplacer les accent dans une phrase par les lettres sans accent
+// Fonction pour remplacer les accent dans une phrase par les lettres sans accent
 function supp_accent(my_string)
 {
-	// tableau accents
+	// Tableau accents
 	var pattern_accent = new Array(/À/g, /Á/g, /Â/g, /Ã/g, /Ä/g, /Å/g, /Æ/g, /Ç/g, /È/g, /É/g, /Ê/g, /Ë/g,
 	/Ì/g, /Í/g, /Î/g, /Ï/g, /Ð/g, /Ñ/g, /Ò/g, /Ó/g, /Ô/g, /Õ/g, /Ö/g, /Ø/g, /Ù/g, /Ú/g, /Û/g, /Ü/g, /Ý/g,
 	/Þ/g, /ß/g, /à/g, /á/g, /â/g, /ã/g, /ä/g, /å/g, /æ/g, /ç/g, /è/g, /é/g, /ê/g, /ë/g, /ì/g, /í/g, /î/g,
 	/ï/g, /ð/g, /ñ/g, /ò/g, /ó/g, /ô/g, /õ/g, /ö/g, /ø/g, /ù/g, /ú/g, /û/g, /ü/g, /ý/g, /ý/g, /þ/g, /ÿ/g);
 
-	// tableau sans accents
+	// Tableau sans accents
 	var pattern_replace_accent = new Array("A","A","A","A","A","A","A","C","E","E","E","E",
 	"I","I","I","I","D","N","O","O","O","O","O","O","U","U","U","U","Y",
 	"b","s","a","a","a","a","a","a","a","c","e","e","e","e","i","i","i",
 	"i","d","n","o","o","o","o","o","o","u","u","u","u","y","y","b","y");
 
-	//pour chaque caractere si accentué le remplacer par un non accentué
+	// Pour chaque caractere si accentué le remplacer par un non accentué
 	for(var i=0;i<pattern_accent.length;i++)
 	{
 		my_string = my_string.replace(pattern_accent[i],pattern_replace_accent[i]);
 	}
 	return my_string;
 }
+
+// Fonction pour copier le XML
+function copierTexte() {
+    // Selectionne l'élément à prendre
+    let texteACopier = document.querySelectorAll("#a-copier")[0];
+
+    // Met en sélection chaque charactère
+    var range = document.createRange();
+    var selection = window.getSelection();
+    range.selectNode(texteACopier);
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+	// Met dans le presse-papier
+	document.execCommand("copy");
+
+    // Action pour notifier que le texte à été copié
+    const btn = document.getElementById("btnCopier");
+
+    if(btn.innerText === "Copier le texte"){
+        btn.innerText = "Bien copié !";
+    }else{
+        btn.innerText= "Copier le texte";
+    }
+
+}
+
+
+  

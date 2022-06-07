@@ -37,3 +37,9 @@ dwsync.xml
 intermediate
 .idea
 cache
+
+# Fichiers à ignorer
+.htaccess
+
+# Dossiers à ignorer
+wp-content/uploads/

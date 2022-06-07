@@ -18,17 +18,26 @@
             $video = $block['attrs']['url'];
         }
     }
+
+    if (str_contains($video, 'youtube')) {
+        $video = str_replace("watch?v=", "embed/", $video);
+    } 
+    else if (str_contains($video, 'dailymotion')) {
+        $video = str_replace(".com/video", ".com/embed/video", $video);
+    }
+    else {
+        $video = $video;
+    }
+
+
 ?>
 
-    <section id="slide_15">
-        <div id="slide_15_c" class="container-fluid">
-            <div id="slide_15_r" class="row vh-100 p-5">
-                <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
-                    <div class="wp-block-embed__wrapper">
-                        <?=$video?>
-                    </div>
-                </figure>
+<section id="slide_15">
+    <div id="slide_15_c" class="container-fluid">
+        <div id="slide_15_r" class="row vh-100 p-5">
+            <div class="embed-responsive">
+                <iframe src=<?=$video?> class="embed-responsive-item"></iframe>
             </div>
         </div>
-
-    </section>
+    </div>
+</section>

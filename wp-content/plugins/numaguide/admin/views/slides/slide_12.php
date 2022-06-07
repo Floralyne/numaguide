@@ -15,8 +15,8 @@
     $link = '';
     foreach ($blocks as $block) {
         if ($block['blockName'] == 'core/image') {
-            $link = substr($block['innerHTML'], 51);
-            $link = substr($link, 0, -39);
+            $link = substr($block['innerHTML'], 67);
+            $link = substr($link, 0, -56);
         }
     }
 ?>
@@ -42,6 +42,4 @@
             </div>
         </div>
     </div>
-    </div>
-
 </section>
