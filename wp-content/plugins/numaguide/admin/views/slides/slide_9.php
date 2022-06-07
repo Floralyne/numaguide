@@ -19,7 +19,6 @@
             $link = substr($link, 0, -56);
         }
     }
-    // die(var_dump($link));
 ?>
 
 <section id="slide_9">
