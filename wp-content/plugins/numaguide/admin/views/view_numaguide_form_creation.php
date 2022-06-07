@@ -978,7 +978,7 @@ $optional->appendChild($financement);
 //affichage des métadonnées avec balises xml apparentes et indentées
 if (isset($_POST['GenererMeta'])) {
 
-    echo "<div id=\"meta\"><xmp id=\"a-copier\">".$res= $dom->saveXML()."</xmp></div><div class=\"text-center\"><br><button id=\"btnCopier\" class=\"boutonForm boutonAction\" onclick=\"copierTexte()\">Copier le texte</button></div>";
+    echo "<div id=\"meta\"><xmp id=\"a-copier\">".$res= $dom->saveXML()."</xmp></div><div class=\"text-center\"><br><button id=\"btnCopier\" class=\"boutonForm boutonAction\" type=\"button\" onclick=\"copierTexte()\">Copier le texte</button></div>";
 
 
 }
