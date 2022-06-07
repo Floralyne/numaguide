@@ -731,7 +731,6 @@ $dom->formatOutput = true;
 $all = $dom->createElement('all');
 $HAL = $dom->createElement('HAL');
 $informations = $dom->createElement('informations');
-$file = $dom->createElement('file');
 $meta = $dom->createElement('meta');
 $auhtor = $dom->createElement('author');
 $required = $dom->createElement('required');
@@ -912,7 +911,7 @@ $dom->appendChild($all);
 $all->appendChild($HAL);
 $all->appendChild($informations);
 
-$HAL->appendChild($file);
+
 $HAL->appendChild($meta);
 $HAL->appendChild($author);
 
