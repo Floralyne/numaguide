@@ -561,7 +561,7 @@ $d_financement = "";
         $d_financement = $_POST['financement'];
 
 
-//Creation de variables pour stocker le texte de chaque option
+//creation de variables pour stocker le texte de chaque option
         if ($d_type != "") {
             if ($d_type == "") { $d_type_texte = " "; }
             elseif ($d_type == "ART") { $d_type_texte = "Article"; }
@@ -695,9 +695,7 @@ $dom->formatOutput = true;
 
 
 //creation des principaux elements, sans valeurs
-$all = $dom->createElement('all');
 $HAL = $dom->createElement('HAL');
-$informations = $dom->createElement('informations');
 $meta = $dom->createElement('meta');
 $auhtor = $dom->createElement('author');
 $required = $dom->createElement('required');
@@ -707,9 +705,6 @@ $authorvalidity = $dom->createElement('authorvalidity');
 $authors = $dom->createElement('authors');
 
 //creation des elements avec valeurs
-$desc = $dom->createElement('description','fichier de métadonnees');
-$licencedoc = $dom->createElement('licencedoc', 'type de licence');
-
 $titre = $dom->createElement('title',$d_titre);
 $auteur = $dom->createElement('searchAuthor', $d_auteur);
 $type = $dom->createElement('type', $d_type_texte);
@@ -754,7 +749,6 @@ $commentaire = $dom->createElement('comment', $d_commentaire);
 $referenceinterne = $dom->createElement('localReference', $d_referenceinterne);
 $collabprojet = $dom->createElement('collaboration', $d_collabprojet);
 $voiraussi = $dom->createElement('seeAlso', $d_voiraussi);
-
 $projetanr = $dom->createElement('anrProject', $d_projetanr);
 $projeteurop = $dom->createElement('europeanProject', $d_projeteurop);
 $financement = $dom->createElement('funding', $d_financement);
@@ -900,6 +894,7 @@ $required->appendChild($ville);
 $required->appendChild($pays);
 $required->appendChild($description);
 $required->appendChild($typerapport);
+
 $optional->appendChild($soustitre);
 $optional->appendChild($resume);
 $optional->appendChild($motscles);
