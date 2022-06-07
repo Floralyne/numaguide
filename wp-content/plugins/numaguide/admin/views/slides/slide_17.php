@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div id="slide_17_div2" class="col text-center mt-auto mb-auto p-5">
-                    <div class="embed-responsive"><iframe src=<?=$video?> class="embed-responsive-item" id="slide_17_video"></iframe></div>
+                    <iframe src=<?=$video?> class="mt-auto mb-auto" id="slide_17_video"></iframe>
                 </div>
             </div>
         </div>

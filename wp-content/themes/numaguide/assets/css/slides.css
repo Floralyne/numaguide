@@ -416,12 +416,11 @@
 }
 
 #slide_16_r {
-    --bs-gutter-x: 0;
-    overflow: auto;
-}
+    --bs-gutter-x: 0;}
 
 #slide_16_c {
     padding: 0;
+    overflow: auto;
 }
 
 #slide_16_titre {
@@ -439,15 +438,18 @@
     overflow: auto;
     margin-left: 0;
     margin-right: 0;
+    overflow: auto;
 }
 
 #slide_17_c {
     padding: 0;
-    overflow: auto;
 }
 
 #slide_17_video {
     position: relative;
+    width: 60vw;
+    height: 50vh;
+    border:none;
 }
 
 #slide_17_div2 {
