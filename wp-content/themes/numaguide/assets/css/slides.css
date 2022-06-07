@@ -413,6 +413,8 @@
 
 #slide_16_div1 {
     text-align: justify;
+    margin-left:0;
+    margin-right: 0;
 }
 
 #slide_16_r {
@@ -427,6 +429,9 @@
 
 #slide_16_titre {
     font-style: italic;
+    display:block;
+    margin-left:0;
+    margin-right: 0;
 }
 
 #slide_16_video {
@@ -434,6 +439,11 @@
     width: 60vw;
     height: 50vh;
     border:none;
+}
+
+#slide_16_texte_div {
+    margin-left:0;
+    margin-right: 0;
 }
 
 /*Slide 17 - Slide contenant un texte et une vidéo*/
