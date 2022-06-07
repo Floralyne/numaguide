@@ -55,9 +55,6 @@
                     <option value="UNDEFINED">Pré-publication Document de travail</option>
                     <option value="REPORT">Rapport</option>
                 </select>
-                <small class="text-muted">
-                Le type correspond au type de publication sur HAL.
-                </small>
             </div>
 
                 <div class="form-group">
@@ -93,6 +90,7 @@
                         <option value="shs.stat">Méthodes et statsitiques</option>
                     </select>
                     <small class="text-muted">
+                        Domaine d'études concerné par la publication.
                 </small>
                 </div>
 
@@ -105,22 +103,19 @@
                         <option value="es">Espagnol</option>
                         <option value="de">Allemand</option>
                     </select>
-                    <small class="text-muted">
-                </small>
+                
                 </div>
 
                 <div class="form-group pb-sm-2">
                         <label for="institution">Institution :</label>
                         <input type="text" class="form-control" name="institution">
-                        <small class="text-muted">
-                </small>
+                        
                     </div>
 
                     <div class="form-group pb-sm-2">
                     <label for="DatedePublication">Date de publication :</label>
                     <input type="date" class="form-control" name="DatedePublication" min="1970-01-01" max="2030-12-31">
-                    <small class="text-muted">
-                </small>
+                    
                 </div>
 <hr>
 <div class="mb-3" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour un <span class="type">article</span> sur HAL :</div>    
@@ -129,6 +124,7 @@
                     <label for="Nomdelarevue">Nom de la revue :</label>
                     <input type="text" class="form-control" name="Nomdelarevue">
                     <small class="text-muted">
+                        S'assurer que la revue ne pratique pas de politique d'embargo sur la publication.
                 </small>
                 </div>
 <hr>
@@ -137,22 +133,19 @@
                 <div class="form-group pb-sm-2">
                         <label for="TitreduCongres">Titre du congrès :</label>
                         <input type="text" class="form-control" name="TitreduCongres">
-                        <small class="text-muted">
-                </small>
+                       
                     </div>
 
                     <div class="form-group pb-sm-2">
                         <label for="Datedebutducongres">Date de début du congrès :</label>
                         <input type="date" class="form-control" name="Datedebutducongres" min="1970-01-01" max="2030-12-31">
-                        <small class="text-muted">
-                </small>
+                
                     </div>
 
                     <div class="form-group pb-sm-2">
                     <label for="ville">Ville :</label>
                     <input type="text" class="form-control" name="ville">
-                    <small class="text-muted">
-                </small>
+                
                 </div>
 
                 <div class="form-group pb-sm-2">
@@ -168,8 +161,7 @@
                         <option value="it">Italy</option>
                         <option value="gb">Royaume-Uni</option>
                     </select>  
-                    <small class="text-muted">
-                </small> 
+                 
                 </div>
 
 <hr>
@@ -179,8 +171,7 @@
                 <div class="form-group pb-sm-2">
                     <label for="description">Description :</label>
                     <textarea type="text" class="form-control" name="description" rows="3"></textarea>
-                    <small class="text-muted">
-                </small>
+                    
                 </div>
 <hr>
 <div class="mb-3 text-justify" id="metaObli">Les métadonnées supplémentaires suivantes sont obligatoires pour un <span class="type">rapport</span> sur HAL :</div>    
@@ -195,8 +186,7 @@
                     <option value="3">Interne</option>
                     <option value="0">Autre</option>
                     </select>
-                    <small class="text-muted">
-                </small>
+                  
                 </div>
 <hr>
 
@@ -206,28 +196,26 @@
                 <div class="form-group mt-1">
                     <label for="Soustitre">Sous-titre :</label>
                     <input type="text" class="form-control" name="Soustitre">
-                    <small class="text-muted">
-                </small>
+                   
                 </div>
 
                 <div class="form-group pb-sm-2">
                         <label for="resume">Résumé :</label>
                         <textarea type="text" class="form-control" name="resume" rows="5"></textarea>
-                        <small class="text-muted">
-                </small>
+                        
                     </div>
 
                 <div class="form-group pb-sm-2">
                     <label for="motscles">Mots-clés :</label>
                     <input type="text" class="form-control" name="motscles">
-                    <small class="text-muted">
-                </small>
+                    
                 </div>
 
                 <div class="form-group pb-sm-2">
                     <label for="DOIpublication">DOI de la publication :</label>
                     <input type="text" class="form-control" name="DOIpublication">
                     <small class="text-muted">
+                        Identifiant DOI de la publication.
                 </small>
                 </div>
 
@@ -245,6 +233,7 @@
                     <label for="Datedeproduction">Date de production :</label>
                     <input type="date" class="form-control" name="Datedeproduction" min="1970-01-01" max="2030-12-31">
                     <small class="text-muted">
+                        Date de production du contenu.
                 </small>
                 </div>
 
@@ -264,15 +253,13 @@
                 <option value="http://hal.archives-ouvertes.fr/licences/copyright/">Copyright (Tous droits réservés)</option>
                 <option value="http://hal.archives-ouvertes.fr/licences/publicDomain/">Domaine public</option>
                 </select>
-                <small class="text-muted">
-                </small>
+               
                 </div>
                 
                 <div class="form-group pb-sm-2">
                     <label for="source">Source :</label>
                     <input type="text" class="form-control" name="source">
-                    <small class="text-muted">
-                </small>
+                   
                 </div>
 
                 <div class="form-group pb-sm-2">
@@ -282,8 +269,7 @@
                     <option value="0">Non</option>
                     <option value="1">Oui</option>
                 </select>
-                <small class="text-muted">
-                </small>
+              
                 </div>
 
                 <div class="form-group pb-sm-2">
@@ -293,8 +279,7 @@
                     <option value="0">Non</option>
                     <option value="1">Oui</option>
                 </select>
-                <small class="text-muted">
-                </small>
+            
                 </div>
 
                 <div class="form-group pb-sm-2">
@@ -304,8 +289,7 @@
                     <option value="0">Non</option>
                     <option value="1">Oui</option>
                 </select>
-                <small class="text-muted">
-                </small>
+            
                 </div>
 
                 <div class="form-group pb-sm-2">
@@ -316,8 +300,7 @@
                     <option value="3">Nationale</option>
                     <option value="1">Non spécifiée</option>
                 </select>    
-                <small class="text-muted">
-                </small>
+             
                 </div>
 
                 <div class="form-group pb-sm-2">
@@ -327,8 +310,7 @@
                     <option value="0">Non</option>
                     <option value="1">Oui</option>
                 </select>
-                <small class="text-muted">
-                </small>
+              
                 </div>
 
                 <div class="form-group pb-sm-2">
@@ -338,141 +320,123 @@
                     <option value="0">Non</option>
                     <option value="1">Oui</option>
                 </select>
-                <small class="text-muted">
-                </small>
+               
                 </div>
 
                 <div class="form-group pb-sm-2">
                 <label for="edate">Date de publication électronique :</label>
                 <input type="date" class="form-control" name="edate" min="1970-01-01" max="2030-12-31">
-                <small class="text-muted">
-                </small>
+               
                 </div>
 
                 <div class="form-group pb-sm-2">
                 <label for="Titrevolume">Titre du volume :</label>
                 <input type="text" class="form-control" name="Titrevolume">
-                <small class="text-muted">
-                </small>
+             
                 </div>
 
                 <div class="form-group pb-sm-2">
                 <label for="volume">Volume :</label>
                 <input type="text" class="form-control" name="volume">
-                <small class="text-muted">
-                </small>
+             
                 </div>
 
                 <div class="form-group pb-sm-2">
                 <label for="numero">Numéro :</label>
                 <input type="text" class="form-control" name="numero">
-                <small class="text-muted">
-                </small>
+                
                 </div>
 
                 <div class="form-group pb-sm-2">
                 <label for="Numerorapport">N° rapport :</label>
                 <input type="text" class="form-control" name="Numerorapport">
-                <small class="text-muted">
-                </small>
+                
                 </div>
 
                 <div class="form-group pb-sm-2">
                 <label for="PageID">Page Identifiant :</label>
                 <input type="text" class="form-control" name="PageID">
                 <small class="text-muted">
+                Identifiant pérenne de l'article.
                 </small>
                 </div>
 
                 <div class="form-group pb-sm-2">
                     <label for="Editeurcommercial">Éditeur commercial :</label>
                     <input type="text" class="form-control" name="Editeurcommercial">
-                    <small class="text-muted">
-                </small>
+               
                 </div>
 
                 <div class="form-group pb-sm-2">
                     <label for="Directeurcollection">Directeur de collection :</label>
                     <input type="text" class="form-control" name="Directeurcollection">
-                    <small class="text-muted">
-                </small>
+                    
                 </div>
 
                 <div class="form-group pb-sm-2">
                     <label for="Editeurscientifique">Éditeur scientifique :</label>
                     <input type="text" class="form-control" name="Editeurscientifique">
-                    <small class="text-muted">
-                </small>
+                  
                 </div>
 
                 <div class="form-group pb-sm-2">
                 <label for="Organisateurcongres">Organisateur du congrès :</label>
                     <input type="text" class="form-control" name="Organisateurcongres">
-                    <small class="text-muted">
-                </small>
+                 
                 </div>
 
                 <div class="form-group pb-sm-2">
                     <label for="Urlediteur">URL du congrès ou de l'éditeur :</label>
                     <input type="text" class="form-control" name="Urlediteur">
-                    <small class="text-muted">
-                </small>
+                   
                 </div>
 
                 <div class="form-group pb-sm-2">
                         <label for="classification">Classification :</label>
                         <textarea type="text" class="form-control" name="classification" rows="3"></textarea>
-                        <small class="text-muted">
-                </small>
+                      
                 </div>
 
                 <div class="form-group pb-sm-2">
                         <label for="commentaire">Commentaire :</label>
                         <textarea type="text" class="form-control" name="commentaire" rows="5"></textarea>
-                        <small class="text-muted">
-                </small>
+                       
                 </div>
 
                 <div class="form-group pb-sm-2">
                 <label for="Referenceinterne">Référence interne :</label>
                 <input type="text" class="form-control" name="Referenceinterne">
-                <small class="text-muted">
-                </small>
+        
                 </div>
 
                 <div class="form-group pb-sm-2">
                     <label for="Collaborationprojet">Collaboration / Projet :</label>
                     <input type="text" class="form-control" name="Collaborationprojet">
-                    <small class="text-muted">
-                </small>
+                 
                 </div>
 
                 <div class="form-group pb-sm-2">
                     <label for="Voiraussi">Voir aussi :</label>
                     <input type="text" class="form-control" name="Voiraussi">
-                    <small class="text-muted">
-                </small>
+                  
                 </div>
 
                 <div class="form-group pb-sm-2">
                     <label for="Projetanr">Projet ANR :</label>
                     <input type="text" class="form-control" name="Projetanr">
-                    <small class="text-muted">
-                </small>
+                  
                 </div>
 
                 <div class="form-group pb-sm-2">
                     <label for="Projeteuropeen">Projet européen :</label>
                     <input type="text" class="form-control" name="Projeteuropeen">
-                    <small class="text-muted">
-                </small>
+                 
                 </div>
 
                 <div class="form-group pb-sm-2">
                         <label for="financement">Financement :</label>
                         <textarea type="text" class="form-control" name="financement" rows="3"></textarea>
-                        <small class="text-muted">
-                </small>
+                     
                 </div>
     
 </details>
