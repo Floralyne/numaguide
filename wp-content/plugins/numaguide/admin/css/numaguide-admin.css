@@ -463,3 +463,17 @@ textarea:invalid {
 	font-size:0.8rem;
 	height: 300px;
 }
+
+/*Liste des guides*/
+
+#blocliste{
+	border-radius: 5px;
+	border: solid;
+	height: 400px;
+	overflow:auto;
+}
+
+#listeauteur{
+	border-left: 2px;
+	border-right: 2px;
+}
