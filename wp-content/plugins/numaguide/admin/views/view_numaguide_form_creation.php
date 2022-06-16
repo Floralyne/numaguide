@@ -1372,6 +1372,21 @@ if (isset($_POST['GenererMeta'])) {
                             name="slide19-5"></textarea>
                     </div>
                 </div>
+
+                <hr>
+                <div class="soustitreForm">Slide 20 - Mentions légales</div>
+                <div class="row">
+                    <div class="col col-lg-3 mb-auto mt-auto">
+                        <figure class="figure  mt-auto mb-auto">
+                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_20.png'; ?>"
+                                class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
+                            name="slide20-1" disabled></textarea>
+                    </div>
+                </div>
         </details>
         <input type=submit name="CreerGuide" class="boutonForm boutonValider mt-5" value="Créer le mini guide">
 </div>
