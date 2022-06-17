@@ -13,14 +13,14 @@
 
     <div class="form-group row">
         <div class="col">
-            <input class="boutonForm boutonAjouter" type="submit" value="Consulter" />
+            <input class="boutonForm boutonAjouter" type="submit" value="Consulter" disabled/>
         </div>
         <div class="col">
-            <input class="boutonForm boutonAction" type="submit" value="Modifier" />
+            <input class="boutonForm boutonAction" type="submit" value="Modifier" disabled/>
 
         </div>
         <div class="col">
-            <input class="boutonForm boutonSupprimer" type="submit" value="Supprimer" />
+            <input class="boutonForm boutonSupprimer" type="submit" value="Supprimer" disabled/>
 
         </div>
     </div>
