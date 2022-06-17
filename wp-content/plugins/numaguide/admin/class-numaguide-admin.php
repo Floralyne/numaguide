@@ -93,6 +93,15 @@ class Numaguide_Admin
             'ng_submenu_form_creation'
         );
 
+        // add_submenu_page(
+        //     'numaguide',
+        //     'Numaguide | Création version dynamique',
+        //     'Créer un guide (dynamique)',
+        //     'edit_posts',
+        //     'ng_creerguide_dyna',
+        //     'ng_submenu_form_dyna'
+        // );
+
         add_submenu_page(
             'numaguide',
             'Numaguide | Modifier un guide',
@@ -130,6 +139,11 @@ class Numaguide_Admin
             include_once 'views/view_numaguide_form_creation.php';
         }
 
+        // function ng_submenu_form_dyna()
+        // {
+        //     include_once 'views/view_numaguide_form_creation_original.php';
+        // }
+
         function ng_submenu_form_modification()
         {
             include_once 'views/view_numaguide_form_modification.php';
@@ -147,22 +161,22 @@ class Numaguide_Admin
 
     }
 
-    /*
-     * Cherche l'article pour générer l'article.
+    /**
+     * Cherche l'article pour générer la slide.
      *
      * @since Numaguide 1.0.0
      *
-     * @param string $titre_guide Le titre du guide
-     * @param string $content le contenu à placer
-     * @param int $parent_id id d'un parent, par défaut NULL
+     * @param array $info_slide un tableau avec les informations pour chercher
+     *                          l'article
      *
-     * @return int $page_id
+     * @return string $slide
      */
     public function numaguide_article_pour_template($info_slide)
     {
         $slide = "";
         $nbSlide = 1;
 
+        //Info de l'article à checrher
         $args = array(
             'post_type' => 'post',
             'post_status' => 'draft',
@@ -170,19 +184,22 @@ class Numaguide_Admin
             'tag' => $nbSlide,
         );
 
+        //Récupération de l'article
         $mypost = get_posts($args);
 
+        //Génération avec la slide
         if ($mypost) {
             the_post();
             $post_tab = array('article' => $mypost);
-            $slide = apply_filters('ng_genere_slide', $info_slide[1], null, $post_tab);
+            $slide = apply_filters('ng_generer_slide', $info_slide[1], null, $post_tab);
             $nbSlide = $nbSlide + 1;
         }
 
+        //Retourne le code
         return $slide;
     }
 
-    /*
+    /**
      * Met en variable un template avec son contenu.
      *
      * @since Numaguide 1.0.0
@@ -191,13 +208,13 @@ class Numaguide_Admin
      * @param string $part_name le nom de la partie du template
      * @param array $args tableau de variables à injecter dans le template
      *
-     * @return string
+     * @return string $slide
      */
-    public function numaguide_genere_slide($template_name, $part_name = null, $args)
+    public function numaguide_generer_slide($template_name, $part_name = null, $args)
     {
         $slide = "";
 
-        //Start le buffering
+        //Commence le buffering
         ob_start();
 
         //Inclu le template
@@ -210,7 +227,7 @@ class Numaguide_Admin
 
     }
 
-    /*
+    /**
      * Creer le guide numérique sous la forme d'une page wordpress.
      *
      * @since Numaguide 1.0.0
@@ -223,12 +240,14 @@ class Numaguide_Admin
      */
     public function numaguide_creer_guide($titre_guide, $content, $parent_id = null)
     {
+        //Vérification que la page n'existe pas
         $objPage = get_page_by_title($titre_guide, 'OBJECT', 'page');
         if (!empty($objPage)) {
             echo "La page existe déjà: " . $titre_guide;
             return $objPage->ID;
         }
 
+        //Standardisation du titre (vu après, une fonction existe sur wordpress)
         $enleveaccent_array = array('Š' => 'S', 'š' => 's', 'Ž' => 'Z', 'ž' => 'z', 'À' => 'A', 'Á' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'A', 'Ç' => 'C', 'È' => 'E', 'É' => 'E',
             'Ê' => 'E', 'Ë' => 'E', 'Ì' => 'I', 'Í' => 'I', 'Î' => 'I', 'Ï' => 'I', 'Ñ' => 'N', 'Ò' => 'O', 'Ó' => 'O', 'Ô' => 'O', 'Õ' => 'O', 'Ö' => 'O', 'Ø' => 'O', 'Ù' => 'U',
             'Ú' => 'U', 'Û' => 'U', 'Ü' => 'U', 'Ý' => 'Y', 'Þ' => 'B', 'ß' => 'Ss', 'à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'å' => 'a', 'æ' => 'a', 'ç' => 'c',
@@ -237,6 +256,7 @@ class Numaguide_Admin
         $titre_guide = strtr($titre_guide, $enleveaccent_array);
         $titre_guide = str_replace('\'', '', $titre_guide);
 
+        //Création de la page
         $page_id = wp_insert_post(
             array(
                 'comment_status' => 'close',
@@ -250,26 +270,28 @@ class Numaguide_Admin
                 'post_parent' => $parent_id, //seulement s'il y en a un
             )
         );
+
+        //Message de succès et retourne l'ID de la page (préparation s'il y avait eu le formulaire dynamique)
         echo "Le guide numérique : \"" . $titre_guide . " (ID: " . $page_id . ")\" a été crée ! <br>";
         echo "<a href=\"" . get_site_url() . "/" . strtolower(str_replace(' ', '-', trim($titre_guide))) . "\">Appuyez pour voir le guide !</a>";
         return $page_id;
     }
 
-    /*
+    /**
      * Masques les menus de la barre de menus pour les éditeurs, auteurs et contributeurs.
      *
      * @since Numaguide 1.0.0
      *
-     * @param string $user
-     * @param array $allowed_roles la liste des rôles concernés
-
      */
 
     public function numaguide_cacher_menus()
     {
+        //Récupération du rôle de l'user actuel
         $user = wp_get_current_user();
+        //Mise en variable des rôles qui nous intéressent
         $allowed_roles = array('editor', 'contributor', 'author');
 
+        //Réstriction sur les pages suivant les rôles
         if (array_intersect($allowed_roles, $user->roles)) {
 
             remove_menu_page('index.php'); //Dashboard
@@ -288,13 +310,12 @@ class Numaguide_Admin
         }
     }
 
-    /*
+    /**
      * Supprime les commentaires et la possibilité de créer des articles via la barre administrateur.
      *
      * @since Numaguide 1.0.0
      *
-     * @param WP_Admin_Bar $wp_admin_bar WP_Admin Bar instance.
-     * @param array $allowed_roles la liste des rôles concernés
+     * @param WP_Admin_Bar $wp_admin_bar instance WP_Admin Bar
      *
      */
 
@@ -306,25 +327,25 @@ class Numaguide_Admin
 
     }
 
-    /*
+    /**
      * Redirige vers la page d'accueil du plug-in après connexion de l'utilisateur
      *
      * @since Numaguide 1.0.0
      *
-     * @return string 
+     * @return string
      */
 
-//Change la page d'accueil
+    public function numaguide_rediriger_admin_page()
+    {
+        //En local
+        return '/wordpress/wp-admin/admin.php?page=numaguide';
 
-    public function admin_default_page() {
+        //Sur serveur distant
+        // return '/wp-admin/admin.php?page=numaguide';
+    }
 
-    return '/wordpress/wp-admin/admin.php?page=numaguide';
-    // return '/wp-admin/admin.php?page=numaguide';
- }
-
-    /*
+    /**
      * SLIDE 1
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 1
      *
@@ -344,6 +365,7 @@ class Numaguide_Admin
     {
         $ng_slide1_nom = "slide1";
 
+        //Le code du bloc pour le système Wordpress Gutenberg
         $ng_content = '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
             $texte1 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
@@ -351,6 +373,7 @@ class Numaguide_Admin
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
             $texte3 . '<!-- /wp:paragraph -->';
 
+        //Infos pour la création de l'article
         $ng_info_article = array(
             'post_content' => $ng_content,
             'post_category' => array(51),
@@ -358,17 +381,19 @@ class Numaguide_Admin
             'post_type' => 'post',
         );
 
+        // Création de l'article
         wp_insert_post($ng_info_article);
 
+        //Infos puis fonction pour faire la slide entière
         $info_slide = array($ng_slide1_nom, 'views/slides/slide_1.php');
         $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
+        //Renvoi le code
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 2
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 2
      *
@@ -416,9 +441,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 3
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 3
      *
@@ -454,9 +478,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 4
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 4
      *
@@ -492,9 +515,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 5
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 5
      *
@@ -530,9 +552,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 6
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 6
      *
@@ -568,9 +589,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 7
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 7
      *
@@ -609,9 +629,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 8
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 8
      *
@@ -650,9 +669,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 9
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 9
      *
@@ -678,10 +696,12 @@ class Numaguide_Admin
 
         $nomImg = sanitize_file_name($image1['name']);
 
+        //La variable qui contient le path pour la biblio de média
         $new_file_path = $wordpress_upload_dir['path'] . '/' . $nomImg;
 
         $new_file_mime = mime_content_type($image1['tmp_name']);
 
+        //Vérifications avant d'enregistrer l'image
         if ($image1['error']) {
             die($image1['error']);
         }
@@ -694,6 +714,7 @@ class Numaguide_Admin
             die('Le type de l\'image n\'est pas valide');
         }
 
+        //Si le nom de l'image existe déjà, rajout d'un nombre à la fin pour l'accepter
         while (file_exists($new_file_path)) {
             $i++;
             $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $nomImg;
@@ -711,7 +732,7 @@ class Numaguide_Admin
                 'post_status' => 'inherit',
             ), $new_file_path);
 
-            // wp_generate_attachment_metadata() sans cet include
+            // wp_generate_attachment_metadata() ne marche pas sans cet include
             require_once ABSPATH . 'wp-admin/includes/image.php';
 
             // Genere et sauvegarde les métadonnées associé dans la BDD
@@ -728,10 +749,12 @@ class Numaguide_Admin
             $imgID = $imgObj[0]->ID;
             $imgURL = wp_get_attachment_image_src($imgID, 'full');
 
+            //Le code du bloc pour le système Wordpress Gutenberg
             $ng_content = '<!-- wp:image {"id":' . $imgID . ',"sizeSlug":"full","linkDestination":"none"} -->
               <figure class="wp-block-image size-full"><img src="' . $imgURL[0] . '" alt="" class="wp-image-190"/></figure>
               <!-- /wp:image -->';
 
+            //Infos pour créer l'article
             $ng_info_article = array(
                 'post_content' => $ng_content,
                 'post_category' => array(59),
@@ -739,8 +762,10 @@ class Numaguide_Admin
                 'post_type' => 'post',
             );
 
+            //Création de l'article
             wp_insert_post($ng_info_article);
 
+            //Info et génération de la slide
             $info_slide = array($ng_slide9_nom, 'views/slides/slide_9.php');
             $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
@@ -748,9 +773,8 @@ class Numaguide_Admin
         }
     }
 
-    /*
+    /**
      * SLIDE 10
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 10
      *
@@ -852,22 +876,21 @@ class Numaguide_Admin
         return $slide;
     }
 
-/*
-     * SLIDE 11
-     * ///////
-     * Récupère les infos du formulaire de création de guide
-     * créé un article et génère la slide 11
-     *
-     * @since Numaguide 1.0.0
-     *
-     * @param string $ng_guide_nom
-     * @param array $image1
-     * @param string $texte1
-     * @param string $slide
-     *
-     * @return string $slide
-     *
-     */
+/**
+ * SLIDE 11
+ * Récupère les infos du formulaire de création de guide
+ * créé un article et génère la slide 11
+ *
+ * @since Numaguide 1.0.0
+ *
+ * @param string $ng_guide_nom
+ * @param array $image1
+ * @param string $texte1
+ * @param string $slide
+ *
+ * @return string $slide
+ *
+ */
 
     public function numaguide_creer_slide11($ng_guide_nom, $image1, $texte1, $slide)
     {
@@ -956,9 +979,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 12
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 12
      *
@@ -1061,9 +1083,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 13
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 13
      *
@@ -1091,10 +1112,12 @@ class Numaguide_Admin
 
         $nomSon = sanitize_file_name($son1['name']);
 
+        //Le path de la bibliothèque média de wordpress
         $new_file_path = $wordpress_upload_dir['path'] . '/' . $nomSon;
 
         $new_file_mime = mime_content_type($son1['tmp_name']);
 
+        //Vérifications avant de lancer la machine
         if ($son1['error']) {
             die($son1['error']);
         }
@@ -1107,6 +1130,7 @@ class Numaguide_Admin
             die('Le format du fichier audio n\'est pas valide');
         }
 
+        //Boucle pour changer le nom si déjà existant
         while (file_exists($new_file_path)) {
             $i++;
             $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $nomSon;
@@ -1124,7 +1148,7 @@ class Numaguide_Admin
                 'post_status' => 'inherit',
             ), $new_file_path);
 
-            // wp_generate_attachment_metadata() sans cet include (ligne 477, marche pour image/son et video)
+            // wp_generate_attachment_metadata() ne marche pas sans cet include (ligne 477, marche pour image/son et video)
             require_once ABSPATH . 'wp-admin/includes/image.php';
 
             // Genere et sauvegarde les métadonnées associé dans la BDD
@@ -1141,34 +1165,38 @@ class Numaguide_Admin
             $sonID = $sonObj[0]->ID;
             $sonURL = wp_get_attachment_url($sonID);
 
+            //Le code du bloc pour le système Wordpress Gutenberg
             $ng_content = '<!-- wp:audio {"id":' . $sonID . ',"className":"wp-block-audio"} -->
             <figure class="wp-block-audio"><audio controls src="' . $sonURL . '"></audio></figure>
             <!-- /wp:audio -->';
         }
 
+        //Pour mettre les autres blocs
         $ng_content = $ng_content . '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
             $texte1 . '<!-- /wp:paragraph -->' .
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
             $texte2 . '<!-- /wp:paragraph -->';
 
+        //Infos pour la création de l'article
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 63 ),
+            'post_category' => array(63),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
 
+        //Création de l'article
         wp_insert_post($ng_info_article);
 
+        //Génération de la slide
         $info_slide = array($ng_slide13_nom, 'views/slides/slide_13.php');
         $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 14
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 14
      *
@@ -1212,11 +1240,11 @@ class Numaguide_Admin
             die($son2['error']);
         }
 
-        if ($son1['size'] > wp_max_upload_size()||$son2['size'] > wp_max_upload_size()) {
+        if ($son1['size'] > wp_max_upload_size() || $son2['size'] > wp_max_upload_size()) {
             die('La taille du fichier audio est trop grande.');
         }
 
-        if (!in_array($new_file_mime, get_allowed_mime_types())||!in_array($new_file_mime2, get_allowed_mime_types())) {
+        if (!in_array($new_file_mime, get_allowed_mime_types()) || !in_array($new_file_mime2, get_allowed_mime_types())) {
             die('Le format du fichier audio n\'est pas valide');
         }
 
@@ -1307,11 +1335,11 @@ class Numaguide_Admin
 
         $ng_info_article = array(
             'post_content' => $ng_content,
-            'post_category' => array( 64 ),
+            'post_category' => array(64),
             'tags_input' => array('1', $ng_guide_nom),
             'post_type' => 'post',
         );
-   
+
         wp_insert_post($ng_info_article);
 
         $info_slide = array($ng_slide14_nom, 'views/slides/slide_14.php');
@@ -1320,9 +1348,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 15
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 15
      *
@@ -1339,10 +1366,12 @@ class Numaguide_Admin
     {
         $ng_slide15_nom = 'slide15';
 
+        //Le code du bloc pour le système Wordpress Gutenberg (pour les articles)
         $ng_content = '<!-- wp:embed {"url":"' . $video1 . '","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
     <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">'
-    . $video1 . '</div></figure><!-- /wp:embed -->';
+            . $video1 . '</div></figure><!-- /wp:embed -->';
 
+        //Infos pour la création de l'article
         $ng_info_article = array(
             'post_content' => $ng_content,
             'post_category' => array(65),
@@ -1350,17 +1379,18 @@ class Numaguide_Admin
             'post_type' => 'post',
         );
 
+        //Création de l'article
         wp_insert_post($ng_info_article);
 
+        //Génération de la slide
         $info_slide = array($ng_slide15_nom, 'views/slides/slide_15.php');
         $slide = $slide . apply_filters('ng_article_pour_template', $info_slide);
 
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 16
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 16
      *
@@ -1386,7 +1416,6 @@ class Numaguide_Admin
             '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
             $texte2 . '<!-- /wp:paragraph -->';
 
-
         $ng_info_article = array(
             'post_content' => $ng_content,
             'post_category' => array(66),
@@ -1402,9 +1431,8 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 17
-     * ///////
      * Récupère les infos du formulaire de création de guide
      * créé un article et génère la slide 17
      *
@@ -1427,7 +1455,6 @@ class Numaguide_Admin
             . $video1 . '</div></figure><!-- /wp:embed -->' . '<!-- wp:paragraph {"placeholder":"Post Paragraph"} -->' .
             $texte1 . '<!-- /wp:paragraph -->';
 
-
         $ng_info_article = array(
             'post_content' => $ng_content,
             'post_category' => array(67),
@@ -1443,12 +1470,10 @@ class Numaguide_Admin
         return $slide;
     }
 
-
-    /*
+    /**
      * SLIDE 18
-     * ///////
      * Récupère les infos du formulaire de création de guide
-     * créé un article et génère la slide 1
+     * créé un article et génère la slide 18
      *
      * @since Numaguide 1.0.0
      *
@@ -1494,11 +1519,10 @@ class Numaguide_Admin
         return $slide;
     }
 
-    /*
+    /**
      * SLIDE 19
-     * ///////
      * Récupère les infos du formulaire de création de guide
-     * créé un article et génère la slide 1
+     * créé un article et génère la slide 19
      *
      * @since Numaguide 1.0.0
      *

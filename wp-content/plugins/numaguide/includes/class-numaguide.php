@@ -67,7 +67,7 @@ class Numaguide
     /**
      * Charge les dépendances requises pour ce plugin.
      *
-     * Include the following files that make up the plugin:
+     * Inclu les fichiers suivant:
      *
      * - Numaguide_Loader. Chef d'orchestre des hooks.
      * - Numaguide_i18n. Langages.
@@ -140,11 +140,11 @@ class Numaguide
         $this->loader->add_action('admin_menu', $plugin_admin, 'numaguide_creer_menu_admin');
         $this->loader->add_action('admin_menu', $plugin_admin, 'numaguide_cacher_menus');
         $this->loader->add_action('admin_bar_menu', $plugin_admin, 'numaguide_vider_barre_admin', 999);
-        $this->loader->add_filter('login_redirect', $plugin_admin, 'admin_default_page');
+        $this->loader->add_filter('login_redirect', $plugin_admin, 'numaguide_rediriger_admin_page');
 
         // Hooks pour utiliser les fonctions pour la création d'un guide
         $this->loader->add_filter('ng_article_pour_template', $plugin_admin, 'numaguide_article_pour_template', 10, 1);
-        $this->loader->add_filter('ng_genere_slide', $plugin_admin, 'numaguide_genere_slide', 10, 3);
+        $this->loader->add_filter('ng_generer_slide', $plugin_admin, 'numaguide_generer_slide', 10, 3);
         $this->loader->add_filter('ng_creer_guide', $plugin_admin, 'numaguide_creer_guide', 10, 3);
 
         $this->loader->add_filter('ng_creer_slide1', $plugin_admin, 'numaguide_creer_slide1', 10, 5);

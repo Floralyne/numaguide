@@ -1,6 +1,6 @@
-/**
- * CSS PARTIE ADMINISTRATEUR
- */
+/*******************/
+ /* CSS PARTIE ADMINISTRATEUR */
+/*******************/
 
 /* Couleurs et police interface administrateur */
 @font-face {
@@ -176,7 +176,9 @@ div#wpwrap div#adminmenumain div#adminmenuwrap ul#adminmenu a.wp-has-current-sub
 	background-color: #1d2327;
 }
 
+/*******************/
 /*** Formulaires ***/
+/*******************/
 
 /*Apparence des boutons du formulaire*/
 

@@ -65,7 +65,7 @@ class Numaguide_Public
 	}
 
 	/**
-	 * Enlève la barre administrateur côté front.
+	 * Enlève la barre administrateur côté public.
 	 *
 	 * @since    1.0.0
 	 */
