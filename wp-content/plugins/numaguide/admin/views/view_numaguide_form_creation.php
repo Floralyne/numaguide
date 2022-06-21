@@ -697,7 +697,8 @@ $dom->formatOutput = true;
 //creation des principaux elements, sans valeurs
 $HAL = $dom->createElement('oai_dc:dc');
 $author = $dom->createElement('dc:author');
-
+$authorvalidity = $dom->createElement('dc:authorvalidity');
+$authors = $dom->createElement('dc:authors');
 
 //creation des elements avec valeurs
 $titre = $dom->createElement('dc:title',$d_titre);
