@@ -695,66 +695,77 @@ $dom->formatOutput = true;
 
 
 //creation des principaux elements, sans valeurs
-$HAL = $dom->createElement('HAL');
-$meta = $dom->createElement('meta');
-$auhtor = $dom->createElement('author');
-$required = $dom->createElement('required');
-$optional = $dom->createElement('optional');
-$author = $dom->createElement('author');
-$authorvalidity = $dom->createElement('authorvalidity');
-$authors = $dom->createElement('authors');
+$HAL = $dom->createElement('oai_dc:dc');
+$author = $dom->createElement('dc:author');
+
 
 //creation des elements avec valeurs
-$titre = $dom->createElement('title',$d_titre);
-$auteur = $dom->createElement('searchAuthor', $d_auteur);
-$type = $dom->createElement('type', $d_type_texte);
-$domaine = $dom->createElement('domain', $d_domaine_texte);
-$langue = $dom->createElement('language', $d_langue_texte);
-$institution = $dom->createElement('authorityInstitution', $d_institution);
-$datepublication = $dom->createElement('date-id', $d_datepublication);
-$nomrevue = $dom->createElement('journal', $d_nomrevue);
-$titrecongres = $dom->createElement('conferenceTitle', $d_titrecongres);
-$datedebutcongres = $dom->createElement('conferenceStartDate-id', $d_datedebutcongres);
-$ville = $dom->createElement('city', $d_ville);
-$pays = $dom->createElement('country', $d_pays_texte);
-$description = $dom->createElement('description', $d_description);
-$typerapport = $dom->createElement('reportType', $d_typerapport_texte);
-$soustitre = $dom->createElement('subTitle', $d_soustitre);
-$resume = $dom->createElement('abstract', $d_resume);
-$motscles = $dom->createElement('keyword', $d_motscles);
-$doipublication = $dom->createElement('identifier', $d_doipublication);
-$donneesassociees = $dom->createElement('researchdata', $d_donneesassociees);
-$dateproduction = $dom->createElement('writingDate-id', $d_dateproduction);
-$licence = $dom->createElement('licence', $d_licence_texte);
-$source = $dom->createElement('source', $d_source);
-$vulgarisation = $dom->createElement('popularLevel', $d_vulgarisation_texte);
-$comitedelecture = $dom->createElement('peerReviewing', $d_comitedelecture_texte);
-$invite = $dom->createElement('invitedCommunication', $d_invite_texte);
-$audience = $dom->createElement('audience', $d_audience_texte);
-$actes = $dom->createElement('proceedings', $d_actes_texte);
-$aparaitre = $dom->createElement('inPress', $d_aparaitre_texte);
-$datepublicationelec = $dom->createElement('edate-id', $d_datepublicationelec);
-$titrevolume = $dom->createElement('serie', $d_titrevolume);
-$volume = $dom->createElement('volume', $d_volume);
-$numero = $dom->createElement('issue', $d_numero);
-$nrapport = $dom->createElement('number', $d_nrapport);
-$pageid = $dom->createElement('page', $d_pageid);
-$editeurcommercial = $dom->createElement('publisher', $d_editeurcommercial);
-$directeurcollection = $dom->createElement('seriesEditor', $d_directeurcollection);
-$editeurscientifique = $dom->createElement('scientificEditor', $d_editeurscientifique);
-$organisateurducongres = $dom->createElement('conferenceOrganizer', $d_organisateurducongres);
-$urlcediteur = $dom->createElement('publisherLink', $d_urlcediteur);
-$classification = $dom->createElement('classification', $d_classification);
-$commentaire = $dom->createElement('comment', $d_commentaire);
-$referenceinterne = $dom->createElement('localReference', $d_referenceinterne);
-$collabprojet = $dom->createElement('collaboration', $d_collabprojet);
-$voiraussi = $dom->createElement('seeAlso', $d_voiraussi);
-$projetanr = $dom->createElement('anrProject', $d_projetanr);
-$projeteurop = $dom->createElement('europeanProject', $d_projeteurop);
-$financement = $dom->createElement('funding', $d_financement);
+$titre = $dom->createElement('dc:title',$d_titre);
+$auteur = $dom->createElement('dc:searchAuthor', $d_auteur);
+$type = $dom->createElement('dc:type', $d_type_texte);
+$domaine = $dom->createElement('dc:domain', $d_domaine_texte);
+$langue = $dom->createElement('dc:language', $d_langue_texte);
+$institution = $dom->createElement('dc:authorityInstitution', $d_institution);
+$datepublication = $dom->createElement('dc:date-id', $d_datepublication);
+$nomrevue = $dom->createElement('dc:journal', $d_nomrevue);
+$titrecongres = $dom->createElement('dc:conferenceTitle', $d_titrecongres);
+$datedebutcongres = $dom->createElement('dc:conferenceStartDate-id', $d_datedebutcongres);
+$ville = $dom->createElement('dc:city', $d_ville);
+$pays = $dom->createElement('dc:country', $d_pays_texte);
+$description = $dom->createElement('dc:description', $d_description);
+$typerapport = $dom->createElement('dc:reportType', $d_typerapport_texte);
+$soustitre = $dom->createElement('dc:subTitle', $d_soustitre);
+$resume = $dom->createElement('dc:abstract', $d_resume);
+$motscles = $dom->createElement('dc:keyword', $d_motscles);
+$doipublication = $dom->createElement('dc:identifier', $d_doipublication);
+$donneesassociees = $dom->createElement('dc:researchdata', $d_donneesassociees);
+$dateproduction = $dom->createElement('dc:writingDate-id', $d_dateproduction);
+$licence = $dom->createElement('dc:licence', $d_licence_texte);
+$source = $dom->createElement('dc:source', $d_source);
+$vulgarisation = $dom->createElement('dc:popularLevel', $d_vulgarisation_texte);
+$comitedelecture = $dom->createElement('dc:peerReviewing', $d_comitedelecture_texte);
+$invite = $dom->createElement('dc:invitedCommunication', $d_invite_texte);
+$audience = $dom->createElement('dc:audience', $d_audience_texte);
+$actes = $dom->createElement('dc:proceedings', $d_actes_texte);
+$aparaitre = $dom->createElement('dc:inPress', $d_aparaitre_texte);
+$datepublicationelec = $dom->createElement('dc:edate-id', $d_datepublicationelec);
+$titrevolume = $dom->createElement('dc:serie', $d_titrevolume);
+$volume = $dom->createElement('dc:volume', $d_volume);
+$numero = $dom->createElement('dc:issue', $d_numero);
+$nrapport = $dom->createElement('dc:number', $d_nrapport);
+$pageid = $dom->createElement('dc:page', $d_pageid);
+$editeurcommercial = $dom->createElement('dc:publisher', $d_editeurcommercial);
+$directeurcollection = $dom->createElement('dc:seriesEditor', $d_directeurcollection);
+$editeurscientifique = $dom->createElement('dc:scientificEditor', $d_editeurscientifique);
+$organisateurducongres = $dom->createElement('dc:conferenceOrganizer', $d_organisateurducongres);
+$urlcediteur = $dom->createElement('dc:publisherLink', $d_urlcediteur);
+$classification = $dom->createElement('dc:classification', $d_classification);
+$commentaire = $dom->createElement('dc:comment', $d_commentaire);
+$referenceinterne = $dom->createElement('dc:localReference', $d_referenceinterne);
+$collabprojet = $dom->createElement('dc:collaboration', $d_collabprojet);
+$voiraussi = $dom->createElement('dc:seeAlso', $d_voiraussi);
+$projetanr = $dom->createElement('dc:anrProject', $d_projetanr);
+$projeteurop = $dom->createElement('dc:europeanProject', $d_projeteurop);
+$financement = $dom->createElement('dc:funding', $d_financement);
 
 
 //creation des attributs dans les balises 
+$HAL_dc_oai = $dom->createAttribute('xmlns:oai_dc');
+$HAL_dc_oai-> value = "http://www.openarchives.org/OAI/2.0/oai_dc/";
+
+$HAL_dc_xmlns = $dom->createAttribute('xmlns:dc');
+$HAL_dc_xmlns-> value = "http://purl.org/dc/elements/1.1/";
+
+$HAL_dc_xsi = $dom->createAttribute('xmlns:xsi');
+$HAL_dc_xsi-> value = "http://www.w3.org/2001/XMLSchema-instance";
+
+$HAL_dc_tei = $dom->createAttribute('xmlns:tei');
+$HAL_dc_tei-> value = "http://www.tei-c.org/ns/1.0";
+
+$HAL_dc_schema = $dom->createAttribute('xsi:schemaLocation');
+$HAL_dc_schema-> value = "http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd http://purl.org/dc/elements/1.1/ http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd";
+
+
 $type_value = $dom->createAttribute('value');
 $type_value-> value = $d_type;
 
@@ -838,6 +849,11 @@ $europrojet_value-> value = $d_projeteurop;
 
 
 //ajout de l'attribut
+$HAL->appendChild($HAL_dc_oai);
+$HAL->appendChild($HAL_dc_xmlns);
+$HAL->appendChild($HAL_dc_xsi);
+$HAL->appendChild($HAL_dc_tei);
+$HAL->appendChild($HAL_dc_schema);
 $type->appendChild($type_value);
 $domaine->appendChild($domaine_value);
 $langue->appendChild($langue_value);
@@ -869,65 +885,59 @@ $projeteurop->appendChild($europrojet_value);
 //creation de la structure xml
 $dom->appendChild($HAL);
 
-$HAL->appendChild($meta);
+$HAL->appendChild($titre);
+$HAL->appendChild($type);
+$HAL->appendChild($domaine);
+$HAL->appendChild($langue);
+$HAL->appendChild($institution);
+$HAL->appendChild($datepublication);
+$HAL->appendChild($nomrevue);
+$HAL->appendChild($titrecongres);
+$HAL->appendChild($datedebutcongres);
+$HAL->appendChild($ville);
+$HAL->appendChild($pays);
+$HAL->appendChild($description);
+$HAL->appendChild($typerapport);
+
+$HAL->appendChild($soustitre);
+$HAL->appendChild($resume);
+$HAL->appendChild($motscles);
+$HAL->appendChild($doipublication);
+$HAL->appendChild($donneesassociees);
+$HAL->appendChild($dateproduction);
+$HAL->appendChild($licence);
+$HAL->appendChild($source);
+$HAL->appendChild($vulgarisation);
+$HAL->appendChild($comitedelecture);
+$HAL->appendChild($invite);
+$HAL->appendChild($audience);
+$HAL->appendChild($actes);
+$HAL->appendChild($aparaitre);
+$HAL->appendChild($datepublicationelec);
+$HAL->appendChild($titrevolume);
+$HAL->appendChild($volume);
+$HAL->appendChild($numero);
+$HAL->appendChild($nrapport);
+$HAL->appendChild($pageid);
+$HAL->appendChild($editeurcommercial);
+$HAL->appendChild($directeurcollection);
+$HAL->appendChild($editeurscientifique);
+$HAL->appendChild($organisateurducongres);
+$HAL->appendChild($urlcediteur);
+$HAL->appendChild($classification);
+$HAL->appendChild($commentaire);
+$HAL->appendChild($referenceinterne);
+$HAL->appendChild($collabprojet);
+$HAL->appendChild($voiraussi);
+$HAL->appendChild($projetanr);
+$HAL->appendChild($projeteurop);
+$HAL->appendChild($financement);
+
 $HAL->appendChild($author);
-
-
-$meta->appendChild($required);
-$meta->appendChild($optional);
 
 $author->appendChild($authorvalidity);
 $authorvalidity->appendChild($authors);
 $authors->appendChild($auteur);
-
-
-$required->appendChild($titre);
-$required->appendChild($type);
-$required->appendChild($domaine);
-$required->appendChild($langue);
-$required->appendChild($institution);
-$required->appendChild($datepublication);
-$required->appendChild($nomrevue);
-$required->appendChild($titrecongres);
-$required->appendChild($datedebutcongres);
-$required->appendChild($ville);
-$required->appendChild($pays);
-$required->appendChild($description);
-$required->appendChild($typerapport);
-
-$optional->appendChild($soustitre);
-$optional->appendChild($resume);
-$optional->appendChild($motscles);
-$optional->appendChild($doipublication);
-$optional->appendChild($donneesassociees);
-$optional->appendChild($dateproduction);
-$optional->appendChild($licence);
-$optional->appendChild($source);
-$optional->appendChild($vulgarisation);
-$optional->appendChild($comitedelecture);
-$optional->appendChild($invite);
-$optional->appendChild($audience);
-$optional->appendChild($actes);
-$optional->appendChild($aparaitre);
-$optional->appendChild($datepublicationelec);
-$optional->appendChild($titrevolume);
-$optional->appendChild($volume);
-$optional->appendChild($numero);
-$optional->appendChild($nrapport);
-$optional->appendChild($pageid);
-$optional->appendChild($editeurcommercial);
-$optional->appendChild($directeurcollection);
-$optional->appendChild($editeurscientifique);
-$optional->appendChild($organisateurducongres);
-$optional->appendChild($urlcediteur);
-$optional->appendChild($classification);
-$optional->appendChild($commentaire);
-$optional->appendChild($referenceinterne);
-$optional->appendChild($collabprojet);
-$optional->appendChild($voiraussi);
-$optional->appendChild($projetanr);
-$optional->appendChild($projeteurop);
-$optional->appendChild($financement);
 
 //affichage des métadonnées avec balises xml apparentes et indentées
 if (isset($_POST['GenererMeta'])) {
@@ -1370,21 +1380,6 @@ if (isset($_POST['GenererMeta'])) {
                             name="slide19-4"></textarea>
                         <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
                             name="slide19-5"></textarea>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="soustitreForm">Slide 20 - Mentions légales</div>
-                <div class="row">
-                    <div class="col col-lg-3 mb-auto mt-auto">
-                        <figure class="figure  mt-auto mb-auto">
-                            <img src="<?= plugin_dir_url(__DIR__ ) . 'images/Slide_20.png'; ?>"
-                                class="figure-img img-fluid rounded">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control m-1" id="exampleFormControlTextarea1" rows="1"
-                            name="slide20-1" disabled></textarea>
                     </div>
                 </div>
         </details>
