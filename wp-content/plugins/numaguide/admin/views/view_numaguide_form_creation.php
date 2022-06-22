@@ -1416,7 +1416,7 @@ if (isset($_POST['CreerGuide'])) {
     wp_create_term($ng_guide_nom);
 
     // Slide 1
-    if ($_POST['slide1-1'] !== ''&$_POST['slide1-2'] !== ''&$_POST['slide1-3'] !== '') {
+    if ($_POST['slide1-1'] !== '') {
         $texte1 = $_POST['slide1-1'];
         $texte2 = $_POST['slide1-2'];
         $texte3 = $_POST['slide1-3'];
