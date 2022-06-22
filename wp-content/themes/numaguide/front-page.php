@@ -14,8 +14,8 @@
 
 <section class="accueil">
         <div class="containeraccueil">
-        <div class="img-fluid">
-            <img src="<?= get_template_directory_uri() . '/assets/images/logotype_numaguide.png'; ?>">
+        <div class="img-fluid" >
+            <img style="max-width:30%" src="<?= get_template_directory_uri() . '/assets/images/logotype_numaguide.png'; ?>">
         </div>
         </div>
 </section>
