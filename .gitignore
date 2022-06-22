@@ -38,8 +38,8 @@ intermediate
 .idea
 cache
 
-# Fichiers à ignorer
-.htaccess
+# # Fichiers à ignorer
+# .htaccess
 
-# Dossiers à ignorer
-wp-content/uploads/
+# # Dossiers à ignorer
+# wp-content/uploads/
